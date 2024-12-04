@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/obscuretone.github.io/static/css/main.f236bf72.css",
+    "main.js": "/obscuretone.github.io/static/js/main.7cde431a.js",
+    "static/js/453.7f0b5b27.chunk.js": "/obscuretone.github.io/static/js/453.7f0b5b27.chunk.js",
+    "index.html": "/obscuretone.github.io/index.html",
+    "main.f236bf72.css.map": "/obscuretone.github.io/static/css/main.f236bf72.css.map",
+    "main.7cde431a.js.map": "/obscuretone.github.io/static/js/main.7cde431a.js.map",
+    "453.7f0b5b27.chunk.js.map": "/obscuretone.github.io/static/js/453.7f0b5b27.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f236bf72.css",
+    "static/js/main.7cde431a.js"
+  ]
+}

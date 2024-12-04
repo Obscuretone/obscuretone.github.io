@@ -1,0 +1,37 @@
+name: Generate Posts JSON
+
+on:
+  push:
+    paths:
+      - 'public/posts/**.md'  # Trigger the action when markdown files in the posts folder change
+
+jobs:
+  generate-posts-json:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'  # Adjust to the version you're using
+
+      - name: Install dependencies
+        run: |
+          npm install
+          
+      - name: Run script to generate posts.json
+        run: |
+          node generatePostsJson.js
+          
+      - name: Commit and push the generated posts.json
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add public/posts/**/*.json
+          git commit -m "Generate posts JSON"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
