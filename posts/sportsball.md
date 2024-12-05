@@ -3,7 +3,7 @@ title: A Trip into Software Hell.
 description: This article discusses the worst codebase I've ever heard of. Certianly the worst I've had the pleasure of building an API on top of.
 ---
 
-# It’s not about how you start. It’s about how you finish.
+## "It’s not about how you start. It’s about how you finish."
 ## – Kobe Bryant
 
 In the software world, some codebases are so tangled and outdated that they feel like a trip into software hell. This post recounts my experience with one such codebase—a nightmare that was as much a lesson in poor practices as it was a survival challenge. It’s a story about legacy code, the harsh realities of software development, and the irony of success despite everything.
@@ -12,13 +12,15 @@ Imagine a root directory overflowing with over 1,000 PHP files, each a relic fro
 
 Despite this chaos, the company emerged as a market leader, landing national contracts for major organizations. This highlights the value of being first to market and the edge that incumbents can have, regardless of the underlying systems.
 
-## I am not here to be liked. I am here to be respected. – Pat Riley
+## "I am not here to be liked. I am here to be respected." 
+## – Pat Riley
 
 The work environment was a nightmare in its own right. Developers were underpaid, required to wear dress shirts, and endured a volatile atmosphere. The CEO once threw a chair through a wall out of frustration due to a bug. Rumor had it the VP held a record for penalty minutes in a Europe. It was a perfect storm of poor management and bad working conditions.
 
 Everyone except the developers had “manager” in their title. Developers were relegated to a basement office with no windows. This made for a truly dismal working environment, highlighting the disregard for the development team’s needs.
 
-## You have to learn to play together – Michael Jordan
+## "You have to learn to play together" 
+## – Michael Jordan
 
 When tasked with creating a mobile app and an API on top of this chaotic codebase, a normal approach wasn’t feasible. The existing system was so tangled and complex that direct integration with its functions was not practical. Refactoring the codebase was off the table, so I had to work with what I was given.
 
@@ -69,7 +71,8 @@ $json = json_encode($api_data);
 This approach involved letting the site do the heavy lifting. It was a workaround to deal with the limitations of the existing system and provided a way to interact with the data without needing to refactor the existing, overly complex codebase.
 
 
-## It's not about being the best. It's about being better than you were yesterday. – Anonymous
+## "It's not about being the best. It's about being better than you were yesterday." 
+## – Anonymous
 
 When it came time to upgrade the PHP version to 5.6, the situation took another bizarre turn. Magic quotes, a feature deprecated in PHP 5.3, was deeply ingrained in the codebase. The system relied on magic quotes for input sanitization, which meant that simply turning off this feature would break the application. To address this, I had to write a `fake_magic_quotes` function to replicate the old behavior. This function was automatically included at the top of every page, ensuring that even as we updated the PHP version, the codebase continued to operate as if magic quotes were still active.
 
@@ -101,7 +104,8 @@ $_COOKIE = fake_magic_quotes($_COOKIE);
 
 This function recursively adds slashes to incoming data, emulating the magic quotes effect. The absurdity of maintaining such outdated practices in a modernized environment was a stark reminder of the tangled mess this codebase had become.
 
-## "You miss 100% of the shots you don’t take." – Wayne Gretzky
+## "You miss 100% of the shots you don’t take." 
+## – Wayne Gretzky
 
 One of the most absurd aspects was our $40,000 monthly bill for a Postgres server, just to ensure a single query ran "quickly". The codebase handled UTF-8 character substitutions on both input data and server-side data, applying every possible substitution. This was done twice—once before sending data to the database and again on the data retrieved from the database. 
 
@@ -209,7 +213,8 @@ The original query utilized extensive nested `REPLACE()` functions for character
 
 In contrast, the refactored approach utilized triggers to keep the `first_name_normalized` and `last_name_normalized` columns updated with normalized data, which were indexed for efficiency, while PHP was employed for preprocessing the input data.
 
-## The harder the battle, the sweeter the victory. – Les Brown
+## "The harder the battle, the sweeter the victory."
+## – Les Brown
 
 The plaintext storage of passwords was another glaring issue. Passwords were stored in plain text in the database, making them visible and easily accessible. This practice was initially adopted to allow the support manager to look up passwords if needed. The support manager was resistant to change, arguing that without access to plaintext passwords, he wouldn't be able to log into customer accounts when required. This insecure practice underscored a significant lack of understanding and concern for data security.
 
@@ -217,7 +222,8 @@ To address this critical issue, I developed a proper authentication system. At l
 
 This new system allowed the support team to log in as users without exposing or needing access to their plaintext passwords. While this transition was necessary, it was a frustrating process. It highlighted the challenges of improving data security and protecting user information while overcoming institutional resistance to change. By implementing this new authentication system, we moved towards better practices in data security, ensuring that sensitive information was handled with the necessary care and respect.
 
-## I’ve failed over and over and over again in my life and that is why I succeed. – Michael Jordan
+## "I’ve failed over and over and over again in my life and that is why I succeed."
+## – Michael Jordan
 
 Reflecting on this experience, the irony is striking. Despite the code quality, the company succeeded based on client lists and market perception rather than the actual quality of its software. It’s a stark reminder of how sometimes, a company can thrive despite having a system that’s deeply flawed.
 
