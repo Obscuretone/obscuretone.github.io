@@ -64,11 +64,11 @@ export default function Post({ post, allPosts }) {
     const { title, description, image, imagealt, htmlContent } = post;
 
     useEffect(() => {
-        if (typeof window !== 'undefined') {
-            const hljs = require('highlight.js');
-            hljs.highlightAll();
+        if (typeof window !== 'undefined' && window.MathJax) {
+            // Ensure MathJax processes math expressions after the content is loaded
+            window.MathJax.Hub.Queue(["Typeset", window.MathJax.Hub]);
         }
-    }, []);
+    }, [htmlContent]);
 
     return (
         <>
@@ -82,6 +82,12 @@ export default function Post({ post, allPosts }) {
                 <meta property="og:type" content="article" />
                 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css" />
                 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+                {/* Include MathJax CDN */}
+                <script
+                    type="text/javascript"
+                    async
+                    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"
+                ></script>
             </Head>
 
             <article>
