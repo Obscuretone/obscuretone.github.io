@@ -7,6 +7,8 @@ import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
+import hljs from 'highlight.js';
+import 'highlight.js/styles/github.css'; // Choose a Highlight.js theme
 
 export async function getStaticPaths() {
     const postsDirectory = path.join(process.cwd(), 'posts');
@@ -54,9 +56,15 @@ export default function Post({ post, allPosts }) {
     const { title, description, htmlContent } = post;
 
     useEffect(() => {
+        // Reprocess MathJax content
         if (typeof window !== 'undefined' && window.MathJax) {
             window.MathJax.typesetPromise && window.MathJax.typesetPromise();
         }
+
+        // Highlight.js: Apply syntax highlighting to code blocks
+        document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightElement(block);
+        });
     }, [htmlContent]);
 
     return (
@@ -83,10 +91,20 @@ export default function Post({ post, allPosts }) {
                 strategy="afterInteractive"
             />
 
+            <header>
+                <h1>Evan d'Entremont</h1>
+                <h2>Musings on Tech</h2>
+            </header>
+
+
+            <hr />
+
             <article>
                 <h1>{title}</h1>
                 <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
             </article>
+
+            <hr />
 
             <footer>
                 <h2>Other Posts</h2>

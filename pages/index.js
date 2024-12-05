@@ -27,21 +27,27 @@ export async function getStaticProps() {
 
 export default function Home({ posts }) {
   return (
-    <div>
-      <h1>Evan d'Entremont</h1>
-      <h3>Musings on Tech</h3>
+    <>
+      <header>
+        <h1>Evan d'Entremont</h1>
+        <h2>Musings on Tech</h2>
+      </header>
+      <hr />
+      <footer>
+        <h2>Blog Posts</h2>
+        <ul>
+          {posts.map((post) => (
+            <li key={post.slug}>
+              <Link href={`/posts/${post.slug}`}>
+                {post.title} {/* You can directly use this without <a> */}
+              </Link>
+            </li>
+          ))}
+        </ul>
 
-      <br />
-      <h2>Blog Posts</h2>
-      <ul>
-        {posts.map((post) => (
-          <li key={post.slug}>
-            <Link href={`/posts/${post.slug}`}>
-              {post.title} {/* You can directly use this without <a> */}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+
+      </footer>
+
+    </>
   );
 }

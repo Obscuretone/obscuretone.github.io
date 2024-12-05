@@ -3,7 +3,7 @@ title: Factoring Large Semiprimes.
 description: A novel approach to factoring large semiprimes.
 ---
 
-# A New Approach to Factoring Large Semi-Primes: Is It Possible?
+## A New Approach to Factoring Large Semi-Primes: Is It Possible?
 
 Years ago, an acquaintance challenged me with a problem, over beers, that I didn’t know to be impossible. I developed a legitimate method for factoring large semi-primes more efficiently—a method that depends on the difference between primes, not on the size of the semi-prime.
 
