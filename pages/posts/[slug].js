@@ -1,15 +1,13 @@
 import { useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import Script from 'next/script';
+import fs from 'fs';
+import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
 
-// Server-side: Read markdown files
-import fs from 'fs';
-import path from 'path';
-
-// Fetch all posts for generating paths
 export async function getStaticPaths() {
     const postsDirectory = path.join(process.cwd(), 'posts');
     const filenames = fs.readdirSync(postsDirectory);
@@ -20,25 +18,20 @@ export async function getStaticPaths() {
 
     return {
         paths,
-        fallback: false, // 404 if page is not found
+        fallback: false,
     };
 }
 
-// Fetch a single post's data
 export async function getStaticProps({ params }) {
     const { slug } = params;
-
-    // Read the markdown file for the requested post
     const postsDirectory = path.join(process.cwd(), 'posts');
     const filePath = path.join(postsDirectory, `${slug}.md`);
     const fileContent = fs.readFileSync(filePath, 'utf8');
     const { data, content } = matter(fileContent);
 
-    // Convert markdown to HTML
     const processedContent = await remark().use(html).process(content);
     const htmlContent = processedContent.toString();
 
-    // Get all posts for the footer
     const filenames = fs.readdirSync(postsDirectory);
     const allPosts = filenames.map((filename) => ({
         slug: filename.replace(/\.md$/, ''),
@@ -50,8 +43,6 @@ export async function getStaticProps({ params }) {
             post: {
                 title: data.title || 'Untitled',
                 description: data.description || '',
-                image: data.image || null,
-                imagealt: data.imagealt || '',
                 htmlContent,
             },
             allPosts,
@@ -59,14 +50,12 @@ export async function getStaticProps({ params }) {
     };
 }
 
-// React Component: Render the post
 export default function Post({ post, allPosts }) {
-    const { title, description, image, imagealt, htmlContent } = post;
+    const { title, description, htmlContent } = post;
 
     useEffect(() => {
         if (typeof window !== 'undefined' && window.MathJax) {
-            // Ensure MathJax processes math expressions after the content is loaded
-            window.MathJax.Hub.Queue(["Typeset", window.MathJax.Hub]);
+            window.MathJax.typesetPromise && window.MathJax.typesetPromise();
         }
     }, [htmlContent]);
 
@@ -75,22 +64,24 @@ export default function Post({ post, allPosts }) {
             <Head>
                 <title>{title}</title>
                 <meta name="description" content={description} />
-                <meta property="og:title" content={title} />
-                <meta property="og:description" content={description} />
-                {image && <meta property="og:image" content={image} />}
-                {imagealt && <meta property="og:image:alt" content={imagealt} />}
-                <meta property="og:type" content="article" />
-                <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css" />
-                <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-                {/* Include MathJax CDN */}
-                <script
-                    type="text/javascript"
-                    async
-                    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"
-                ></script>
             </Head>
-            <h1>Evan d'Entremont</h1>
-            <h3>Musings on Tech</h3>
+
+            {/* MathJax Configuration */}
+            <Script id="mathjax-config" strategy="afterInteractive">
+                {`
+                    MathJax = {
+                        tex: {
+                            inlineMath: [['$', '$'], ['\$begin:math:text$', '\\$end:math:text$']],
+                            displayMath: [['$$', '$$'], ['\$begin:math:display$', '\\$end:math:display$']],
+                        },
+                        svg: { fontCache: 'global' },
+                    };
+                `}
+            </Script>
+            <Script
+                src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"
+                strategy="afterInteractive"
+            />
 
             <article>
                 <h1>{title}</h1>

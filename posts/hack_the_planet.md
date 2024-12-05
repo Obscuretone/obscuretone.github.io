@@ -172,27 +172,9 @@ $$
 O(\sqrt{pq} - 2^{k/2 - 100} )
 $$
 
-Which is still technically $O(1)$
+Which is still technically $$O(1)$$
 
 This represents a significant improvement over brute-force methods, which have exponential complexity in terms of the number of digits, though it still scales with the size of the semi-prime.
-
-$$
-\begin{array}{|c|c|c|}
-\hline
-\textbf{Key Size (bits)} & \textbf{Max Checks} \, O(\sqrt{pq}) & \textbf{Brute Force Checks} \, O(pq) \\
-\hline
-8   & 16                             & 256                               \\
-16  & 256                            & 65,536                            \\
-32  & 65,536                         & 4,294,967,296                     \\
-64  & 4,294,967,296                  & 18,446,744,073,709,551,616         \\
-128 & 1.84 \times 10^{19}            & 3.4 \times 10^{38}                \\
-256 & 3.4 \times 10^{38}             & 1.16 \times 10^{77}               \\
-512 & 1.16 \times 10^{77}            & 1.34 \times 10^{154}              \\
-1024& 1.34 \times 10^{154}           & 1.80 \times 10^{308}              \\
-\hline
-\end{array}
-$$
-
 
 ## Impact on Cryptography
 
