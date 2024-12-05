@@ -28,7 +28,11 @@ export async function getStaticProps() {
 export default function Home({ posts }) {
   return (
     <div>
-      <h1>Blog Posts</h1>
+      <h1>Evan d'Entremont</h1>
+      <h3>Musings on Tech</h3>
+
+      <br />
+      <h2>Blog Posts</h2>
       <ul>
         {posts.map((post) => (
           <li key={post.slug}>

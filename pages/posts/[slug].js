@@ -89,6 +89,8 @@ export default function Post({ post, allPosts }) {
                     src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"
                 ></script>
             </Head>
+            <h1>Evan d'Entremont</h1>
+            <h3>Musings on Tech</h3>
 
             <article>
                 <h1>{title}</h1>
