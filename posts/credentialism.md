@@ -9,7 +9,7 @@ As someone who has spent 15 years in the tech industry, I’ve seen firsthand ho
 
 However, in 2024's tech market, where hundreds of thousands are facing layoffs and resumes are often filtered by AI, not having a degree has suddenly become a liability. Despite my extensive experience, I’ve noticed that the absence of a formal credential can lead to overlooked opportunities.
 
-# Experience Speaks Volumes
+## Experience Speaks Volumes
 
 Throughout my career, I’ve driven policy and architecture for one of the largest websites on the internet, designed electronics, and written microcontroller firmware. These experiences have shaped my understanding of the industry and honed my problem-solving skills. In employee markets, where talent is in high demand, I’ve found that employers are often more interested in what I can do than in whether I have a degree.
 
@@ -29,6 +29,6 @@ However, the reality shifts when considering the employer market. In many fields
 
 3. **Networking and Opportunities**: Graduating from university can provide access to valuable networks and job opportunities that may not be as readily available to those without a degree.
 
-# Conclusion
+## Conclusion
 
 While a degree can open doors in some employer markets, my experience shows that practical skills and a proven track record hold significant weight, especially in tech. I’ve learned that innovation, adaptability, and real-world experience can lead to remarkable career success, even without formal educational credentials. However, as the job market continues to evolve—marked by layoffs and the prevalence of AI resume filtering—emphasizing experience over a degree may not just be an advantage, but a necessity.

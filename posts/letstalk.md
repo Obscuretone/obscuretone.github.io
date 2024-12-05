@@ -12,7 +12,7 @@ What happens when the same recycled wisdom gets applied to both a job seeker str
 ![Despair.](/images/hollow_echo.webp "Despair")
 
 
-# The Striking Similarity in Language
+## The Striking Similarity in Language
 
 On the surface, it seems harmless. Positive affirmations and words of encouragement are supposed to lift you up, whether you're battling depression or just struggling to land your next job. But for the person hearing these words, they can feel anything but comforting. They may come across as dismissive or reductive—offering blanket solutions to deeply personal and complex problems.
 
@@ -20,7 +20,7 @@ For job seekers, hearing "things will get better" when rent is overdue and rejec
 
 These words don’t just feel hollow—they start to feel invalidating, as if the depth of the problem isn’t being taken seriously.
 
-# The Invisibility of Despair
+## The Invisibility of Despair
 
 Despair, whether it comes from unemployment or suicidal ideation, is an isolating experience. It's invisible. From the outside, both a job seeker and a suicidal person might seem fine—or at least not *that* bad. They might even put on a brave face. This invisibility can lead to people offering generic solutions, because they don’t see—or maybe don’t want to see—the depth of the pain the other person is feeling.
 
@@ -28,7 +28,7 @@ But when someone’s entire existence is unraveling, either because they can’t
 
 Both groups are often left to wonder: does anyone truly understand how bad this is?
 
-# Why It Feels Hollow
+## Why It Feels Hollow
 
 One reason these words feel hollow is that they offer no tangible help. Telling someone to “stay strong” doesn’t alleviate the crushing sense of hopelessness. Telling a job seeker “something will come along” doesn’t pay the bills or stop the anxiety gnawing at them.
 
@@ -36,7 +36,7 @@ When someone is drowning in despair, what they need isn’t platitudes—they ne
 
 There’s a lack of legitimacy given to the emotional turmoil both job seekers and those contemplating suicide experience. It's not enough to hope things will get better; they need help navigating the in-between—the long, dark, uncertain stretch that makes it hard to believe in anything at all.
 
-# Validating the Despair
+## Validating the Despair
 
 Both suicidal people and long-term job seekers are often dealing with very real, very legitimate pain. For someone struggling to find a job, the sense of failure can become overwhelming. They start to question their worth, their place in the world, their identity. For someone struggling with suicidal thoughts, those same questions might be compounded by mental illness or trauma, making it feel like the only way out is an end.
 
@@ -44,7 +44,7 @@ In both cases, despair is valid. It's not something to be waved away with feel-g
 
 For the job seeker, unemployment isn’t just about the lack of income—it’s the loss of identity, the constant rejection, the societal pressure to be "productive." For the suicidal person, it’s the emotional agony that makes existing feel unbearable. These aren’t small, passing inconveniences—they’re profound emotional and psychological battles.
 
-# What People Really Need
+## What People Really Need
 
 What both groups need, more than anything, is for someone to see their pain—not try to fix it with empty words, but acknowledge it. They need space to express their frustrations, their fears, and their despair without judgment or rushed reassurances that everything will turn out fine.
 
@@ -52,7 +52,7 @@ They need practical support—whether it’s financial help, job leads, or profe
 
 Because when someone is in deep despair—whether from endless job rejections or thoughts of ending their life—their pain is real, and it deserves to be treated as such.
 
-# Moving Beyond Platitudes
+## Moving Beyond Platitudes
 
 So, what do you say to someone in despair that doesn’t feel hollow?
 

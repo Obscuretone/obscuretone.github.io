@@ -5,7 +5,7 @@ imagealt: Neo sees a resume review through the lens of the Matrix
 description: This article discusses using ChatGPT to help tailor resumes, simply by asking "why shouldn't we hire this person"
 ---
 
-# Do you hear that, Mr. Anderson? That is the sound of inevitability.
+## Do you hear that, Mr. Anderson? That is the sound of inevitability.
 
 The job market is getting tougher, and employers are using artificial intelligence (AI) to speed up hiring. AI algorithms help them quickly check resumes by looking at education, work experience, and skills to see if they match the job requirements. These tools make the initial screening process faster by highlighting candidates who fit the job criteria well. However, AI is just one part of the hiring process. Job seekers need to understand how these systems work to better navigate today's job market.
 
@@ -62,7 +62,7 @@ In today’s job market, using AI tools to improve your resume is crucial. I use
 
 >**Here is information about my company:** *Here, I paste in their homepage, their about page, and their careers page.*
 >
-> **I am hiring for this position: ** *Here, I paste in the job description.*
+>**I am hiring for this position:** *Here, I paste in the job description.*
 >
 > **Why should we decline to hire this resume?**
 

@@ -13,7 +13,7 @@ Eric Schmidt, former CEO of Google, recently told Stanford students steal everyt
 
 Let’s explore how some of the most iconic startups owe much of their success to luck, parents' money, and bending the rules—or outright cheating.
 
-# Uber: A Better Product Built on Ignoring the Law
+## Uber: A Better Product Built on Ignoring the Law
 Uber revolutionized transportation and made getting a ride as easy as a tap on your phone. But its rise wasn’t just about innovation—it was about blatantly ignoring taxi laws for years.
 
 Breaking the rules: Uber launched its service without complying with the regulations that traditional taxi companies had to follow—driver licensing, insurance requirements, and background checks. They expanded rapidly by operating in this legal gray zone, forcing cities to deal with them after they’d already established a massive user base.
@@ -22,7 +22,7 @@ Why it worked: By the time regulators realized what was happening, Uber had gain
 
 There’s no denying Uber provides a better, cheaper, and more convenient service than traditional taxis in many ways. But it’s also true that the company’s meteoric rise was built on breaking the law for years.
 
-# Mark Zuckerberg: Facebook’s Roots in a Hack
+## Mark Zuckerberg: Facebook’s Roots in a Hack
 Facebook has transformed the way we communicate and connect, but its origin story isn’t the pure stroke of genius it’s often portrayed as. In reality, Facebook’s roots trace back to Mark Zuckerberg hacking into Harvard’s student database to create a site called “FaceMash,” where users could rate their classmates' looks. This act of hacking wasn’t just unethical; it violated university policies and led to disciplinary action.
 
 Breaking rules, again: Even after Facebook launched, Zuckerberg’s approach to user privacy was cavalier at best, with the company continuously facing scandals over how it handled personal data. The Cambridge Analytica scandal, where millions of users' data was harvested without consent, is just one example of Facebook’s long-standing practice of exploiting user data for growth.
@@ -31,7 +31,7 @@ Why it worked: Facebook grew so fast by pushing boundaries and ignoring privacy 
 
 So while Facebook is undeniably innovative, its rise is also a story of rule-breaking and a disregard for privacy from the start.
 
-# Amazon: Built on a Quarter-Million-Dollar Loan from Mom and Dad
+## Amazon: Built on a Quarter-Million-Dollar Loan from Mom and Dad
 Jeff Bezos is often portrayed as the ultimate startup success story—launching Amazon from his garage and growing it into the world’s largest retailer. But there’s one crucial detail that’s often glossed over: Bezos’ parents gave him a $250,000 loan to help get Amazon off the ground.
 
 Financial privilege: A quarter-million dollars is no small sum, and for most aspiring entrepreneurs, it’s an amount they can only dream of. That kind of money provides a massive safety net, allowing Bezos to take risks and focus on long-term growth without the immediate pressure of turning a profit.
@@ -40,7 +40,7 @@ Why it worked: With family financial backing, Bezos could afford to prioritize g
 
 The narrative of Amazon’s scrappy beginnings in a garage conveniently leaves out the fact that Bezos had a quarter-million-dollar cushion that gave him an enormous advantage.
 
-# Elon Musk: From an Emerald Mine to Tech Empire
+## Elon Musk: From an Emerald Mine to Tech Empire
 Elon Musk is hailed as a self-made billionaire who defied the odds to build companies like Tesla and SpaceX. But the story isn’t quite that simple. Musk’s father owned an emerald mine in apartheid-era South Africa, a period marked by systemic racial oppression and vast disparities in wealth.
 
 Privileged beginnings: While Musk is undeniably brilliant and hard-working, his early life wasn’t one of hardship. His father’s wealth provided him with a financial cushion that most people don’t have, allowing him to take big risks that others might not have been able to afford.

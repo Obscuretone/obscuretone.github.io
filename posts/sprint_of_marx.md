@@ -15,7 +15,7 @@ In this post, I’ll explain how Agile has been misused, why it often fails, and
 
 ![A potrayal of a stereotypically soviet-style workplace with modern tools and computers.](/images/sprint_of_marx.webp "The Sprint of Marx")
 
-# Manifesto vs. Reality
+## Manifesto vs. Reality
 
 [Communism sounds good in theory](https://www.marxists.org/archive/marx/works/1848/communist-manifesto/): a society where everyone gets what they need, and everyone works according to their ability. But it only works if you remove people from the equation. Human nature—self-interest, power struggles, and varying levels of motivation—ends up ruining the ideal. The same problem applies to Agile.
 
@@ -23,7 +23,7 @@ On paper, Agile is all about teamwork, flexibility, and adding value. But in pra
 
 In theory, Agile helps teams estimate effort and align priorities through discussion. In reality, many developers dislike rituals like Planning Poker because it forces them to guess and estimate in ways that don’t reflect the actual work. This leads to poor planning and unrealistic expectations.
 
-# That’s how you get ants
+## That’s how you get ants
 
 Bugs are a major headache in software development. They’re sneaky, chaotic, and can turn into big problems. Agile, with its fixed-length sprints and rigid rules, isn’t set up to handle this level of unpredictability. Trying to estimate bugs is like trying to plan for a disaster you don’t know about until it happens.
 
@@ -54,7 +54,7 @@ Other important practices—like providing quiet work conditions, using top-notc
 
 When these foundational practices are compromised, the result is a fragile codebase that resembles a house of cards. Each new feature added without fixing underlying issues increases the risk of collapse. Agile, when it focuses on speed over quality, can turn a solid product into a shaky structure vulnerable to even minor disturbances.
 
-# The Tyranny of Flexibility
+## The Tyranny of Flexibility
 
 The most dangerous aspect of Agile is how it’s often used as an excuse for poor planning. The “flexibility” that Agile promotes can become a way for stakeholders to change their minds at the last minute without considering the impact on the team or the product. This isn’t flexibility; it’s chaos. Real flexibility would mean adjusting timelines, resources, and expectations when priorities change, not just expecting teams to work faster and cut corners.
 
@@ -64,7 +64,7 @@ This incomplete approach creates a false sense of agility, where only the surfac
 
 The result is a cycle of constant re-prioritization and shifting deadlines without adjusting resources or scope. Teams are pushed to meet unrealistic expectations, leading to rushed work, technical debt, and a compromised product. Agile’s potential to improve responsiveness and project outcomes is lost when its practices are used in isolation, making flexibility a cover for poor planning.
 
-# Seize the means of Production Environments
+## Seize the means of Production Environments
 
 The irony of both communism and Agile is that their failure comes not from their ideals but from their implementation. Both systems struggle when human nature and complex realities disrupt their theoretical models. In software development, the goal is not to force rigid methods or overestimate but to step back and let developers focus on their strengths: solving problems and creating great software.
 

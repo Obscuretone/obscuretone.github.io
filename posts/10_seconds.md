@@ -19,15 +19,15 @@ The idea that recruiters can reliably select strong candidates in such a short t
 
 Let’s put this 7-10 second rule into perspective. If a recruiter receives **200 resumes** for a single position and spends an average of **10 seconds** on each, that amounts to:
 
-\[
+$$
 200 \text{ resumes} \times 10 \text{ seconds} = 2000 \text{ seconds}
-\]
+$$
 
 To convert that into hours:
 
-\[
+$$
 \text{Hours} = \frac{2000 \text{ seconds}}{3600 \text{ seconds/hour}} \approx 0.5556 \text{ hours}
-\]
+$$
 
 That’s roughly **33 minutes** of total resume review time—just for one role. If the recruiter has **15 open positions**, they’re looking at around **8 hours** of total time dedicated just to skimming resumes. In a typical workday, this could mean that recruiters spend nearly an entire day merely glancing at resumes, without truly engaging with the content.
 

@@ -9,7 +9,7 @@ It's a simple question, but it reveals a lot. Over the years, I’ve interviewed
 
 Some might say it's a trick question, but in reality, it's a litmus test. In my view, if you've never broken production—or at least made a serious mistake that impacted your team or users—you probably haven't been in the trenches long enough to call yourself a senior developer. After all, breaking production is practically a rite of passage in software development.
 
-# Why this question?
+## Why this question?
 
 First of all, I don’t believe anyone who claims they’ve never shipped a bug. Code is complex, humans are fallible, and systems are unpredictable. The best devs aren’t the ones who have a perfect track record—they’re the ones who’ve made mistakes and learned from them.
 
@@ -19,7 +19,7 @@ Breaking things shows:
 2. **You’ve been trusted**: Junior devs might not have enough responsibility yet to make production-impacting mistakes. The fact that you’ve been in a position to break things shows you’ve been trusted with meaningful work.
 3. **You’ve been through fire**: You’ve dealt with on-call panic, frantic bug fixes, and the pressure of rollback. These are all important experiences that shape a mature developer.
 
-# The best stories come from breaking things
+## The best stories come from breaking things
 
 Let’s be honest: the best war stories in software come from moments of complete panic. No one remembers a smooth release as vividly as they remember the one where the entire production environment went down and they had to scramble for a fix while hundreds (or thousands!) of users were affected.
 
@@ -29,7 +29,7 @@ One of my more notable bugs happened in a complicated financial calculation syst
 
 Most of the mistakes were minor—just a few cents. But in some of the worst cases, the errors totaled in the thousands. In the end, it cost the company a few thousand dollars. Sales had to step in and, on a case-by-case basis, decide whether to waive the charge or correct the bill. Good, reliable customers tended to get their charges waived. There’s a lesson there, too.
 
-# The real test: debugging weird production-only issues
+## The real test: debugging weird production-only issues
 
 While breaking production is one thing, the *real* badge of seniority comes when you find yourself facing bugs that only occur in production. You know the type—those weird, unpredictable issues that refuse to manifest in dev or staging, no matter how hard you try to replicate them.
 
@@ -37,7 +37,7 @@ This is where the magic happens. Fixing these kinds of issues requires a whole n
 
 These types of bugs separate the experienced from the rest.
 
-# Why these issues only show up in production
+## Why these issues only show up in production
 
 There are plenty of reasons why some bugs only appear in production:
 
@@ -48,7 +48,7 @@ There are plenty of reasons why some bugs only appear in production:
 
 That’s what makes these bugs so much more interesting. They force you to zoom out and see the system as a whole, understanding how each part interacts under real-world conditions.
 
-# The art of debugging in production
+## The art of debugging in production
 
 When you’re debugging something that only happens in production, you have to be methodical. It's not just about reading stack traces or logs—sometimes it’s about understanding the entire ecosystem your code operates in.
 
@@ -61,7 +61,7 @@ In these situations, a senior developer knows:
 
 Sometimes, these bugs make you question everything you thought you knew about the system. It requires a deep understanding of how your application, databases, network, and services all interact at scale.
 
-# What this teaches you
+## What this teaches you
 
 The ability to debug these weird, one-off production issues is a hallmark of a senior dev. It’s a skill that’s honed over time, as you gain a broader understanding of the system you’re working with and become better at seeing the interconnectedness of things.
 
@@ -72,7 +72,7 @@ The lessons learned from these debugging experiences:
 * **Patience and Persistence**: Debugging production issues requires methodical investigation and persistence. It’s easy to get lost in the weeds, but staying calm and following the data is key.
 * **Humility**: Debugging these elusive problems teaches humility. Sometimes it’s not your code, but an external service, or an environment quirk. But as the one responsible, you have to navigate through all that complexity to fix the issue.
 
-# Correlation doesn't imply causation—but it works
+## Correlation doesn't imply causation—but it works
 
 “Correlation doesn’t imply causation,” as the saying goes, but I can tell you this: **this question has never led to a bad hire**. Maybe I’m missing out on the developers who write truly bug-free code. One person even told me he tests so thoroughly that there *can’t* be bugs in his work.
 
@@ -82,7 +82,7 @@ The best developers know this and have learned to adapt to the chaos.
 
 ![This is fine.](/images/trial_by_fire.jpg "This is fine.")
 
-# Breaking and fixing production is a rite of passage
+## Breaking and fixing production is a rite of passage
 
 As I mentioned earlier, breaking production is a rite of passage for any senior developer. But digging into weird, production-only bugs? That’s when you really separate the pros from the rest. These issues force you to go beyond the code and think about the system as a whole.
 
