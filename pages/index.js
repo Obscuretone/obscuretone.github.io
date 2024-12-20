@@ -1,31 +1,20 @@
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
-import Link from 'next/link';
+import { getPostsByLanguage } from '../utils/posts'; // You should have a utility function that fetches posts
+import PostsList from '../components/PostsList';
 
 export async function getStaticProps() {
-  const postsDirectory = path.join(process.cwd(), 'posts');
-  const filenames = fs.readdirSync(postsDirectory);
-
-  const posts = filenames.map((filename) => {
-    const filePath = path.join(postsDirectory, filename);
-    const fileContents = fs.readFileSync(filePath, 'utf8');
-    const { data } = matter(fileContents);
-
-    return {
-      slug: filename.replace('.md', ''),
-      ...data,
-    };
-  });
+  // Fetch all English and French posts using the helper function
+  const englishPosts = getPostsByLanguage('en');
+  const frenchPosts = getPostsByLanguage('fr');
 
   return {
     props: {
-      posts,
+      englishPosts,
+      frenchPosts,
     },
   };
 }
 
-export default function Home({ posts }) {
+export default function Home({ englishPosts, frenchPosts }) {
   return (
     <>
       <header>
@@ -33,21 +22,11 @@ export default function Home({ posts }) {
         <h2>Musings on Tech</h2>
       </header>
       <hr />
+
       <footer>
-        <h2>Blog Posts</h2>
-        <ul>
-          {posts.map((post) => (
-            <li key={post.slug}>
-              <Link href={`/posts/${post.slug}`}>
-                {post.title} {/* You can directly use this without <a> */}
-              </Link>
-            </li>
-          ))}
-        </ul>
-
-
+        <PostsList title="English Posts" posts={englishPosts} />
+        <PostsList title="Articles en Français" posts={frenchPosts} />
       </footer>
-
     </>
   );
 }

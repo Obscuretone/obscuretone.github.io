@@ -4,7 +4,7 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 class MyDocument extends Document {
   render() {
     return (
-      <Html>
+      <Html lang={this.props.__NEXT_DATA__.props.pageProps.currentLang || 'en'}>
         <Head>
           {/* Fonts */}
           <link rel="preconnect" href="https://fonts.googleapis.com" />
