@@ -111,6 +111,18 @@ export default function Post({ post, postsEn, postsFr, currentLang }) {
         document.querySelectorAll('pre code').forEach((block) => {
             hljs.highlightElement(block);
         });
+
+        // Wait until MathJax is loaded and available
+        const checkMathJax = () => {
+            if (window.MathJax && typeof window.MathJax.typeset === 'function') {
+                window.MathJax.typeset();  // Trigger MathJax to reprocess the content
+            } else {
+                // Retry after a short delay if MathJax is not loaded yet
+                setTimeout(checkMathJax, 100);
+            }
+        };
+
+        checkMathJax();  // Check for MathJax and apply it when it's ready
     }, [htmlContent, currentLang]); // Re-run when content or language changes
 
     // Format the updatedAt date to show as "Month Day, Year" (e.g., December 14, 2024)
