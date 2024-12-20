@@ -7,25 +7,27 @@ import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
 import hljs from 'highlight.js';
-import 'highlight.js/styles/github.css'; // Highlight.js theme for syntax highlighting
+import 'highlight.js/styles/github.css';
 import Link from 'next/link';
-import PostsList from '../../../components/PostsList'; // Import PostsList component
-import { visit } from 'unist-util-visit'; // Import the package properly
+import PostsList from '../../../components/PostsList';
 
-// Custom Remark Plugin to modify header levels
-const customHeaderPlugin = () => {
-    return (tree) => {
-        visit(tree, 'heading', (node) => {
-            const depth = node.depth;
+// Utility function to extract metadata from posts
+function getPostsMetadata(postsDirectory, lang) {
+    const filenames = fs.readdirSync(postsDirectory);
 
-            // Map header levels to h2, h3, h4, or h5
-            if (depth === 1) node.tagName = 'h2';  // # to <h2>
-            else if (depth === 2) node.tagName = 'h3';  // ## to <h3>
-            else if (depth === 3) node.tagName = 'h4';  // ### to <h4>
-            else if (depth === 4) node.tagName = 'h5';  // #### to <h5>
+    return filenames
+        .filter((filename) => filename.endsWith('.md'))
+        .map((filename) => {
+            const filePath = path.join(postsDirectory, filename);
+            const fileContents = fs.readFileSync(filePath, 'utf8');
+            const { data } = matter(fileContents);
+
+            return {
+                slug: `${lang}/${filename.replace('.md', '')}`,
+                ...data,
+            };
         });
-    };
-};
+}
 
 export async function getStaticPaths() {
     const paths = [];
@@ -37,70 +39,36 @@ export async function getStaticPaths() {
 
         filenames.forEach((filename) => {
             paths.push({
-                params: { slug: filename.replace('.md', ''), lang }, // Include lang within params
+                params: { slug: filename.replace('.md', ''), lang },
             });
         });
     });
 
     return {
         paths,
-        fallback: false, // No fallback since all paths are pre-generated
+        fallback: false,
     };
 }
 
 export async function getStaticProps({ params }) {
     const { slug, lang } = params;
 
-    // Define directories for each language
     const postsDirectoryEn = path.join(process.cwd(), 'public/posts/en');
     const postsDirectoryFr = path.join(process.cwd(), 'public/posts/fr');
 
-    // Get all posts from both directories
-    const filenamesEn = fs.readdirSync(postsDirectoryEn);
-    const filenamesFr = fs.readdirSync(postsDirectoryFr);
+    const postsEn = getPostsMetadata(postsDirectoryEn, 'en');
+    const postsFr = getPostsMetadata(postsDirectoryFr, 'fr');
 
-    // Extract metadata for English posts
-    const postsEn = filenamesEn
-        .filter((filename) => filename.endsWith('.md'))
-        .map((filename) => {
-            const filePath = path.join(postsDirectoryEn, filename);
-            const fileContents = fs.readFileSync(filePath, 'utf8');
-            const { data } = matter(fileContents);
-
-            return {
-                slug: `en/${filename.replace('.md', '')}`,
-                ...data,
-            };
-        });
-
-    // Extract metadata for French posts
-    const postsFr = filenamesFr
-        .filter((filename) => filename.endsWith('.md'))
-        .map((filename) => {
-            const filePath = path.join(postsDirectoryFr, filename);
-            const fileContents = fs.readFileSync(filePath, 'utf8');
-            const { data } = matter(fileContents);
-
-            return {
-                slug: `fr/${filename.replace('.md', '')}`,
-                ...data,
-            };
-        });
-
-    // Load the current post (either English or French)
     const currentDirectory = lang === 'en' ? postsDirectoryEn : postsDirectoryFr;
     const filePath = path.join(currentDirectory, `${slug}.md`);
     const fileContent = fs.readFileSync(filePath, 'utf8');
     const { data, content } = matter(fileContent);
 
-    // Get the last modified date of the post file (updatedAt from file stats)
-    const stats = fs.statSync(filePath); // Get file stats
-    const updatedAt = stats.mtime;  // Get the last modified time of the file
+    const stats = fs.statSync(filePath);
+    const updatedAt = stats.mtime;
 
-    // Convert markdown to HTML with custom headers transformation
     const processedContent = await remark()
-        .use(customHeaderPlugin)  // Use the custom plugin to transform headers
-        .use(html)                // Convert the markdown content to HTML
+        .use(html)
         .process(content);
     const htmlContent = processedContent.toString();
 
@@ -110,11 +78,11 @@ export async function getStaticProps({ params }) {
                 title: data.title || 'Untitled',
                 description: data.description || '',
                 htmlContent,
-                updatedAt: updatedAt.toISOString(), // Store the modified date as ISO string
+                updatedAt: updatedAt.toISOString(),
             },
             postsEn,
             postsFr,
-            currentLang: lang, // Pass currentLang to the page
+            currentLang: lang,
         },
     };
 }
@@ -123,21 +91,18 @@ export default function Post({ post, postsEn, postsFr, currentLang }) {
     const { title, description, htmlContent, updatedAt } = post;
 
     useEffect(() => {
-        // Dynamically update the lang attribute based on currentLang
         document.documentElement.lang = currentLang;
 
-        // Apply syntax highlighting for code blocks
         document.querySelectorAll('pre code').forEach((block) => {
             hljs.highlightElement(block);
         });
-    }, [htmlContent, currentLang]); // Re-run when content or language changes
+    }, [htmlContent, currentLang]);
 
-    // Format the updatedAt date to show as "Month Day, Year" (e.g., December 14, 2024)
     const formattedDate = updatedAt
         ? new Date(updatedAt).toLocaleDateString(currentLang, {
             year: 'numeric',
             month: 'long',
-            day: 'numeric'
+            day: 'numeric',
         })
         : null;
 
@@ -148,7 +113,6 @@ export default function Post({ post, postsEn, postsFr, currentLang }) {
                 <meta name="description" content={description} />
             </Head>
 
-            {/* MathJax Configuration */}
             <Script id="mathjax-config" strategy="afterInteractive">
                 {`
                     MathJax = {
@@ -185,7 +149,6 @@ export default function Post({ post, postsEn, postsFr, currentLang }) {
             <hr />
 
             <footer>
-                {/* Conditional Rendering Based on Language */}
                 {currentLang === 'en' ? (
                     <>
                         <PostsList title="Other Posts" posts={postsEn} />
