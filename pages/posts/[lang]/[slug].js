@@ -32,7 +32,7 @@ export async function getStaticPaths() {
 
     // Generate paths for English and French posts
     ['en', 'fr'].forEach((lang) => {
-        const postsDirectory = path.join(process.cwd(), `posts/${lang}`);
+        const postsDirectory = path.join(process.cwd(), `public/posts/${lang}`);
         const filenames = fs.readdirSync(postsDirectory);
 
         filenames.forEach((filename) => {
@@ -52,8 +52,8 @@ export async function getStaticProps({ params }) {
     const { slug, lang } = params;
 
     // Define directories for each language
-    const postsDirectoryEn = path.join(process.cwd(), 'posts/en');
-    const postsDirectoryFr = path.join(process.cwd(), 'posts/fr');
+    const postsDirectoryEn = path.join(process.cwd(), 'public/posts/en');
+    const postsDirectoryFr = path.join(process.cwd(), 'public/posts/fr');
 
     // Get all posts from both directories
     const filenamesEn = fs.readdirSync(postsDirectoryEn);

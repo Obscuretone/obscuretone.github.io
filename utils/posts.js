@@ -4,7 +4,7 @@ import path from 'path';
 import matter from 'gray-matter';
 
 export function getPostsByLanguage(language) {
-    const postsDirectory = path.join(process.cwd(), `posts/${language}`);
+    const postsDirectory = path.join(process.cwd(), `public/posts/${language}`);
     const filenames = fs.readdirSync(postsDirectory);
 
     return filenames
