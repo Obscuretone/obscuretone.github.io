@@ -10,6 +10,22 @@ import hljs from 'highlight.js';
 import 'highlight.js/styles/github.css'; // Highlight.js theme for syntax highlighting
 import Link from 'next/link';
 import PostsList from '../../../components/PostsList'; // Import PostsList component
+import { visit } from 'unist-util-visit'; // Import the package properly
+
+// Custom Remark Plugin to modify header levels
+const customHeaderPlugin = () => {
+    return (tree) => {
+        visit(tree, 'heading', (node) => {
+            const depth = node.depth;
+
+            // Map header levels to h2, h3, h4, or h5
+            if (depth === 1) node.tagName = 'h2';  // # to <h2>
+            else if (depth === 2) node.tagName = 'h3';  // ## to <h3>
+            else if (depth === 3) node.tagName = 'h4';  // ### to <h4>
+            else if (depth === 4) node.tagName = 'h5';  // #### to <h5>
+        });
+    };
+};
 
 export async function getStaticPaths() {
     const paths = [];
@@ -81,8 +97,11 @@ export async function getStaticProps({ params }) {
     const stats = fs.statSync(filePath); // Get file stats
     const updatedAt = stats.mtime;  // Get the last modified time of the file
 
-    // Convert markdown to HTML
-    const processedContent = await remark().use(html).process(content);
+    // Convert markdown to HTML with custom headers transformation
+    const processedContent = await remark()
+        .use(customHeaderPlugin)  // Use the custom plugin to transform headers
+        .use(html)                // Convert the markdown content to HTML
+        .process(content);
     const htmlContent = processedContent.toString();
 
     return {

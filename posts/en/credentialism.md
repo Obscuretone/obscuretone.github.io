@@ -19,7 +19,7 @@ Throughout my career, I’ve driven policy and architecture for one of the large
 
 3. **Real-World Problem Solving**: My background in designing electronics and firmware positions me as a practical problem solver. This hands-on knowledge often proves more beneficial than theoretical learning, especially in an industry driven by innovation.
 
-# The Employer Market Perspective
+## The Employer Market Perspective
 
 However, the reality shifts when considering the employer market. In many fields, especially those with a high demand for specialized skills, employers may still favor candidates with degrees. This inclination stems from several factors:
 

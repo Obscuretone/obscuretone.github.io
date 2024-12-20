@@ -29,29 +29,6 @@ Bugs are a major headache in software development. They’re sneaky, chaotic, an
 
 This unpredictability is why bugs should be dealt with before new features are added. If bugs aren’t fixed right away, they pile up and make the system fragile and hard to maintain. Agile’s focus on adding new features can turn the codebase into a house of cards—fragile and complex, where even small issues can cause everything to collapse. This builds up technical debt and slows down future development while increasing the risk of serious failures.
 
-[Joel Spolsky lists 12 key practices](https://www.joelonsoftware.com/2000/08/09/the-joel-test-12-steps-to-better-code/) that separate strong teams from those at risk of creating such a fragile system:
-
-
->1. Do you use source control?
->2. Can you make a build in one step?  
->3. Do you make daily builds?  
->4. Do you have a bug database?  
->5. Do you fix bugs before writing new code?  
->6. Do you have an up-to-date schedule?  
->7. Do you have a spec?  
->8. Do programmers have quiet working conditions?  
->9. Do you use the best tools money can buy?  
->10. Do you have testers?  
->11. Do new candidates write code during their interview?  
->12. Do you do hallway usability testing?
-
-
-These practices are still [widely considered essential for software quality and stability](https://dev.to/checkgit/the-joel-test-20-years-later-1kjk). While some practices, like using source control and making daily builds, are within a team’s control, others are influenced by external factors. Agile, when misapplied, often makes these challenges worse.
-
-For example, maintaining an up-to-date schedule, having a clear spec, managing a bug database, and prioritizing bug fixes can all be affected by Agile. The constant push to deliver new features can lead to chaotic schedules, unclear specs, and a backlog of unresolved bugs. Agile can undermine these essential practices, pushing teams to sacrifice long-term quality for short-term gains.
-
-Other important practices—like providing quiet work conditions, using top-notch tools, and doing usability testing—are often out of the team’s control. These factors are crucial for long-term success but are often overlooked in Agile environments where short-term delivery is prioritized.
-
 When these foundational practices are compromised, the result is a fragile codebase that resembles a house of cards. Each new feature added without fixing underlying issues increases the risk of collapse. Agile, when it focuses on speed over quality, can turn a solid product into a shaky structure vulnerable to even minor disturbances.
 
 ## The Tyranny of Flexibility
