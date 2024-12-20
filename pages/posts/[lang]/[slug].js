@@ -155,7 +155,6 @@ export default function Post({ post, postsEn, postsFr, currentLang }) {
 
             <article>
                 <h1>{title}</h1>
-                <p>{description}</p>
                 {formattedDate && <p><strong>Last updated:</strong> {formattedDate}</p>} {/* Display the updated date */}
                 <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
             </article>
