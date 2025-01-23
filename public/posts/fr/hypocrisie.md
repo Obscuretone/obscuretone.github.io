@@ -6,9 +6,9 @@ Le Village Inclusif de Montréal est un quartier animé, surtout en été quand 
 
 Je vis dans le Village et je marche dans le quartier tous les jours. Je trouve étrange que les policiers eux-mêmes utilisent des vélos dans des endroits où les bicyclettes sont interdites. Ils disent que c'est une « exception » pour eux, mais si la rue est dangereuse pour les gens, elle devrait l’être aussi pour eux. J’ai demandé à la Ville de Montréal pourquoi il y a cette exception:
 
-<blockquote>Il ne s'agit pas d'une politique mais bien d'une nécessité pour les services du SPVM et du Service d'incendie de Montréal.
-
-Ceci dit, nous prenons bonne note de votre commentaire et elle a été envoyée aux équipes responsables de la piétonnisation de cette portion de Sainte-Catherine pour l'année prochaine.</blockquote>
+> Il ne s'agit pas d'une politique mais bien d'une nécessité pour les services du SPVM et du Service d'incendie de Montréal.
+>
+> Ceci dit, nous prenons bonne note de votre commentaire et elle a été envoyée aux équipes responsables de la piétonnisation de cette portion de Sainte-Catherine pour l'année prochaine.
 
 Cette situation est encore plus problématique parce que la police semble intervenir moins souvent pour les comportements violents et la consommation de drogues dans le quartier. Les problèmes liés aux drogues sont visibles et préoccupants, et il y aurait besoin de plus d’action à ce sujet. C’est paradoxal de voir que les bicyclettes sont très surveillées alors que d’autres problèmes importants reçoivent moins d’attention.
 

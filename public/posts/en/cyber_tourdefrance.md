@@ -23,7 +23,7 @@ AI can assist with straightforward programming tasks, such as debugging common i
 
 ## 3. Enhancing Documentation
 
-Keeping documentation up-to-date and comprehensive is essential but often neglected. AI tools can automatically generate and update documentation from code, ensuring that it remains accurate and useful. This aspect of AI is analogous to advanced training tools in sports, which help athletes maintain peak performance by automating certain aspects of their regimen. By reducing the time developers spend on documentation, AI allows them to concentrate on development and problem-solving.
+Keeping documentation up-to-date and comprehensive is essential but often neglected. AI tools can automatically generate and update documentation from code, ensuring that it remains accurate and useful. By reducing the time developers spend on documentation, AI allows them to concentrate on development and problem-solving.
 
 ## Expertise: The Key to AI’s Effectiveness
 
