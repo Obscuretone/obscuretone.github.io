@@ -217,7 +217,7 @@ In one case, for a company specializing in LLM chatbots, my cover letter literal
 
 >Overall, Evan’s blend of leadership experience, technical expertise, and focus on innovation makes him a compelling candidate for the Engineering Manager role at Ada. His background aligns well with the responsibilities and goals outlined in the job description, positioning him to effectively contribute to Ada’s continued success and growth.
 
-This approach not only showcased my creativity but also leveraged technology to present a persuasive case for my candidacy.
+This approach not only showcased my creativity but also leveraged technology to present a persuasive case for my candidacy. (I didn't get the job)
 
 ## Welcome to the real world.
 
