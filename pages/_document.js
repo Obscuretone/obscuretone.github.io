@@ -6,17 +6,7 @@ class MyDocument extends Document {
     return (
       <Html lang={this.props.__NEXT_DATA__.props.pageProps.currentLang || 'en'}>
         <Head>
-          {/* Fonts */}
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-          <link
-            href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&family=Inconsolata:wght@200..900&family=Overlock:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-            rel="stylesheet"
-          />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap"
-            rel="stylesheet"
-          />
+
 
           {/* Syntax Highlighting Styles */}
           <link

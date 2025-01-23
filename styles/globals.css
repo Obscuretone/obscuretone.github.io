@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Share+Tech&family=Share+Tech+Mono&display=swap');
+
 html {
   background-image: url('/images/background.jpg');
   background-size: cover;
   background-attachment: fixed;
+  background-position: center;
 }
 
 body {
@@ -9,11 +12,12 @@ body {
   max-width: 800px;
   line-height: 1.6;
   font-size: 18px;
-  color: #333;
+  color: #fff;
   padding: 20px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  background-color: #fff;
-  font-family: "Overlock", sans-serif;
+  background-color: rgba(0, 0, 0, 0.9);
+
+  font-family: "Share Tech", serif;
 }
 
 article h1 {
@@ -24,14 +28,22 @@ h1,
 h2,
 h3,
 h4 {
-  color: #222;
+  color: #fff;
   line-height: 1.2;
-  font-family: "Special Elite", serif;
+  font-family: "Audiowide", serif;
   font-weight: normal;
 }
 
+a {
+  color: aqua
+}
+
+a:visited {
+  color: pink;
+}
+
 strong {
-  font-family: "Special Elite", serif;
+  font-family: "Audiowide", serif;
   font-weight: 900;
 }
 
@@ -48,7 +60,7 @@ blockquote {
   margin-left: 60px;
   margin-right: 60px;
   text-align: justify;
-  font-family: "Inconsolata", fixed;
+  font-family: "Share Tech Mono", serif;
   line-height: 16px;
   border-left: 2px solid #777;
   padding-left: 12px;
@@ -61,7 +73,7 @@ blockquote li {
 }
 
 article>span {
-  font-family: "Special Elite", serif;
+  font-family: "Audiowide", serif;
 }
 
 img {
@@ -69,7 +81,7 @@ img {
 }
 
 code {
-  font-family: "Inconsolata", monospace;
+  font-family: "Share Tech Mono", serif;
 }
 
 pre code {
