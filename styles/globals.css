@@ -56,11 +56,11 @@ blockquote {
 
   border-left: 1px black;
   display: block;
-  font-size: 1em;
+  font-size: 0.8em;
   margin-left: 60px;
   margin-right: 60px;
   font-family: "Share Tech Mono", serif;
-  line-height: 16px;
+  line-height: 1em;
   border-left: 2px solid #777;
   padding-left: 12px;
 
