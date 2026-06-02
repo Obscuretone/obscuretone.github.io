@@ -1,9 +1,8 @@
 import Head from 'next/head';
-import { getPostsByLanguage } from '../utils/posts'; // You should have a utility function that fetches posts
+import { getPostsByLanguage } from '../utils/posts';
 import PostsList from '../components/PostsList';
 
 export async function getStaticProps() {
-  // Fetch all English and French posts using the helper function
   const englishPosts = getPostsByLanguage('en');
   const frenchPosts = getPostsByLanguage('fr');
 
@@ -18,14 +17,13 @@ export async function getStaticProps() {
 export default function Home({ englishPosts, frenchPosts }) {
   return (
     <>
-
       <Head>
-        <title>Evan d'Entremont</title>
+        <title>Evan d&apos;Entremont</title>
         <meta name="description" content="Musings on Tech" />
       </Head>
 
       <header>
-        <h1>Evan d'Entremont</h1>
+        <h1>Evan d&apos;Entremont</h1>
         <h2>Musings on Tech</h2>
       </header>
       <hr />

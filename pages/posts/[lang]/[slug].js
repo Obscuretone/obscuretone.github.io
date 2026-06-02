@@ -8,7 +8,6 @@ import { remark } from 'remark';
 import html from 'remark-html';
 import hljs from 'highlight.js';
 import 'highlight.js/styles/github.css';
-import Link from 'next/link';
 import PostsList from '../../../components/PostsList';
 
 // Utility function to extract metadata from posts
@@ -130,7 +129,7 @@ export default function Post({ post, postsEn, postsFr, currentLang }) {
             />
 
             <header>
-                <h1>Evan d'Entremont</h1>
+                <h1>Evan d&apos;Entremont</h1>
                 <h2>Musings on Tech</h2>
             </header>
 
