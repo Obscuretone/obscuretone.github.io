@@ -1,11 +1,19 @@
 ---
 title: Factoring Large Semiprimes.
-description: A novel approach to factoring large semiprimes.
+description: A rediscovered Fermat factorization approach to factoring large semiprimes.
 ---
 
-## A New Approach to Factoring Large Semi-Primes: Is It Possible?
+## Update: I Rediscovered Fermat Factorization
 
-Years ago, an acquaintance challenged me with a problem, over beers, that I didn’t know to be impossible. I developed a legitimate method for factoring large semi-primes more efficiently—a method that depends on the difference between primes, not on the size of the semi-prime.
+Front and center: this is not a novel factoring breakthrough. It is Fermat factorization, independently rediscovered from first principles.
+
+The insight is still real: an odd semiprime can be written as a difference of squares, and the search cost depends heavily on the distance between the two factors. But this method already existed. I came to the same conclusion the long way around, then later recognized it as the classic Fermat approach.
+
+I also built a small parallel Go implementation while checking the idea: [Obscuretone/factorer](https://github.com/Obscuretone/factorer). It scales the search across CPU cores, but the same caveat applies: it is fast when the factors are close together and not a general RSA-breaking algorithm.
+
+## A Rediscovered Approach to Factoring Large Semi-Primes
+
+Years ago, an acquaintance challenged me with a problem, over beers, that I didn’t know to be impossible. I worked out a legitimate method for factoring some large semi-primes more efficiently—a method that depends heavily on the difference between primes, not only on the size of the semi-prime. I later learned that this was Fermat factorization.
 
 ## Understanding Semi-Primes
 
@@ -22,7 +30,7 @@ The first step to improving efficiency is reducing the search space. Key observa
 * $p$ and $q$ are odd primes.
 * $p$ will always be greater than $\sqrt{pq}$, while $q$ will be smaller.
 
-Even with these constraints, the search space remains large. However, I discovered a method to make it more manageable by refactoring the problem.
+Even with these constraints, the search space remains large. However, I rediscovered a method to make it more manageable by refactoring the problem.
 
 ## A Mathematical Approach
 
@@ -102,9 +110,9 @@ Here, $7 \times 11 = 77$, confirming the factors.
 
 ## Enhancing Efficiency
 
-The method effectively narrows down the search to the range of possible differences between the primes, which is significantly smaller than brute-forcing all numbers. This approach can factor a 50-digit semi-prime in milliseconds on modest hardware.
+The method effectively narrows down the search to the range of possible differences between the primes, which can be significantly smaller than brute-forcing all numbers when the factors are close together. In those near-square cases, even large-looking semi-primes can fall quickly on modest hardware.
 
-The algorithm is non-deterministic, meaning that the specific values of $x$ and $n$ that lead to a correct factorization can vary, and it relies on iterative searching. Additionally, the method is inherently parallelizable: each range of potential values for $x$ can be tested simultaneously by different processes or machines, speeding up the overall search.
+The search is also inherently parallelizable: each range of potential values for $x$ can be tested simultaneously by different processes or machines, speeding up the overall search.
 
 By reversing the process—fixing $x = \lceil \sqrt{pq} \rceil$ and solving for $n$—we can improve speed further:
 
@@ -172,13 +180,13 @@ $$
 O(\sqrt{pq} - 2^{k/2 - 100} )
 $$
 
-Which is still technically $$O(1)$$
+This does not make the method $$O(1)$$. It only skips a known region of the search space.
 
-This represents a significant improvement over brute-force methods, which have exponential complexity in terms of the number of digits, though it still scales with the size of the semi-prime.
+This can be a significant improvement over naive brute force in the right cases, though it still scales with the distance between the factors and does not defeat well-generated RSA keys.
 
 ## Impact on Cryptography
 
-That acquaintance, whom I know to be involved in the Tor ecosystem, later told me that this approach directly influenced the transition to version 3 (v3) onion addresses.
+That acquaintance, whom I know to be involved in the Tor ecosystem, later told me that this approach influenced the transition to version 3 (v3) onion addresses. I now treat that as an anecdote rather than a claim I can independently verify.
 
 Tor's v3 addresses moved from RSA to elliptic-curve cryptography (ECC) for several reasons:
 
@@ -190,6 +198,6 @@ This is just one example of how cryptographic research and improvements in facto
 
 ## Conclusion
 
-The method I’ve described offers a way to efficiently factor large semi-primes by exploiting the difference between primes. Though not a panacea, it is an important step in understanding the weaknesses of current cryptographic systems and lays the groundwork for future research into improving security.
+The method I’ve described is Fermat factorization: a way to factor semi-primes efficiently when their factors are close together by exploiting the difference between primes. Though not a panacea, rediscovering it was an important step in my own understanding of why the shape of prime selection matters.
 
 This method shows that there is still room for improvement in factoring algorithms, but also reinforces why RSA, despite its vulnerabilities, continues to be widely used for many applications. 
