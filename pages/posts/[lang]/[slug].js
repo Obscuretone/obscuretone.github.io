@@ -1,6 +1,5 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import Head from 'next/head';
-import Script from 'next/script';
 import fs from 'fs';
 import path from 'path';
 import { execFileSync } from 'child_process';
@@ -11,6 +10,53 @@ import html from 'remark-html';
 import hljs from 'highlight.js';
 import 'highlight.js/styles/github.css';
 import PostsList from '../../../components/PostsList';
+
+const MATHJAX_SCRIPT_ID = 'mathjax-script';
+
+function ensureMathJax() {
+    if (typeof window === 'undefined') {
+        return Promise.resolve(null);
+    }
+
+    if (window.MathJax?.typesetPromise) {
+        return Promise.resolve(window.MathJax);
+    }
+
+    if (window.__mathJaxLoadingPromise) {
+        return window.__mathJaxLoadingPromise;
+    }
+
+    window.MathJax = {
+        startup: {
+            typeset: false,
+        },
+        tex: {
+            inlineMath: [['$', '$']],
+            displayMath: [['$$', '$$']],
+        },
+        svg: { fontCache: 'global' },
+    };
+
+    window.__mathJaxLoadingPromise = new Promise((resolve, reject) => {
+        const existingScript = document.getElementById(MATHJAX_SCRIPT_ID);
+
+        if (existingScript) {
+            existingScript.addEventListener('load', () => resolve(window.MathJax), { once: true });
+            existingScript.addEventListener('error', reject, { once: true });
+            return;
+        }
+
+        const script = document.createElement('script');
+        script.id = MATHJAX_SCRIPT_ID;
+        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js';
+        script.async = true;
+        script.onload = () => resolve(window.MathJax);
+        script.onerror = reject;
+        document.head.appendChild(script);
+    });
+
+    return window.__mathJaxLoadingPromise;
+}
 
 function getGitLastUpdated(filePath) {
     try {
@@ -102,6 +148,7 @@ export async function getStaticProps({ params }) {
 
 export default function Post({ post, postsEn, currentLang }) {
     const { title, description, htmlContent, updatedAt } = post;
+    const articleContentRef = useRef(null);
 
     useEffect(() => {
         document.documentElement.lang = currentLang;
@@ -109,6 +156,25 @@ export default function Post({ post, postsEn, currentLang }) {
         document.querySelectorAll('pre code').forEach((block) => {
             hljs.highlightElement(block);
         });
+
+        let isCancelled = false;
+
+        ensureMathJax()
+            .then((mathJax) => {
+                if (isCancelled || !mathJax?.typesetPromise || !articleContentRef.current) {
+                    return;
+                }
+
+                mathJax.typesetClear?.([articleContentRef.current]);
+                return mathJax.typesetPromise([articleContentRef.current]);
+            })
+            .catch((error) => {
+                console.error('MathJax failed to render', error);
+            });
+
+        return () => {
+            isCancelled = true;
+        };
     }, [htmlContent, currentLang]);
 
     const formattedDate = updatedAt
@@ -126,22 +192,6 @@ export default function Post({ post, postsEn, currentLang }) {
                 <meta name="description" content={description} />
             </Head>
 
-            <Script id="mathjax-config" strategy="afterInteractive">
-                {`
-                    MathJax = {
-                        tex: {
-                            inlineMath: [['$', '$'], ['\$begin:math:text$', '\\$end:math:text$']],
-                            displayMath: [['$$', '$$'], ['\$begin:math:display$', '\\$end:math:display$']],
-                        },
-                        svg: { fontCache: 'global' },
-                    };
-                `}
-            </Script>
-            <Script
-                src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"
-                strategy="afterInteractive"
-            />
-
             <header>
                 <h1>Evan d&apos;Entremont</h1>
                 <h2>Musings on Tech</h2>
@@ -156,7 +206,7 @@ export default function Post({ post, postsEn, currentLang }) {
                         <strong>Last updated:</strong> {formattedDate}
                     </p>
                 )}
-                <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
+                <div ref={articleContentRef} dangerouslySetInnerHTML={{ __html: htmlContent }} />
             </article>
 
             <hr />
