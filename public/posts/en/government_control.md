@@ -17,7 +17,7 @@ But here’s the catch: the average Canadian’s beliefs and priorities are cons
 
 ![Canadian PID Loop](/images/government_control.webp "Canadian PID Loop")
 
-DALL-E: wierdly on point, but deeply unsettling, as always. 
+DALL-E: weirdly on point, but deeply unsettling, as always.
 
 ## What is a PID Loop?
 
@@ -70,4 +70,3 @@ This would keep the **shock absorber** in place while addressing concerns about 
 Just like a well-tuned PID loop, the Canadian political system relies on careful balance to function smoothly. The **House of Commons** reacts quickly to shifts in public opinion, while the **Senate** absorbs these shocks and ensures that policy changes are more gradual and considered. Meanwhile, the **Crown** provides a rarely-used but essential check against the most extreme potential outcomes.
 
 By **electing senators for life**, Canada could introduce a democratic element to the Senate while preserving its stabilizing function. Without this balance, an elected Senate with fixed terms risks turning into another proportional gain, amplifying political swings rather than dampening them. In a world of increasing political polarization, the Senate’s role as a stabilizer is more important than ever.
-

@@ -4,17 +4,15 @@ import PostsList from '../components/PostsList';
 
 export async function getStaticProps() {
   const englishPosts = getPostsByLanguage('en');
-  const frenchPosts = getPostsByLanguage('fr');
 
   return {
     props: {
       englishPosts,
-      frenchPosts,
     },
   };
 }
 
-export default function Home({ englishPosts, frenchPosts }) {
+export default function Home({ englishPosts }) {
   return (
     <>
       <Head>
@@ -29,8 +27,7 @@ export default function Home({ englishPosts, frenchPosts }) {
       <hr />
 
       <footer>
-        <PostsList title="English Posts" posts={englishPosts} />
-        <PostsList title="Articles en Français" posts={frenchPosts} />
+        <PostsList title="Posts" posts={englishPosts} />
       </footer>
     </>
   );

@@ -1,34 +1,61 @@
 ---
-title: The Value of a Degree in Employer Markets
-image: 
-imagealt: 
-description: This article explores how practical experience can outweigh formal education in today's job market, especially in the tech industry. It discusses the challenges faced by skilled professionals without degrees in an evolving landscape marked by layoffs and AI resume filtering.
+title: Building A Career Through Practical Experience
+description: This article explains how practical experience, continuous learning, and measurable outcomes can build senior engineering capability outside a traditional degree path.
 ---
 
-As someone who has spent 15 years in the tech industry, I’ve seen firsthand how practical experience can often outweigh formal education. I didn’t have the financial ability to finish university, and realistically, I can’t take four years off work to pursue that now—nor should I need to. My journey has shown me that skills and real-world accomplishments matter.
+Software careers are often described through credentials: degrees, certifications, recognizable companies, and formal titles. Those signals can be useful, but they are not the work itself.
 
-However, in 2024's tech market, where hundreds of thousands are facing layoffs and resumes are often filtered by AI, not having a degree has suddenly become a liability. Despite my extensive experience, I’ve noticed that the absence of a formal credential can lead to overlooked opportunities.
+Engineering ability is ultimately proven through systems built, incidents handled, decisions made, teams supported, and problems solved over time.
 
-## Experience Speaks Volumes
+My own career has been built much more through practical experience than through a traditional academic path. That shaped how I learn, how I evaluate technical decisions, and how I think about engineering leadership.
 
-Throughout my career, I’ve driven policy and architecture for one of the largest websites on the internet, designed electronics, and written microcontroller firmware. These experiences have shaped my understanding of the industry and honed my problem-solving skills. In employee markets, where talent is in high demand, I’ve found that employers are often more interested in what I can do than in whether I have a degree.
+## Experience As A Learning System
 
-1. **Skills Over Credentials**: Many employers today prioritize demonstrable skills over formal qualifications. My ability to create code that impacts millions of users speaks to my capabilities. Hiring managers increasingly recognize that relevant experience can be a better predictor of future performance than a degree.
+Practical experience compounds when it is treated deliberately. Each project teaches something different: how systems fail, how users behave, how teams communicate, how requirements change, and how technical debt accumulates.
 
-2. **Evolving Job Requirements**: The tech industry moves fast. Skills that were relevant five years ago may no longer apply. I’ve continuously adapted and learned, which has made me a more valuable asset than those who may have relied solely on what they learned in school.
+Over time, that creates a kind of applied curriculum:
 
-3. **Real-World Problem Solving**: My background in designing electronics and firmware positions me as a practical problem solver. This hands-on knowledge often proves more beneficial than theoretical learning, especially in an industry driven by innovation.
+1. **Production systems** teach reliability, monitoring, incident response, and risk management.
+2. **Legacy systems** teach restraint, migration strategy, and respect for business continuity.
+3. **High-traffic applications** teach performance, capacity planning, and operational tradeoffs.
+4. **Compliance-sensitive work** teaches process, auditability, and careful change management.
+5. **Team leadership** teaches communication, prioritization, mentorship, and delegation.
 
-## The Employer Market Perspective
+That kind of learning is difficult to compress into a credential. It shows up in judgment.
 
-However, the reality shifts when considering the employer market. In many fields, especially those with a high demand for specialized skills, employers may still favor candidates with degrees. This inclination stems from several factors:
+## The Value Of Fundamentals
 
-1. **Standardization and Risk Mitigation**: Degrees often serve as a standardized measure for employers to evaluate candidates. They can mitigate risk by selecting individuals with formal qualifications, even if experience suggests that a candidate could excel without one.
+None of this means formal education is unimportant. Fundamentals matter: data structures, algorithms, networking, databases, operating systems, security, and software design all show up in real work.
 
-2. **Perception of Knowledge**: Some hiring managers equate a degree with a certain level of knowledge or commitment to a field. This bias can lead to skepticism about the skills of professionals who don’t have formal educational credentials.
+The question is not whether fundamentals matter. They do. The question is whether there is only one valid way to learn and demonstrate them.
 
-3. **Networking and Opportunities**: Graduating from university can provide access to valuable networks and job opportunities that may not be as readily available to those without a degree.
+In practice, strong engineers keep learning throughout their careers. Tools change, platforms change, architectures change, and the useful half-life of specific implementation knowledge can be short. The durable skill is the ability to learn accurately, reason from first principles, and apply judgment in context.
 
-## Conclusion
+## What Employers Actually Need
 
-While a degree can open doors in some employer markets, my experience shows that practical skills and a proven track record hold significant weight, especially in tech. I’ve learned that innovation, adaptability, and real-world experience can lead to remarkable career success, even without formal educational credentials. However, as the job market continues to evolve—marked by layoffs and the prevalence of AI resume filtering—emphasizing experience over a degree may not just be an advantage, but a necessity.
+Employers need confidence that a candidate can do the work. Credentials can help provide that confidence, especially early in a career or when a hiring process needs a quick filter.
+
+For senior roles, the stronger signal is often evidence:
+
+1. What systems has this person owned?
+2. What scale have they operated at?
+3. How do they handle ambiguity?
+4. Can they communicate tradeoffs clearly?
+5. Have they improved teams and processes?
+6. Do they understand both technical and organizational risk?
+
+Those questions are closer to the job than the credential alone.
+
+## Hiring For Evidence
+
+A good hiring process should not ignore credentials, but it should not stop there either. The better question is what evidence demonstrates capability.
+
+That evidence can come from shipped systems, technical writing, architecture discussions, incident stories, code samples, references, leadership examples, or thoughtful explanations of past tradeoffs.
+
+For candidates without a traditional path, the responsibility is to make that evidence easy to evaluate. A resume should emphasize outcomes, scale, ownership, and impact. Interviews should connect experience to the employer's actual problems.
+
+## Closing Thought
+
+There are many valid paths into strong engineering work. A degree can be one of them. So can years of practical experience, disciplined self-study, production ownership, and continuous adaptation.
+
+The important thing is not the path by itself. It is whether the path produced the judgment, skill, and reliability the work requires.

@@ -1,112 +1,186 @@
 ---
-title: Anything That is Measured, is Measured.
+title: Pieces Of Flair
 image: 51_flair.webp
-imagealt: People Scrambling to Increase Stats 
-description: This article explores the pitfalls of over-relying on metrics and performance indicators, arguing that while measurement is crucial for improvement, an excessive focus on numbers can lead to misleading conclusions and superficial success.
+imagealt: People scrambling to increase stats
+description: Measurement is useful until the metric becomes the job. This article looks at handle time, engineering dashboards, OKRs, and return-to-office mandates as examples of numbers replacing judgment.
 ---
 
-I came across a tagline for a marketing research company called *L'Observateur* while walking down the street the other day: "Tout ce que l'on mesure s'améliore," which translates to "Everything that is measured improves." At first glance, it seems to make sense; after all, focusing on metrics often drives improvement and efficiency. This concept is echoed in the film [*Office Space*](https://www.youtube.com/watch?v=3_fG_zLbBeU), where the characters grapple with the impact of excessive measurement and corporate metrics on their work lives.
+I came across a tagline for a marketing research company called *L'Observateur*: "Tout ce que l'on mesure s'améliore."
 
-In the movie, the relentless pursuit of quantifiable performance metrics leads to absurdities and frustrations, revealing the pitfalls of overemphasizing numbers. The film illustrates that while measurement can indeed lead to improvement, it can also create a superficial veneer of success while ignoring deeper issues. Similarly, in real-life scenarios, especially in industries like software development, an overfocus on metrics can obscure genuine performance challenges and create a misleading picture of progress.
+Everything that is measured improves.
+
+It sounds true because it is almost true.
+
+Measurement can focus attention. It can reveal patterns. It can show whether a change helped or hurt. Without measurement, teams are guessing.
+
+But the more complete version is less comforting:
+
+Everything that is measured gets optimized.
+
+Whether it improves depends on whether the metric is connected to the thing people actually care about.
 
 ![Measurement above all else](/images/51_flair.webp "Measurement above all else")
 
+## The Metric Becomes The Job
 
-## The Zero-Sum Game of Metrics
+The joke in *Office Space* is not really about the number of pieces of flair.
 
-[Metrics](https://en.wikipedia.org/wiki/Software_metric) and [KPIs](https://www.forbes.com/advisor/business/what-is-a-kpi-definition-examples/) are tools are designed to keep organizations on track, ensuring goals are met and progress is made. But in reality, they often transform into zero-sum games. 
+It is about a workplace that has confused visible compliance with actual value. The employee is technically meeting the stated requirement, but the manager still wants more enthusiasm, more performance, more proof that she has internalized the metric.
 
->**Zero-Sum Game: a situation in which one person or group can win something only by causing another person or group to lose it.**
->
->- ***[Merriam Webster](https://www.merriam-webster.com/dictionary/zero-sum%20game)***
+That is what bad measurement does.
 
-In a zero-sum game, one person's gain is another's loss. When we apply this concept to metrics, achieving one goal frequently comes at the expense of another. The problem is that metrics, by their very nature, are reductionist. They focus on specific, quantifiable outcomes while ignoring the broader context.
+It starts as a proxy for the work. Then it becomes the work. Eventually people are no longer optimizing the outcome. They are optimizing their appearance inside the reporting system.
 
-## Theories on Measurement
+This is the warning behind [Goodhart's Law](https://en.wikipedia.org/wiki/Goodhart%27s_law):
 
-This issue isn’t new. Economists and social scientists have long recognized the dangers of over-reliance on metrics. [Goodhart’s Law](https://en.wikipedia.org/wiki/Goodhart%27s_law) states, 
+> **When a measure becomes a target, it ceases to be a good measure.**
 
->**When a measure becomes a target, it ceases to be a good measure.**
+[Campbell's Law](https://en.wikipedia.org/wiki/Campbell%27s_law) says the same thing in institutional terms: the more a metric is used to make decisions, the more pressure there is to corrupt the process being measured.
 
-In other words, once you set a metric as a goal, people will optimize for that metric—even if it means subverting the original intention behind it.
+That sounds abstract until you have lived inside one of those systems.
 
-[Campbell’s Law](https://en.wikipedia.org/wiki/Campbell%27s_law) goes a step further, warning that 
+## Handle Time
 
->**The more any quantitative social indicator is used for social decision-making, the more subject it will be to corruption pressures and the more apt it will be to distort the social processes it is intended to monitor.**
+During university, I worked in technical support at an Apple call center.
 
-Essentially, when metrics become the focal point, they encourage gaming the system, sometimes leading to outright dishonesty.
+One of the key metrics was average handle time. On the surface, that made sense. Shorter calls can mean faster service, lower queue times, and better operational efficiency.
 
-## Real World Examples
+I was good at the job. I knew the tools, I knew the products, and I had been there long enough to solve common issues quickly.
 
-### Tech Support
+That became a problem.
 
-During university, I worked part-time at an Apple call center, a role that taught me a great deal about both the technical and human aspects of customer service. One of the most closely monitored metrics was the length of time spent on each call. Given my familiarity with both the tools and the products we supported, I consistently had a lower handle time compared to my colleagues. That efficiency, however, became a point of contention. I was written up for having an “out of spec” handle time; which seemed counterintuitive. When I questioned this decision, my manager argued:
+I was written up because my handle time was out of spec. Not too long. Too short.
 
->**You are creating an unrealistic expectation of future support capabilities**
+The explanation I was given was:
 
-That is a direct quote. 
+> You are creating an unrealistic expectation of future support capabilities.
 
-At the time, I was much younger and had been in the role longer than most, having spent about three years in the call center. I was committed and well-acquainted with the job, which allowed me to handle calls quickly and effectively. However, this efficiency was seen as a problem rather than a strength. It was a challenging and somewhat frustrating position to be in.
+That sentence has stayed with me because it is such a pure example of measurement replacing judgment.
 
-In response to the demands, which in my mind was clearly to waste the customers’ time, I adapted in my own way. I began putting customers on hold and occupying myself with tasks like playing [Tetris in emacs](https://apple.stackexchange.com/questions/103600/using-the-terminal-command-and-emacs-to-play-the-video-game-tetris), or bathroom breaks, just to keep my handle time higher. This was obviously not allowed, but [netstat](https://www.unix.com/man-page/osx/1/netstat/) is a thing.
+The customers were getting helped. The queue was moving. The work was being done. But the metric wanted the appearance of standardized effort more than it wanted the outcome the metric supposedly represented.
 
-My next review was positive, and I received a raise. The experience highlighted the absurdity of valuing metrics over genuine service quality. A week after the review, I left the call center to manage an electronics store on an interim basis. Looking back, I see the situation as a formative experience, teaching me the importance of balancing metrics with meaningful work and not letting rigid targets undermine the essence of true performance.
+So I adapted to the system.
 
-### Engineering Directors
+I put customers on hold. I took longer breaks. I let calls breathe for no reason other than making the number look normal.
 
-I’ve witnessed the pitfalls of over-reliance on metrics firsthand in a particularly striking case involving a director at a previous company. This director faced pressure to meet automated reporting on things like lines of code written, and jira comments written. On paper, the metrics appeared impressive, with high numbers of comments in Jira, lines of code written, and low rework. However, these figures were ultimately meaningless, as they did not reflect the true value or effectiveness of the work being done.
+The next review was positive.
 
-Ironically, upper management, allegedly fully aware of the director’s data manipulation, remained indifferent as long as the numbers met their targets. To them, the appearance of success was sufficient, and they had little concern for the actual quality of work or the broader implications of the manipulated metrics. The last I heard, he is now in charge of this monitoring company-wide.
+That is the part that matters. The system did not detect better support. It detected better compliance with the metric. Once the metric became the target, wasting time became the rational behavior.
 
-This disconnect between reported numbers and genuine performance highlights a fundamental issue with an overemphasis on metrics: it can obscure real problems and create a false sense of achievement, ignoring the deeper issues that impact the effectiveness and integrity of the work being done.
+## Engineering Dashboards
 
-Another director employed a curious strategy with agile sprints. Whenever new tasks were added to a sprint, existing items were quietly removed. This tactic kept the total number of hours allocated to the sprint constant, giving a misleading impression that the team was meeting its objectives and staying on track.
+Software teams are not immune to this. We just use more expensive dashboards.
 
-Compounding the issue was the director’s focus on avoiding conflict with his peers. By manipulating the visible data, he created an illusion of productivity while failing to address the real challenges the team faced. The constant shifting of goals without clear data to justify these changes led to significant frustration among team members, who struggled with an ever-changing workload.
+Lines of code, ticket counts, Jira comments, pull-request volume, story points, sprint velocity, review counts, deployment frequency, and incident counts can all be useful in narrow contexts. None of them is engineering value.
 
-Despite the mounting issues, upper management remained satisfied with the favorable metrics, which painted a distorted picture of success. This disconnect between superficial metrics and the actual work environment highlights a critical flaw in relying solely on numbers: it can obscure real challenges and issues, creating a facade of success while failing to address the underlying problems that impact performance and morale.
+The danger is not that the numbers are fake. The danger is that they can be real and still misleading.
 
-## Objective and Key Results (OKRs)
+A developer can write a lot of code in the wrong direction.
 
-[OKRs](https://peoplelogic.ai/blog/history-of-objectives-and-key-results) are a popular framework used by organizations to set and achieve goals. Unlike traditional metrics like KPIs, which often focus on specific outputs or activities, OKRs are designed to align the entire organization around measurable outcomes that drive meaningful progress. An Objective represents a significant, qualitative goal that the organization aims to achieve, while Key Results are specific, quantitative measures that track progress toward that objective. The key distinction between OKRs and KPIs lies in this focus on *outcomes* rather than just outputs. Where KPIs might track how many tasks were completed, OKRs push for understanding the impact those tasks have on broader goals.
+A team can close many tickets while accumulating technical debt.
 
-The strength of OKRs lies in their emphasis on results over activity. By prioritizing the impact of work rather than the mere completion of tasks, OKRs encourage teams to think critically about the value they are delivering. For instance, instead of measuring success by the number of features released (a typical KPI), an OKR might measure how much those features improved user satisfaction or increased customer retention. This shift in focus ensures that efforts are aligned with the organization's strategic objectives and that teams are working toward outcomes that truly matter. OKRs challenge organizations to ask, "What difference are we making?" rather than just, "What are we doing?"
+A sprint can look predictable because scope is quietly removed whenever new work appears.
 
->“OKRs have helped lead us to 10x growth, many times over. They've helped make our crazily bold mission of "organizing the world's information" perhaps even achievable. They've kept me and the rest of the company on time and on track when it mattered the most."
->
-> [**Larry Page,** ***Co-founder of Google.***](https://www.cnbc.com/2018/08/14/this-goal-setting-method-is-used-by-bill-gates-larry-page-and-bono.html)
+A director can generate a beautiful dashboard that proves the organization is busy while every engineer underneath it knows the work is getting worse.
 
-The value of OKRs depends heavily on their implementation. While OKRs provide a more holistic view by focusing on results, they are not immune to the pitfalls of overemphasis on measurable outcomes. If not carefully managed, even OKRs can lead to tunnel vision, where teams focus only on what is easily measurable, neglecting equally important but less quantifiable aspects of their work. For OKRs to be effective, organizations must remain vigilant against the temptation to chase numbers at the expense of genuine progress. The key is to use OKRs as a guide for prioritization and alignment, rather than as rigid targets that overshadow the bigger picture.
+That is the bleak little magic trick of bad metrics: they convert local dysfunction into executive confidence.
 
-## The Implications of Return-to-Office Mandates
+I have seen reporting systems where the visible numbers mattered more than the underlying reality. Comments existed because comments were counted. Ticket movement mattered because ticket movement was visible. Rework disappeared because the definition of rework was convenient.
 
-In the context of remote work, the current trend towards Return-to-Office (RTO) mandates reveals a significant disconnect between what is being measured—shareholder value—and actual productivity and employee satisfaction.
+The dashboard was not measuring the work. The work was being reshaped to satisfy the dashboard.
 
-### Layoffs and RTO: A Convenient Strategy
+## The Zero-Sum Part
 
-Faced with the negative perception of layoffs, some companies have leveraged RTO as a means to reduce their workforce without the stigma associated with direct job cuts. This strategy allows organizations to effectively phase out employees under the guise of a return to in-person work. 
+Metrics often create hidden tradeoffs.
 
-- **Talent Drain**: Ironically, the most qualified employees—those who are often the most sought after—are likely to seek opportunities elsewhere if forced back into the office. These individuals can easily find remote positions that offer the flexibility and work-life balance they desire, leading to a significant loss of top talent.
+If support agents are judged mainly on handle time, deep troubleshooting loses to fast closure.
 
-### The Productivity Argument
+If engineers are judged mainly on ticket throughput, invisible maintenance loses to visible output.
 
-Research consistently shows that remote workers tend to be happier and more productive. Studies indicate that the flexibility of working from home leads to increased job satisfaction, lower stress levels, and better overall performance. By prioritizing RTO, companies risk undermining these benefits.
+If managers are judged mainly on sprint predictability, honest uncertainty loses to scope manipulation.
 
-- **Real-World Performance Impact**: RTO mandates, designed to bolster a company's image and stimulate local economies, often do not translate into improved productivity. Instead, they can create dissatisfaction and disengagement among employees who thrive in remote work environments.
+If companies are judged mainly on office occupancy, effective remote work loses to badge swipes.
 
-### Economic Motivations Behind RTO
+The measured thing improves. Something else pays for it.
 
-A driving force behind RTO initiatives is the need to support downtown economies and mitigate the financial burden of unused real estate. Companies with empty office spaces face significant liabilities, prompting them to push for employees to return in order to justify these expenses.
+That is why "everything that is measured improves" is too naive. A metric can improve by pushing damage somewhere the dashboard does not look.
 
-- **Facade of Stability**: While these actions may appear beneficial on paper, they do little to address the real-world implications for employee morale and productivity. The focus remains on maintaining shareholder value and financial metrics rather than fostering a culture that values effective work practices and employee well-being.
+## OKRs Are Not Magic
 
-Ultimately, the push for RTO highlights the need for organizations to reassess their measurement priorities. By focusing on superficial metrics designed to appease shareholders, companies risk alienating their workforce and sacrificing long-term productivity for short-term gains. The challenge lies in finding a balance that recognizes the importance of both employee satisfaction and the broader economic context, rather than adhering to outdated notions of workplace success.
+Objective and Key Results are supposed to avoid some of this by connecting work to outcomes instead of activity.
 
+That is a good instinct. Measuring "features shipped" is weaker than measuring whether those features improved activation, reliability, retention, or support load.
 
-## Closing Thoughts
+But OKRs do not automatically fix the problem. They can become pieces of flair too.
 
-Measurement is essential; without it, we'd be navigating in the dark. However, when measurements become the goal rather than a tool, they can distort reality and produce unintended consequences. While numbers provide valuable insights, they rarely tell the whole story. The challenge lies in using metrics wisely. Understand their limitations, the trade-offs they involve, and the behaviors they encourage. 
+If the organization treats OKRs as a performance theater, people will learn to write safe objectives, negotiate easy key results, and tell success-shaped stories at the end of the quarter.
 
-Much like in *Office Space*, where the number of [pieces of flair](https://www.youtube.com/watch?v=F7SNEdjftno) you wear becomes a superficial measure of your worth, focusing too narrowly on quantifiable metrics can skew our view of success.
+The framework is not the hard part.
 
-Ultimately, the aim should be genuine improvement, not just checking boxes or meeting arbitrary targets.
+The hard part is whether the organization can tolerate honest measurement.
+
+Can it look at a missed target and ask what was learned, or does it need someone to blame?
+
+Can it accept that an important project may reduce future risk without creating a clean short-term graph?
+
+Can it distinguish "we changed the number" from "we improved the system"?
+
+If not, OKRs become a more sophisticated way to count flair.
+
+## Return To Office
+
+Return-to-office mandates are a clean modern example of mismatched measurement.
+
+Office attendance is easy to measure. Badge swipes are easy to count. Empty real estate is easy to see. Executives can look at occupancy and feel that something concrete has improved.
+
+But the outcomes companies usually claim to care about are harder to measure:
+
+1. productivity
+2. retention
+3. communication quality
+4. delivery speed
+5. focus time
+6. team trust
+7. access to talent
+
+When organizations optimize for visible presence, they may improve the office-utilization metric while damaging the work.
+
+That does not mean remote work is always better. It means attendance is a proxy, not the outcome. Treating presence as productivity is the same category of mistake as treating call length as support quality or Jira movement as engineering value.
+
+It rewards the visible signal because the real signal is harder to capture.
+
+## What Good Measurement Looks Like
+
+Good metrics are not scoreboards. They are instruments.
+
+They should help people ask better questions:
+
+1. Why did cycle time increase?
+2. Are incidents clustering around a subsystem?
+3. Did this feature reduce support load?
+4. Are customers succeeding faster?
+5. Is review latency slowing delivery?
+6. What behavior does this metric encourage?
+7. What damage could this metric hide?
+
+The last two questions are the ones organizations skip.
+
+Every metric is also an incentive. Every dashboard is also a theory of what matters. If that theory is wrong, people will still optimize for it.
+
+They may even get rewarded for doing so.
+
+## Closing Thought
+
+Measurement is necessary.
+
+But measurement is not judgment.
+
+The point is not to reject metrics. The point is to remember that metrics are lossy representations of reality. They can reveal the system, or they can become a costume the system wears to look healthy.
+
+When a workplace starts rewarding the costume, people notice. They learn what is actually valued. They stop asking what would improve the work and start asking what will improve the number.
+
+That is how you end up with more pieces of flair, longer support calls, cleaner dashboards, fuller offices, and worse outcomes.
+
+Everything that is measured is measured.
+
+That does not mean it improved.

@@ -1,43 +1,131 @@
 ---
-title: Hiring rejections - the error messages we can't debug
+title: Job Not Found
 image: application_error.webp
 imagealt: A stylized error message on a computer screen
-description: The article draws an analogy between hiring rejections and error messages in software development, highlighting the frustrations of a non-transparent hiring process and urging companies to provide more constructive feedback.
+description: "Hiring rejections increasingly behave like silent software failures: candidates invest time, employers provide little signal, and the feedback gap gets worse as application volume rises."
 ---
 
-Applying for jobs can feel a lot like interacting with a broken piece of software. You input your resume and cover letter, maybe go through a few rounds of interviews, and wait. Then comes the rejection: an email that tells you nothing more than “We’ve decided to move forward with other candidates.” It’s the hiring equivalent of a vague error message like, *"Something went wrong."* You know you didn't pass the hiring process, but what exactly failed? No one tells you.
+Applying for jobs can feel like interacting with software that fails silently.
+
+You submit a resume. You answer screening questions. You may complete interviews, assessments, or take-home work. Then the process ends with a generic rejection, or worse, no response at all.
+
+As a candidate, you know the process failed.
+
+You rarely know what failed.
 
 ![Job Application Error](/images/application_error.webp "Job Application Error")
 
+In software, a bad error message is more than annoying. It blocks debugging. It tells the user something went wrong while hiding the information needed to correct it.
 
-In software, when a user encounters an error, they get a sanitized message that hides the gritty details of what went wrong. Internally, the system logs a full, detailed error report so engineers can troubleshoot the problem. This same dynamic exists in the hiring process: companies know why a candidate didn’t make the cut, but they rarely share that information. The error logs are internal, leaving the candidate to face a vague, opaque rejection.
+Modern hiring often works the same way.
 
-## Treating candidates like bad actors
+## The Feedback Gap Is Getting Worse
 
-Why do companies insist on keeping candidates in the dark? [It’s mostly about legal protection](https://www.bbc.com/worklife/article/20240123-why-employers-are-stingy-with-job-interview-feedback). By withholding specific feedback, companies protect themselves from potential lawsuits. The thinking goes: if a candidate knows why they were rejected, they could use that information to claim bias or discrimination. So, rather than risk that, companies sanitize their rejections, leaving candidates guessing about what went wrong.
+This is not just a personal frustration. The data suggests the candidate feedback problem is worsening.
 
-But this approach is fundamentally hostile. Just like software engineers sanitize error output to users because those users might be hostile, companies are treating job applicants like potential bad actors. It’s as though they assume the candidate will take any constructive feedback and twist it into a legal threat. But here’s the reality: **most candidates just want to know how to improve**. 
+[iHire surveyed 1,024 candidates in October 2025](https://www.ihire.com/resourcecenter/employer/pages/53-percent-of-job-seekers-have-been-ghosted-by-a-potential-employer) and found that 53% had been ghosted by an employer during their job search.
 
-Treating everyone like a potential liability creates an unnecessarily adversarial process. The lack of transparency not only frustrates job seekers, but also damages a company’s brand and reputation among future applicants. Candidates aren't the enemy; they're people trying to grow and improve. Just like debugging software, offering clear and constructive feedback helps both sides move forward productively.
+[Greenhouse reported](https://www.greenhouse.com/blog/greenhouse-2024-state-of-job-hunting-report) that 61% of job seekers had been ghosted after an interview, up nine percentage points from earlier in 2024.
 
-## If you’re going to copy Google, stay up to date
+That second number matters because post-interview ghosting is not silence after a low-effort application. It happens after the candidate has already spent real time in the employer's process.
 
-What makes this situation even more frustrating is that many companies blindly copy hiring practices from industry giants like Google, even when those practices are outdated. Companies adopt Google’s use of algorithm-heavy interviews or vague rejection processes because, well, if it worked for Google, it must work for everyone, right? 
+At the same time, the macro hiring market has become more confusing. The [Bureau of Labor Statistics reported](https://www.bls.gov/news.release/jolts.nr0.htm) 7.6 million U.S. job openings in May 2026, but only 5.2 million hires. In other words, visible openings do not automatically mean fast hiring, responsive process, or real candidate momentum.
 
-But here’s the catch: [**Google moved away from a lot of these practices because they didn’t work**](https://abcnews.go.com/blogs/business/2013/06/google-skips-waste-of-time-brainteaser-interview-questions). Google's own research showed that methods like LeetCode-style algorithmic puzzles weren’t good predictors of job performance. In fact, Google has actively shifted toward a more holistic evaluation process that focuses on real-world problem-solving and collaboration. Yet, many companies are still stuck in Google’s old playbook, without realizing that even the pioneers have moved on.
+That gap between openings and hires is part of why job seekers can feel gaslit by the market. The jobs are listed. The applications are submitted. The process still goes nowhere.
 
-So if you’re going to copy Google, at least stay up to date. Google has learned from its mistakes and adapted its hiring process. The same should apply to companies that model themselves after tech giants. If Google discovered that vague error messages and poorly designed interview processes don’t work, maybe it’s time for others to learn from that.
+## The Error Message Problem
 
-## Breaking the cycle: moving toward constructive feedback
+Most hiring rejections are equivalent to:
 
-The vague rejection emails, like error messages, don’t help anyone. Just as developers need detailed logs to fix broken code, candidates need specific, actionable feedback to understand where they fell short. 
+> Something went wrong.
 
-Some companies have started to recognize the value of providing feedback while still protecting themselves legally. For example, platforms like Hired.com and TalentWorks offer anonymized, automated feedback based on objective criteria like skills gaps or experience mismatches. By keeping feedback focused on skill-building, companies can give candidates useful information while reducing legal risks. 
+That is not enough information to debug.
 
-Google itself has made strides in providing constructive feedback after technical interviews, with recommendations on specific areas for improvement. If companies are going to borrow from Google’s playbook, they should follow the more current, transparent practices—not the outdated ones that don't serve either side.
+A candidate needs to know which kind of failure happened:
 
-## A call for change
+1. the resume was never read
+2. the resume was screened out by keyword or tooling
+3. the role already had an internal candidate
+4. the role was paused or cancelled
+5. the salary range did not match
+6. the experience level was too junior or too senior
+7. the interview signal was weak in a specific area
+8. another candidate was stronger on a concrete requirement
 
-Hiring rejections shouldn’t feel like cryptic error messages. Candidates aren’t unsanitized input that needs to be neutralized. They’re people, and they deserve more transparency in the hiring process. Companies that treat job seekers with respect and offer meaningful, constructive feedback will not only foster better relationships with candidates but will also attract top talent by building a reputation for fairness.
+Those are different problems. They require different responses.
 
-If the giants like Google have learned that transparency and specific feedback can lead to better outcomes, it’s time for other companies to follow suit. Instead of hiding behind sanitized messages, let’s give candidates the error logs they need to debug their career.
+If a candidate lacks Kubernetes operations experience, they can learn from that. If the company paused the role, rewriting the resume is wasted effort. If the issue was compensation, the candidate should not reinterpret the rejection as a skill failure. If the resume never made it past a search filter, the problem may be presentation rather than ability.
+
+Generic rejection messages collapse all of that into nothing.
+
+## Why Companies Do It
+
+There are understandable reasons companies avoid feedback.
+
+Feedback takes time. It can create legal risk. It can invite argument. Recruiters may not have useful notes from the hiring team. Hiring managers may not want to write anything specific. Applicant volume can be overwhelming.
+
+But those explanations do not make the candidate experience good.
+
+They reveal the actual system design: the employer has internal logs, but the candidate only gets a sanitized error page.
+
+That design might be convenient for the company, but it pushes all uncertainty onto the applicant.
+
+## The Cost To Candidates
+
+When candidates receive no signal, they have to guess.
+
+They may rewrite the wrong parts of their resume. They may overcorrect in interviews. They may apply to roles they were never realistically being considered for. They may assume a skills gap where the real issue was timing, budget, an internal candidate, or a frozen requisition.
+
+Silence also makes the process emotionally corrosive.
+
+It is hard to maintain a healthy sense of reality when the labor market keeps returning null responses. After enough silent failures, even strong candidates start treating every application as evidence against themselves.
+
+That is not because candidates are fragile. It is because the system withholds diagnostic information while demanding repeated effort.
+
+## Better Feedback Does Not Need To Be Dangerous
+
+Most candidates are not asking for a debate, a performance review, or a legally risky confession. They are asking for a useful category of information.
+
+Employers could provide structured feedback without overexposing themselves:
+
+1. **Experience depth:** "We needed more production experience with distributed systems."
+2. **Role scope:** "The role requires direct people-management ownership."
+3. **Domain fit:** "We prioritized candidates with healthcare data experience."
+4. **Interview signal:** "The system design interview needed stronger tradeoff analysis."
+5. **Process status:** "The role was paused before final selection."
+6. **Candidate pool:** "Another candidate had more direct experience with this specific stack."
+
+That is not a full explanation. It is not perfect transparency. But it is enough signal to help a candidate decide what to change.
+
+The highest obligation should come after interviews. If a candidate has invested live time with the company, the company should close the loop with something more useful than silence.
+
+## Better Systems Would Help Employers Too
+
+This is not only a kindness argument.
+
+Hiring feedback is part of the employer's product surface. A company that ghosts candidates teaches the market something about how it operates. A company that communicates clearly earns goodwill even from people it rejects.
+
+Better feedback also improves future matching. Candidates who understand why they were declined can return later with better alignment. Recruiters get fewer confused follow-ups. Hiring teams build a more defensible process when the evaluation criteria are explicit enough to share in simplified form.
+
+The same tools companies use internally could support this:
+
+1. structured interview rubrics
+2. rejection reason categories
+3. automated status updates
+4. candidate-facing process states
+5. plain-language feedback templates
+6. expiry notices for paused or stale postings
+
+The bar does not have to be high. It just has to be better than disappearing.
+
+## Closing Thought
+
+Hiring will never be perfectly transparent. Companies do need consistency, discretion, and legal caution.
+
+But a process can be careful without being opaque.
+
+Right now, too much hiring behaves like broken software: no stack trace, no useful error message, no indication whether the request was ever processed.
+
+Candidates do not need every internal detail. They need enough signal to know what happened and what to do next.
+
+When someone invests time in a hiring process, "job not found" is not good enough.

@@ -1,69 +1,210 @@
 ---
-title: The 7-10 Second Resume Review - A Flawed Approach to Hiring
-description: This article critiques the common practice of spending only 7-10 seconds on resume reviews, highlighting the flaws in this approach and advocating for a more thorough evaluation to improve hiring outcomes.
+title: The Ten-Second Resume Is An Advertisement
+description: Fast resume screening compresses professional history into a headline, rewarding titles, brand names, and flashy numbers while pushing the real evidence into fine print.
 ---
 
-In the fast-paced world of recruitment, the common mantra is that hiring managers spend a mere [7 to 10 seconds](https://hbr.org/2020/09/how-to-get-your-resume-noticed-and-out-of-the-trash-bin) reviewing each resume. This practice has become standard, leading many to question whether such a brief evaluation truly captures the essence of a candidate's qualifications. As someone who has navigated the hiring process both as a job seeker and a hiring manager, I have a hard time believing that this timeframe is anything better than chance.
+The problem with the ten-second resume review is not only that ten seconds is too short.
 
-## The Case Against the 10-Second Rule
+The deeper problem is what ten seconds turns a resume into.
 
-### Superficial Evaluation  
-When hiring managers skim resumes for less than 10 seconds, they inevitably miss critical details that could differentiate one candidate from another. This approach encourages a focus on superficial indicators—such as buzzwords or company names—rather than a deeper understanding of a candidate’s actual accomplishments and potential fit for the role.
+It stops being a record of work. It becomes an advertisement.
 
-Imagine you’re a recruiter sifting through hundreds of resumes. In 10 seconds, you might glance at the job title, the company, and a few bullet points. However, can you truly assess the value of a candidate’s experience or their unique contributions in that fleeting moment? It’s unlikely.
+The optimal resume for that process is barely a document at all. It is a headline, a few flashy numbers, recognizable titles, company names, and enough keyword density to survive the first filter. Everything else becomes fine print.
 
-### Better Than Chance?  
-The idea that recruiters can reliably select strong candidates in such a short time frame seems dubious. With limited time to form a judgment, they often resort to biases or gut feelings. This reliance on quick assessments can lead to overlooking qualified candidates simply because their resumes didn’t stand out within that brief window.
+That is a strange way to evaluate a person.
 
-## The Numbers Behind the Process
+## The Resume As Ad Unit
 
-Let’s put this 7-10 second rule into perspective. If a recruiter receives **200 resumes** for a single position and spends an average of **10 seconds** on each, that amounts to:
+If the reviewer has only a few seconds, the resume has to communicate almost instantly:
+
+1. title
+2. seniority
+3. recognizable employers
+4. familiar tools
+5. years of experience
+6. large numbers
+7. obvious relevance to the posting
+
+Those signals are not meaningless. They can be useful. But they are not the same thing as understanding someone's work.
+
+The ten-second process rewards whatever can be understood at a glance. That means it rewards compression, formatting, brand recognition, and easily digestible claims.
+
+It punishes context.
+
+It punishes non-linear careers.
+
+It punishes people whose best work requires explanation.
+
+It punishes candidates who did important work in unimpressive-looking environments.
+
+It punishes anyone whose value does not fit cleanly into a headline.
+
+The resume becomes less like evidence and more like packaging.
+
+## Less Than A Sentence
+
+Taken seriously, the logic of the ten-second screen implies that the resume needs to be reducible to something shorter than a sentence.
+
+Not:
+
+> This person designed, maintained, debugged, negotiated, learned, shipped, supported, recovered, documented, mentored, and made tradeoffs across complicated systems.
+
+But:
+
+> Senior backend engineer. Python. AWS. 40% latency reduction. Fintech.
+
+That may be useful as a summary. It is not enough as an evaluation.
+
+The problem is that the hiring process often behaves as if the summary is the evaluation. The tagline becomes the product.
+
+Once that happens, candidates learn to write resumes like landing pages. Put the conversion-critical content above the fold. Make the numbers big. Repeat the right keywords. Remove nuance. Hide caveats. Keep the reader moving toward the call to action.
+
+That may be rational, but it is not healthy.
+
+## The Throughput Math
+
+The time pressure is real.
+
+If a recruiter receives 200 resumes for one role and spends 10 seconds on each, that is:
 
 $$
-200 \text{ resumes} \times 10 \text{ seconds} = 2000 \text{ seconds}
+200 \times 10 = 2000 \text{ seconds}
 $$
 
-To convert that into hours:
+That is about 33 minutes.
 
-$$
-\text{Hours} = \frac{2000 \text{ seconds}}{3600 \text{ seconds/hour}} \approx 0.5556 \text{ hours}
-$$
+If the recruiter has 15 open roles, the same quick skim becomes more than eight hours of resume review.
 
-That’s roughly **33 minutes** of total resume review time—just for one role. If the recruiter has **15 open positions**, they’re looking at around **8 hours** of total time dedicated just to skimming resumes. In a typical workday, this could mean that recruiters spend nearly an entire day merely glancing at resumes, without truly engaging with the content.
+And that is only the first pass. It does not include intake meetings, sourcing, scheduling, interviews, candidate communication, hiring-manager follow-up, offer process, or administrative work.
 
-## A Fundamental Piece of the Recruitment Process
+So yes, hiring teams compress the screen because volume forces compression.
 
-This approach to resume review raises a critical concern: the initial evaluation of candidates is a fundamental piece of the entire recruitment process. It is the very first step that sets the stage for everything that follows. If this step is rushed or undervalued, it can lead to significant repercussions throughout the hiring cycle.
+But compression has consequences.
 
-* **Impact on Candidate Quality**: When recruiters only spend a few seconds on each resume, they risk missing out on highly qualified candidates. The initial screening is where potential talent is identified, and if it’s done hastily, it can compromise the quality of candidates brought in for interviews.
+The more the process optimizes for speed, the more resumes are forced to become instantly legible artifacts. The market then teaches candidates to optimize for the skim rather than the truth.
 
-* **Ripple Effects on Subsequent Steps**: An inadequate evaluation during the resume review can result in hiring managers interviewing candidates who are not a good fit for the role, wasting valuable time and resources. This not only affects the hiring team but also impacts the overall productivity of the organization.
+## The Average Is Not A Defense
 
-* **Setting the Tone for Engagement**: A thoughtful approach to resume screening can foster a more respectful and engaging process for candidates. When applicants feel that their resumes are being read with care, it enhances their overall experience and perception of the company.
+A common rebuttal is that recruiters do not spend only ten seconds on good resumes. Ten seconds is just an average. Strong resumes get more attention.
 
-## The Shotgun Approach to Applications
+That sounds reassuring, but it actually makes the problem clearer.
 
-In today’s job market, many candidates resort to "shotgunning" their resumes—submitting the same resume to multiple positions across different companies in hopes of getting a response. This phenomenon arises partly because candidates often don’t receive feedback from their applications. When resumes aren’t reviewed thoroughly, qualified candidates become discouraged and turn to mass applications as a last resort.
+It means the glance is the classifier.
 
-As a result, an arms race emerges. Candidates begin crafting AI-driven resumes tailored to pass through automated Applicant Tracking Systems (ATS) rather than reflecting their true capabilities. This, in turn, pushes hiring managers to rely more heavily on AI tools, further dehumanizing the process and making it more challenging for genuine talent to shine through.
+The resume only gets a deeper read after it has already survived the first visual and semantic impression. The extra attention is not evenly available to all candidates. It is allocated to resumes that look promising immediately.
+
+That makes the first few seconds even more important, not less.
+
+The process is not really asking:
+
+> Is this candidate qualified?
+
+It is asking:
+
+> Does this resume look like it is worth spending more attention on?
+
+Those are different questions.
+
+The first asks about the person. The second asks about the artifact's ability to compete for human attention under constraint.
+
+That means precise keywords, familiar titles, known companies, obvious metrics, and conventional formatting become gates to further consideration. The deeper read only happens after the resume has already signaled in the expected way.
+
+This is why the advertisement analogy matters. Ads do not get equal reading time either. The headline earns the click. The click earns the body copy. The body copy earns the conversion.
+
+A resume screen built around average attention behaves the same way.
+
+It is not considering all candidates first and then choosing how much time they deserve. It is using the upper limit of a human attention span as a sorting mechanism.
+
+That is efficient. It is also a very lossy way to evaluate people.
+
+## The Arms Race
+
+This creates a bad loop.
+
+Employers receive too many applications, so they screen faster.
+
+Candidates know they are screened quickly, so they simplify, keyword-pack, and exaggerate the most scannable parts of their experience.
+
+AI tools make it easier to generate tailored resumes at scale.
+
+Employers respond with more automation, stricter filters, and even faster triage.
+
+Candidates respond with more volume.
+
+Eventually both sides distrust the artifacts they created.
+
+The employer distrusts the resume because it looks optimized.
+
+The candidate distrusts the process because they know the resume was barely read.
+
+Everyone behaves rationally inside a system that produces worse signal.
+
+## What Gets Lost
+
+Some of the most important work is difficult to advertise.
+
+How do you compress good judgment into a bullet?
+
+How do you prove that you prevented incidents that never happened?
+
+How do you show that you made a system easier to operate, reduced future maintenance, improved team decision-making, or noticed the requirement that everyone else missed?
+
+You can try. You can write numbers. You can polish bullets. You can name the tools. But the deeper value often lives in context, tradeoffs, and judgment.
+
+Those are exactly the things a ten-second screen is least able to see.
+
+That does not mean every resume deserves a deep reading. Initial screening will always be a triage problem.
+
+But a process should be honest about what kind of signal it is using. A glance can identify obvious matches. It cannot reliably evaluate professional quality.
 
 ## The Harvard Resume Effect
 
-It’s no surprise that the so-called “Harvard resume”—a simple, clean, and structured format—tends to get better results. Why is that? It all comes down to the way information is presented. When recruiters know exactly where to look, they can quickly glean the most pertinent information.
+This is why simple, conventional resume formats work.
 
-### Saving Time = More Words  
-Let’s break it down: if a recruiter saves just one second by using a familiar format, that precious second can translate into an additional five words read. In a world where every word counts, this small advantage can make all the difference. A resume that clearly highlights metrics and accomplishments will likely stand out more effectively than one cluttered with irrelevant information.
+They reduce search cost.
 
-The standardized format allows recruiters to focus on key areas that align with their needs. They can quickly identify whether a candidate’s experience matches the job requirements and whether they have the quantifiable achievements that demonstrate their impact.
+If the reviewer knows where to find title, employer, dates, tools, and impact, the resume gets a few more words of attention. A second saved on layout may become a few more words read. A familiar structure lowers friction.
 
-## The Need for a Reevaluation
+That is practical advice, but it is also depressing.
 
-This raises a critical question: should the recruitment process continue to rely on a 7-10 second review? If we acknowledge that this approach is fundamentally flawed, it becomes imperative to explore alternative methods that prioritize a more thorough evaluation.
+It means the resume is being optimized less for expression than for scan efficiency. The format wins because it helps the reviewer consume the candidate faster.
 
-Recruiters might benefit from adopting a more balanced strategy—one that allows for a more in-depth initial review while still maintaining efficiency. Consider integrating technology, such as AI tools, that can highlight key qualifications based on the job description. This can help streamline the review process without sacrificing the quality of evaluation.
+In a better process, clarity would help the reviewer understand more.
 
-## Conclusion
+In the current process, clarity often helps the reviewer decide faster.
 
-The 7-10 second resume review is not only insufficient but also potentially detrimental to the hiring process. As someone who values a thoughtful and comprehensive approach to recruitment, I believe that we must move beyond quick assessments based on chance. Emphasizing clarity in resume formats and allowing for a more substantial review period will lead to better hiring outcomes for both candidates and employers.
+Those are not the same thing.
 
-Let’s challenge the status quo and strive for a recruitment process that values depth over speed—after all, a well-crafted resume deserves more than a cursory glance. Investing time in this initial step is crucial; it lays the foundation for successful hiring and sets the tone for the rest of the recruitment journey. It’s time to end this arms race in the recruitment landscape and foster a more equitable, engaging, and effective hiring process.
+## Better Screening
+
+The answer is not to demand that every recruiter lovingly read every resume.
+
+That is not realistic.
+
+The better answer is to admit that first-pass screening is a decision system and design it accordingly.
+
+A better screen would separate obvious triage from deeper evaluation:
+
+1. define which requirements are genuinely disqualifying
+2. distinguish missing evidence from negative evidence
+3. avoid treating keywords as a substitute for skill
+4. use structured rubrics for close calls
+5. preserve notes on why candidates were rejected
+6. feed interview outcomes back into screening criteria
+7. give candidates enough signal to improve
+
+Tools can help, but only if they are built around evidence rather than superficial matching. Otherwise they just make the skim faster.
+
+## Closing Thought
+
+The ten-second resume is not merely unfair because it is short.
+
+It is unfair because it changes what the resume is trying to be.
+
+It pushes candidates to compress years of work into an ad: headline, numbers, keywords, brand signals, and fine print. It rewards the easiest evidence to consume, not necessarily the strongest evidence of ability.
+
+That is the real failure.
+
+A resume should help someone understand work.
+
+The ten-second process asks it to sell.

@@ -6,6 +6,7 @@ import path from 'path';
 import { execFileSync } from 'child_process';
 import matter from 'gray-matter';
 import { remark } from 'remark';
+import remarkGfm from 'remark-gfm';
 import html from 'remark-html';
 import hljs from 'highlight.js';
 import 'highlight.js/styles/github.css';
@@ -47,8 +48,8 @@ function getPostsMetadata(postsDirectory, lang) {
 export async function getStaticPaths() {
     const paths = [];
 
-    // Generate paths for English and French posts
-    ['en', 'fr'].forEach((lang) => {
+    // Generate paths for published English posts
+    ['en'].forEach((lang) => {
         const postsDirectory = path.join(process.cwd(), `public/posts/${lang}`);
         const filenames = fs.readdirSync(postsDirectory);
 
@@ -69,12 +70,10 @@ export async function getStaticProps({ params }) {
     const { slug, lang } = params;
 
     const postsDirectoryEn = path.join(process.cwd(), 'public/posts/en');
-    const postsDirectoryFr = path.join(process.cwd(), 'public/posts/fr');
 
     const postsEn = getPostsMetadata(postsDirectoryEn, 'en');
-    const postsFr = getPostsMetadata(postsDirectoryFr, 'fr');
 
-    const currentDirectory = lang === 'en' ? postsDirectoryEn : postsDirectoryFr;
+    const currentDirectory = postsDirectoryEn;
     const filePath = path.join(currentDirectory, `${slug}.md`);
     const fileContent = fs.readFileSync(filePath, 'utf8');
     const { data, content } = matter(fileContent);
@@ -82,6 +81,7 @@ export async function getStaticProps({ params }) {
     const updatedAt = getGitLastUpdated(filePath) || fs.statSync(filePath).mtime.toISOString();
 
     const processedContent = await remark()
+        .use(remarkGfm)
         .use(html)
         .process(content);
     const htmlContent = processedContent.toString();
@@ -95,13 +95,12 @@ export async function getStaticProps({ params }) {
                 updatedAt,
             },
             postsEn,
-            postsFr,
             currentLang: lang,
         },
     };
 }
 
-export default function Post({ post, postsEn, postsFr, currentLang }) {
+export default function Post({ post, postsEn, currentLang }) {
     const { title, description, htmlContent, updatedAt } = post;
 
     useEffect(() => {
@@ -154,7 +153,7 @@ export default function Post({ post, postsEn, postsFr, currentLang }) {
                 <h1>{title}</h1>
                 {formattedDate && (
                     <p>
-                        <strong>{currentLang === 'fr' ? 'Dernière mise à jour :' : 'Last updated:'}</strong> {formattedDate}
+                        <strong>Last updated:</strong> {formattedDate}
                     </p>
                 )}
                 <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
@@ -163,17 +162,7 @@ export default function Post({ post, postsEn, postsFr, currentLang }) {
             <hr />
 
             <footer>
-                {currentLang === 'en' ? (
-                    <>
-                        <PostsList title="Other Posts" posts={postsEn} />
-                        <PostsList title="French Posts" posts={postsFr} />
-                    </>
-                ) : (
-                    <>
-                        <PostsList title="Autre Articles" posts={postsFr} />
-                        <PostsList title="Articles en Anglais" posts={postsEn} />
-                    </>
-                )}
+                <PostsList title="Other Posts" posts={postsEn} />
             </footer>
         </>
     );

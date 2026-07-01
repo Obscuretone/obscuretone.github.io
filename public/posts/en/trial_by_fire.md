@@ -1,89 +1,200 @@
 ---
-title: Tell me about the last time you broke production.
+title: Tell Me About The Last Time Something Broke In Production
 image: trial_by_fire.jpg
 imagealt: The classic meme, a dog in a room on fire, "this is fine"
-description: This article explores the best question I've learned to ask when interviewing software engineers.
+description: Production incidents are not a badge of honor, but they are a real signal of engineering experience. The useful interview question is not whether someone has broken production, but what happened afterward.
 ---
 
-It's a simple question, but it reveals a lot. Over the years, I’ve interviewed countless developers—junior, mid-level, and senior. And when I ask this question, I can tell instantly who’s seasoned and who's green, regardless of how polished their résumé might look.
+One of my favorite interview questions is simple:
 
-Some might say it's a trick question, but in reality, it's a litmus test. In my view, if you've never broken production—or at least made a serious mistake that impacted your team or users—you probably haven't been in the trenches long enough to call yourself a senior developer. After all, breaking production is practically a rite of passage in software development.
+> Tell me about the last time something broke in production.
 
-## Why this question?
+I do not like this question because I want to punish people for making mistakes.
 
-First of all, I don’t believe anyone who claims they’ve never shipped a bug. Code is complex, humans are fallible, and systems are unpredictable. The best devs aren’t the ones who have a perfect track record—they’re the ones who’ve made mistakes and learned from them.
+I like it because production is where software stops being theoretical.
 
-Breaking things shows:
+Local development is controlled. Tests are selective. Staging is a model. Production has real users, real data, real concurrency, real integrations, real permissions, real traffic, real money, and real organizational pressure.
 
-1. **You’ve taken ownership**: Only developers who work on production code with real-world consequences are in a position to break things.
-2. **You’ve been trusted**: Junior devs might not have enough responsibility yet to make production-impacting mistakes. The fact that you’ve been in a position to break things shows you’ve been trusted with meaningful work.
-3. **You’ve been through fire**: You’ve dealt with on-call panic, frantic bug fixes, and the pressure of rollback. These are all important experiences that shape a mature developer.
+If someone has worked on enough real systems, eventually something goes wrong.
 
-## The best stories come from breaking things
+The interesting question is not whether they have ever shipped a bug. The interesting question is whether they know what to do when the system proves them wrong.
 
-Let’s be honest: the best war stories in software come from moments of complete panic. No one remembers a smooth release as vividly as they remember the one where the entire production environment went down and they had to scramble for a fix while hundreds (or thousands!) of users were affected.
+## The Probability Of Never Shipping A Bug
 
-And if you're a senior developer, you're bound to have more than one such story. I certainly do—though the details seem to blur into one endless firefight of frantic fixes and post-mortem discussions. Whether it was a misconfigured environment, a forgotten edge case, or something as simple as a rogue ; in the wrong place—I've been there.
+Nobody has a universal statistic for "software engineers who have never shipped a bug." The honest way to think about it is probabilistic.
 
-One of my more notable bugs happened in a complicated financial calculation system, almost like cell phone billing, but for field equipment that wasn’t always connected. The system had a concept of eventual consistency. It was correct 99.99% of the time and passed all our test cases. But we had a subtle edge case—a discrepancy between an initial plan and a later revision—that wasn’t caught, and this caused a minimum usage charge to be calculated incorrectly.
+Assume:
 
-Most of the mistakes were minor—just a few cents. But in some of the worst cases, the errors totaled in the thousands. In the end, it cost the company a few thousand dollars. Sales had to step in and, on a case-by-case basis, decide whether to waive the charge or correct the bill. Good, reliable customers tended to get their charges waived. There’s a lesson there, too.
+1. an engineer ships \(n\) meaningful changes
+2. each change has probability \(p\) of causing a production bug
+3. the risks are independent enough for a rough model
 
-## The real test: debugging weird production-only issues
+The probability of shipping zero production bugs is:
 
-While breaking production is one thing, the *real* badge of seniority comes when you find yourself facing bugs that only occur in production. You know the type—those weird, unpredictable issues that refuse to manifest in dev or staging, no matter how hard you try to replicate them.
+$$
+P(\text{zero bugs}) = (1 - p)^n
+$$
 
-This is where the magic happens. Fixing these kinds of issues requires a whole new level of system understanding and troubleshooting skills. You can’t just rely on the familiar, controlled environment of staging. Production is messy, full of live user data, real-world network traffic, and all kinds of subtle configuration differences that can make even a seemingly small bug rear its head in unpredictable ways.
+So the probability of shipping at least one production bug is:
 
-These types of bugs separate the experienced from the rest.
+$$
+P(\text{at least one bug}) = 1 - (1 - p)^n
+$$
 
-## Why these issues only show up in production
+Now use a very generous assumption: only 1% of meaningful changes cause a production bug.
 
-There are plenty of reasons why some bugs only appear in production:
+For 500 meaningful shipped changes:
 
-1. **Scale**: Your dev environment might not have the same amount of traffic or data as your production environment. What works fine for a few users can break down at scale.
-2. **Environment Differences**: Dev and staging are often simplified versions of production—fewer machines, different configurations, or missing integrations.
-3. **Concurrency**: You rarely simulate real-world concurrency and race conditions in staging, but in production, everything happens at once.
-4. **Real Data**: Production often has far messier data than your test databases, where everything is structured nicely. In production, users enter garbage data, unexpected formats, and push your system in ways you never anticipated.
+$$
+P(\text{zero bugs}) = 0.99^{500}
+$$
 
-That’s what makes these bugs so much more interesting. They force you to zoom out and see the system as a whole, understanding how each part interacts under real-world conditions.
+$$
+P(\text{zero bugs}) \approx 0.00657
+$$
 
-## The art of debugging in production
+That is about:
 
-When you’re debugging something that only happens in production, you have to be methodical. It's not just about reading stack traces or logs—sometimes it’s about understanding the entire ecosystem your code operates in.
+$$
+0.657\%
+$$
 
-In these situations, a senior developer knows:
+So even under a forgiving model, the chance of making 500 meaningful production changes without ever causing a production bug is less than 1%.
 
-* **How to dig deep into logs**: You need to know exactly where to look for clues, and often that means sifting through a massive volume of logs.
-* **Where the hidden bottlenecks are**: You might need to check network latency, database performance, or other external services to identify bottlenecks or failures.
-* **How to use monitoring tools effectively**: Knowing how to work with performance monitoring and error tracking tools is crucial to zeroing in on the issue.
-* **How to isolate variables**: You can’t just reproduce the issue in a nice, controlled environment. You have to systematically isolate the problem using feature flags, traffic mirroring, or rolling out patches to a small subset of users first.
+Put differently:
 
-Sometimes, these bugs make you question everything you thought you knew about the system. It requires a deep understanding of how your application, databases, network, and services all interact at scale.
+$$
+P(\text{at least one bug}) = 1 - 0.99^{500} \approx 99.343\%
+$$
 
-## What this teaches you
+The exact numbers are debatable. The conclusion is not. If someone has shipped enough real software, "nothing ever broke" is not a credible engineering story. It is either lack of production exposure, lack of ownership, lack of memory, or an unusually narrow definition of "bug."
 
-The ability to debug these weird, one-off production issues is a hallmark of a senior dev. It’s a skill that’s honed over time, as you gain a broader understanding of the system you’re working with and become better at seeing the interconnectedness of things.
+## This Is Not Gatekeeping
 
-The lessons learned from these debugging experiences:
+There is a bad version of this question:
 
-* **Systems Thinking**: Senior developers understand that no bug exists in isolation. Production is an ecosystem where everything is interdependent.
-* **Deep Knowledge**: You can’t debug what you don’t understand. It’s these production issues that push developers to learn the nuances of databases, network layers, and the quirks of different services.
-* **Patience and Persistence**: Debugging production issues requires methodical investigation and persistence. It’s easy to get lost in the weeds, but staying calm and following the data is key.
-* **Humility**: Debugging these elusive problems teaches humility. Sometimes it’s not your code, but an external service, or an environment quirk. But as the one responsible, you have to navigate through all that complexity to fix the issue.
+> Have you suffered enough to be allowed in?
 
-## Correlation doesn't imply causation—but it works
+That version is useless.
 
-“Correlation doesn’t imply causation,” as the saying goes, but I can tell you this: **this question has never led to a bad hire**. Maybe I’m missing out on the developers who write truly bug-free code. One person even told me he tests so thoroughly that there *can’t* be bugs in his work.
+The good version is:
 
-And maybe he’s right! But I couldn't help but wonder—if you're spending all that time testing to perfection, how much time are you actually spending *writing* code? There’s a balance to be struck, and while testing is crucial, the reality is that systems are messy, unpredictable, and always evolving.
+> What did production teach you that tests, code review, and local development did not?
 
-The best developers know this and have learned to adapt to the chaos.
+That is not gatekeeping. That is signal.
 
-![This is fine.](/images/trial_by_fire.jpg "This is fine.")
+A production incident reveals how someone behaves when the abstraction leaks. It shows whether they can stay calm, gather evidence, communicate clearly, reduce blast radius, make reversible changes, and learn without hiding.
 
-## Breaking and fixing production is a rite of passage
+Those are real engineering skills.
 
-As I mentioned earlier, breaking production is a rite of passage for any senior developer. But digging into weird, production-only bugs? That’s when you really separate the pros from the rest. These issues force you to go beyond the code and think about the system as a whole.
+## A Deliberately Lossy Filter
 
-If you’ve never had to troubleshoot a production-only bug, brace yourself. It’s only a matter of time before the complexity of your system throws something at you that dev and staging simply can’t simulate. When that day comes, embrace the challenge—these are the moments that teach you the most about being a truly senior developer.
+I have used this question as a real hiring filter.
+
+If someone swears they have never broken production, I treat that as a fail.
+
+Could that lose an amazing candidate? Yes. It probably loses someone. Maybe one in a hundred strong candidates has genuinely shipped meaningful production software for years without causing a production bug, or has a definition of "broke production" so narrow that their answer is technically true.
+
+So be it.
+
+Every hiring filter is lossy. The question is whether the signal is connected to the job.
+
+Compared with the filters employers actually use, this one is defensible. Companies routinely make snap judgments from weaker proxies:
+
+1. whether the resume has the exact keywords
+2. whether the previous title matches the new title
+3. whether the company names are recognizable
+4. whether the degree came from the right school
+5. whether the employment timeline looks conventional
+6. whether the email domain looks "professional"
+7. whether the resume format feels familiar
+
+Some filters are worse than weak. They are discriminatory.
+
+I have literally been in the room when gender was considered in a hiring conversation. I escalated it immediately because that is not a hiring signal. It is illegal, unethical, and corrosive to the entire process.
+
+That experience is part of why I prefer a question like this. It is not perfect, but at least it points toward the work.
+
+Production incidents are part of software engineering. How someone talks about them tells me more than a polished resume, a brand-name employer, a school, an email domain, or a rehearsed answer about strengths and weaknesses.
+
+Find me a better filter that is actually available in a real interview, under real time constraints, with the information employers really use.
+
+Until then, I will keep asking.
+
+## Why Production Is Different
+
+Some bugs only appear in production because production is not just another environment. It is a different kind of system.
+
+Common production-only causes include:
+
+1. **Scale:** data volume or traffic reveals performance issues
+2. **Environment differences:** configuration, secrets, permissions, or infrastructure differs from staging
+3. **Concurrency:** race conditions appear only under real load
+4. **Real data:** user input is messier than test fixtures
+5. **External dependencies:** vendors, networks, queues, and background jobs introduce timing failures
+6. **Operational pressure:** fixes happen while people are waiting
+
+This is why the question is useful in interviews. A person can memorize patterns, pass coding exercises, and explain best practices. Production asks whether they can operate inside a system that is already moving.
+
+## What A Strong Answer Sounds Like
+
+Strong answers are specific.
+
+They usually include:
+
+1. what changed
+2. what broke
+3. how the issue was detected
+4. who was affected
+5. what was done to mitigate it
+6. how the root cause was found
+7. what changed afterward
+
+The best answers are not heroic. They are boring in the right way.
+
+The engineer noticed evidence, narrowed the problem, communicated impact, chose a reversible mitigation, preserved information for root-cause analysis, and turned the incident into better tests, monitoring, design, or process.
+
+That is what maturity looks like.
+
+## A Useful Incident Story
+
+One production issue I worked through involved a billing-like calculation system for field equipment with intermittent connectivity.
+
+The system was eventually consistent and correct for the overwhelming majority of cases, but a subtle edge case appeared when an initial plan and a later revision interacted in an unexpected way.
+
+The result was that a minimum usage charge could be calculated incorrectly. Most discrepancies were small, but some were large enough to require manual review.
+
+The technical fix mattered, but the broader lesson mattered more: tests covered the expected paths, but not the lifecycle interaction that caused the issue.
+
+The follow-up was to improve the test cases around revisions, make the calculation easier to reason about, and add checks that surfaced unusual billing outcomes earlier.
+
+That is the kind of story I want to hear in interviews. Not perfection. Ownership, analysis, and improvement.
+
+## What The Question Actually Tests
+
+"Tell me about the last time something broke in production" is not a confession prompt.
+
+It tests:
+
+1. **Ownership:** Does the candidate take responsibility without becoming defensive?
+2. **Judgment:** Can they explain tradeoffs under pressure?
+3. **Systems thinking:** Do they understand why the issue happened beyond the immediate symptom?
+4. **Communication:** Did they keep teammates, users, or stakeholders informed?
+5. **Learning:** Did the incident lead to better tests, monitoring, process, or design?
+6. **Humility:** Do they understand that real systems fail in ways no one fully predicts?
+
+The red flag is not "I broke production."
+
+The red flag is "I have never been close enough to production to have a story," or "I have a story but learned nothing from it."
+
+## Closing Thought
+
+Breaking production is not a badge of honor.
+
+Learning from production is.
+
+The strongest engineers are not the ones who claim nothing ever goes wrong. They are the ones who can explain what happened, how they responded, and how the system became better afterward.
+
+Production is not fair, but it is honest.
+
+Eventually, it grades the assumptions.
