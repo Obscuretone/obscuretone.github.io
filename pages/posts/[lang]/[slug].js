@@ -3,12 +3,28 @@ import Head from 'next/head';
 import Script from 'next/script';
 import fs from 'fs';
 import path from 'path';
+import { execFileSync } from 'child_process';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
 import hljs from 'highlight.js';
 import 'highlight.js/styles/github.css';
 import PostsList from '../../../components/PostsList';
+
+function getGitLastUpdated(filePath) {
+    try {
+        const relativePath = path.relative(process.cwd(), filePath);
+        const updatedAt = execFileSync(
+            'git',
+            ['log', '-1', '--format=%aI', '--', relativePath],
+            { cwd: process.cwd(), encoding: 'utf8' },
+        ).trim();
+
+        return updatedAt || null;
+    } catch {
+        return null;
+    }
+}
 
 // Utility function to extract metadata from posts
 function getPostsMetadata(postsDirectory, lang) {
@@ -63,8 +79,7 @@ export async function getStaticProps({ params }) {
     const fileContent = fs.readFileSync(filePath, 'utf8');
     const { data, content } = matter(fileContent);
 
-    const stats = fs.statSync(filePath);
-    const updatedAt = stats.mtime;
+    const updatedAt = getGitLastUpdated(filePath) || fs.statSync(filePath).mtime.toISOString();
 
     const processedContent = await remark()
         .use(html)
@@ -77,7 +92,7 @@ export async function getStaticProps({ params }) {
                 title: data.title || 'Untitled',
                 description: data.description || '',
                 htmlContent,
-                updatedAt: updatedAt.toISOString(),
+                updatedAt,
             },
             postsEn,
             postsFr,
