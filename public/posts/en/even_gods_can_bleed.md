@@ -11,6 +11,14 @@ That word was the escape hatch.
 
 It moved the story away from the obvious system failure: a government web portal exposed documents without meaningful access control. It moved attention toward a 19-year-old who changed numbers in a URL, downloaded files, and got arrested.
 
+It also moved attention away from where power actually lived.
+
+Not with my local elected officials.
+
+Not with the people most voters could name, call, shame, or replace.
+
+The real authority was buried in the permanent state: deputy ministers, privacy officials, technology executives, corporate security, departmental counsel, communications staff, and the internal machinery that can turn a web application failure into a police matter before the public understands what happened.
+
 That was the underlying problem. Once the province described its own exposed records as a hack, responsibility moved from the people who built, approved, operated, and defended the system to the teenager who touched the evidence. "Hack" was not a technical description. It was a liability transfer.
 
 The technical issue was not subtle. Sequential identifiers are not authorization. HTTPS is not access control. A document being reachable from a public URL is not the same thing as a protected record. If the only thing between a citizen and someone else's FOIPOP package is changing `id=1234` to `id=1235`, the problem is not an elite cyberattack.
@@ -62,6 +70,8 @@ Useful source anchors include:
 11. [My archived open letter to the Premier and Cabinet](https://web.archive.org/web/20180503163551/https://evandentremont.com/an-open-letter-to-the-premier-and-the-cabinet/)
 12. [My archived FOIPOP conclusion](https://web.archive.org/web/20191016205033/https://evandentremont.com/a-conclusion-to-foipop/)
 13. [My AtlSecCon 2018 talk, "1,2,3,4 I Declare Cyber War"](https://speakerdeck.com/evandentremont/1-2-3-4-i-declare-cyber-war)
+14. [Nova Scotia's Freedom of Information and Protection of Privacy Act](https://nslegislature.ca/sites/default/files/legc/statutes/freedom%20of%20information%20and%20protection%20of%20privacy.pdf)
+15. [Cape Breton Spectator on deputy ministers, exemptions, and Nova Scotia access-to-information culture](https://capebretonspectator.com/2020/11/18/cbrm-oipc-access-information-ns/)
 
 ## The Real Failure
 
@@ -86,6 +96,40 @@ Corporate Security contacted Halifax Regional Police. The warrant materials repe
 The public record already shows a government security office using police channels to convert an embarrassing access-control failure into a criminal investigation.
 
 That protected the institution for about five minutes. Then it made everything worse.
+
+## The Authority Problem
+
+The most important thing FOIPOP taught me was not that Nova Scotia had a bad web portal.
+
+It was that elected accountability and operational authority are not the same thing.
+
+My local elected officials could ask questions, make noise, apply pressure, and maybe embarrass the government. They could not run the department. They could not rewrite the breach response. They could not decide what Corporate Security told police. They could not force a deputy minister to treat a technical failure as a technical failure.
+
+The operational authority lived elsewhere.
+
+That matters because the access-to-information system itself is administered through that same unelected layer. Nova Scotia's FOIPOP Act says its purpose is to make public bodies accountable by giving the public a right of access, while specifying "limited exceptions" to that right. But the practical machinery of those exceptions sits with the public body.
+
+The Act repeatedly says the "head of a public body may refuse" disclosure. The head may refuse information that would reveal the substance of Executive Council deliberations. The head may refuse advice or recommendations developed by or for a public body or minister. The head may refuse information where disclosure could harm law enforcement or the security of property or a computer system. The head may refuse solicitor-client privileged information. The Act also allows the head of a public body to delegate powers to officers of the public body.
+
+That is not automatically corrupt.
+
+Some exemptions are legitimate. Personal privacy matters. Cabinet confidentiality can matter. Solicitor-client privilege can matter. Security details can matter.
+
+But the design matters too.
+
+The same institution that may be embarrassed by disclosure is also the institution that searches, frames, delays, applies exemptions, and writes the first decision letter. The public can appeal, complain, litigate, or make noise, but the first pass belongs to the bureaucracy.
+
+That is why access-to-information law can look democratic while still feeling like a locked filing cabinet with a complaint form taped to it.
+
+This is also why the deputy minister problem is not abstract. Graham Steele, a former Nova Scotia cabinet minister, told a Cape Breton Spectator panel discussion that deputy ministers were, in his view, most responsible for slowing access to information because department heads over-relied on exemptions and failed to interpret the law liberally in favour of disclosure.
+
+FOIPOP made that structure visible.
+
+The elected layer could be pressured.
+
+The unelected layer owned the process.
+
+Even gods can bleed, but only after someone proves where the blood is coming from.
 
 ## My Part
 
@@ -117,7 +161,7 @@ Deputy and associate deputy ministers usually survive by being invisible.
 
 They are senior enough to shape decisions, but insulated enough that the public often sees only the minister. FOIPOP made that harder. Jeff Conrad's name became attached to the file. Sandra Cascadden's name became attached to the privacy and technology approvals around the portal. The question stopped being only "what did the teenager do?" and became "what did the department build, approve, say, and tell police?"
 
-That is the part I do not want softened into a misunderstanding. The people around this file were not helplessly confused by computers. The province had professional technology leadership. It had privacy process. It had career bureaucrats whose job was to understand risk, records, procurement, operations, and public accountability. If the system exposed documents and the official response still pointed outward at a teenager, that is not merely a literacy gap. That is an institution protecting itself.
+That is the part I do not want softened into a misunderstanding. The people around this file were not helplessly confused by computers. The province had professional technology leadership. It had privacy process. It had career bureaucrats whose job was to understand risk, records, procurement, operations, exemptions, law-enforcement escalation, and public accountability. If the system exposed documents and the official response still pointed outward at a teenager, that is not merely a literacy gap. That is an institution protecting itself.
 
 It is also why Corporate Security matters. Security offices sit at the boundary between bureaucracy and law enforcement. Staffed by people who know how police think, they can make an incident sound like a criminal matter before anyone technical has slowed the story down. In this case, the phrase "hack" did the work. It gave police a familiar role, gave the province distance from its own failure, and gave the public someone to blame.
 
@@ -180,6 +224,8 @@ That pattern appears everywhere.
 Bad metrics become employee problems. Bad hiring systems become candidate problems. Bad public policy becomes citizen behavior. Bad software becomes "misuse." The institution designs the maze, then blames the person who walks into the wall.
 
 That is worse when the institution has engineers, security staff, and senior officials who should know better. The problem is not ignorance. The problem is that blame is often cheaper than accountability, and police can make blame feel official.
+
+It is worse again when elected oversight is weaker than people imagine. Voters can throw out a government. They cannot directly fire the deputy minister, rewrite the exemption culture, change the breach protocol, or make Corporate Security stop speaking fluent police.
 
 The FOIPOP case was different because the wall was visible.
 
