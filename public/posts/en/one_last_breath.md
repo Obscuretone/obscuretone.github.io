@@ -1,5 +1,9 @@
 ---
 title: The Last Human Job Is Blame
+image: rt_blame_desk.webp
+imagealt: "An automated office machine sends stamped decisions to a lone human liability desk."
+imagecaption: "Automated work flows through the machine until responsibility needs a person-shaped endpoint."
+imagesource: "AI-generated illustration created for obscuretone with OpenAI image generation."
 description: As AI absorbs more work, institutions will still need a person-shaped place to put responsibility. The last durable human job may not be creativity or judgment. It may be blame.
 tags: [ai, accountability, work, liability, institutions]
 ---

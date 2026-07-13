@@ -1,5 +1,10 @@
 ---
 title: Nova Scotia Should Be An Island
+image: rt_nova_scotia_map.webp
+imagealt: "A styled map of Nova Scotia with the Chignecto Isthmus highlighted."
+imagecaption: "A deliberately over-serious Chignecto Isthmus flood proposal, anchored to the actual Nova Scotia map."
+imagesource: "Wikimedia Commons map, Canada Nova Scotia location map 2, adapted with overlay."
+imagesourceurl: "https://commons.wikimedia.org/wiki/File:Canada_Nova_Scotia_location_map_2.svg"
 description: A satirical engineering proposal to flood the Chignecto Isthmus and make Nova Scotia's geography match its culture, written with the full seriousness of a public infrastructure review.
 tags: [nova-scotia, infrastructure, satire, government, systems]
 ---

@@ -1,7 +1,9 @@
 ---
 title: Startup Myths, Structural Advantages, and Real Execution
-image: startup_garage_bay_area.png
-imagealt: A luxury home garage in the Bay Area with startup founders working inside.
+image: rt_startup_launchbay.webp
+imagealt: "Retrofuturist plate of a garage launch bay connected to capital tanks and regulatory gates."
+imagecaption: "The garage myth redrawn as infrastructure, timing, capital, and support systems."
+imagesource: "AI-generated illustration created for obscuretone with OpenAI image generation."
 description: This article looks at how startup success is shaped by execution, timing, capital, regulation, and privilege rather than grit alone.
 tags: [startups, capital, incentives, regulation, mythology]
 ---

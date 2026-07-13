@@ -1,5 +1,9 @@
 ---
 title: The Job Market Is Eventually Consistent
+image: rt_eventual_hiring_sync.webp
+imagealt: "Recruiters, candidates, budgets, job postings, and calendars appear as delayed database nodes trying to sync."
+imagecaption: "Hiring as stale replicated state: every node updates eventually, and candidates wait in the lag."
+imagesource: "AI-generated illustration created for obscuretone with OpenAI image generation."
 description: "Hiring behaves like a badly replicated distributed system: postings, recruiters, candidates, managers, budgets, and ATS records all drift out of sync, and candidates pay for the inconsistency."
 tags: [hiring, distributed-systems, careers, incentives, software]
 ---

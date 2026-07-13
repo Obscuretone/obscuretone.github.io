@@ -1,7 +1,9 @@
 ---
 title: EMH - Building A Hiring Platform Around Evidence
-image: resume_mr_anderson.webp
-imagealt: Neo sees a resume review through the lens of the Matrix
+image: rt_emh_evidence_matcher.webp
+imagealt: "One resume and one job description feed into an evidence comparison machine with requirement gauges and a draft output tray."
+imagecaption: "EMH as a one-resume, one-job evidence matcher instead of another pile-reduction machine."
+imagesource: "AI-generated illustration created for obscuretone with OpenAI image generation."
 description: EMH started as an attempt to replace keyword-based first-line HR screening, then evolved into an evidence-grounded platform for comparing one resume to one job and generating application-specific resume drafts.
 tags: [hiring, ai, evidence, software, resumes]
 ---
@@ -27,8 +29,6 @@ Paste in a resume. Paste in a job description. Ask the model whether the candida
 That can be useful, but a software system needs memory. It should remember what evidence was used, distinguish missing information from a weak score, separate recruiter matching from applicant optimization, and explain how a tailored resume was grounded in actual work history.
 
 EMH is my attempt to treat that problem as a platform problem instead.
-
-![Neo sees a resume through the lens of the matrix](/images/resume_mr_anderson.webp "The Matrix")
 
 ## The Core Idea
 

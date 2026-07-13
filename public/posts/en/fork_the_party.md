@@ -1,5 +1,9 @@
 ---
 title: Fork The Party
+image: rt_fork_party_branching.webp
+imagealt: "A political party headquarters becomes a branching source-control station with several unpleasant deployment targets."
+imagecaption: "A worldview is easy to fork; the hard part is choosing where the branch has to run."
+imagesource: "AI-generated illustration created for obscuretone with OpenAI image generation."
 description: A political worldview is not enough. It needs a deployment target, and every available target has horrible implementation details.
 tags: [politics, institutions, movements, incentives, systems]
 ---

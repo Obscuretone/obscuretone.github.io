@@ -1,5 +1,9 @@
 ---
 title: About This Site
+image: rt_project_lab.webp
+imagealt: "Retrofuturist technical-manual plate of interconnected project modules on a lab bench."
+imagecaption: "A project-lab plate for the site notes, software experiments, and systems essays."
+imagesource: "AI-generated illustration created for obscuretone with OpenAI image generation."
 description: obscuretone is a collection of systems notes, software projects, and essays on reliable systems, practical architecture, AI-assisted workflows, hiring systems, and the organizational incentives around software work.
 tags: [systems, software, incentives, architecture, publishing]
 ---

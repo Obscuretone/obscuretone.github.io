@@ -1,5 +1,9 @@
 ---
 title: Building A Career Through Practical Experience
+image: rt_practical_experience_bench.webp
+imagealt: "A practical engineering workbench stacks shipped systems, incident notes, mentorship, and production evidence above framed credentials."
+imagecaption: "Practical experience as a curriculum made of shipped systems, incidents, judgment, and evidence."
+imagesource: "AI-generated illustration created for obscuretone with OpenAI image generation."
 description: This article explains how practical experience, continuous learning, and measurable outcomes can build senior engineering capability outside a traditional degree path.
 tags: [careers, hiring, evidence, engineering, credentials]
 ---

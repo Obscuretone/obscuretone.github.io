@@ -1,7 +1,9 @@
 ---
 title: Tell Me About The Last Time Something Broke In Production
-image: trial_by_fire.jpg
-imagealt: The classic meme, a dog in a room on fire, "this is fine"
+image: rt_production_incident.webp
+imagealt: "A production control room with an incident lamp, rollback lever, pager, falling graph trace, and review notebook."
+imagecaption: "A production incident as the place where assumptions meet users, alarms, rollback, and review."
+imagesource: "AI-generated illustration created for obscuretone with OpenAI image generation."
 description: Production incidents are a real signal of engineering experience. The useful interview question asks what happened after something broke.
 tags: [production, incidents, hiring, engineering, evidence]
 ---

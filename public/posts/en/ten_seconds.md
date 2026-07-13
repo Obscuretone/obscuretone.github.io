@@ -1,5 +1,9 @@
 ---
 title: The Ten-Second Resume Is An Advertisement
+image: rt_resume_ad_unit.webp
+imagealt: "A resume transformed into a billboard above a fast screening conveyor."
+imagecaption: "A resume becomes an ad unit when the review window collapses to ten seconds."
+imagesource: "AI-generated illustration created for obscuretone with OpenAI image generation."
 description: Fast resume screening compresses professional history into a headline, rewarding titles, brand names, and flashy numbers while pushing the real evidence into fine print.
 tags: [hiring, resumes, attention, careers, incentives]
 ---

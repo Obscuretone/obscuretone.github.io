@@ -1,5 +1,9 @@
 ---
 title: Refactoring Capitalism With Zero Downtime
+image: rt_zero_downtime_capitalism.webp
+imagealt: "A live city services machine keeps housing, food, medicine, payroll, power, schools, buses, and hospitals running during a migration."
+imagecaption: "Economic transition as a live migration where the services people depend on cannot go down."
+imagesource: "AI-generated illustration created for obscuretone with OpenAI image generation."
 description: If an economic system has to change, people still need food, housing, medicine, payroll, power, schools, and hospitals while the migration runs.
 tags: [politics, economics, systems, migration, institutions]
 ---
