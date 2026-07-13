@@ -16,6 +16,21 @@ import { getPostsByLanguage } from '../../../utils/posts';
 
 const MATHJAX_SCRIPT_ID = 'mathjax-script';
 
+function splitAfterFirstParagraph(htmlContent) {
+    const firstParagraphEnd = htmlContent.indexOf('</p>');
+
+    if (firstParagraphEnd === -1) {
+        return [htmlContent, ''];
+    }
+
+    const splitIndex = firstParagraphEnd + '</p>'.length;
+
+    return [
+        htmlContent.slice(0, splitIndex),
+        htmlContent.slice(splitIndex),
+    ];
+}
+
 function ensureMathJax() {
     if (typeof window === 'undefined') {
         return Promise.resolve(null);
@@ -124,6 +139,11 @@ export async function getStaticProps({ params }) {
                 title: data.title || 'Untitled',
                 description: data.description || '',
                 tags: data.tags || [],
+                image: data.image || '',
+                imageAlt: data.imagealt || '',
+                imageCaption: data.imagecaption || '',
+                imageSource: data.imagesource || '',
+                imageSourceUrl: data.imagesourceurl || '',
                 htmlContent,
                 updatedAt,
             },
@@ -138,7 +158,17 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Post({ post, nearbyArguments, postsEn, currentLang }) {
-    const { title, description, htmlContent, updatedAt } = post;
+    const {
+        title,
+        description,
+        image,
+        imageAlt,
+        imageCaption,
+        imageSource,
+        imageSourceUrl,
+        htmlContent,
+        updatedAt,
+    } = post;
     const articleContentRef = useRef(null);
 
     useEffect(() => {
@@ -175,6 +205,28 @@ export default function Post({ post, nearbyArguments, postsEn, currentLang }) {
             day: 'numeric',
         })
         : null;
+    const [openingHtml, remainingHtml] = splitAfterFirstParagraph(htmlContent);
+    const postFigure = image ? (
+        <figure className="post-figure">
+            <img src={`/images/${image}`} alt={imageAlt || ''} />
+            {(imageCaption || imageSource) && (
+                <figcaption>
+                    {imageCaption}
+                    {imageCaption && imageSource && ' '}
+                    {imageSource && (
+                        <>
+                            Source:{' '}
+                            {imageSourceUrl ? (
+                                <a href={imageSourceUrl}>{imageSource}</a>
+                            ) : (
+                                imageSource
+                            )}
+                        </>
+                    )}
+                </figcaption>
+            )}
+        </figure>
+    ) : null;
 
     return (
         <>
@@ -197,7 +249,11 @@ export default function Post({ post, nearbyArguments, postsEn, currentLang }) {
                         <strong>Last updated:</strong> {formattedDate}
                     </p>
                 )}
-                <div ref={articleContentRef} dangerouslySetInnerHTML={{ __html: htmlContent }} />
+                <div ref={articleContentRef}>
+                    <div dangerouslySetInnerHTML={{ __html: openingHtml }} />
+                    {postFigure}
+                    <div dangerouslySetInnerHTML={{ __html: remainingHtml }} />
+                </div>
             </article>
 
             <hr />

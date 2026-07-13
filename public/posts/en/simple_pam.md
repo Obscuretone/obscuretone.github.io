@@ -1,5 +1,9 @@
 ---
 title: Simple PAM - Using Uptime As An Authentication Signal
+image: rt_simple_pam_uptime.webp
+imagealt: "A login doorway controlled by a reboot clock, uptime gauge, and relay-like PAM modules."
+imagecaption: "Physical access, recent reboot, and PAM policy drawn as one local authentication boundary."
+imagesource: "AI-generated illustration created for obscuretone with OpenAI image generation."
 description: A project note on a small Linux PAM module that checks system uptime as a narrow authentication control for physical-access scenarios.
 tags: [security, linux, authentication, software, systems]
 ---

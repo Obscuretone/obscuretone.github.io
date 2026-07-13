@@ -1,7 +1,9 @@
 ---
 title: AI Did Not Replace Developers. It Changed The Bar.
-image: cybertourdefrance.webp
-imagealt: A cyborg racing in the Tour de France alongside human cyclists.
+image: rt_ai_code_review_queue.webp
+imagealt: "An engineer reviews a growing queue of AI-generated code printouts moving through QA gates."
+imagecaption: "AI makes the first draft cheaper and pushes the bottleneck into review, testing, and accountability."
+imagesource: "AI-generated illustration created for obscuretone with OpenAI image generation."
 description: A 2026 retrospective on AI-assisted software development, arguing that AI amplified experienced developers first, made routine work cheaper, and moved the real bottleneck into review, QA, and accountability.
 tags: [ai, software, engineering, review, accountability]
 ---
@@ -17,8 +19,6 @@ The answer, at least so far, is that AI helps most when the person using it can 
 AI can do useful work. The modern problem is that it can create more work than the existing QA, review, and deployment pipelines were designed to absorb.
 
 That is why AI has not removed the need for strong developers. It has changed the bar for what strong development looks like.
-
-![Cyborgs running the tour de france](/images/cybertourdefrance.webp "Cyber Tour De France")
 
 ## The Original Claim
 

@@ -1,20 +1,16 @@
 html {
-  background:
-    radial-gradient(circle at top left, rgba(255, 255, 255, 0.55), transparent 32rem),
-    linear-gradient(90deg, rgba(110, 88, 58, 0.035) 1px, transparent 1px),
-    linear-gradient(rgba(110, 88, 58, 0.035) 1px, transparent 1px),
-    #d8d1c3;
-  background-size: auto, 28px 28px, 28px 28px, auto;
+  background: #3b3923;
 }
 
 body {
   margin: 40px auto;
   max-width: 800px;
   padding: 28px;
-  color: #333;
-  background-color: #fffdf7;
-  box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.28);
-  font-family: "Overlock", Georgia, serif;
+  border: 1px solid #3b3923;
+  color: #211f15;
+  background-color: #f7f4e1;
+  box-shadow: 6px 6px 0 rgba(76, 6, 29, 0.45);
+  font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 18px;
   line-height: 1.6;
 }
@@ -27,31 +23,69 @@ h1,
 h2,
 h3,
 h4 {
-  color: #222;
-  font-family: "Special Elite", "IM Fell DW Pica SC", Georgia, serif;
-  font-weight: normal;
+  color: #4c061d;
+  font-family: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
   line-height: 1.2;
-}
-
-a {
-  color: #064f80;
-}
-
-a:visited {
-  color: #6f3d68;
-}
-
-strong {
-  font-family: "Special Elite", "IM Fell DW Pica SC", Georgia, serif;
-  font-weight: 900;
 }
 
 header {
   position: relative;
+  padding-bottom: 0.85em;
+  border-bottom: 2px solid #d17a22;
+}
+
+header::before {
+  content: "technical notes / local systems / rev. 0";
+  display: block;
+  margin-bottom: 0.6em;
+  color: #736f4e;
+  font-family: "IBM Plex Mono", Consolas, monospace;
+  font-size: 0.78em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+header h1 {
+  margin-bottom: 0;
+}
+
+header h2 {
+  margin-top: 0.2em;
+  color: #736f4e;
+  font-family: "IBM Plex Mono", Consolas, monospace;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+a {
+  color: #4c061d;
+  text-decoration-color: rgba(76, 6, 29, 0.55);
+  text-underline-offset: 0.18em;
+}
+
+a:visited {
+  color: #736f4e;
+}
+
+a:hover,
+a:focus {
+  color: #211f15;
+  background: rgba(180, 194, 146, 0.5);
+  text-decoration-color: #d17a22;
+}
+
+strong {
+  color: #4c061d;
+  font-weight: 700;
 }
 
 .nearby-arguments {
   margin: 1.5em 0;
+  padding: 1em;
+  border: 1px solid #736f4e;
+  border-left: 6px solid #d17a22;
+  background: rgba(180, 194, 146, 0.22);
 }
 
 .nearby-arguments ul {
@@ -64,7 +98,7 @@ header {
 
 .nearby-arguments span {
   display: block;
-  color: #5f5547;
+  color: #736f4e;
   font-size: 0.9em;
 }
 
@@ -73,9 +107,9 @@ blockquote {
   margin-left: 60px;
   margin-right: 60px;
   padding-left: 12px;
-  border-left: 2px solid #777;
-  color: #444;
-  font-family: "Inconsolata", Consolas, monospace;
+  border-left: 2px solid #d17a22;
+  color: #3b3923;
+  font-family: "IBM Plex Mono", Consolas, monospace;
   font-size: 0.95em;
   line-height: 1.25;
 }
@@ -83,14 +117,14 @@ blockquote {
 blockquote.longform {
   margin-left: -1px;
   padding-left: 9px;
-  border-left: 1px solid #333;
-  font-family: "Inconsolata", Consolas, monospace;
+  border-left: 1px solid #736f4e;
+  font-family: "IBM Plex Mono", Consolas, monospace;
   font-size: 0.8em;
   text-align: left;
 }
 
 blockquote.longform strong {
-  font-family: "Special Elite", "IM Fell DW Pica SC", Georgia, serif;
+  font-family: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
 }
 
 blockquote li {
@@ -99,11 +133,36 @@ blockquote li {
 }
 
 article>span {
-  font-family: "Special Elite", "IM Fell DW Pica SC", Georgia, serif;
+  font-family: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
 }
 
 img {
+  display: block;
   max-width: 100%;
+}
+
+.post-figure {
+  margin: 1.4em 0 1.8em;
+  padding: 10px;
+  border: 1px solid #736f4e;
+  background:
+    linear-gradient(135deg, rgba(209, 122, 34, 0.18), transparent 28%),
+    rgba(180, 194, 146, 0.16);
+}
+
+.post-figure img {
+  width: 100%;
+  border: 1px solid rgba(59, 57, 35, 0.55);
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.post-figure figcaption {
+  margin-top: 0.75em;
+  color: #3b3923;
+  font-family: "IBM Plex Mono", Consolas, monospace;
+  font-size: 0.78em;
+  line-height: 1.35;
 }
 
 table {
@@ -115,28 +174,28 @@ table {
 
 th,
 td {
-  border: 1px solid #b8ad9d;
+  border: 1px solid #736f4e;
   padding: 0.6em 0.75em;
   text-align: left;
   vertical-align: top;
 }
 
 th {
-  background-color: #eee5d5;
-  color: #222;
-  font-family: "Special Elite", "IM Fell DW Pica SC", Georgia, serif;
-  font-weight: normal;
+  background-color: #4c061d;
+  color: #f7f4e1;
+  font-family: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
 }
 
 tr:nth-child(even) td {
-  background-color: #fbf6ec;
+  background-color: rgba(180, 194, 146, 0.18);
 }
 
 code {
   border-radius: 4px;
-  background-color: #f2eadc;
-  color: #2d2a26;
-  font-family: Consolas, "Cascadia Code", "Fira Code", "JetBrains Mono", "Inconsolata", monospace;
+  background-color: rgba(180, 194, 146, 0.32);
+  color: #4c061d;
+  font-family: "IBM Plex Mono", Consolas, "Cascadia Code", "Fira Code", "JetBrains Mono", monospace;
   font-size: 0.92em;
   padding: 0.08em 0.28em;
 }
@@ -144,9 +203,9 @@ code {
 pre {
   overflow-x: auto;
   margin: 1.5em 0;
-  border: 1px solid #c8bba7;
+  border: 1px solid #736f4e;
   border-radius: 4px;
-  background-color: #f7efe2;
+  background-color: #f7f4e1;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.55);
 }
 
@@ -188,10 +247,10 @@ pre code {
 hr {
   display: block;
   width: 100%;
-  height: 42px;
-  background-image: url('/images/divider.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  height: 24px;
+  margin: 1.6em 0;
+  background:
+    linear-gradient(90deg, transparent 0 7%, #4c061d 7% 18%, transparent 18% 21%, #d17a22 21% 27%, transparent 27% 31%, #b4c292 31% 34%, transparent 34% 38%, #736f4e 38% 100%);
+  clip-path: polygon(0 48%, 7% 48%, 7% 20%, 11% 20%, 11% 48%, 27% 48%, 27% 0, 31% 0, 31% 48%, 100% 48%, 100% 56%, 31% 56%, 31% 100%, 27% 100%, 27% 56%, 11% 56%, 11% 80%, 7% 80%, 7% 56%, 0 56%);
   border: none;
 }

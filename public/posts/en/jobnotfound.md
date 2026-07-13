@@ -1,7 +1,9 @@
 ---
 title: Job Not Found
-image: application_error.webp
-imagealt: A stylized error message on a computer screen
+image: rt_job_not_found_terminal.webp
+imagealt: "A job applicant feeds a resume into a large terminal with an empty output tray and disconnected feedback cable."
+imagecaption: "The application disappears into the machine, and the feedback path never returns."
+imagesource: "AI-generated illustration created for obscuretone with OpenAI image generation."
 description: "Hiring rejections increasingly behave like silent software failures: candidates invest time, employers provide little signal, and the feedback gap gets worse as application volume rises."
 tags: [hiring, feedback, careers, systems, software]
 ---
@@ -13,8 +15,6 @@ You submit a resume. You answer screening questions. You may complete interviews
 As a candidate, you know the process failed.
 
 You rarely know what failed.
-
-![Job Application Error](/images/application_error.webp "Job Application Error")
 
 In software, a bad error message is more than annoying. It blocks debugging. It tells the user something went wrong while hiding the information needed to correct it.
 

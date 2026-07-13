@@ -1,5 +1,9 @@
 ---
 title: Glass Ceiling
+image: rt_ai_glass_ceiling_access.webp
+imagealt: "AI terminal cabinets rise toward a glass ceiling while public users wait below an access gate."
+imagecaption: "Capability exists above the public access layer, where permission becomes part of the product."
+imagesource: "AI-generated illustration created for obscuretone with OpenAI image generation."
 description: "Anthropic's Mythos restriction suggests the public AI market has hit a glass ceiling: once models cross it, access becomes permission, and the remaining race is price and usability."
 tags: [ai, regulation, export-controls, markets, capability]
 ---

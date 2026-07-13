@@ -1,7 +1,9 @@
 ---
 title: Should Canada Elect Senators?
-image: government_control.webp
-imagealt: A parliament style building with an imagined PID waveform.
+image: rt_senate_pid_controller.webp
+imagealt: "Canadian parliamentary components are arranged as an analog control loop with an elected-senate path causing resonance."
+imagecaption: "The House, Senate, and Crown redrawn as a control loop where adding another electoral input risks oscillation."
+imagesource: "AI-generated illustration created for obscuretone with OpenAI image generation."
 description: This article compares the three pillars of Canadian government to a PID controller, suggesting that an elected senate would lead to resonance.
 tags: [government, canada, control-systems, senate, institutions]
 ---
@@ -13,8 +15,6 @@ Canadian politics has a useful control-systems analogy: the House of Commons, Se
 In a perfect world, democracy would involve voting on every issue, ensuring that the government is always aligned with the will of the people. But the logistical nightmare and dangers of such a system—imagine a society constantly pivoting with every whim of public opinion—make it unfeasible. Some science fiction, like [that unsettling episode of *The Orville*](https://orville.fandom.com/wiki/Majority_Rule), explores the risks of such systems. Instead, we have representative democracies, like Canada’s, where elected officials represent us in Parliament for fixed terms.
 
 But here’s the catch: the average Canadian’s beliefs and priorities are constantly shifting. Whether it’s due to economic changes, global events, or social movements, public opinion is a moving target. The government needs to respond to these changes, but without veering too far off course or bouncing between extremes. This is where I find the analogy to PID loops useful.
-
-![Canadian PID Loop](/images/government_control.webp "Canadian PID Loop")
 
 DALL-E: weirdly on point, but deeply unsettling, as always.
 
