@@ -1,6 +1,7 @@
 ---
 title: Politics Is Not Strongly Typed
 description: Party labels look like clear types, but local politics is full of implicit conversions, overloaded names, and values that only make sense at runtime.
+tags: [politics, canada, types, institutions, local-systems]
 ---
 
 Politics is not strongly typed.
@@ -17,7 +18,7 @@ If you are from there, you see two d'Entremonts.
 
 The Dictionary of Canadian Biography identifies Philippe Mius d'Entremont as the first [Baron de Pobomcoup](https://www.biographi.ca/en/bio/mius_d_entremont_philippe_1E.html), notes that the barony remained in the family until the Acadian expulsion, and says he left a large number of descendants in Acadia. Nova Scotia Archives dates the grant of Pobomcoup as a barony to [July 17, 1653](https://archives.novascotia.ca/communityalbums/pubnico/archives/?ID=928).
 
-So the ballot was not merely Liberal versus Progressive Conservative.
+So the ballot carried more information than Liberal versus Progressive Conservative.
 
 At local resolution, it was also two candidates carrying a name tied back to a 1653 French colonial barony, running for modern party labels in a riding with fewer than six thousand listed electors.
 
@@ -35,17 +36,13 @@ The interface says Liberal, Conservative, New Democrat, Green, independent, left
 
 Those labels look like types.
 
-They are not.
-
 They are hints.
 
 Sometimes they are useful hints. Sometimes they are stale comments. Sometimes they are marketing. Sometimes they are the only field the database preserved after throwing away the interesting data.
 
 This is why national politics discourse often loses precision the moment it touches a small place.
 
-It assumes the label is the object.
-
-It is not.
+It assumes the label is the object and loses the local meaning.
 
 ## Argyle 2003
 
@@ -119,11 +116,7 @@ You do not need to agree with any of that to understand the type error.
 
 If someone reads "Liberal candidate" and imports the entire modern national Liberal schema, they have already lost information.
 
-The local value does not conform cleanly to the expected type.
-
-It is not because the data is corrupt.
-
-It is because the type is too simple.
+The local value does not conform cleanly to the expected type because the type is too simple.
 
 The same word means different things at different levels of government, in different regions, across different eras, and inside different communities.
 
@@ -145,11 +138,7 @@ He represented West Nova, then the redesigned federal riding of Acadie-Annapolis
 
 And now, according to his official House of Commons profile, [Chris d'Entremont is a Liberal MP](https://www.ourcommons.ca/members/en/chris-dentremont%2849344%29).
 
-If party labels were strong types, this would look like a type violation.
-
-It is not.
-
-It is a runtime conversion.
+If party labels were strong types, this would look like a type violation. In practice, it is a runtime conversion.
 
 The person did not become a different object. The label changed. The institutional context changed. The federal party system changed. The incentives changed. The coalition around him changed. The voters now have to interpret what the label means after the fact.
 
@@ -195,7 +184,7 @@ At one resolution.
 
 Zoom in far enough and the types blur.
 
-## This Is Not A Plea For Vibes
+## The Data Still Matters
 
 None of this means politics is only personal.
 
@@ -234,7 +223,7 @@ For a candidate, the record might include:
 
 That last field matters.
 
-Politics is not just what the party says it is. It is what voters, organizers, institutions, and opponents understand the label to mean in that place at that time.
+Politics includes what voters, organizers, institutions, and opponents understand the label to mean in that place at that time.
 
 Argyle 2003 makes that obvious because the national abstraction collapses almost immediately.
 

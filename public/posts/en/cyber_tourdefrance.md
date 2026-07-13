@@ -3,6 +3,7 @@ title: AI Did Not Replace Developers. It Changed The Bar.
 image: cybertourdefrance.webp
 imagealt: A cyborg racing in the Tour de France alongside human cyclists.
 description: A 2026 retrospective on AI-assisted software development, arguing that AI amplified experienced developers first, made routine work cheaper, and moved the real bottleneck into review, QA, and accountability.
+tags: [ai, software, engineering, review, accountability]
 ---
 
 When AI coding tools first became useful, the obvious question was whether they would replace software developers.
@@ -11,9 +12,9 @@ That was the wrong question.
 
 The better question was: who gets more leverage from the tool?
 
-The answer, at least so far, is that AI helps most when the person using it can evaluate the output. It can generate boilerplate, draft tests, summarize unfamiliar code, explain APIs, and propose implementations quickly. But the valuable part is not the generated text. The valuable part is knowing what to accept, what to reject, and what still needs to be reasoned through.
+The answer, at least so far, is that AI helps most when the person using it can evaluate the output. It can generate boilerplate, draft tests, summarize unfamiliar code, explain APIs, and propose implementations quickly. The generated text has value, but the real leverage comes from knowing what to accept, what to reject, and what still needs to be reasoned through.
 
-The modern problem is not that AI cannot do useful work. It can. The problem is that it can create more work than the existing QA, review, and deployment pipelines were designed to absorb.
+AI can do useful work. The modern problem is that it can create more work than the existing QA, review, and deployment pipelines were designed to absorb.
 
 That is why AI has not removed the need for strong developers. It has changed the bar for what strong development looks like.
 
@@ -128,15 +129,15 @@ The failure mode is not dramatic. It looks ordinary:
 6. teams merge changes they understand less deeply
 7. production becomes the first environment where the full interaction is tested
 
-That is not an argument against using AI. It is an argument against measuring AI success only by how quickly code appears.
+That argues against measuring AI success only by how quickly code appears.
 
 The better question is whether the whole delivery system can safely absorb the increased rate of proposed change. If AI increases output but the review, test, QA, and observability layers stay fixed, the team may simply be moving faster toward uncertainty.
 
-In that world, the valuable engineer is not just the person who can get AI to write code. It is the person who can design the validation path around that code.
+In that world, the valuable engineer can design the validation path around AI-written code.
 
 ## The Junior Developer Problem
 
-The hardest long-term issue is not whether AI replaces senior developers. It is what happens to the work that used to train junior developers.
+The harder long-term issue is what happens to the work that used to train junior developers.
 
 A lot of early-career learning came from routine implementation: small features, test updates, bug fixes, migrations, documentation, and glue code. AI is increasingly good at those tasks. That makes teams more productive in the short term, but it can also remove the apprenticeship path.
 
@@ -181,7 +182,7 @@ AI can help with many of those. It cannot be accountable for them.
 
 ## Closing Thought
 
-The early performance-enhancer analogy held up better than I expected. AI did not simply replace developers. It amplified the people and teams capable of using it well.
+The early performance-enhancer analogy held up better than I expected. AI amplified the people and teams capable of using it well.
 
 It made routine work cheaper. It made first drafts faster. It made code generation less scarce.
 

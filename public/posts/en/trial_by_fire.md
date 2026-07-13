@@ -2,7 +2,8 @@
 title: Tell Me About The Last Time Something Broke In Production
 image: trial_by_fire.jpg
 imagealt: The classic meme, a dog in a room on fire, "this is fine"
-description: Production incidents are not a badge of honor, but they are a real signal of engineering experience. The useful interview question is not whether someone has broken production, but what happened afterward.
+description: Production incidents are a real signal of engineering experience. The useful interview question asks what happened after something broke.
+tags: [production, incidents, hiring, engineering, evidence]
 ---
 
 One of my favorite interview questions is simple:
@@ -17,7 +18,7 @@ Local development is controlled. Tests are selective. Staging is a model. Produc
 
 If someone has worked on enough real systems, eventually something goes wrong.
 
-The interesting question is not whether they have ever shipped a bug. The interesting question is whether they know what to do when the system proves them wrong.
+The interesting question is whether they know what to do when the system proves them wrong.
 
 ## The Probability Of Never Shipping A Bug
 
@@ -67,9 +68,9 @@ $$
 P(\text{at least one bug}) = 1 - 0.99^{500} \approx 99.343\%
 $$
 
-The exact numbers are debatable. The conclusion is not. If someone has shipped enough real software, "nothing ever broke" is not a credible engineering story. It is either lack of production exposure, lack of ownership, lack of memory, or an unusually narrow definition of "bug."
+The exact numbers are debatable. The conclusion is sturdy. If someone has shipped enough real software, "nothing ever broke" is not a credible engineering story. It suggests lack of production exposure, lack of ownership, lack of memory, or an unusually narrow definition of "bug."
 
-## This Is Not Gatekeeping
+## This Is Signal
 
 There is a bad version of this question:
 
@@ -81,7 +82,7 @@ The good version is:
 
 > What did production teach you that tests, code review, and local development did not?
 
-That is not gatekeeping. That is signal.
+That is signal.
 
 A production incident reveals how someone behaves when the abstraction leaks. It shows whether they can stay calm, gather evidence, communicate clearly, reduce blast radius, make reversible changes, and learn without hiding.
 
@@ -113,7 +114,7 @@ Some filters are worse than weak. They are discriminatory.
 
 I have literally been in the room when gender was considered in a hiring conversation. I escalated it immediately because that is not a hiring signal. It is illegal, unethical, and corrosive to the entire process.
 
-That experience is part of why I prefer a question like this. It is not perfect, but at least it points toward the work.
+That experience is part of why I prefer a question like this. It points toward the work.
 
 Production incidents are part of software engineering. How someone talks about them tells me more than a polished resume, a brand-name employer, a school, an email domain, or a rehearsed answer about strengths and weaknesses.
 
@@ -183,7 +184,7 @@ It tests:
 5. **Learning:** Did the incident lead to better tests, monitoring, process, or design?
 6. **Humility:** Do they understand that real systems fail in ways no one fully predicts?
 
-The red flag is not "I broke production."
+The red flag is the absence of ownership.
 
 The red flag is "I have never been close enough to production to have a story," or "I have a story but learned nothing from it."
 

@@ -1,13 +1,14 @@
 ---
 title: Simple PAM - Using Uptime As An Authentication Signal
 description: A project note on a small Linux PAM module that checks system uptime as a narrow authentication control for physical-access scenarios.
+tags: [security, linux, authentication, software, systems]
 ---
 
 [simple-pam](https://github.com/obscuretone/simple-pam) is a small Linux PAM module that checks system uptime during authentication.
 
 By default, it allows authentication to continue only if the machine has been power-cycled recently. The idea is narrow: in some device scenarios, recent uptime can act as a rough signal that the user had physical access to the machine.
 
-This is not a general authentication solution. It is a small example of how Linux PAM can enforce local policy at the authentication boundary.
+This small example shows how Linux PAM can enforce local policy at the authentication boundary.
 
 ## What PAM Gives You
 
@@ -59,7 +60,7 @@ For system-level code, that kind of harness matters. The safest version of low-l
 
 ## What This Project Shows
 
-The value of this project is not its size. It is the kind of boundary it touches.
+The value of this project comes from the kind of boundary it touches.
 
 It shows:
 

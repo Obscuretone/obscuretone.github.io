@@ -3,6 +3,7 @@ title: EMH - Building A Hiring Platform Around Evidence
 image: resume_mr_anderson.webp
 imagealt: Neo sees a resume review through the lens of the Matrix
 description: EMH started as an attempt to replace keyword-based first-line HR screening, then evolved into an evidence-grounded platform for comparing one resume to one job and generating application-specific resume drafts.
+tags: [hiring, ai, evidence, software, resumes]
 ---
 
 Most recruiting software still carries too much 1990s thinking.
@@ -23,7 +24,7 @@ Most AI hiring advice collapses that into a prompt.
 
 Paste in a resume. Paste in a job description. Ask the model whether the candidate is a fit.
 
-That can be useful, but it is not really a software system. It does not remember what evidence was used, distinguish missing information from a weak score, separate recruiter matching from applicant optimization, or explain how a tailored resume was grounded in actual work history.
+That can be useful, but a software system needs memory. It should remember what evidence was used, distinguish missing information from a weak score, separate recruiter matching from applicant optimization, and explain how a tailored resume was grounded in actual work history.
 
 EMH is my attempt to treat that problem as a platform problem instead.
 
@@ -47,7 +48,7 @@ The current premise is more precise: AI can help surface and organize the eviden
 
 ## The Scaling Problem
 
-The hard part is not comparing one resume to one job.
+Comparing one resume to one job is the easy part.
 
 That is exactly where EMH is useful. A one-to-one comparison gives the system enough context to reason carefully about evidence, missing information, transferable skills, and role-specific fit.
 
@@ -76,7 +77,7 @@ The applicant wants a careful reading. They want the system to understand the fu
 
 The recruiter usually wants enough qualified candidates to fill the pipeline. When a posting has hundreds or thousands of applicants, the incentive is not to understand every resume deeply. The incentive is to reduce the pile quickly, find a workable shortlist, and move on.
 
-That is the uncomfortable truth behind a lot of resume advice. It is not really advice about how to communicate your work. It is advice about how to survive a lazy first-pass filter.
+That is the uncomfortable truth behind a lot of resume advice. Much of it teaches people how to survive a lazy first-pass filter.
 
 I do not mean lazy as a personal insult. I mean structurally lazy. The process rewards shallow elimination because shallow elimination is cheap, and once there are enough apparently qualified candidates, the marginal value of carefully reading the next resume drops.
 
@@ -118,7 +119,7 @@ That design choice makes the system more honest. Unknown skills should often tri
 
 I do not like hiring systems that reduce a person to a mysterious percentage.
 
-EMH uses overlap as the main user-facing concept. The question is not "is this candidate a 78?" The better question is: how much of the job shape is covered by known evidence?
+EMH uses overlap as the main user-facing concept. Instead of asking "is this candidate a 78?", it asks how much of the job shape is covered by known evidence.
 
 That distinction handles cases that generic scores often get wrong.
 
@@ -144,11 +145,11 @@ EMH is designed around a stricter path:
 6. generate a targeted draft from that candidate set
 7. keep source bullets and covered skills inspectable
 
-That makes the draft more useful because it is not free-floating persuasion. It is a rewritten presentation of known evidence.
+That makes the draft more useful because it rewrites known evidence instead of producing free-floating persuasion.
 
 This is where the original screening idea turns into a resume-writing product. If the system can understand why a resume does or does not match a job, it can also help rewrite the resume so the real match is visible.
 
-That is not gaming the system. The system already rewards presentation. The useful version of EMH makes the presentation clearer without inventing experience.
+The system already rewards presentation. The useful version of EMH makes the presentation clearer without inventing experience.
 
 ## The Platform Work
 
@@ -167,7 +168,7 @@ The harder work is everything around it:
 9. a queue dashboard that shows stuck work, blockers, retries, completions, cooldown state, and task history
 10. versioned prompt templates editable from the application
 
-That is the difference between a demo and a platform. The product problem is not just "can the model answer this?" It is "can the system produce, store, inspect, retry, and explain the work?"
+That is the difference between a demo and a platform. The product problem is whether the system can produce, store, inspect, retry, and explain the work.
 
 ## Why This Matters
 
@@ -193,6 +194,6 @@ That is still useful, but EMH is the bigger answer. It takes the same instinct a
 
 The project started with a bigger ambition: replace first-line keyword screening with real resume understanding. Building it made the limits clearer. Exhaustive AI screening can become expensive quickly. One-to-one comparison is where the system becomes practical, explainable, and immediately useful.
 
-If AI is going to be involved in hiring, the important question is not whether it can produce a confident answer.
+If AI is going to be involved in hiring, confident answers are the least interesting part.
 
 The important question is whether the system can show its work.

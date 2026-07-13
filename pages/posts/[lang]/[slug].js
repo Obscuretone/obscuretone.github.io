@@ -10,6 +10,9 @@ import html from 'remark-html';
 import hljs from 'highlight.js';
 import 'highlight.js/styles/github.css';
 import PostsList from '../../../components/PostsList';
+import NearbyArguments from '../../../components/NearbyArguments';
+import { getNearbyArguments } from '../../../utils/nearbyArguments';
+import { getPostsByLanguage } from '../../../utils/posts';
 
 const MATHJAX_SCRIPT_ID = 'mathjax-script';
 
@@ -73,24 +76,6 @@ function getGitLastUpdated(filePath) {
     }
 }
 
-// Utility function to extract metadata from posts
-function getPostsMetadata(postsDirectory, lang) {
-    const filenames = fs.readdirSync(postsDirectory);
-
-    return filenames
-        .filter((filename) => filename.endsWith('.md'))
-        .map((filename) => {
-            const filePath = path.join(postsDirectory, filename);
-            const fileContents = fs.readFileSync(filePath, 'utf8');
-            const { data } = matter(fileContents);
-
-            return {
-                slug: `${lang}/${filename.replace('.md', '')}`,
-                ...data,
-            };
-        });
-}
-
 export async function getStaticPaths() {
     const paths = [];
 
@@ -117,7 +102,7 @@ export async function getStaticProps({ params }) {
 
     const postsDirectoryEn = path.join(process.cwd(), 'public/posts/en');
 
-    const postsEn = getPostsMetadata(postsDirectoryEn, 'en');
+    const postsEn = getPostsByLanguage('en');
 
     const currentDirectory = postsDirectoryEn;
     const filePath = path.join(currentDirectory, `${slug}.md`);
@@ -135,18 +120,24 @@ export async function getStaticProps({ params }) {
     return {
         props: {
             post: {
+                slug: `${lang}/${slug}`,
                 title: data.title || 'Untitled',
                 description: data.description || '',
+                tags: data.tags || [],
                 htmlContent,
                 updatedAt,
             },
+            nearbyArguments: getNearbyArguments({
+                slug: `${lang}/${slug}`,
+                tags: data.tags || [],
+            }, postsEn),
             postsEn,
             currentLang: lang,
         },
     };
 }
 
-export default function Post({ post, postsEn, currentLang }) {
+export default function Post({ post, nearbyArguments, postsEn, currentLang }) {
     const { title, description, htmlContent, updatedAt } = post;
     const articleContentRef = useRef(null);
 
@@ -208,6 +199,10 @@ export default function Post({ post, postsEn, currentLang }) {
                 )}
                 <div ref={articleContentRef} dangerouslySetInnerHTML={{ __html: htmlContent }} />
             </article>
+
+            <hr />
+
+            <NearbyArguments posts={nearbyArguments} />
 
             <hr />
 

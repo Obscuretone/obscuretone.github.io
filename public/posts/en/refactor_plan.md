@@ -1,6 +1,7 @@
 ---
 title: Refactoring Capitalism With Zero Downtime
 description: If an economic system has to change, people still need food, housing, medicine, payroll, power, schools, and hospitals while the migration runs.
+tags: [politics, economics, systems, migration, institutions]
 ---
 
 You cannot take the country offline while you replace the economic system.
@@ -19,7 +20,7 @@ Do it without emptying grocery stores.
 
 Do it without destroying pensions, freezing credit, collapsing construction, or teaching every landlord and employer in the country to panic at the same time.
 
-The problem is not only moral.
+The moral problem is only the start.
 
 It is operational.
 
@@ -29,7 +30,7 @@ It has to be a migration.
 
 ## The Legacy System Is Running
 
-Capitalism is not only an ideology.
+Capitalism is also infrastructure.
 
 It is a running production system.
 
@@ -49,7 +50,7 @@ That matters.
 
 A serious transition cannot treat continuity as a decorative constraint. Continuity is children eating breakfast. It is insulin in a pharmacy. It is a bus arriving. It is a furnace staying on in February. It is a nurse getting paid. It is an apartment building having maintenance staff.
 
-If your migration plan cannot preserve those things, it is not radical.
+A migration plan that cannot preserve those things is just reckless.
 
 It is a production incident.
 
@@ -85,9 +86,9 @@ This is left-leaning.
 
 Obviously.
 
-But it is not quite the offer of any major federal party.
+No major federal party quite offers it.
 
-The Liberals are the party of managed markets. Their recent [housing plan](https://liberal.ca/housing-plan/) talks about making the market work better by catalyzing private capital, cutting red tape, lowering building costs, creating Build Canada Homes, financing prefabricated builders, using public land, and helping first-time buyers. That is not nothing. Some of it is useful. But the operating model is still mostly public policy as market enablement: use the state to improve the conditions under which private capital builds, sells, rents, and finances.
+The Liberals are the party of managed markets. Their recent [housing plan](https://liberal.ca/housing-plan/) talks about making the market work better by catalyzing private capital, cutting red tape, lowering building costs, creating Build Canada Homes, financing prefabricated builders, using public land, and helping first-time buyers. Some of it is useful. But the operating model is still mostly public policy as market enablement: use the state to improve the conditions under which private capital builds, sells, rents, and finances.
 
 That can build things.
 
@@ -97,25 +98,25 @@ The Conservatives are the party of market discipline and state suspicion. Their 
 
 You cannot drain traffic from coercive systems with no replacement service.
 
-The NDP is closest in instinct. Its recent [campaign commitments](https://www.ndp.ca/campaign-commitments) emphasize health care, homes, lower bills, worker taxes, green jobs, reconciliation, democracy, social spending, and redistribution. That is the nearest existing vocabulary. But it still often sounds like a better list of programs rather than a new operating model. The missing piece is not compassion. It is architecture.
+The NDP is closest in instinct. Its recent [campaign commitments](https://www.ndp.ca/campaign-commitments) emphasize health care, homes, lower bills, worker taxes, green jobs, reconciliation, democracy, social spending, and redistribution. That is the nearest existing vocabulary. But it still often sounds like a better list of programs rather than a new operating model. The missing piece is architecture.
 
 The distinction is this:
 
-The goal is not only to spend more.
+Spending more is insufficient.
 
-The goal is not only to regulate more.
+Regulating more is insufficient.
 
-The goal is not only to tax different people.
+Taxing different people is insufficient.
 
 The goal is to reduce dependency on coercive chokepoints, build public systems reliable enough to replace private desperation, migrate ownership and investment over time, and instrument the transition so ordinary people do not absorb the downtime.
 
 That is a real political distinction.
 
-It is not Liberal market management.
+It moves beyond Liberal market management.
 
-It is not Conservative market deference.
+It rejects Conservative market deference.
 
-It is not simply NDP redistribution.
+It requires more than NDP redistribution.
 
 It is public reliability as an ideology.
 
@@ -133,7 +134,7 @@ The first step is not abolishing every market.
 
 The first step is making fewer things depend on markets for survival.
 
-Healthcare is the obvious example in Canada. It is not perfect. It is not free of politics, rationing, wait times, staffing failures, or administrative failure. But the premise matters: getting cancer should not require negotiating with a billing department as the primary interface.
+Healthcare is the obvious example in Canada. It has politics, rationing, wait times, staffing failures, and administrative failure. But the premise matters: getting cancer should not require negotiating with a billing department as the primary interface.
 
 That premise can be extended.
 
@@ -161,7 +162,7 @@ These are stable public APIs for ordinary life.
 
 The more reliable they are, the less desperate people become. The less desperate people become, the less power employers, landlords, lenders, insurers, and petty gatekeepers have over them.
 
-This is not charity.
+This is infrastructure.
 
 It is dependency reduction.
 
@@ -175,7 +176,7 @@ That is a system change.
 
 People in power rely on these systems for their power.
 
-That is not a side effect.
+That is the machine working as designed.
 
 It is the mechanism.
 
@@ -305,7 +306,7 @@ None of these are magic.
 
 All of them are migration tools.
 
-The point is not to make every corner store a ministry.
+Nobody needs every corner store to become a ministry.
 
 The point is to make democratic and non-extractive ownership normal enough that private command stops looking like the default setting of civilization.
 
@@ -339,7 +340,7 @@ These are not innovation.
 
 They are dependency failures.
 
-The migration path is not only public ownership. It is also making extraction less profitable.
+The migration path combines public ownership with making extraction less profitable.
 
 Land value taxes.
 
@@ -371,7 +372,7 @@ Factories, apartments, transit lines, data centres, labs, farms, grid upgrades, 
 
 If investment is governed mostly by private return, then society gets the future private return can justify.
 
-That is not the same as the future people need.
+That allocates the wrong future.
 
 A public investment bank, public wealth fund, or network of sectoral investment institutions can change the routing.
 
@@ -395,7 +396,7 @@ You do not have to own every process immediately if you control more of the sche
 
 People cannot support deep system change if every step threatens their survival.
 
-That is not resistance to change.
+That is a protection racket against change.
 
 That is rational.
 
@@ -421,13 +422,13 @@ Union access.
 
 Debt relief where debt is functioning as social control.
 
-The goal is not to make work meaningless.
+The goal is to make work less coercive.
 
 The goal is to make refusal possible.
 
 When people can refuse a bad job, a bad landlord, a bad lender, or a bad contract without falling through the floor, the power relationship changes.
 
-That is not a side benefit.
+That matters directly.
 
 That is the migration.
 
@@ -505,7 +506,7 @@ A weak state does not produce liberation.
 
 It produces private power with fewer constraints.
 
-The question is not whether the state should do everything.
+The state should not do everything.
 
 It should not.
 
@@ -551,13 +552,13 @@ Fourth, migrate ownership through worker control, public wealth, land trusts, an
 
 Fifth, make rent-seeking less profitable.
 
-Sixth, move more of the investment function into public control so the future is not allocated only by private return.
+Sixth, move more of the investment function into public control so private return does not get exclusive power over the future.
 
 Seventh, de-risk exit so people can refuse bad arrangements.
 
 Eighth, instrument the whole thing so failures are visible, reversible, and not borne by the people with the least slack.
 
-This is not a clean rewrite.
+This is a live migration.
 
 It is a long migration away from a system where survival is rented back to people by whoever owns the dependency.
 

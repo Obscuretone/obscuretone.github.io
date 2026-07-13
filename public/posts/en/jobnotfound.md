@@ -3,6 +3,7 @@ title: Job Not Found
 image: application_error.webp
 imagealt: A stylized error message on a computer screen
 description: "Hiring rejections increasingly behave like silent software failures: candidates invest time, employers provide little signal, and the feedback gap gets worse as application volume rises."
+tags: [hiring, feedback, careers, systems, software]
 ---
 
 Applying for jobs can feel like interacting with software that fails silently.
@@ -21,7 +22,7 @@ Modern hiring often works the same way.
 
 ## The Feedback Gap Is Getting Worse
 
-This is not just a personal frustration. The data suggests the candidate feedback problem is worsening.
+The data suggests the candidate feedback problem is worsening.
 
 [iHire surveyed 1,024 candidates in October 2025](https://www.ihire.com/resourcecenter/employer/pages/53-percent-of-job-seekers-have-been-ghosted-by-a-potential-employer) and found that 53% had been ghosted by an employer during their job search.
 
@@ -39,7 +40,7 @@ Most hiring rejections are equivalent to:
 
 > Something went wrong.
 
-That is not enough information to debug.
+That leaves candidates without enough information to debug.
 
 A candidate needs to know which kind of failure happened:
 
@@ -80,7 +81,7 @@ Silence also makes the process emotionally corrosive.
 
 It is hard to maintain a healthy sense of reality when the labor market keeps returning null responses. After enough silent failures, even strong candidates start treating every application as evidence against themselves.
 
-That is not a character flaw in candidates. It is what happens when the system withholds diagnostic information while demanding repeated effort.
+That is what happens when the system withholds diagnostic information while demanding repeated effort.
 
 ## Better Feedback Does Not Need To Be Dangerous
 
@@ -95,13 +96,13 @@ Employers could provide structured feedback without overexposing themselves:
 5. **Process status:** "The role was paused before final selection."
 6. **Candidate pool:** "Another candidate had more direct experience with this specific stack."
 
-That is not a full explanation. It is not perfect transparency. But it is enough signal to help a candidate decide what to change.
+That stops well short of perfect transparency, but it gives a candidate enough signal to decide what to change.
 
 The highest obligation should come after interviews. If a candidate has invested live time with the company, the company should close the loop with something more useful than silence.
 
 ## Better Systems Would Help Employers Too
 
-This is not only a kindness argument.
+Kindness is only part of the argument.
 
 Hiring feedback is part of the employer's product surface. A company that ghosts candidates teaches the market something about how it operates. A company that communicates clearly earns goodwill even from people it rejects.
 

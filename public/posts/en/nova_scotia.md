@@ -1,6 +1,7 @@
 ---
 title: Nova Scotia Should Be An Island
 description: A satirical engineering proposal to flood the Chignecto Isthmus and make Nova Scotia's geography match its culture, written with the full seriousness of a public infrastructure review.
+tags: [nova-scotia, infrastructure, satire, government, systems]
 ---
 
 # Chignecto Isthmus Decommissioning Proposal
@@ -18,7 +19,7 @@ Literally.
 
 The province should be separated from the mainland by flooding the Chignecto Isthmus in a planned, consultative, environmentally reviewed, procurement-compliant manner.
 
-This is not an act of hostility. It is an act of architectural consistency.
+This is an act of architectural consistency.
 
 Nova Scotia already behaves like an island. The infrastructure should stop lying.
 
@@ -32,7 +33,7 @@ Raise the dykes. Improve the aboiteaux. Protect the highway and rail line. Keep 
 
 This is the conventional answer, which is how we know it has not been thought through emotionally.
 
-The better question is not whether Nova Scotia can remain attached.
+Nova Scotia can remain attached. The better question is why it should.
 
 The better question is why we keep insisting.
 
@@ -81,7 +82,7 @@ The Chignecto Isthmus is already a fragile dependency.
 
 It is low-lying. It is dyke-protected. It is exposed to sea-level rise and storm surge. It carries transportation, trade, and symbolic continuity through one narrow corridor.
 
-That is not resilience. That is a TODO comment with tides.
+That is a TODO comment with tides.
 
 If a software team found a critical system relying on one aging shared dependency with no clean failover, the review would not be gentle.
 
@@ -227,7 +228,7 @@ That is why the project must include replacement logistics.
 
 Bridge, tunnel, ferry, relocated corridor, amphibious trucking: the specific technical solution can be determined by people with credentials, budgets, and the thousand-yard stare of public procurement.
 
-The key point is not to isolate Nova Scotia in practice.
+The key point is to make Nova Scotia honest with itself in theory.
 
 The key point is to isolate it accurately.
 

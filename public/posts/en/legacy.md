@@ -1,15 +1,16 @@
 ---
 title: Canada Is A Legacy System
 description: "Canadian government looks strange because it is a working legacy system: old interfaces, ceremonial dependencies, undocumented conventions, and terrifying migration risk."
+tags: [government, canada, legacy-systems, institutions, architecture]
 ---
 
 Canada is a legacy system.
 
-That is not an insult.
+I mean that descriptively.
 
 Not entirely.
 
-A legacy system is not bad because it is old. It is bad when nobody remembers which parts are load-bearing, which parts are ceremonial, which parts are obsolete, and which parts only still exist because removing them would require a meeting that could destroy the organization.
+Age alone does not make a system bad. The danger starts when nobody remembers which parts are load-bearing, which parts are ceremonial, which parts are obsolete, and which parts only still exist because removing them would require a meeting that could destroy the organization.
 
 That is Canada.
 
@@ -17,11 +18,11 @@ We have a constitutional monarchy, a parliamentary democracy, a federal system, 
 
 We also have literal magic wands.
 
-This is not a metaphor.
+The analogy has teeth.
 
 The [House of Commons has a Mace](https://learn.parl.ca/understanding-comprendre/en/people-in-parliament/key-roles-in-the-house-of-commons/). The [Senate has a Mace](https://sencanada.ca/en/sencaplus/how-why/the-senate-mace-from-historical-weapon-to-symbol-of-monarchy/). The [Usher of the Black Rod](https://sencanada.ca/en/about/usher-black-rod) carries an ebony cane as a symbol of authority and serves as the Crown's messenger in Parliament. The House of Commons cannot meet without the Mace in the chamber, and the Senate says the same about its own Mace.
 
-Canada does not merely have symbolic authority.
+Canada has more than symbolic authority.
 
 It has literal magic wands that must be physically present for the spell to work.
 
@@ -103,7 +104,7 @@ The clean statement is stranger:
 
 The powers existed, were used historically, became politically obsolete, and remain embedded in a constitutional structure that now depends heavily on convention.
 
-That is not no code.
+That is code.
 
 That is dead code with root access.
 
@@ -111,7 +112,7 @@ That is dead code with root access.
 
 Australia is the warning comment in the source file.
 
-In 1975, [Governor-General Sir John Kerr dismissed Prime Minister Gough Whitlam during a supply crisis](https://www.nma.gov.au/defining-moments/resources/whitlam-dismissal). That was not a routine refusal of Royal Assent to a bill. It was the use of reserve powers to remove an elected prime minister, and it remains one of the clearest Commonwealth examples of the ceremonial layer becoming politically consequential.
+In 1975, [Governor-General Sir John Kerr dismissed Prime Minister Gough Whitlam during a supply crisis](https://www.nma.gov.au/defining-moments/resources/whitlam-dismissal). The use of reserve powers to remove an elected prime minister remains one of the clearest Commonwealth examples of the ceremonial layer becoming politically consequential.
 
 Australia also has a narrower Royal Assent example. The [Parliament of Australia's procedure notes](https://www.aph.gov.au/About_Parliament/House_of_Representatives/Powers_practice_and_procedure/Practice7/HTML/Chapter10/Presentation_of_bills_for_assent) describe a bill that was reserved for the King's assent, which was never given.
 
@@ -133,7 +134,7 @@ Conventions are the undocumented business logic.
 
 The Governor General acts on the advice of the prime minister, except when they do not. The prime minister must maintain the confidence of the House of Commons, but the exact moments of confidence, resignation, dissolution, and refusal are governed by practice as much as text. The Senate has legal power it often does not fully use because elected legitimacy lives elsewhere.
 
-That is not necessarily bad.
+That can be fine.
 
 Every mature system has implicit rules.
 
@@ -177,7 +178,7 @@ Here the debug interface becomes especially weak.
 
 Canada has built a system where real estate wealth is politically protected, where younger people are told to accept permanently degraded affordability, and where [immigration targets](https://www.canada.ca/en/immigration-refugees-citizenship/news/notices/supplementary-immigration-levels-2024-2026.html), labour supply, university economics, construction capacity, interest rates, municipal zoning, provincial land-use rules, and federal growth policy all collide in ways no ballot can cleanly address.
 
-That does not mean immigration is the only cause of housing costs. It is not.
+Immigration is one cause among many.
 
 But population targets, housing supply, wages, infrastructure, and asset prices are coupled systems. CMHC has estimated that Canada needs [millions of additional homes to restore affordability](https://www.cmhc-schl.gc.ca/observer/2023/estimating-how-much-housing-we-need-by-2030), and later estimated that housing starts would need to [nearly double until 2035](https://www.cmhc-schl.gc.ca/professionals/housing-markets-data-and-research/housing-research/research-reports/accelerate-supply/canadas-housing-supply-shortages-a-new-framework) to meet projected demand. When governments pursue high growth without building enough housing, transit, healthcare capacity, schools, and infrastructure, the pressure does not land evenly. It lands on renters, new buyers, new arrivals, young families, and anyone without property wealth.
 
@@ -185,7 +186,7 @@ The result looks a lot like intergenerational policy capture.
 
 People who already own assets are protected. People who do not are told the system is working as designed, or that the moral problem is their lack of optimism.
 
-That is not a healthy feedback loop.
+That feedback loop is unhealthy.
 
 It is closer to an asset-protection political economy: younger and newer participants are expected to support the paper stability of people who got in earlier, while being told that questioning the arrangement is irresponsible, economically illiterate, or insufficiently Canadian.
 
@@ -213,7 +214,7 @@ Sometimes that is defensible.
 
 Sometimes it is wild.
 
-The current federal riding of [Kingston and the Islands has 134,415 people](https://electionsanddemocracy.ca/print/pdf/node/35046). [Labrador has 26,655](https://electionsanddemocracy.ca/print/pdf/node/10004). Prince Edward Island's four federal ridings range from [Egmont at 37,751 people](https://electionsanddemocracy.ca/print/pdf/node/11003) to [Cardigan at 39,236](https://electionsanddemocracy.ca/print/pdf/node/11001). That is not an accident in a spreadsheet. It is the result of a [House of Commons seat allocation formula](https://www.elections.ca/content.aspx?dir=cir%2Fred%2Fallo&document=index&lang=e&section=res) balancing population, provincehood, geography, history, and constitutional promises.
+The current federal riding of [Kingston and the Islands has 134,415 people](https://electionsanddemocracy.ca/print/pdf/node/35046). [Labrador has 26,655](https://electionsanddemocracy.ca/print/pdf/node/10004). Prince Edward Island's four federal ridings range from [Egmont at 37,751 people](https://electionsanddemocracy.ca/print/pdf/node/11003) to [Cardigan at 39,236](https://electionsanddemocracy.ca/print/pdf/node/11001). A [House of Commons seat allocation formula](https://www.elections.ca/content.aspx?dir=cir%2Fred%2Fallo&document=index&lang=e&section=res) balances population, provincehood, geography, history, and constitutional promises.
 
 The same problem shows up locally too. In [Politics Is Not Strongly Typed](/posts/en/politics_not_strongly_typed), I use Argyle's 2003 provincial election as a smaller example: party labels, family names, church networks, local institutions, and later federal power all refuse to fit cleanly into one national red-team/blue-team model.
 
@@ -223,7 +224,7 @@ The system has weights.
 
 Some weights are historical. Some are geographic. Some are provincial. Some protect language and minority communities. Some are constitutional compromises. Some are accidents that survived because changing them would create a different unfairness.
 
-That makes the voting interface even harder to debug. A vote is not just a vote. It is a vote inside a riding, inside a province, inside a party system, inside a legislature, inside a federation that has already decided some communities need more representation per person than others.
+That makes the voting interface even harder to debug. A vote lives inside a riding, inside a province, inside a party system, inside a legislature, inside a federation that has already decided some communities need more representation per person than others.
 
 Again, maybe that is right.
 
@@ -239,7 +240,7 @@ Ministers come and go. Cabinets change. Governments rebrand priorities. Mandate 
 
 Underneath that, deputy ministers, assistant deputy ministers, senior public servants, departmental counsel, central agencies, procurement offices, regulators, boards, and long-lived program staff keep operating the system.
 
-That is not automatically sinister.
+That can be ordinary federalism rather than conspiracy.
 
 Institutional memory matters. A government cannot rebuild the civil service after every election. Somebody has to know where the contracts are, which statutes matter, which programs are already committed, which courts have spoken, which federal-provincial agreements are active, and which promises are impossible by Tuesday.
 
@@ -355,7 +356,7 @@ Then you discover the shared state.
 
 Currency. Trade. Borders. Citizenship. Indigenous treaties and rights. Pensions. Debt. Defence. Passports. Fisheries. Energy infrastructure. Language rights. Internal migration. Regulatory equivalence. Federal assets. Federal employees. Families, businesses, supply chains, and institutions that were never designed around a hard boundary.
 
-Suddenly the refactor is not just "move this code into its own repo."
+Suddenly the refactor has grown far beyond "move this code into its own repo."
 
 It is data migration, contract negotiation, identity management, traffic routing, backward compatibility, and incident response while the system is still serving users.
 
@@ -375,7 +376,7 @@ It means reform is migration, not deletion.
 
 ## Law Is Code With A Terrible Parser
 
-The "legacy system" analogy is not only about institutions.
+The "legacy system" analogy also applies to implementation.
 
 It is also about law itself.
 
@@ -391,7 +392,7 @@ They interact with the compiled artifact.
 
 The law gets compiled through regulations, forms, department policies, court interpretations, ministerial discretion, funding agreements, enforcement priorities, software systems, front-line staff, and institutional habit. By the time it reaches a person, the operative rule may be several transformations away from the statute.
 
-That is not a side detail.
+That detail carries load.
 
 That is the runtime.
 
@@ -455,7 +456,7 @@ Healthcare would show provincial delivery, federal transfers, professional colle
 
 Climate adaptation would show federal goals, provincial infrastructure, municipal planning, private property, insurance markets, emergency management, and Indigenous rights meeting in the same floodplain.
 
-The bug is not simply that governments disagree.
+Government disagreement is only the surface bug.
 
 The bug is that the legal AST is not inspectable by ordinary people, and sometimes not even by the institutions executing it.
 
@@ -486,7 +487,7 @@ Start with observability, ownership, documentation, tests, safer interfaces, and
 
 Canadian constitutional law has the same constraint. The [Constitution Act, 1982](https://laws-lois.justice.gc.ca/eng/const/page-13.html) makes major changes expensive. The general amending formula requires Parliament plus at least seven provinces representing at least 50% of the population. Senate powers and selection methods live in that high-friction path. Changes to the office of the monarch, Governor General, or lieutenant governors require unanimity. The federal government’s own [intergovernmental affairs summary](https://www.canada.ca/en/intergovernmental-affairs/services/about-canada.html) describes the same 7/50 structure.
 
-That is not a normal pull request.
+That pull request is anything but normal.
 
 That is an enterprise migration with every regional office holding a veto-shaped clipboard.
 
@@ -543,7 +544,7 @@ If Ottawa transfers money for housing or healthcare, the public should be able t
 5. what dependency failed
 6. what happens when the agreement is not met
 
-This is not radical constitutional reform.
+This is modest constitutional maintenance.
 
 It is API documentation for federalism.
 
@@ -557,7 +558,7 @@ The same applies to housing targets, immigration targets, healthcare staffing, c
 
 A promise should have acceptance criteria.
 
-If it does not, it is not a plan.
+Without that, the plan is cosplay.
 
 It is marketing copy.
 
@@ -594,7 +595,7 @@ Reservation. Disallowance. Reserve powers. Ceremonial dependencies that no one e
 
 If they are truly obsolete, say so more clearly. If they are emergency powers, document the emergency. If they are symbolic, keep them symbolic. If they are too dangerous to use and too hard to remove, wrap them in stronger conventions, reporting expectations, and public explanation requirements.
 
-The goal is not to pretend dead code is harmless.
+The goal is to know which dead code is harmless.
 
 The goal is to stop pretending nobody can see it.
 
@@ -633,7 +634,7 @@ It needs fewer hidden states, clearer ownership, better runbooks, more honest pr
 
 ## The Better Question
 
-The better question is not whether Canada's system is old and weird.
+Canada's system is obviously old and weird.
 
 It is.
 
@@ -675,7 +676,7 @@ The House of Commons cannot meet without the Mace. The Senate cannot meet withou
 
 This is the final critique.
 
-Canada does not only have symbols.
+Canada has symbols with executable consequences.
 
 It has symbols wired into production.
 

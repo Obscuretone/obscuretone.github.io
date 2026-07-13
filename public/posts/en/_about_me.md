@@ -1,6 +1,7 @@
 ---
 title: About This Site
 description: obscuretone is a collection of systems notes, software projects, and essays on reliable systems, practical architecture, AI-assisted workflows, hiring systems, and the organizational incentives around software work.
+tags: [systems, software, incentives, architecture, publishing]
 ---
 
 obscuretone is a place for systems notes, software projects, and essays about technology, organizations, and the strange places where incentives turn into architecture.
@@ -31,7 +32,7 @@ I use side projects to explore systems at a scale where the whole shape still fi
 
 [The XKCD Tasks Meme As A Systems Test](/posts/en/xkcdmeme) is about turning the classic "is there a bird in a national park?" joke into an actual service using EXIF parsing, geospatial boundaries, and computer vision. It is small, but it captures how much leverage modern tooling can give a developer.
 
-[Simple PAM](/posts/en/simple_pam) is a tiny authentication-boundary project: a Linux PAM module that uses recent uptime as a narrow physical-access signal. It is not a general security solution, but it is a useful reminder that authentication is policy expressed at a boundary.
+[Simple PAM](/posts/en/simple_pam) is a tiny authentication-boundary project: a Linux PAM module that uses recent uptime as a narrow physical-access signal. Its narrowness is the point: authentication is policy expressed at a boundary.
 
 I also have a collection of todo apps that I treat as architecture probes rather than products. The domain is intentionally boring, which makes framework choices, persistence models, runtime tradeoffs, and UI/API boundaries easier to compare.
 
@@ -43,6 +44,6 @@ I am interested in systems that can be operated, debugged, explained, and improv
 
 The tone changes from post to post, but the habit is consistent: look at the system, identify the incentives, find the bottleneck, and ask what the current design is actually optimizing.
 
-That is also how I approach engineering work. Good software is not just code that runs. It is code inside an operating system of people, processes, failures, constraints, and tradeoffs.
+That is also how I approach engineering work. Good software runs inside an operating system of people, processes, failures, constraints, and tradeoffs.
 
 That is the part I find interesting.

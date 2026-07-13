@@ -1,6 +1,7 @@
 ---
 title: Glass Ceiling
 description: "Anthropic's Mythos restriction suggests the public AI market has hit a glass ceiling: once models cross it, access becomes permission, and the remaining race is price and usability."
+tags: [ai, regulation, export-controls, markets, capability]
 ---
 
 We may already have reached peak public AI.
@@ -49,13 +50,13 @@ Anthropic's own research is even more direct. In ["When AI builds itself"](https
 
 None of those trends are perfect forecasts. They measure different slices of capability. But they agree on the shape: useful AI capabilities are improving on the scale of months.
 
-So six months to a year is a plausible window for other frontier systems to reach the public-access ceiling. The point is not that every lab becomes equally good. The point is that once several labs can reach "maximum permitted AI," the public no longer experiences the race as unlimited capability growth.
+So six months to a year is a plausible window for other frontier systems to reach the public-access ceiling. Once several labs can reach "maximum permitted AI," the public no longer experiences the race as unlimited capability growth.
 
 The off-the-shelf models still improve.
 
 They improve toward a public maximum.
 
-After that, overshooting the wall is not a consumer feature. It is a reason to gate the model.
+After that, overshooting the wall becomes a reason to gate the model.
 
 ## The New Race
 
@@ -71,7 +72,7 @@ Not mysticism.
 
 Metering.
 
-Chinese models make the pressure obvious. Their appeal is not only capability. It is cost, availability, and deployability. [Rest of World](https://restofworld.org/2026/when-americans-choose-chinese-ai/) reported that U.S. companies are experimenting with Chinese open models like Qwen and Kimi, often through U.S. infrastructure or self-hosting to reduce data and geopolitical risk.
+Chinese models make the pressure obvious. Their appeal combines capability, cost, availability, and deployability. [Rest of World](https://restofworld.org/2026/when-americans-choose-chinese-ai/) reported that U.S. companies are experimenting with Chinese open models like Qwen and Kimi, often through U.S. infrastructure or self-hosting to reduce data and geopolitical risk.
 
 When the middle catches the ceiling, price pressure gets brutal.
 

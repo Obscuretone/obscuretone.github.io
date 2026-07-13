@@ -1,11 +1,12 @@
 ---
 title: Nira - Designing Tools For Humans And Agents
 description: A project note on Nira, a local issue tracker built around a CLI for automation and agents, a web UI for humans, and SQLite state stored with the workspace.
+tags: [software, tools, agents, architecture, local-first]
 ---
 
 [Nira](https://github.com/obscuretone/nira) is a local issue tracker for a single workspace. It has a command-line interface for automation and tool use, a local web UI for humans, and SQLite storage in the project directory.
 
-The interesting part is not that it tracks tickets. The interesting part is the interface design question:
+The interesting part is the interface design question behind ticket tracking:
 
 > What should a tool look like if both humans and coding agents need to use it comfortably?
 
@@ -27,7 +28,7 @@ nira close NIRA-12 --reason completed
 
 Those commands are easy to call, easy to inspect, and easy to compose with other development workflows.
 
-The value is not that a terminal is special. The value is that a CLI tends to force a stable contract.
+A terminal is not special by itself. A CLI tends to force a stable contract.
 
 ## APIs Can Work Just As Well
 
@@ -56,7 +57,7 @@ That local model fits agent-assisted development well:
 3. Commands can be run from anywhere under the workspace.
 4. The database can be inspected, backed up, or removed like any other local project artifact.
 
-This is not a replacement for team-scale systems like Jira or GitHub Issues. It is a different shape: local, lightweight, and close to the work.
+This has a different shape from team-scale systems like Jira or GitHub Issues: local, lightweight, and close to the work.
 
 ## Humans Still Need A UI
 
@@ -70,7 +71,7 @@ That split is deliberate:
 2. **Web UI:** browsing, editing, review, and human comfort.
 3. **SQLite:** durable local state behind both interfaces.
 
-The goal is not to force humans to behave like scripts or force agents to use a human UI. The goal is to give each user the interface that matches the task.
+The goal is to give each user the interface that matches the task, without forcing humans to behave like scripts or agents to use a human UI.
 
 ## Interface Design Is The Product
 
