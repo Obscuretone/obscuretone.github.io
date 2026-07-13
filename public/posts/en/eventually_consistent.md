@@ -1,6 +1,7 @@
 ---
 title: The Job Market Is Eventually Consistent
 description: "Hiring behaves like a badly replicated distributed system: postings, recruiters, candidates, managers, budgets, and ATS records all drift out of sync, and candidates pay for the inconsistency."
+tags: [hiring, distributed-systems, careers, incentives, software]
 ---
 
 The modern job market behaves like a badly replicated distributed system.
@@ -55,9 +56,7 @@ Recruiters are often blamed personally for this, but the role itself is structur
 
 They are asked to search for people without always having direct access to the work. They get keywords, years of experience, location constraints, salary bands, availability targets, and a description of the person the hiring manager thinks they want.
 
-That is not the same thing as understanding the job.
-
-It is querying an index.
+That is querying an index, with all the distance from the real job that implies.
 
 An index is useful. It helps find candidates quickly. It supports filtering, ranking, and rough matching. But an index is not the source record. It does not contain the full context of the team, the technical debt, the political constraints, the production risks, or the actual reason the role exists.
 
@@ -95,7 +94,7 @@ Hiring usually returns:
 
 > Thank you for your interest.
 
-That is not an acknowledgement. That is a postcard from the void.
+That is a postcard from the void.
 
 The candidate does not know whether the role is active, whether the resume parsed correctly, whether the application reached a human, whether the posting has an internal candidate, whether the salary range is real, or whether the company is collecting resumes for a role it may never fill.
 
@@ -145,7 +144,7 @@ Candidates cannot reliably tell which postings represent real demand. A listing 
 
 The visible job market becomes contaminated by records that look valid but do not behave like real openings.
 
-This is not only paranoia from exhausted job seekers. [Greenhouse's 2024 State of Job Hunting report](https://www.greenhouse.com/blog/greenhouse-2024-state-of-job-hunting-report) said 18-22% of jobs posted on its platform in a given quarter were classified as ghost jobs, and that three in five candidates suspected they had encountered one.
+Exhausted job seekers have data behind the paranoia. [Greenhouse's 2024 State of Job Hunting report](https://www.greenhouse.com/blog/greenhouse-2024-state-of-job-hunting-report) said 18-22% of jobs posted on its platform in a given quarter were classified as ghost jobs, and that three in five candidates suspected they had encountered one.
 
 That breaks trust.
 
@@ -181,7 +180,7 @@ But many do.
 
 ## The Candidate Is Also Inconsistent
 
-This is not a pure employer indictment.
+Employers do not own the whole mess.
 
 Candidates are inconsistent too.
 
@@ -205,7 +204,7 @@ A candidate cannot wait forever for the posting, budget, recruiter, hiring manag
 
 Employers have constraints too. They need people. They need process. They need legal caution. They need to avoid overfitting to the loudest candidate or the most polished resume.
 
-The problem is not that hiring has uncertainty.
+Hiring will always have uncertainty.
 
 The problem is that the uncertainty is hidden from the people most affected by it.
 
@@ -215,7 +214,7 @@ That is where hiring is now.
 
 ## Better Consistency
 
-The answer is not perfect transparency.
+Perfect transparency would be a bad promise.
 
 Companies will never expose every internal discussion, and they should not. Candidates will never submit a complete representation of themselves, because such a document would be unreadable and possibly illegal to ask for.
 
@@ -240,7 +239,7 @@ It requires treating candidates like callers of a real system.
 
 This is the part that keeps pulling me back to hiring software.
 
-The problem is not only that recruiters use bad keyword tools. It is that the system lacks a shared model of evidence and state.
+Bad keyword tools are only one symptom. The system lacks a shared model of evidence and state.
 
 A better hiring platform would reconcile replicas:
 
@@ -258,7 +257,7 @@ It means software should help identify where the records disagree.
 
 If the posting says Python and the hiring manager means production Django at scale, that mismatch should be visible. If the recruiter rejects a candidate for missing Kubernetes but the role only needs container literacy, that should be visible. If the candidate's resume implies relevant incident-response experience without using the expected term, that should be visible.
 
-Hiring software should not merely rank people.
+Hiring software should do more than rank people.
 
 It should make inconsistency inspectable.
 

@@ -3,6 +3,7 @@ title: Pieces Of Flair
 image: 51_flair.webp
 imagealt: People scrambling to increase stats
 description: Measurement is useful until the metric becomes the job. This article looks at handle time, engineering dashboards, OKRs, and return-to-office mandates as examples of numbers replacing judgment.
+tags: [metrics, incentives, management, systems, work]
 ---
 
 I came across a tagline for a marketing research company called *L'Observateur*: "Tout ce que l'on mesure s'améliore."
@@ -73,7 +74,7 @@ Software teams are not immune to this. We just use more expensive dashboards.
 
 Lines of code, ticket counts, Jira comments, pull-request volume, story points, sprint velocity, review counts, deployment frequency, and incident counts can all be useful in narrow contexts. None of them is engineering value.
 
-The danger is not that the numbers are fake. The danger is that they can be real and still misleading.
+The danger is that numbers can be real and still misleading.
 
 A developer can write a lot of code in the wrong direction.
 
@@ -175,7 +176,7 @@ Measurement is necessary.
 
 But measurement is not judgment.
 
-The point is not to reject metrics. The point is to remember that metrics are lossy representations of reality. They can reveal the system, or they can become a costume the system wears to look healthy.
+Metrics are lossy representations of reality. They can reveal the system, or they can become a costume the system wears to look healthy.
 
 When a workplace starts rewarding the costume, people notice. They learn what is actually valued. They stop asking what would improve the work and start asking what will improve the number.
 

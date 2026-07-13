@@ -1,6 +1,7 @@
 ---
 title: Resumes And Job Descriptions Are Lossy Compression
 description: Hiring starts by compressing people and work into tiny artifacts, then pretends the artifacts contain enough signal to make confident decisions.
+tags: [hiring, resumes, compression, evidence, systems]
 ---
 
 Hiring starts with two compression artifacts.
@@ -72,7 +73,7 @@ The posting usually says:
 4. work with Python, React, Kubernetes, AWS, PostgreSQL, or whatever terms survived the editing process
 5. thrive in a fast-paced environment
 
-That is not a job.
+That is a placeholder for a job.
 
 That is a brochure for a job.
 
@@ -114,7 +115,7 @@ A candidate can pass screening because they repeated a keyword they barely under
 
 A team can receive hundreds of applications that match the posting and almost none that match the actual work.
 
-The problem is not only bad faith.
+Bad faith is only one part of the problem.
 
 The problem is that both sides are comparing compressed files without enough error correction.
 
@@ -190,7 +191,7 @@ Negotiating a sane migration path may look less impressive than declaring a rewr
 
 Making a system boring is one of the highest forms of engineering taste, and one of the hardest things to advertise.
 
-That is not a resume-writing problem alone.
+Resume writing alone cannot solve that.
 
 It is a compression problem.
 
@@ -218,7 +219,7 @@ The organization compresses its need into a more attractive artifact, then compl
 
 ## Decompression Is The Real Hiring Work
 
-A good hiring process is not just matching.
+A good hiring process needs more than matching.
 
 It is decompression.
 
@@ -248,13 +249,13 @@ It is also one of the most useful.
 
 ## Better Artifacts
 
-The answer is not to make resumes longer or job descriptions exhaustive.
+Longer resumes and exhaustive job descriptions will not fix it.
 
 Nobody wants that.
 
 The answer is to design better artifacts and better decompression paths.
 
-Resumes should be allowed to preserve evidence, not just polish. Project context, tradeoffs, failure recovery, operating environment, and collaboration shape matter.
+Resumes should be allowed to preserve evidence instead of only polish. Project context, tradeoffs, failure recovery, operating environment, and collaboration shape matter.
 
 Job descriptions should distinguish:
 
@@ -268,7 +269,7 @@ Hiring systems should treat missing information carefully. Missing is not zero. 
 
 This is where software could help, if it were built around evidence instead of shortcuts.
 
-A useful system would not simply score the resume against the posting. It would ask what information survived compression, what was lost, where the artifacts disagree, and what questions would recover the missing signal.
+A useful system would ask what information survived compression, what was lost, where the artifacts disagree, and what questions would recover the missing signal.
 
 ## Closing Thought
 

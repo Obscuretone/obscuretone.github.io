@@ -1,6 +1,7 @@
 ---
 title: The XKCD Tasks Meme As A Systems Test
 description: A project note on implementing the classic XKCD Tasks problem with EXIF parsing, geospatial boundaries, and computer vision classification.
+tags: [ai, computer-vision, geospatial, software, systems]
 ---
 
 [xkcdmeme](https://github.com/obscuretone/xkcdmeme) is an implementation of the classic XKCD "Tasks" joke: given a photo, determine whether it was taken in a national park and whether it contains a bird.
@@ -62,7 +63,7 @@ That makes the project a useful miniature of modern applied AI work. The model i
 
 ## What The Project Shows
 
-The interesting lesson is not that every hard problem is now easy. It is that the boundary between research problem and integration problem keeps moving.
+The interesting lesson is that the boundary between research problem and integration problem keeps moving.
 
 A task that once required specialized ML work may become accessible when the ecosystem provides:
 
