@@ -1,6 +1,7 @@
 ---
 title: Building A Career Through Practical Experience
 description: This article explains how practical experience, continuous learning, and measurable outcomes can build senior engineering capability outside a traditional degree path.
+tags: [careers, hiring, evidence, engineering, credentials]
 ---
 
 Software careers are often described through credentials: degrees, certifications, recognizable companies, and formal titles. Those signals can be useful, but they are not the work itself.
@@ -27,7 +28,7 @@ That kind of learning is difficult to compress into a credential. It shows up in
 
 None of this means formal education is unimportant. Fundamentals matter: data structures, algorithms, networking, databases, operating systems, security, and software design all show up in real work.
 
-The question is not whether fundamentals matter. They do. The question is whether there is only one valid way to learn and demonstrate them.
+Fundamentals matter. The real question is whether there is only one valid way to learn and demonstrate them.
 
 In practice, strong engineers keep learning throughout their careers. Tools change, platforms change, architectures change, and the useful half-life of specific implementation knowledge can be short. The durable skill is the ability to learn accurately, reason from first principles, and apply judgment in context.
 
@@ -58,4 +59,4 @@ For candidates without a traditional path, the responsibility is to make that ev
 
 There are many valid paths into strong engineering work. A degree can be one of them. So can years of practical experience, disciplined self-study, production ownership, and continuous adaptation.
 
-The important thing is not the path by itself. It is whether the path produced the judgment, skill, and reliability the work requires.
+The path matters only insofar as it produced the judgment, skill, and reliability the work requires.

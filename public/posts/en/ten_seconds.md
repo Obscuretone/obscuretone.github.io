@@ -1,9 +1,10 @@
 ---
 title: The Ten-Second Resume Is An Advertisement
 description: Fast resume screening compresses professional history into a headline, rewarding titles, brand names, and flashy numbers while pushing the real evidence into fine print.
+tags: [hiring, resumes, attention, careers, incentives]
 ---
 
-The problem with the ten-second resume review is not only that ten seconds is too short.
+Ten seconds is too short, and the deeper problem is what that speed rewards.
 
 The deeper problem is what ten seconds turns a resume into.
 
@@ -53,13 +54,13 @@ But:
 
 > Senior backend engineer. Python. AWS. 40% latency reduction. Fintech.
 
-That may be useful as a summary. It is not enough as an evaluation.
+That may be useful as a summary. Evaluation needs more.
 
 The problem is that the hiring process often behaves as if the summary is the evaluation. The tagline becomes the product.
 
 Once that happens, candidates learn to write resumes like landing pages. Put the conversion-critical content above the fold. Make the numbers big. Repeat the right keywords. Remove nuance. Hide caveats. Keep the reader moving toward the call to action.
 
-That may be rational, but it is not healthy.
+That may be rational. It is also unhealthy.
 
 ## The Throughput Math
 
@@ -113,7 +114,7 @@ This is why the advertisement analogy matters. Ads do not get equal reading time
 
 A resume screen built around average attention behaves the same way.
 
-It is not considering all candidates first and then choosing how much time they deserve. It is using the upper limit of a human attention span as a sorting mechanism.
+It uses the upper limit of a human attention span as a sorting mechanism.
 
 That is efficient. It is also a very lossy way to evaluate people.
 
@@ -177,9 +178,9 @@ Those are not the same thing.
 
 ## Better Screening
 
-The answer is not to demand that every recruiter lovingly read every resume.
+Demanding that every recruiter lovingly read every resume will not work.
 
-That is not realistic.
+That would be fantasy.
 
 The better answer is to admit that first-pass screening is a decision system and design it accordingly.
 
@@ -197,7 +198,7 @@ Tools can help, but only if they are built around evidence rather than superfici
 
 ## Closing Thought
 
-The ten-second resume is not merely unfair because it is short.
+The ten-second resume does more damage than wasting candidates' time.
 
 It is unfair because it changes what the resume is trying to be.
 

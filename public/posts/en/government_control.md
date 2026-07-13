@@ -3,6 +3,7 @@ title: Should Canada Elect Senators?
 image: government_control.webp
 imagealt: A parliament style building with an imagined PID waveform.
 description: This article compares the three pillars of Canadian government to a PID controller, suggesting that an elected senate would lead to resonance.
+tags: [government, canada, control-systems, senate, institutions]
 ---
 
 Canadian politics has a useful control-systems analogy: the House of Commons, Senate, and Crown behave a little like parts of a PID loop. While system control theory and political science are distant fields, the analogy holds up surprisingly well when we examine how different branches of government interact and how changes to the system, like electing senators, could affect political stability.

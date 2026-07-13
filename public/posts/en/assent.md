@@ -1,11 +1,12 @@
 ---
 title: My Cat Could Be The Crown
 description: The Crown is symbolically enormous, constitutionally important, and in ordinary legislative processing behaves like a service dependency expected to return assent.
+tags: [government, canada, institutions, legacy-systems, monarchy]
 ---
 
 My cat could perform most of the Crown's ordinary legislative function with almost no change to existing law or process.
 
-This is not a serious proposal.
+This is a constitutional joke with a straight face.
 
 It is a serious architecture review.
 
@@ -43,11 +44,11 @@ But that mostly proves the point.
 
 The ordinary legislative-processing role is not where the Crown's day-to-day meaning lives. The Crown is symbolically enormous, legally embedded, and historically load-bearing. But in routine bill passage, the system mostly expects the endpoint to return `assent`.
 
-That is not a monarch.
+Calling that a monarch feels generous.
 
 That is a dependency.
 
-## The Endpoint Is Not The Power
+## The Endpoint And The Power
 
 The absurdity is useful because it separates two things that are usually blurred together.
 
@@ -109,11 +110,11 @@ Reserve powers exist. Conventions constrain them. The legal constitution and the
 
 Canada has historical examples. At the federal level, early post-Confederation bills were sometimes reserved for imperial consideration. According to the [Centre for Constitutional Studies](https://www.constitutionalstudies.ca/2019/07/reservation-and-disallowance/?print=print), between 1867 and 1878, 21 federal bills were reserved and six were denied Royal Assent by the United Kingdom; no federal bills have been reserved since. At the provincial level, reservation and disallowance survived longer, with the last reservation occurring in Saskatchewan in 1961.
 
-Australia gives the Commonwealth warning comment. In 1975, [Governor-General Sir John Kerr dismissed Prime Minister Gough Whitlam during a supply crisis](https://www.nma.gov.au/defining-moments/resources/whitlam-dismissal). That was not a routine Royal Assent dispute. It was a reserve-power event, and it showed that the ceremonial layer can become consequential when the system enters an unusual state.
+Australia gives the Commonwealth warning comment. In 1975, [Governor-General Sir John Kerr dismissed Prime Minister Gough Whitlam during a supply crisis](https://www.nma.gov.au/defining-moments/resources/whitlam-dismissal). A reserve-power event like that shows the ceremonial layer becoming consequential when the system enters an unusual state.
 
 This is why the cat argument matters.
 
-It is not that the Crown does nothing.
+The Crown still does things.
 
 It is that the Crown usually does so little visible work that people forget the emergency branch exists.
 
@@ -143,7 +144,7 @@ Mostly true is where legacy systems live.
 
 ## The Better Question
 
-The interesting question is not whether my cat should be monarch.
+My cat's constitutional fitness is the wrong question.
 
 Obviously not.
 
@@ -173,7 +174,7 @@ Is it inherited ceremony wrapped around a dangerous fallback path nobody wants t
 
 Also yes.
 
-That is why the cat joke is not just a joke.
+That is why the cat joke reaches past the joke.
 
 It exposes the shape of the system.
 

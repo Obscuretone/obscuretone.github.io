@@ -1,6 +1,7 @@
 ---
 title: What Todo Apps Are Good For
 description: A project note on using deliberately small todo applications to compare frameworks, persistence models, runtime choices, and architecture tradeoffs.
+tags: [software, architecture, frameworks, persistence, systems]
 ---
 
 Todo apps are not interesting because the domain is interesting. The domain is intentionally boring.
@@ -33,7 +34,7 @@ That kind of comparison is hard when every project has a different domain.
 
 [todo-roadrunner](https://github.com/obscuretone/todo-roadrunner) explores a high-performance PHP path with RoadRunner, PostgreSQL, Redis, UUIDs, and separate read/write database connections. It is a useful contrast against traditional request-per-process PHP because the runtime model changes the performance and lifecycle assumptions.
 
-[todo-mainframe](https://github.com/obscuretone/todo-mainframe) is the intentionally strange one: a modern REST and HTMX facade backed by COBOL business logic running inside an emulated Hercules/MVS mainframe. The useful idea is not that todos need COBOL. It is that legacy integration often looks like this in miniature: modern edges, old core, fixed-width records, transaction shims, and host-owned business rules.
+[todo-mainframe](https://github.com/obscuretone/todo-mainframe) is the intentionally strange one: a modern REST and HTMX facade backed by COBOL business logic running inside an emulated Hercules/MVS mainframe. It turns legacy integration into miniature: modern edges, old core, fixed-width records, transaction shims, and host-owned business rules.
 
 [CBC-Todo-App](https://github.com/obscuretone/CBC-Todo-App) is a more conventional full-stack example with a React frontend, Sanic API, MariaDB persistence, JWT authentication, and Docker Compose. It is useful as a baseline for a runnable product-shaped app.
 
@@ -77,6 +78,6 @@ That makes them useful as small comparative studies.
 
 ## Closing Thought
 
-A todo app is not a product story. It is a constraint.
+A todo app is a constraint.
 
-Used well, that constraint makes architectural tradeoffs easier to see. The value is not in the task list. The value is in making different stacks solve the same problem and observing what each one makes easy, awkward, fast, slow, explicit, or hidden.
+Used well, that constraint makes architectural tradeoffs easier to see. The value comes from making different stacks solve the same problem and observing what each one makes easy, awkward, fast, slow, explicit, or hidden.

@@ -1,6 +1,7 @@
 ---
 title: Fork The Party
 description: A political worldview is not enough. It needs a deployment target, and every available target has horrible implementation details.
+tags: [politics, institutions, movements, incentives, systems]
 ---
 
 A political worldview is not enough.
@@ -81,7 +82,7 @@ If this is radical, it is radical in the way a functioning elevator is radical a
 
 So it is worth making the opposite argument in good faith.
 
-Maybe better access to health care is not merely an obvious good.
+Maybe better access to health care is also power.
 
 Maybe it creates unlimited demand, hides costs, overloads clinicians, empowers bureaucracy, reduces personal responsibility, crowds out private innovation, and turns every political fight into a fight over rationing.
 
@@ -107,7 +108,7 @@ The argument for public reliability is not that public systems are magically goo
 
 It is that private dependency is already a form of rationing, bureaucracy, coercion, and inefficiency. It just routes the pain through prices, queues, debt, precarity, and denial instead of through a ministry.
 
-The question is not whether a public system can fail.
+Public systems can fail.
 
 Of course it can.
 
@@ -217,7 +218,7 @@ It can defend public services without sounding obsessed enough with whether they
 
 That is the opening.
 
-The shift is not "be more left" in the abstract.
+The shift needs more precision than "be more left" in the abstract.
 
 The shift is:
 
@@ -225,11 +226,11 @@ Public services must become reliable infrastructure, not symbolic proof of compa
 
 Rights should become automatic where possible, not humiliating application processes.
 
-Housing policy should reduce landlord dependency, not merely subsidize demand.
+Housing policy should reduce landlord dependency instead of subsidizing demand.
 
-Labour policy should make refusal possible, not only make bad jobs slightly less bad.
+Labour policy should make refusal possible instead of sanding the edges off bad jobs.
 
-Industrial policy should build public capacity, not just hand incentives to firms and hope.
+Industrial policy should build public capacity instead of handing incentives to firms and hoping.
 
 Policy should include observability, appeals, rollback, and blast-radius control.
 
@@ -289,7 +290,7 @@ Do they actually want to reduce dependency on landlords, employers, banks, consu
 
 Or do they want those dependencies to remain, with better messaging, targeted benefits, and a grant program with a logo?
 
-The danger is not that they cannot understand the vocabulary.
+They can understand the vocabulary. That is where the danger starts.
 
 The danger is that they can understand it, repeat it, and route around the control transfer.
 
@@ -357,7 +358,7 @@ A policy shop to make the ideas concrete.
 
 Local groups to test the ideas against actual people.
 
-Mutual aid to prove the values are not only electoral.
+Mutual aid to prove the values extend beyond elections.
 
 Candidate training to build a bench.
 
@@ -395,23 +396,23 @@ That leaves the least bad path:
 
 Push an existing left-of-centre party toward public reliability as an operating model, while building enough outside infrastructure that the party cannot reduce the idea to slogans.
 
-Not just better programs.
+Better programs alone will not do it.
 
 Better systems.
 
-Not just redistribution.
+Redistribution alone will not do it.
 
 Dependency reduction.
 
-Not just compassion.
+Compassion alone will not do it.
 
 Capacity.
 
-Not just promises.
+Promises alone will not do it.
 
 Observability.
 
-Not just outrage.
+Outrage alone will not do it.
 
 Implementation.
 

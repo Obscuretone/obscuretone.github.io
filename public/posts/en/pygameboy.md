@@ -1,11 +1,12 @@
 ---
 title: PyGameBoy - Writing A Game Boy Emulator In Python
 description: A project note on PyGameBoy, a Python Game Boy emulator that uses flat memory, opcode dispatch tables, NumPy rendering, and audio-clock synchronization to reach real-time performance.
+tags: [emulation, python, performance, software, architecture]
 ---
 
 [PyGameBoy](https://github.com/obscuretone/pygameboy) is a Game Boy emulator written in Python with Pygame and NumPy.
 
-The interesting part is not simply that it emulates the original DMG-01 hardware. The interesting part is the constraint: getting real-time emulator performance out of CPython, where function calls, dynamic lookups, and object-heavy abstractions quickly become the bottleneck.
+The interesting constraint is getting real-time emulator performance out of CPython while emulating the original DMG-01 hardware, where function calls, dynamic lookups, and object-heavy abstractions quickly become the bottleneck.
 
 That makes the project a useful performance exercise. It is a small system where every abstraction has a cost, and the hardware being emulated is slow enough to understand but fast enough to punish careless design.
 
@@ -20,7 +21,7 @@ The emulator includes the major pieces expected from a Game Boy implementation:
 5. **Input:** keyboard mapping through Pygame.
 6. **Boot ROM support:** optional original DMG boot sequence support.
 
-That means the project is not just a ROM loader or display demo. It crosses the boundary into system behavior: CPU, memory, video, audio, timing, and input all have to cooperate.
+That pushes the project past a ROM loader or display demo and into system behavior: CPU, memory, video, audio, timing, and input all have to cooperate.
 
 ## The CPython Constraint
 
@@ -76,8 +77,8 @@ This project is a good example of engineering under constraints:
 2. Find the hot paths.
 3. Remove abstraction where measurement proves it matters.
 4. Move bulk work into libraries that execute outside Python loops.
-5. Treat timing as a system property, not just a sleep call.
+5. Treat timing as a system property instead of a sleep call.
 
-The result is not the most idiomatic Python code possible. It is Python shaped around the performance requirements of an emulator.
+The result is Python shaped around the performance requirements of an emulator.
 
 That is what makes it worth writing about.
