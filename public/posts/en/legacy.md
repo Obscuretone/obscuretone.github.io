@@ -1,5 +1,9 @@
 ---
 title: Canada Is A Legacy System
+image: rt_canada_legacy_mainframe.webp
+imagealt: "A patched government mainframe connects monarchy, parliament, provinces, courts, and public services through old ports."
+imagecaption: "Canada as a running legacy mainframe: old interfaces, modern adapters, and terrifying migration risk."
+imagesource: "AI-generated illustration created for obscuretone with OpenAI image generation."
 description: "Canadian government looks strange because it is a working legacy system: old interfaces, ceremonial dependencies, undocumented conventions, and terrifying migration risk."
 tags: [government, canada, legacy-systems, institutions, architecture]
 ---

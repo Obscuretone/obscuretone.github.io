@@ -1,5 +1,9 @@
 ---
 title: Politics Is Not Strongly Typed
+image: rt_politics_weak_types.webp
+imagealt: "A local ballot booth and council chamber feed party blocks through a type-conversion machine into mismatched local issues."
+imagecaption: "Party labels go into the converter; local politics comes out with runtime surprises."
+imagesource: "AI-generated illustration created for obscuretone with OpenAI image generation."
 description: Party labels look like clear types, but local politics is full of implicit conversions, overloaded names, and values that only make sense at runtime.
 tags: [politics, canada, types, institutions, local-systems]
 ---

@@ -1,7 +1,9 @@
 ---
 title: Pieces Of Flair
-image: 51_flair.webp
-imagealt: People scrambling to increase stats
+image: rt_flair_metric_dashboard.webp
+imagealt: "Workers wear excessive badges while managers watch handle-time clocks, attendance turnstiles, sprint tokens, and velocity gauges."
+imagecaption: "Metrics become the costume, and the costume becomes the work."
+imagesource: "AI-generated illustration created for obscuretone with OpenAI image generation."
 description: Measurement is useful until the metric becomes the job. This article looks at handle time, engineering dashboards, OKRs, and return-to-office mandates as examples of numbers replacing judgment.
 tags: [metrics, incentives, management, systems, work]
 ---
@@ -19,8 +21,6 @@ But the more complete version is less comforting:
 Everything that is measured gets optimized.
 
 Whether it improves depends on whether the metric is connected to the thing people actually care about.
-
-![Measurement above all else](/images/51_flair.webp "Measurement above all else")
 
 ## The Metric Becomes The Job
 

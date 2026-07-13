@@ -1,5 +1,9 @@
 ---
 title: PyGameBoy - Writing A Game Boy Emulator In Python
+image: rt_pygameboy_emulator.webp
+imagealt: "An exploded handheld game console diagram with CPU, memory, display, audio, and Python runtime parts."
+imagecaption: "A Python emulator shown as timing, memory, display, and audio hardware made visible."
+imagesource: "AI-generated illustration created for obscuretone with OpenAI image generation."
 description: A project note on PyGameBoy, a Python Game Boy emulator that uses flat memory, opcode dispatch tables, NumPy rendering, and audio-clock synchronization to reach real-time performance.
 tags: [emulation, python, performance, software, architecture]
 ---

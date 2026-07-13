@@ -1,5 +1,9 @@
 ---
 title: My Cat Could Be The Crown
+image: rt_cat_crown.webp
+imagealt: "A cat beside a Royal Assent desk and ceremonial stamp machinery."
+imagecaption: "The Crown's ordinary assent path, reduced to a ceremonial endpoint with a cat-shaped operator."
+imagesource: "AI-generated illustration created for obscuretone with OpenAI image generation."
 description: The Crown is symbolically enormous, constitutionally important, and in ordinary legislative processing behaves like a service dependency expected to return assent.
 tags: [government, canada, institutions, legacy-systems, monarchy]
 ---

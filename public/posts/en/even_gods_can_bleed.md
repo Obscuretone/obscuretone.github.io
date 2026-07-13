@@ -1,5 +1,9 @@
 ---
 title: FOIPOP - The Hack That Wasn't
+image: rt_foipop_access_control.webp
+imagealt: "A government records terminal exposes document drawers while officials point away from a broken access-control panel."
+imagecaption: "The FOIPOP failure drawn as an exposed access-control path, not a teenager-shaped villain."
+imagesource: "AI-generated illustration created for obscuretone with OpenAI image generation."
 description: A post-mortem on Nova Scotia's FOIPOP breach, the teenager accused in it, and the public pressure campaign that turned a quiet government security failure into an accountability problem.
 tags: [security, government, accountability, nova-scotia, institutions]
 ---

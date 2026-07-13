@@ -1,5 +1,9 @@
 ---
 title: Resumes And Job Descriptions Are Lossy Compression
+image: rt_lossy_compression.webp
+imagealt: "Retrofuturist plate of resumes and job descriptions passing through a compression codec."
+imagecaption: "Resumes and job descriptions as lossy compression artifacts."
+imagesource: "AI-generated illustration created for obscuretone with OpenAI image generation."
 description: Hiring starts by compressing people and work into tiny artifacts, then pretends the artifacts contain enough signal to make confident decisions.
 tags: [hiring, resumes, compression, evidence, systems]
 ---
