@@ -10,11 +10,11 @@ tags: [hiring, ai, evidence, software, resumes]
 
 Most recruiting software still carries too much 1990s thinking.
 
-Boolean searches, keyword filters, and crude applicant tracking screens treat a resume like a bag of terms. If the right acronym appears, the candidate survives. If the same experience is described in different language, they may disappear.
+Boolean searches, keyword filters, and crude applicant tracking screens treat a resume like a bag of terms. If the right acronym appears, the candidate survives. If the same experience is described in different language, they may disappear. Harvard Business School's *Hidden Workers* report describes employers using automated systems and rigid filters in ways that can [exclude otherwise viable candidates](https://www.hbs.edu/ris/Publication%20Files/hiddenworkers09032021_Fuller_white_paper_33a2047f-41dd-47b1-9a8d-bd08cf3bfa94.pdf "hiring, ai, evidence | Harvard").
 
 That was the original frustration behind [EMH](https://github.com/obscuretone/emh).
 
-I started it while unemployed and tired of hearing the same recruiting advice: make the resume instantly searchable, mirror the job description, include the right keywords, assume nobody has time to infer anything.
+I started it while unemployed and tired of hearing the same recruiting advice: make the resume instantly searchable, mirror the job description, include the right keywords, assume nobody has time to infer anything. That advice exists because the first skim is brutal: Ladders' eye-tracking work put initial resume attention at [about 7.4 seconds](https://www.prnewswire.com/news-releases/ladders-updates-popular-recruiter-eye-tracking-study-with-new-key-insights-on-how-job-seekers-can-improve-their-resumes-300744217.html "hiring, resumes, attention | PR Newswire").
 
 Some of that advice is practical. The part that bothered me was the implied product failure. Candidates were being told to reshape their work around recruiter shortcuts because the screening layer could not reliably understand evidence unless it arrived in the exact expected wording.
 
@@ -24,7 +24,7 @@ Not "understood" in the mystical sense. Understood in the practical sense: what 
 
 Most AI hiring advice collapses that into a prompt.
 
-Paste in a resume. Paste in a job description. Ask the model whether the candidate is a fit.
+Paste in a resume. Paste in a job description. Ask the model whether the candidate is a fit. The risk is that hiring AI becomes another opaque decision layer rather than a better evidence layer; the U.S. EEOC has warned that employers can be responsible when algorithmic tools create [discriminatory employment outcomes](https://www.eeoc.gov/select-issues-assessing-adverse-impact-software-algorithms-and-artificial-intelligence-used-employment "hiring, ai, accountability | EEOC").
 
 That can be useful, but a software system needs memory. It should remember what evidence was used, distinguish missing information from a weak score, separate recruiter matching from applicant optimization, and explain how a tailored resume was grounded in actual work history.
 

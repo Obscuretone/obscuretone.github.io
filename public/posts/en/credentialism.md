@@ -8,7 +8,7 @@ description: This article explains how practical experience, continuous learning
 tags: [careers, hiring, evidence, engineering, credentials]
 ---
 
-Software careers are often described through credentials: degrees, certifications, recognizable companies, and formal titles. Those signals can be useful, but they are not the work itself.
+Software careers are often described through credentials: degrees, certifications, recognizable companies, and formal titles. Those signals can be useful, but they are not the work itself. Harvard Business School's work on hidden workers is a good warning here: hiring systems designed around "perfect" candidates can [exclude capable people through credential and screening filters](https://www.hbs.edu/managing-the-future-of-work/research/hidden-workers-untapped-talent "hiring, careers, evidence | Harvard"). The same institution's *Dismissed by Degrees* report, with Burning Glass and Accenture, describes degree inflation as employers using bachelor's requirements for jobs where many current workers [do not have those degrees](https://www.hbs.edu/managing-the-future-of-work/Documents/dismissed-by-degrees.pdf "hiring, credentials, careers | Harvard").
 
 Engineering ability is ultimately proven through systems built, incidents handled, decisions made, teams supported, and problems solved over time.
 
@@ -32,7 +32,7 @@ That kind of learning is difficult to compress into a credential. It shows up in
 
 None of this means formal education is unimportant. Fundamentals matter: data structures, algorithms, networking, databases, operating systems, security, and software design all show up in real work.
 
-Fundamentals matter. The real question is whether there is only one valid way to learn and demonstrate them.
+Fundamentals matter. The real question is whether there is only one valid way to learn and demonstrate them. Opportunity@Work uses the term STARs for workers "skilled through alternative routes," arguing that many workers without bachelor's degrees have skills that are [not captured by degree-first screening](https://opportunityatwork.org/our-solutions/stars-insights/ "careers, credentials, evidence | Opportunity@Work").
 
 In practice, strong engineers keep learning throughout their careers. Tools change, platforms change, architectures change, and the useful half-life of specific implementation knowledge can be short. The durable skill is the ability to learn accurately, reason from first principles, and apply judgment in context.
 

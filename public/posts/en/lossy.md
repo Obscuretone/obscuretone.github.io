@@ -26,7 +26,7 @@ The interesting information is often exactly what gets discarded.
 
 A resume is a brutal file format.
 
-It has to reduce years of work into titles, dates, employers, tools, bullets, and metrics. It has to fit on one or two pages. It has to be readable by a human under time pressure and by software that may treat layout, keywords, and section headings as evidence.
+It has to reduce years of work into titles, dates, employers, tools, bullets, and metrics. It has to fit on one or two pages. It has to be readable by a human under time pressure and by software that may treat layout, keywords, and section headings as evidence. Harvard Business School's *Hidden Workers* report is a useful institutional version of the same problem: efficient screening systems can [filter out people whose resumes do not match narrow criteria](https://www.hbs.edu/ris/Publication%20Files/hiddenworkers09032021_Fuller_white_paper_33a2047f-41dd-47b1-9a8d-bd08cf3bfa94.pdf "hiring, resumes, evidence | Harvard"), even when they may be able to do the work.
 
 That means the resume is not a record of the work.
 
@@ -67,7 +67,7 @@ The job description is just as compressed.
 
 It takes a messy organizational reality and turns it into a public-facing role.
 
-The real job may involve a legacy system nobody wants to mention, a manager trying to backfill someone irreplaceable, a team recovering from a failed migration, a product that has outgrown its architecture, or a political problem disguised as a technical one.
+The real job may involve a legacy system nobody wants to mention, a manager trying to backfill someone irreplaceable, a team recovering from a failed migration, a product that has outgrown its architecture, or a political problem disguised as a technical one. Even at the aggregate level, the job ad is only a partial signal: the U.S. Bureau of Labor Statistics treats job openings and hires as distinct measures in [JOLTS](https://www.bls.gov/jlt/ "hiring, evidence, systems | BLS"), which is a polite statistical way of saying a posted opening is not the same thing as a completed job match.
 
 The posting usually says:
 

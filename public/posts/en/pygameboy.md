@@ -10,7 +10,7 @@ tags: [emulation, python, performance, software, architecture]
 
 [PyGameBoy](https://github.com/obscuretone/pygameboy) is a Game Boy emulator written in Python with Pygame and NumPy.
 
-The interesting constraint is getting real-time emulator performance out of CPython while emulating the original DMG-01 hardware, where function calls, dynamic lookups, and object-heavy abstractions quickly become the bottleneck.
+The interesting constraint is getting real-time emulator performance out of CPython while emulating the original DMG-01 hardware, where function calls, dynamic lookups, and object-heavy abstractions quickly become the bottleneck. Pan Docs remains the public technical reference point for the hardware, including the Game Boy's [CPU, memory, display, and timing details](https://gbdev.io/pandocs/).
 
 That makes the project a useful performance exercise. It is a small system where every abstraction has a cost, and the hardware being emulated is slow enough to understand but fast enough to punish careless design.
 
@@ -29,7 +29,7 @@ That pushes the project past a ROM loader or display demo and into system behavi
 
 ## The CPython Constraint
 
-The original Game Boy CPU runs at about 4.19 MHz. In a native language, that is modest. In CPython, it is a real constraint because the emulator cannot afford millions of expensive Python-level abstractions per second.
+The original Game Boy CPU runs at about [4.194304 MHz](https://problemkaputt.de/pandocs.htm). In a native language, that is modest. In CPython, it is a real constraint because the emulator cannot afford millions of expensive Python-level abstractions per second.
 
 An idiomatic emulator might route every memory access through methods such as `bus.read_byte(address)` or expose CPU registers through properties. That design is pleasant to read, but in Python it can be too slow for the hottest paths.
 
@@ -61,7 +61,7 @@ For emulator work, that kind of mechanical sympathy matters. The loop is small, 
 
 Pixel rendering is another place where pure Python loops are expensive. A Game Boy frame is small by modern standards, but calculating background tiles, scrolling, palettes, sprites, and priority per pixel can still dominate runtime if each pixel is handled individually in Python.
 
-PyGameBoy uses NumPy to move scanline work into vectorized operations. Background and window pixels can be resolved in bulk, sprite intersections can be found with array operations, and the resulting palette indices can be mapped to RGB values before being pushed through Pygame.
+PyGameBoy uses NumPy to move scanline work into vectorized operations. Background and window pixels can be resolved in bulk, sprite intersections can be found with array operations, and the resulting palette indices can be mapped to RGB values before being pushed through Pygame. That is exactly the kind of work NumPy is built for: expressing array operations in a way that can run in optimized compiled code rather than Python loops, as the NumPy docs describe in their overview of [vectorization and array-oriented computing](https://numpy.org/doc/stable/user/whatisnumpy.html).
 
 The larger lesson is that Python performance often comes from choosing which work stays in Python and which work is expressed as bulk operations in C-backed libraries.
 

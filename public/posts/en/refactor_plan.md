@@ -138,11 +138,11 @@ The first step is not abolishing every market.
 
 The first step is making fewer things depend on markets for survival.
 
-Healthcare is the obvious example in Canada. It has politics, rationing, wait times, staffing failures, and administrative failure. But the premise matters: getting cancer should not require negotiating with a billing department as the primary interface.
+Healthcare is the obvious example in Canada. It has politics, rationing, wait times, staffing failures, and administrative failure. CIHI's 2025 wait-time release says patients were still [waiting longer than recommended for priority procedures](https://www.cihi.ca/en/news/longer-wait-times-for-surgeries-and-diagnostic-imaging-persist-across-canada-compared-with-the-pre "healthcare, canada, systems | CIHI") compared with the pre-pandemic period, even as procedure volumes rose. But the premise matters: getting cancer should not require negotiating with a billing department as the primary interface.
 
 That premise can be extended.
 
-Housing.
+Housing. CMHC estimates Canada needs [millions of additional homes to restore affordability](https://www.cmhc-schl.gc.ca/observer/2023/estimating-how-much-housing-we-need-by-2030 "housing, canada, systems | CMHC"), and later estimated that housing starts would need to [nearly double until 2035](https://www.cmhc-schl.gc.ca/professionals/housing-markets-data-and-research/housing-research/research-reports/accelerate-supply/canadas-housing-supply-shortages-a-new-framework "housing, canada, systems | CMHC") to close the supply gap.
 
 Childcare.
 
@@ -152,7 +152,7 @@ Education.
 
 Internet access.
 
-Food security.
+Food security. Statistics Canada's poverty dashboard and Canadian Income Survey keep the material baseline visible: its 2026 table reports that [4.478 million people were below the Market Basket Measure poverty line in 2024](https://www150.statcan.gc.ca/n1/daily-quotidien/260429/t003a-eng.htm "canada, evidence, economics | Statistics Canada").
 
 Legal aid.
 
@@ -170,7 +170,7 @@ This is infrastructure.
 
 It is dependency reduction.
 
-If losing your job means losing your medicine, your apartment, your childcare, your immigration status, your dental care, and your ability to move around the city, then the labour market is not voluntary in any meaningful sense.
+If losing your job means losing your medicine, your apartment, your childcare, your immigration status, your dental care, and your ability to move around the city, then the labour market is not voluntary in any meaningful sense. Canada already recognizes the basic shape of that risk in Employment Insurance: regular EI exists for workers who [lose a job through no fault of their own](https://www.canada.ca/en/services/benefits/ei/ei-regular-benefit.html "work, canada, institutions | Canada"), and EI sickness benefits provide partial temporary support when someone [cannot work for medical reasons](https://www.canada.ca/en/services/benefits/ei/ei-sickness.html "work, healthcare, canada | Canada").
 
 If those dependencies are removed one by one, people become harder to coerce.
 
@@ -238,7 +238,7 @@ It is draining traffic from coercive paths until fewer people need permission fr
 
 ## Strangler Fig The Extractive Parts
 
-In software, a strangler fig migration wraps an old system with new interfaces, routes traffic through the new path, and gradually drains the legacy system until it can be removed.
+In software, a strangler fig migration wraps an old system with new interfaces, routes traffic through the new path, and gradually drains the legacy system until it can be removed. Martin Fowler's writeup of the [Strangler Fig Application](https://martinfowler.com/bliki/StranglerFigApplication.html "software, architecture, migration | Martin Fowler") is the software version of the political metaphor here.
 
 That is the better model.
 
