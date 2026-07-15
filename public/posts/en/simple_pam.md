@@ -16,7 +16,7 @@ This small example shows how Linux PAM can enforce local policy at the authentic
 
 ## What PAM Gives You
 
-PAM, or Pluggable Authentication Modules, lets Linux systems compose authentication behavior from modules. Login, `sudo`, SSH, display managers, and custom applications can all use PAM stacks depending on system configuration.
+PAM, or Pluggable Authentication Modules, lets Linux systems compose authentication behavior from modules. Login, `sudo`, SSH, display managers, and custom applications can all use PAM stacks depending on system configuration; the Linux-PAM manual describes the framework as a way for applications to be [independent of the underlying authentication scheme](https://man7.org/linux/man-pages/man8/pam.8.html).
 
 That makes PAM powerful and dangerous. A small module can affect critical login paths. It needs to fail predictably, be easy to test, and be installed carefully.
 
@@ -50,7 +50,7 @@ It would be inappropriate as a standalone security control for normal servers or
 
 The module checks system uptime and returns a PAM result based on a configured threshold. If the uptime is recent enough, authentication continues to the next module in the stack. If not, authentication can fail immediately depending on how the PAM config is written.
 
-That behavior makes configuration important. In PAM, words like `required`, `requisite`, and `sufficient` change how failure affects the rest of the stack.
+That behavior makes configuration important. In PAM, words like `required`, `requisite`, and `sufficient` change how failure affects the rest of the stack; the `pam.conf` manual spells out those [control flag semantics](https://man7.org/linux/man-pages/man5/pam.conf.5.html).
 
 For example, putting a module at the top of `common-auth` as `requisite` means a failed check can stop the authentication flow early. That may be exactly what you want in a test environment and exactly what you do not want on a remote system you depend on.
 

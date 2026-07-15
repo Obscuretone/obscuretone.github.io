@@ -20,7 +20,7 @@ AI can write the memo. AI can draft the code. AI can summarize the meeting, tria
 
 But when it fails, somebody still has to be standing there.
 
-Somebody has to approve the change. Somebody has to sign the form. Somebody has to hold the license. Somebody has to answer the email. Somebody has to attend the hearing. Somebody has to say, with a straight face, that appropriate oversight was applied.
+Somebody has to approve the change. Somebody has to sign the form. Somebody has to hold the license. Somebody has to answer the email. Somebody has to attend the hearing. Somebody has to say, with a straight face, that appropriate oversight was applied. The governance language around AI already points this way: NIST's AI Risk Management Framework treats trustworthy AI as including [accountability, transparency, explainability, safety, and risk management](https://www.nist.gov/itl/ai-risk-management-framework), which are organizational burdens before they are model features.
 
 The model can do the work.
 
@@ -190,7 +190,7 @@ That arrangement will be unstable.
 
 If the human has real authority, then AI remains a tool and the human can reject it. That is expensive. It requires time, expertise, confidence, and organizational permission to slow down.
 
-If the human has no real authority, then "human oversight" becomes decorative. The person is responsible for outputs they cannot meaningfully inspect, produced by systems they cannot meaningfully control, under incentives they cannot meaningfully resist.
+If the human has no real authority, then "human oversight" becomes decorative. The person is responsible for outputs they cannot meaningfully inspect, produced by systems they cannot meaningfully control, under incentives they cannot meaningfully resist. The EU AI Act's high-risk-system rules make the same distinction in legal language by requiring systems to be designed so natural persons can [effectively oversee them while in use](https://artificialintelligenceact.eu/section/3-2/).
 
 Oversight needs more than placement in a workflow.
 

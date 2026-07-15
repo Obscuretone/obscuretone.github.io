@@ -32,11 +32,11 @@ That is what bad measurement does.
 
 It starts as a proxy for the work. Then it becomes the work. Eventually people are no longer optimizing the outcome. They are optimizing their appearance inside the reporting system.
 
-This is the warning behind [Goodhart's Law](https://en.wikipedia.org/wiki/Goodhart%27s_law):
+This is the warning behind [Goodhart's Law](https://en.wikipedia.org/wiki/Goodhart%27s_law), especially the formulation popularized by Marilyn Strathern in ["Improving ratings"](https://journals.sagepub.com/doi/10.1177/135638909700300102):
 
 > **When a measure becomes a target, it ceases to be a good measure.**
 
-[Campbell's Law](https://en.wikipedia.org/wiki/Campbell%27s_law) says the same thing in institutional terms: the more a metric is used to make decisions, the more pressure there is to corrupt the process being measured.
+[Campbell's Law](https://www.sesp.northwestern.edu/docs/publications/429551791356808642.pdf) says the same thing in institutional terms: the more a metric is used to make decisions, the more pressure there is to corrupt the process being measured.
 
 That sounds abstract until you have lived inside one of those systems.
 
