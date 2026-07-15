@@ -18,7 +18,7 @@ I like it because production is where software stops being theoretical.
 
 Local development is controlled. Tests are selective. Staging is a model. Production has real users, real data, real concurrency, real integrations, real permissions, real traffic, real money, and real organizational pressure.
 
-If someone has worked on enough real systems, eventually something goes wrong.
+If someone has worked on enough real systems, eventually something goes wrong. Google's SRE book treats incidents and postmortems as normal operating material, arguing that a [blameless postmortem culture](https://sre.google/sre-book/postmortem-culture/ "production, incidents, engineering | Google SRE") turns failure into system learning instead of theater.
 
 The interesting question is whether they know what to do when the system proves them wrong.
 
@@ -88,7 +88,7 @@ That is signal.
 
 A production incident reveals how someone behaves when the abstraction leaks. It shows whether they can stay calm, gather evidence, communicate clearly, reduce blast radius, make reversible changes, and learn without hiding.
 
-Those are real engineering skills.
+Those are real engineering skills. They are also recognizably operational skills: Google's SRE guidance on monitoring describes production systems in terms of [symptoms, causes, alerts, and user-visible behavior](https://sre.google/sre-book/monitoring-distributed-systems/ "production, incidents, engineering | Google SRE"), which is exactly the world an incident story has to navigate.
 
 ## A Deliberately Lossy Filter
 
@@ -114,7 +114,7 @@ Compared with the filters employers actually use, this one is defensible. Compan
 
 Some filters are worse than weak. They are discriminatory.
 
-I have literally been in the room when gender was considered in a hiring conversation. I escalated it immediately because that is not a hiring signal. It is illegal, unethical, and corrosive to the entire process.
+I have literally been in the room when gender was considered in a hiring conversation. I escalated it immediately because that is not a hiring signal. It is illegal, unethical, and corrosive to the entire process. In Canada, sex, sexual orientation, gender identity, and gender expression are all [prohibited grounds of discrimination](https://www.chrc-ccdp.gc.ca/individuals/human-rights/about-discrimination) under human rights law; in the United States, the EEOC likewise says hiring discrimination because of sex is [prohibited employment practice](https://www.eeoc.gov/prohibited-employment-policiespractices).
 
 That experience is part of why I prefer a question like this. It points toward the work.
 
@@ -136,6 +136,8 @@ Common production-only causes include:
 4. **Real data:** user input is messier than test fixtures
 5. **External dependencies:** vendors, networks, queues, and background jobs introduce timing failures
 6. **Operational pressure:** fixes happen while people are waiting
+
+None of those are exotic. They are the ordinary texture of operating software. Stripe's public API docs, for example, devote whole sections to [idempotent requests](https://docs.stripe.com/api/idempotent_requests "production, software, systems | Stripe") because real networks, retries, and failures make "just send the request" an unsafe abstraction.
 
 This is why the question is useful in interviews. A person can memorize patterns, pass coding exercises, and explain best practices. Production asks whether they can operate inside a system that is already moving.
 

@@ -50,7 +50,7 @@ Not really.
 
 A platform is a runtime.
 
-It needs members, money, candidates, staff, volunteers, policy process, local chapters, conflict resolution, governance, branding, media handling, data systems, donation processing, legal compliance, and a reason for normal people to care after the first burst of novelty dies.
+It needs members, money, candidates, staff, volunteers, policy process, local chapters, conflict resolution, governance, branding, media handling, data systems, donation processing, legal compliance, and a reason for normal people to care after the first burst of novelty dies. Elections Canada makes the boring part very real: federal parties have to deal with [registration, reporting, nomination, contribution, and expense rules](https://www.elections.ca/content.aspx?section=pol&dir=pol/bck&document=index&lang=e) before anyone even gets to the poetry of changing society.
 
 It also needs rituals.
 
@@ -156,7 +156,7 @@ You can define the worldview clearly: public reliability, dependency reduction, 
 
 Beautiful.
 
-Now win an election under first-past-the-post.
+Now win an election under first-past-the-post. Elections Canada describes the federal system plainly: in each electoral district, the candidate with the most votes [wins the seat](https://www.elections.ca/content.aspx?section=vot&dir=faq&document=faqvoting&lang=e "politics, canada, institutions | Elections Canada").
 
 Acquire candidates.
 
@@ -198,7 +198,7 @@ Unfortunately, existing parties already exist.
 
 That is their main advantage and their main defect.
 
-The NDP is the obvious candidate because the dependency graph is at least in the same neighbourhood. It already speaks the language of public services, workers, health care, housing, affordability, redistribution, and social protection. It has riding associations, candidates, ballot presence, unions, volunteers, donor infrastructure, caucus experience, and voters who might be reachable.
+The NDP is the obvious candidate because the dependency graph is at least in the same neighbourhood. It already speaks the language of public services, workers, health care, housing, affordability, redistribution, and social protection. Its own recent campaign commitments emphasize [health care, homes, affordability, workers, climate, reconciliation, and democracy](https://www.ndp.ca/campaign-commitments "politics, institutions, movements | NDP"). It has riding associations, candidates, ballot presence, unions, volunteers, donor infrastructure, caucus experience, and voters who might be reachable.
 
 That is enormous.
 

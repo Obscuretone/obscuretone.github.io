@@ -30,7 +30,7 @@ Nova Scotia already behaves like an island. The infrastructure should stop lying
 
 ## Background
 
-The [Chignecto Isthmus](https://www2.gnb.ca/content/gnb/en/departments/dti/promos/chignecto.html) is the low-lying land bridge between Nova Scotia and New Brunswick. It contains the only road and rail connection between Nova Scotia and the rest of Canada. It is protected by dykes, exposed to sea-level rise and severe weather, and responsible for carrying large volumes of trade through a corridor that engineers keep describing as critical, vulnerable, and in need of protection.
+The [Chignecto Isthmus](https://www2.gnb.ca/content/gnb/en/departments/dti/promos/chignecto.html) is the low-lying land bridge between Nova Scotia and New Brunswick. It contains the only road and rail connection between Nova Scotia and the rest of Canada. It is protected by dykes, exposed to sea-level rise and severe weather, and responsible for carrying large volumes of trade through a corridor that engineers keep describing as critical, vulnerable, and in need of protection. Canada, Nova Scotia, and New Brunswick reached a 2025 funding agreement to [raise the dykeland system against sea-level rise and storm surge](https://www.canada.ca/en/housing-infrastructure-communities/news/2025/03/protecting-the-chignecto-isthmus-against-climate-change.html), which is the responsible adult version of this article's much worse idea.
 
 The official plan is to preserve the corridor.
 

@@ -10,13 +10,13 @@ tags: [startups, capital, incentives, regulation, mythology]
 
 The classic startup story is simple: a small team starts in a garage, works harder than everyone else, and changes the world through determination. It is an appealing story because it makes success feel legible. Work hard, take risks, build relentlessly, and the market will reward you.
 
-The reality is more complicated. Execution matters enormously, but it is rarely the whole story. Timing, family support, access to capital, regulatory context, professional networks, and tolerance for risk all shape which companies get to survive long enough to look inevitable in hindsight.
+The reality is more complicated. Execution matters enormously, but it is rarely the whole story. Timing, family support, access to capital, regulatory context, professional networks, and tolerance for risk all shape which companies get to survive long enough to look inevitable in hindsight. Research on entrepreneurship keeps finding that wealth and access to capital matter, whether in NBER work on [entrepreneurial households and wealth](https://www.nber.org/system/files/working_papers/w7894/w7894.pdf) or newer work showing that [family financial resources can ease credit constraints](https://finance.unibocconi.eu/sites/default/files/files/media/attachments/Hosseini_Fatemeh_JobMarket_Paper20170111152045.pdf).
 
 That does not make successful founders undeserving. It does mean we should be careful about turning survivorship bias into advice.
 
 ## The Garage Is Not Neutral
 
-The garage startup has become one of the strongest symbols in technology. It suggests scarcity, improvisation, and ambition. But in expensive markets, even having a garage can signal a level of stability that many founders do not have.
+The garage startup has become one of the strongest symbols in technology. It suggests scarcity, improvisation, and ambition. The HP Garage is literally preserved as ["the birthplace of Silicon Valley"](https://www.hp.com/us-en/hp-information/about-hp/history/hp-garage.html). But in expensive markets, even having a garage can signal a level of stability that many founders do not have.
 
 If someone can afford to spend months or years building before the business is sustainable, there is usually a cushion somewhere: savings, family support, a spouse's income, investor access, or a fallback path that makes risk survivable.
 
@@ -40,7 +40,7 @@ When we talk about entrepreneurship, we should account for that difference.
 
 The useful lesson is precision.
 
-Successful startups usually combine several things:
+Successful startups usually combine several things. CB Insights' startup post-mortem analysis lists causes such as [poor product-market fit, bad timing, unsustainable unit economics, and running out of cash](https://www.cbinsights.com/research/report/startup-failure-reasons-top/), which is another way of saying the myth is missing half the machine:
 
 1. **A real customer problem**
 2. **Strong execution**

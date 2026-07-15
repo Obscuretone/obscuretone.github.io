@@ -8,7 +8,7 @@ description: Fast resume screening compresses professional history into a headli
 tags: [hiring, resumes, attention, careers, incentives]
 ---
 
-Ten seconds is too short, and the deeper problem is what that speed rewards.
+Ten seconds is too short. The exact number varies by process, but the claim is not folklore: Ladders' 2018 eye-tracking work put the first resume skim at [about 7.4 seconds](https://www.theladders.com/career-advice/you-only-get-6-seconds-of-fame-make-it-count "hiring, resumes, attention | Ladders"), and the deeper problem is what that speed rewards.
 
 The deeper problem is what ten seconds turns a resume into.
 
@@ -68,7 +68,7 @@ That may be rational. It is also unhealthy.
 
 ## The Throughput Math
 
-The time pressure is real.
+The time pressure is real. Harvard Business School's *Hidden Workers* report describes hiring processes built for efficient filtering that can [systematically exclude qualified candidates](https://www.hbs.edu/managing-the-future-of-work/research/hidden-workers-untapped-talent "hiring, careers, evidence | Harvard"), especially when automated systems and narrow criteria do too much of the first pass.
 
 If a recruiter receives 200 resumes for one role and spends 10 seconds on each, that is:
 
@@ -168,7 +168,7 @@ This is why simple, conventional resume formats work.
 
 They reduce search cost.
 
-If the reviewer knows where to find title, employer, dates, tools, and impact, the resume gets a few more words of attention. A second saved on layout may become a few more words read. A familiar structure lowers friction.
+If the reviewer knows where to find title, employer, dates, tools, and impact, the resume gets a few more words of attention. A second saved on layout may become a few more words read. A familiar structure lowers friction. The Ladders study found that resumes with [simple layouts and clear sectioning](https://www.prnewswire.com/news-releases/ladders-updates-popular-recruiter-eye-tracking-study-with-new-key-insights-on-how-job-seekers-can-improve-their-resumes-300744217.html "hiring, resumes, attention | PR Newswire") performed better in that initial scan.
 
 That is practical advice, but it is also depressing.
 
