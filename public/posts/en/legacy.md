@@ -220,7 +220,7 @@ Sometimes it is wild.
 
 The current federal riding of [Kingston and the Islands has 134,415 people](https://electionsanddemocracy.ca/print/pdf/node/35046). [Labrador has 26,655](https://electionsanddemocracy.ca/print/pdf/node/10004). Prince Edward Island's four federal ridings range from [Egmont at 37,751 people](https://electionsanddemocracy.ca/print/pdf/node/11003) to [Cardigan at 39,236](https://electionsanddemocracy.ca/print/pdf/node/11001). A [House of Commons seat allocation formula](https://www.elections.ca/content.aspx?dir=cir%2Fred%2Fallo&document=index&lang=e&section=res) balances population, provincehood, geography, history, and constitutional promises.
 
-The same problem shows up locally too. In [Politics Is Not Strongly Typed](/posts/en/politics_not_strongly_typed), I use Argyle's 2003 provincial election as a smaller example: party labels, family names, church networks, local institutions, and later federal power all refuse to fit cleanly into one national red-team/blue-team model.
+The same problem shows up locally too. Party labels, community institutions, regional history, local candidate quality, and later federal power often refuse to fit cleanly into one national red-team/blue-team model.
 
 It is a reminder that representation is not a simple array evenly partitioned by population.
 
@@ -248,7 +248,7 @@ That can be ordinary federalism rather than conspiracy.
 
 Institutional memory matters. A government cannot rebuild the civil service after every election. Somebody has to know where the contracts are, which statutes matter, which programs are already committed, which courts have spoken, which federal-provincial agreements are active, and which promises are impossible by Tuesday.
 
-I saw the sharper version of this in [Even Gods Can Bleed](/posts/en/even_gods_can_bleed), where Nova Scotia's FOIPOP breach exposed how little practical authority local elected officials had over a file controlled by deputy ministers, privacy process, technology leadership, corporate security, and access-to-information exemptions.
+The sharper version appears whenever an operational file is controlled less by visible elected officials than by deputy ministers, privacy process, technology leadership, security offices, procurement history, and statutory exemptions.
 
 But it does mean power is not located only where the ballot points.
 
