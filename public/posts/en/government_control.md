@@ -16,8 +16,6 @@ In a perfect world, democracy would involve voting on every issue, ensuring that
 
 But here’s the catch: the average Canadian’s beliefs and priorities are constantly shifting. Whether it’s due to economic changes, global events, or social movements, public opinion is a moving target. The government needs to respond to these changes, but without veering too far off course or bouncing between extremes. This is where I find the analogy to PID loops useful.
 
-DALL-E: weirdly on point, but deeply unsettling, as always.
-
 ## What is a PID Loop?
 
 In control systems, a [PID controller (Proportional-Integral-Derivative)](https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_controller) is used to manage and stabilize outputs—like keeping your car at a set speed while accounting for inclines and declines. Just as the PID loop adjusts the throttle to smooth out deviations from the target speed, the different elements of the Canadian government work to stabilize policy and governance in the face of changing public opinion.
