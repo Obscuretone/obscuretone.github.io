@@ -44,7 +44,7 @@ $$
 P(\text{at least one bug}) = 1 - (1 - p)^n
 $$
 
-Now use a very generous assumption: only 1% of meaningful changes cause a production bug.
+Now use an illustrative assumption: only 1% of meaningful changes cause a production bug. I chose that number for a deliberately simple model of repeated exposure; it is not an observed industry rate.
 
 For 500 meaningful shipped changes:
 
@@ -62,7 +62,7 @@ $$
 0.657\%
 $$
 
-So even under a forgiving model, the chance of making 500 meaningful production changes without ever causing a production bug is less than 1%.
+Under those assumptions, the chance of making 500 meaningful production changes without ever causing a production bug is less than 1%.
 
 Put differently:
 
@@ -70,7 +70,7 @@ $$
 P(\text{at least one bug}) = 1 - 0.99^{500} \approx 99.343\%
 $$
 
-The exact numbers are debatable. The conclusion is sturdy. If someone has shipped enough real software, "nothing ever broke" is not a credible engineering story. It suggests lack of production exposure, lack of ownership, lack of memory, or an unusually narrow definition of "bug."
+The exact numbers are invented for the example, so they cannot establish how often engineers really cause incidents. The useful conclusion is narrower: after enough production exposure, a claim that nothing ever went wrong deserves a follow-up. The candidate may define "broke" narrowly, may have worked behind strong release controls, or may have contributed without owning deployment.
 
 ## This Is Signal
 
@@ -90,17 +90,15 @@ A production incident reveals how someone behaves when the abstraction leaks. It
 
 Those are real engineering skills. They are also recognizably operational skills: Google's SRE guidance on monitoring describes production systems in terms of [symptoms, causes, alerts, and user-visible behavior](https://sre.google/sre-book/monitoring-distributed-systems/ "production, incidents, engineering | Google SRE"), which is exactly the world an incident story has to navigate.
 
-## A Deliberately Lossy Filter
+## A Prompt, Not A Verdict
 
-I have used this question as a real hiring filter.
+I have used this question in real interviews.
 
-If someone swears they have never broken production, I treat that as a fail.
+If someone says they have never broken production, I do not treat the sentence itself as a fail. I ask what they have operated, how releases worked, what incidents they helped investigate, and what near misses changed their practice.
 
-Could that lose an amazing candidate? Yes. It probably loses someone. Maybe one in a hundred strong candidates has genuinely shipped meaningful production software for years without causing a production bug, or has a definition of "broke production" so narrow that their answer is technically true.
+The useful signal comes from proximity to consequences and the ability to learn from them, not guilt.
 
-So be it.
-
-Every hiring filter is lossy. The question is whether the signal is connected to the job.
+For a junior engineer, a developer without deployment access, or someone working in a tightly controlled environment, an equivalent story may be a failed test rollout, a support escalation, a defect caught before release, or an incident they helped diagnose rather than caused.
 
 Compared with the filters employers actually use, this one is defensible. Companies routinely make snap judgments from weaker proxies:
 
@@ -112,11 +110,11 @@ Compared with the filters employers actually use, this one is defensible. Compan
 6. whether the email domain looks "professional"
 7. whether the resume format feels familiar
 
-Some filters are worse than weak. They are discriminatory.
+Some filters are worse than weak. They use protected characteristics instead of evidence about the work.
 
-I have literally been in the room when gender was considered in a hiring conversation. I escalated it immediately because that is not a hiring signal. It is illegal, unethical, and corrosive to the entire process. In Canada, sex, sexual orientation, gender identity, and gender expression are all [prohibited grounds of discrimination](https://www.chrc-ccdp.gc.ca/individuals/human-rights/about-discrimination) under human rights law; in the United States, the EEOC likewise says hiring discrimination because of sex is [prohibited employment practice](https://www.eeoc.gov/prohibited-employment-policiespractices).
+Canadian employment-discrimination law is divided by jurisdiction. The Canadian Human Rights Commission handles only [federal matters](https://www.chrc-ccdp.gc.ca/find-help/file-discrimination-complaint/find-out-if-you-are-right-place), while provincial and territorial bodies cover most employers and may define grounds, exceptions, and procedures differently. In the United States, the EEOC describes sex discrimination in hiring as a [prohibited employment practice](https://www.eeoc.gov/prohibited-employment-policiespractices).
 
-That experience is part of why I prefer a question like this. It points toward the work.
+That is another reason to prefer questions connected to the work.
 
 Production incidents are part of software engineering. How someone talks about them tells me more than a polished resume, a brand-name employer, a school, an email domain, or a rehearsed answer about strengths and weaknesses.
 
@@ -126,7 +124,7 @@ Until then, I will keep asking.
 
 ## Why Production Is Different
 
-Some bugs only appear in production because production is not just another environment. It is a different kind of system.
+Some bugs only appear in production because its scale, traffic, data, dependencies, timing, and failure modes make it materially different from pre-production environments.
 
 Common production-only causes include:
 
@@ -190,13 +188,11 @@ It tests:
 
 The red flag is the absence of ownership.
 
-The red flag is "I have never been close enough to production to have a story," or "I have a story but learned nothing from it."
+Lack of access says little by itself. The concern is claimed ownership without a failure, a near miss, or anything the system taught you.
 
 ## Closing Thought
 
-Breaking production is not a badge of honor.
-
-Learning from production is.
+Breaking production confers no badge of honor. Learning from the failure is what matters.
 
 The strongest engineers are not the ones who claim nothing ever goes wrong. They are the ones who can explain what happened, how they responded, and how the system became better afterward.
 

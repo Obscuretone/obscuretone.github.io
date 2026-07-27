@@ -2,6 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import { getGitFirstAdded, normalizeDate } from './gitDates';
 
 export function getPostsByLanguage(language) {
     const postsDirectory = path.join(process.cwd(), `public/posts/${language}`);
@@ -18,8 +19,15 @@ export function getPostsByLanguage(language) {
             const { data } = matter(fileContents);
 
             return {
-                slug: `${language}/${filename.replace('.md', '')}`,
                 ...data,
+                slug: `${language}/${filename.replace('.md', '')}`,
+                publishedAt: normalizeDate(data.published) || getGitFirstAdded(filePath),
             };
+        })
+        .sort((left, right) => {
+            const leftTime = Date.parse(left.publishedAt) || 0;
+            const rightTime = Date.parse(right.publishedAt) || 0;
+            const byDate = rightTime - leftTime;
+            return byDate || left.title.localeCompare(right.title);
         });
 }

@@ -102,11 +102,7 @@ Operationally, 1961 is ancient.
 
 That is more than 60 years ago. My grandparents would barely remember the last time the Crown exercised that kind of control in Canada. The modern system has run for a lifetime on the assumption that the Crown assents, signs, appears, notifies, smiles politely, and does not treat itself as an independent policy actor.
 
-So the clean modern statement is not "Royal Assent has never been withheld in Canada."
-
-The clean statement is stranger:
-
-The powers existed, were used historically, became politically obsolete, and remain embedded in a constitutional structure that now depends heavily on convention.
+The historical record supports a stranger modern statement: the powers existed, were used, became politically obsolete, and remain embedded in a constitutional structure that now depends heavily on convention.
 
 That is code.
 
@@ -126,17 +122,13 @@ That is why they matter.
 
 When a legacy system's emergency path is used once every few generations, nobody really knows whether the procedure is safe until it is already happening.
 
-The fact that a reserve power has not been used recently does not mean the power is gone.
-
-It means the production environment has not hit that branch.
+Long dormancy leaves a reserve power sitting in an untested production branch; it does not erase the power.
 
 ## Conventions Are Undocumented Business Logic
 
-The written constitution is not the whole system.
+Conventions supply much of the business logic absent from the written constitution.
 
-Conventions are the undocumented business logic.
-
-The Governor General acts on the advice of the prime minister, except when they do not. The prime minister must maintain the confidence of the House of Commons, but the exact moments of confidence, resignation, dissolution, and refusal are governed by practice as much as text. The Senate has legal power it often does not fully use because elected legitimacy lives elsewhere.
+The Governor General normally acts on the advice of the prime minister, while retaining limited discretion around questions such as who can form a government and whether to grant dissolution. The [Governor General's own description](https://www.gg.ca/en/governor-general/role-and-responsibilities/constitutional-duties) says the office acts on advice and also holds reserve powers. The prime minister must maintain the confidence of the House of Commons, but the exact moments of confidence, resignation, dissolution, and refusal are governed by practice as much as text. The Senate has legal power it often does not fully use because elected legitimacy lives elsewhere.
 
 That can be fine.
 
@@ -152,61 +144,15 @@ In a healthy system, convention is restraint.
 
 In a failing system, convention is a missing assertion.
 
-## Voting Is The Debug Interface
+## Voting Is A Low-Bandwidth Interface
 
-The ordinary citizen's main interface to debug this system is voting.
+The ordinary citizen's main control surface for this system is voting.
 
-That is a very narrow interface.
+That interface matters, but it is narrow. A ballot chooses a representative and, indirectly, a government. It does not expose every policy lever, jurisdictional dependency, court ruling, contract, funding condition, or delivery constraint bundled into the choice.
 
-Every few years, most people get to choose between the red team and the blue team, with a few regional, ideological, or protest options depending on where they live. Then that choice is treated as input into a vast constitutional, fiscal, administrative, and policy machine.
+Campaigns compress that complexity into promises. The machinery then expands each promise back into legislation, budgets, negotiations, regulations, procurement, administration, and implementation across several levels of government. A voter can replace the people setting direction without replacing the entire execution environment.
 
-This would be easier to defend if the parties represented radically different operating models.
-
-Often, they do not.
-
-Canadian federal politics can feel less divided than American Democrats were between Obama 2008 and Obama 2012. The branding changes. The emphasis changes. The patronage networks change. The actual operating envelope is narrower than campaign language suggests.
-
-Voters are asked to make hard choices, but the choices are often weirdly small.
-
-Legal weed?
-
-Sure. Eventually.
-
-[Electoral reform](https://www.pm.gc.ca/en/mandate-letters/2017/02/01/archived-minister-democratic-institutions-mandate-letter)?
-
-Vote for it, watch it disappear, and observe no meaningful consequence for the party that promised it.
-
-Housing?
-
-Here the debug interface becomes especially weak.
-
-Canada has built a system where real estate wealth is politically protected, where younger people are told to accept permanently degraded affordability, and where [immigration targets](https://www.canada.ca/en/immigration-refugees-citizenship/news/notices/supplementary-immigration-levels-2024-2026.html), labour supply, university economics, construction capacity, interest rates, municipal zoning, provincial land-use rules, and federal growth policy all collide in ways no ballot can cleanly address.
-
-Immigration is one cause among many.
-
-But population targets, housing supply, wages, infrastructure, and asset prices are coupled systems. CMHC has estimated that Canada needs [millions of additional homes to restore affordability](https://www.cmhc-schl.gc.ca/observer/2023/estimating-how-much-housing-we-need-by-2030), and later estimated that housing starts would need to [nearly double until 2035](https://www.cmhc-schl.gc.ca/professionals/housing-markets-data-and-research/housing-research/research-reports/accelerate-supply/canadas-housing-supply-shortages-a-new-framework) to meet projected demand. When governments pursue high growth without building enough housing, transit, healthcare capacity, schools, and infrastructure, the pressure does not land evenly. It lands on renters, new buyers, new arrivals, young families, and anyone without property wealth.
-
-The result looks a lot like intergenerational policy capture.
-
-People who already own assets are protected. People who do not are told the system is working as designed, or that the moral problem is their lack of optimism.
-
-That feedback loop is unhealthy.
-
-It is closer to an asset-protection political economy: younger and newer participants are expected to support the paper stability of people who got in earlier, while being told that questioning the arrangement is irresponsible, economically illiterate, or insufficiently Canadian.
-
-A good debug interface would let citizens isolate the fault.
-
-Is the problem zoning? Immigration targets? Investor demand? Interest rates? Federal tax policy? Provincial incentives? Municipal veto points? Construction productivity? Retirement policy? Wage suppression? All of the above?
-
-The actual interface mostly says:
-
-> Pick a team.
-
-Then, after enough people pick the other team, the system reports that democracy has spoken and continues routing around the same constraints.
-
-Voting matters.
-
-It is also not enough observability for a system this complicated.
+Voting is necessary input. A system this complicated also needs observability between elections: clear owners, measurable commitments, visible blockers, and records that show why an announced policy did or did not reach production.
 
 ## Representation Is Not Evenly Sampled
 
@@ -218,7 +164,7 @@ Sometimes that is defensible.
 
 Sometimes it is wild.
 
-The current federal riding of [Kingston and the Islands has 134,415 people](https://electionsanddemocracy.ca/print/pdf/node/35046). [Labrador has 26,655](https://electionsanddemocracy.ca/print/pdf/node/10004). Prince Edward Island's four federal ridings range from [Egmont at 37,751 people](https://electionsanddemocracy.ca/print/pdf/node/11003) to [Cardigan at 39,236](https://electionsanddemocracy.ca/print/pdf/node/11001). A [House of Commons seat allocation formula](https://www.elections.ca/content.aspx?dir=cir%2Fred%2Fallo&document=index&lang=e&section=res) balances population, provincehood, geography, history, and constitutional promises.
+Elections Canada's educational profiles, using Statistics Canada's 2021 Census and estimates for boundaries that took effect in 2025, put [Kingston and the Islands at 134,415 people](https://electionsanddemocracy.ca/print/pdf/node/35046) and [Labrador at 26,655](https://electionsanddemocracy.ca/print/pdf/node/10004). Prince Edward Island's four profiles range from [Egmont at 37,751 people](https://electionsanddemocracy.ca/print/pdf/node/11003) to [Cardigan at 39,236](https://electionsanddemocracy.ca/print/pdf/node/11001). The [House of Commons seat allocation formula](https://www.elections.ca/content.aspx?dir=cir%2Fred%2Fallo&document=index&lang=e&section=res) balances population with provincehood, geography, history, and constitutional promises.
 
 The same problem shows up locally too. Party labels, community institutions, regional history, local candidate quality, and later federal power often refuse to fit cleanly into one national red-team/blue-team model.
 
@@ -240,7 +186,7 @@ Elections change the visible interface.
 
 They do not replace the runtime.
 
-Ministers come and go. Cabinets change. Governments rebrand priorities. Mandate letters get rewritten. The red team swaps places with the blue team and everyone pretends the machine has been reinstalled.
+Ministers come and go. Cabinets change. Governments revise priorities. Mandate letters get rewritten. The visible leadership changes, but the machine is not reinstalled.
 
 Underneath that, deputy ministers, assistant deputy ministers, senior public servants, departmental counsel, central agencies, procurement offices, regulators, boards, and long-lived program staff keep operating the system.
 
@@ -256,11 +202,11 @@ A minister may own the political decision.
 
 A deputy minister often owns the operational reality.
 
-They know what can be delayed, narrowed, reinterpreted, slow-walked, escalated, buried, or transformed into a process review. They know which decision needs Treasury Board approval, which file can die in consultation, which implementation detail changes the policy, and which risk note will make a minister blink.
+They know which decisions need Treasury Board approval, which consultations are legally or operationally necessary, which implementation details can change a policy's effect, and which risks must be escalated. That knowledge gives the administrative layer real influence over timing and execution without implying a conspiracy against elected direction.
 
 In software terms, elected politicians are often the product owners.
 
-The permanent bureaucracy owns production.
+The permanent public service operates production.
 
 That is where many bugs live.
 
@@ -284,7 +230,7 @@ It is also not useless.
 
 The Senate is a review queue with questionable ownership and surprising persistence. It slows things down, catches some errors, creates committee work, and occasionally reminds elected governments that passing a bill through the House is not the same thing as shipping a stable release.
 
-I have written about the more charitable version of this in [Should Canada Elect Senators?](/posts/en/government_control), where I treated the House of Commons, Senate, and Crown as parts of a political control system. In that analogy, the Senate behaves less like a democratic input device and more like damping: it slows sudden changes, absorbs some volatility, and makes the system less responsive but potentially more stable.
+I have written about the more charitable version of this in [Should Canada Elect Senators?](/posts/en/government_control), where I treated the House of Commons, Senate, and Crown as parts of a political control system. In that analogy, the Senate is accumulated state: governments add appointments over time, and both sound judgment and appointment error persist beyond an election. Its different time horizon can slow sudden changes, but it can preserve mistakes too.
 
 It also has its own Mace, because of course the review queue has its own magic wand.
 
@@ -374,9 +320,7 @@ Constitutional rewrites are worse.
 
 Every province has interests. Every region has fears. Every institution has status. Every amendment creates tradeoffs. Every tradeoff creates losers. The process can reopen questions the current system keeps mostly contained.
 
-That does not mean reform is impossible.
-
-It means reform is migration, not deletion.
+Reform remains possible, but its shape is migration rather than deletion.
 
 ## Law Is Code With A Terrible Parser
 
@@ -386,9 +330,7 @@ It is also about law itself.
 
 Law is source code.
 
-Not in the cute sense where policy people say "code is law" and software people nod thoughtfully before returning to YAML.
-
-The written law is the source. It defines rules, permissions, prohibitions, exceptions, procedures, actors, scopes, inputs, outputs, and consequences. It creates objects. It names authorities. It defines valid operations. It routes disputes to interpreters. It decides what happens when someone violates a constraint.
+The analogy goes beyond the cute "code is law" line that earns a thoughtful nod before everyone returns to YAML. Written law is source material for rules, permissions, prohibitions, exceptions, procedures, actors, scopes, inputs, outputs, and consequences. It creates objects. It names authorities. It defines valid operations. It routes disputes to interpreters. It decides what happens when someone violates a constraint.
 
 But citizens do not interact with source code.
 
@@ -420,29 +362,19 @@ That model should compile into the actual operational state of the law.
 
 Not morally. Not politically. Technically.
 
-There should be no unresolved symbol called "jurisdiction." No duplicate owner for "housing" unless the handoff is explicit. No circular dependency where one government funds what another must deliver while a third controls the zoning and everyone gets to blame everyone else. No unreachable branch where a right exists but no process can enforce it. No silent exception where a minister can route around the stated policy because the real authority lives in a regulation, memo, convention, or funding agreement.
+A useful model would expose unresolved questions of jurisdiction, duplicate ownership, circular dependencies, unenforceable rights, and exceptions hidden in regulations, policies, conventions, or funding agreements. Concurrent authority may be intentional, but its handoffs should be visible.
 
 Of course, law will never compile as cleanly as software.
 
 Natural language is fuzzy on purpose. Courts need interpretive room. Legislatures need political compromise. Facts are messy. Human systems need discretion.
 
-But the gap between source law and compiled law is an exploitable surface.
-
-Just like code.
+But the gap between source law and operational law creates room for strategic use, mistakes, and accountability failures.
 
 If the statute says one thing, the regulation narrows it, the form implements a third version, the department follows an internal policy, and the court interprets the whole stack years later, the person subject to the system is not living under the source law.
 
 They are living under the compiled law.
 
-That difference can be exploited.
-
-Governments exploit it when they announce broad rights and bury the constraints in process.
-
-Companies exploit it when regulatory language leaves ambiguity around classification, liability, disclosure, or enforcement.
-
-Wealthy people exploit it when compliance becomes a search problem and lawyers can find the branch where the ordinary rule does not apply.
-
-Bad institutions exploit it when responsibility is split across jurisdictions so cleanly that no one is responsible in the compiled output.
+The difference matters whenever a broad statutory promise is narrowed by process, regulatory ambiguity changes private behaviour, access to legal expertise determines who can find an exception, or responsibility is divided so thoroughly that no institution owns the outcome.
 
 Citizens experience compiler errors as bureaucracy.
 
@@ -460,9 +392,7 @@ Healthcare would show provincial delivery, federal transfers, professional colle
 
 Climate adaptation would show federal goals, provincial infrastructure, municipal planning, private property, insurance markets, emergency management, and Indigenous rights meeting in the same floodplain.
 
-Government disagreement is only the surface bug.
-
-The bug is that the legal AST is not inspectable by ordinary people, and sometimes not even by the institutions executing it.
+The deeper failure is that ordinary people, and sometimes the institutions executing the law, cannot inspect the full dependency graph.
 
 That creates an exploit surface:
 
@@ -475,9 +405,7 @@ That creates an exploit surface:
 7. unfunded mandates
 8. policies that exist in press releases but not in executable process
 
-In software, we would not accept a system where nobody can tell which service owns a failing request.
-
-In government, we call that federalism and ask citizens to be patient.
+Software teams would treat uncertainty about which service owns a failing request as an operational defect. Federal systems often make citizens navigate the governmental version of that ambiguity.
 
 ## Low-Hanging Patches
 
@@ -505,9 +433,7 @@ Document them.
 
 Not necessarily by freezing every convention into constitutional text, but by publishing clearer runbooks for crisis paths: prorogation, dissolution, confidence, caretaker government, supply failure, refusal of advice, and the limited circumstances where reserve powers might be considered.
 
-This would not eliminate discretion.
-
-It would make the exception paths more inspectable before everyone is already screaming.
+Clearer runbooks would preserve discretion while making exception paths more inspectable before a crisis.
 
 In software terms, do not wait for the outage to discover that the disaster-recovery plan is vibes and an elderly binder.
 
@@ -593,11 +519,9 @@ Because "we are working hard for Canadians" is not a status code.
 
 ### Deprecate Dead Code Carefully
 
-Some constitutional powers are dead code with root access.
+Some constitutional paths resemble dead code with root access. Reservation and disallowance remain in the constitutional text despite being politically obsolete in ordinary Canadian practice.
 
-Reservation. Disallowance. Reserve powers. Ceremonial dependencies that no one expects to execute independently.
-
-If they are truly obsolete, say so more clearly. If they are emergency powers, document the emergency. If they are symbolic, keep them symbolic. If they are too dangerous to use and too hard to remove, wrap them in stronger conventions, reporting expectations, and public explanation requirements.
+Reserve powers are a different category. They are rarely used but remain live emergency logic; the Governor General's office explicitly describes them as a democratic safeguard. Document the circumstances and conventions around them instead of grouping them with powers assumed never to execute. If a power is symbolic, keep it symbolic. If it is dangerous but difficult to remove, wrap it in stronger conventions, reporting expectations, and public explanation requirements.
 
 The goal is to know which dead code is harmless.
 
@@ -654,9 +578,7 @@ Conventions may be fragile, but writing everything down can make a system rigid 
 
 This is what makes constitutional design hard.
 
-You are not choosing between clean and messy.
-
-You are choosing which mess you want to operate.
+Constitutional design means choosing which form of mess you are prepared to operate.
 
 ## Closing Thought
 
@@ -672,24 +594,12 @@ Some parts are ordinary service dependencies until the first constitutional cris
 
 And some parts require a literal magic wand.
 
-That should be funny because it is absurd.
-
-It should also be alarming because it is true.
+That is funny because it is absurd and alarming because it is true.
 
 The House of Commons cannot meet without the Mace. The Senate cannot meet without its Mace. The Crown is mostly ceremonial until the reserve powers are not. The conventions are unwritten until someone violates them. The law is source code until the compiled process does something else.
 
-This is the final critique.
+The final critique is that Canada has symbols wired into production.
 
-Canada has symbols with executable consequences.
+The embarrassment comes from insisting the old, shiny, ridiculous wand is merely symbolic while depending on its presence to conduct parliamentary business.
 
-It has symbols wired into production.
-
-The magic wand is not embarrassing because it is old, shiny, and ridiculous.
-
-The magic wand is embarrassing because the system insists it is only symbolic while also depending on it to make the spell legal.
-
-That is the whole country in miniature:
-
-Everyone agrees the wand is decorative.
-
-Nobody can proceed until it is in the room.
+That is the whole country in miniature: everyone agrees the wand is decorative, and nobody can proceed until it is in the room.

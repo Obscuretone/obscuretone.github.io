@@ -4,7 +4,7 @@ image: rt_emh_evidence_matcher.webp
 imagealt: "One resume and one job description feed into an evidence comparison machine with requirement gauges and a draft output tray."
 imagecaption: "EMH as a one-resume, one-job evidence matcher instead of another pile-reduction machine."
 imagesource: "AI-generated illustration created for obscuretone with OpenAI image generation."
-description: EMH started as an attempt to replace keyword-based first-line HR screening, then evolved into an evidence-grounded platform for comparing one resume to one job and generating application-specific resume drafts.
+description: EMH started as an attempt to improve keyword-based first-line screening, then evolved into an evidence-grounded platform for comparing one resume to one job and generating application-specific resume drafts.
 tags: [hiring, ai, evidence, software, resumes]
 ---
 
@@ -12,19 +12,19 @@ Most recruiting software still carries too much 1990s thinking.
 
 Boolean searches, keyword filters, and crude applicant tracking screens treat a resume like a bag of terms. If the right acronym appears, the candidate survives. If the same experience is described in different language, they may disappear. Harvard Business School's *Hidden Workers* report describes employers using automated systems and rigid filters in ways that can [exclude otherwise viable candidates](https://www.hbs.edu/ris/Publication%20Files/hiddenworkers09032021_Fuller_white_paper_33a2047f-41dd-47b1-9a8d-bd08cf3bfa94.pdf "hiring, ai, evidence | Harvard").
 
-That was the original frustration behind [EMH](https://github.com/obscuretone/emh).
+That was the original frustration behind a project I called EMH.
 
-I started it while unemployed and tired of hearing the same recruiting advice: make the resume instantly searchable, mirror the job description, include the right keywords, assume nobody has time to infer anything. That advice exists because the first skim is brutal: Ladders' eye-tracking work put initial resume attention at [about 7.4 seconds](https://www.prnewswire.com/news-releases/ladders-updates-popular-recruiter-eye-tracking-study-with-new-key-insights-on-how-job-seekers-can-improve-their-resumes-300744217.html "hiring, resumes, attention | PR Newswire").
+I started it while unemployed and tired of hearing the same recruiting advice: make the resume instantly searchable, mirror the job description, include the right keywords, assume nobody has time to infer anything. That advice exists because the first skim can be brutal: a proprietary 2018 eye-tracking study publicized by recruiting platform Ladders put average initial attention at [about 7.4 seconds](https://www.prnewswire.com/news-releases/ladders-updates-popular-recruiter-eye-tracking-study-with-new-key-insights-on-how-job-seekers-can-improve-their-resumes-300744217.html "hiring, resumes, attention | PR Newswire").
 
 Some of that advice is practical. The part that bothered me was the implied product failure. Candidates were being told to reshape their work around recruiter shortcuts because the screening layer could not reliably understand evidence unless it arrived in the exact expected wording.
 
-I wanted to replace first-line HR screening with something that actually understood the resume.
+I wanted the first screening layer to interpret resumes as evidence instead of treating them as bags of matching strings.
 
-Not "understood" in the mystical sense. Understood in the practical sense: what work did this person do, what skills does that imply, what evidence exists, what is missing, and how does that compare to the job?
+That kind of understanding has a practical definition: what work did this person do, what skills does that imply, what evidence exists, what is missing, and how does that compare to the job?
 
 Most AI hiring advice collapses that into a prompt.
 
-Paste in a resume. Paste in a job description. Ask the model whether the candidate is a fit. The risk is that hiring AI becomes another opaque decision layer rather than a better evidence layer; the U.S. EEOC has warned that employers can be responsible when algorithmic tools create [discriminatory employment outcomes](https://www.eeoc.gov/select-issues-assessing-adverse-impact-software-algorithms-and-artificial-intelligence-used-employment "hiring, ai, accountability | EEOC").
+Paste in a resume. Paste in a job description. Ask the model whether the candidate is a fit. The risk is that hiring AI becomes another opaque decision layer rather than a better evidence layer; the U.S. EEOC has warned that algorithmic hiring tools can produce [unlawful disability discrimination](https://www.eeoc.gov/newsroom/us-eeoc-and-us-department-justice-warn-against-disability-discrimination "hiring, ai, accountability | EEOC").
 
 That can be useful, but a software system needs memory. It should remember what evidence was used, distinguish missing information from a weak score, separate recruiter matching from applicant optimization, and explain how a tailored resume was grounded in actual work history.
 
@@ -42,7 +42,7 @@ EMH turns those documents into structured evidence.
 
 The system ingests resumes, parses work history, extracts skills, stores canonical profile jobs, imports job descriptions, evaluates required skills, and builds application-specific views of the match between a person and a role.
 
-The original premise was more aggressive: AI should be able to replace the first pass that keyword searches and Boolean queries currently perform badly.
+The original premise was more aggressive: AI should be able to make the first pass substantially more attentive than keyword searches and Boolean queries.
 
 The current premise is more precise: AI can help surface and organize the evidence that a person or recruiter would otherwise evaluate inconsistently, but the economics and architecture matter.
 
@@ -54,11 +54,11 @@ That is exactly where EMH is useful. A one-to-one comparison gives the system en
 
 The harder problem is exhaustive search.
 
-If you try to compare every candidate against every job in a deep, LLM-mediated way, the token cost grows asymptotically with the size of the search space. The more complete you want the understanding to be, the more expensive the matching layer becomes.
+If you try to compare every candidate against every job in a deep, LLM-mediated way, a naive exhaustive pass requires one evaluation per candidate-job pair. With `C` candidates and `J` jobs, that is `C * J` model calls before accounting for the tokens in each comparison. The more complete you want the understanding to be, the more expensive the matching layer becomes.
 
 That does not make the idea useless. It changes where the idea is strongest.
 
-EMH may not be the right shape for brute-force screening across a huge database of candidates and jobs. It is much more compelling as a precise comparison engine:
+Brute-force screening across a huge database of candidates and jobs may be the wrong shape for EMH. Its more compelling use is precise comparison:
 
 1. this resume against this job
 2. this profile against this role
@@ -75,11 +75,11 @@ They are not even trying to optimize the same thing.
 
 The applicant wants a careful reading. They want the system to understand the full shape of their experience, notice transferable skills, and avoid throwing them away because the exact keyword was missing.
 
-The recruiter usually wants enough qualified candidates to fill the pipeline. When a posting has hundreds or thousands of applicants, the incentive is not to understand every resume deeply. The incentive is to reduce the pile quickly, find a workable shortlist, and move on.
+The recruiter usually wants enough qualified candidates to fill the pipeline. When a posting has hundreds or thousands of applicants, the economic incentive favours fast pile reduction and a workable shortlist over a deep reading of every resume.
 
-That is the uncomfortable truth behind a lot of resume advice. Much of it teaches people how to survive a lazy first-pass filter.
+That is the uncomfortable truth behind a lot of resume advice. Much of it teaches people how to survive a low-context first-pass filter.
 
-I do not mean lazy as a personal insult. I mean structurally lazy. The process rewards shallow elimination because shallow elimination is cheap, and once there are enough apparently qualified candidates, the marginal value of carefully reading the next resume drops.
+The problem is structural rather than personal. The process rewards shallow elimination because shallow elimination is cheap, and once there are enough apparently qualified candidates, the marginal value of carefully reading the next resume drops.
 
 The applicant side asks:
 
@@ -153,9 +153,7 @@ The system already rewards presentation. The useful version of EMH makes the pre
 
 ## The Platform Work
 
-The part I am proud of is not that EMH calls an LLM. Calling an LLM is easy.
-
-The harder work is everything around it:
+The part I am proud of is the platform around the model call, because calling an LLM is easy:
 
 1. a React frontend for profiles, jobs, applications, prompt editing, and queue inspection
 2. a Sanic backend with MySQL, Redis, MinIO, and Tortoise models
@@ -192,7 +190,7 @@ The original version of this post was about using AI to stress-test a job applic
 
 That is still useful, but EMH is the bigger answer. It takes the same instinct and turns it into software: freeze the evidence, separate the viewpoints, make the reasoning inspectable, and generate application-specific material without losing the connection to the underlying work.
 
-The project started with a bigger ambition: replace first-line keyword screening with real resume understanding. Building it made the limits clearer. Exhaustive AI screening can become expensive quickly. One-to-one comparison is where the system becomes practical, explainable, and immediately useful.
+The project started with a bigger ambition: make first-line keyword screening more evidence-aware. Building it made the limits clearer. Exhaustive AI screening can become expensive quickly. One-to-one comparison is where the system becomes practical, explainable, and immediately useful.
 
 If AI is going to be involved in hiring, confident answers are the least interesting part.
 

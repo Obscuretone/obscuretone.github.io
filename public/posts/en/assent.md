@@ -64,15 +64,7 @@ Those are not the same thing.
 
 A system can have a dependency that is formally critical and operationally boring. Payroll may depend on an ancient server that does almost nothing. A bank may have a mainframe transaction path nobody wants to touch. A government may require a ceremonial assent process that almost never exercises discretion.
 
-The dependency matters because the system will not complete without it.
-
-That does not mean the dependency is making a meaningful decision every time it is invoked.
-
-This is what makes the Crown such a strange component. It is both more important and less active than it looks.
-
-It is more important because the legal system routes authority through it.
-
-It is less active because modern responsible government expects the Crown to act on advice and not behave like an independent political actor in ordinary cases.
+The dependency matters because the system will not complete without it, even though invocation rarely involves a meaningful policy decision. The Crown is more important and less active than it looks: the legal system routes authority through it, while modern responsible government expects it to act on advice in ordinary cases.
 
 ## The Cat Test
 
@@ -98,9 +90,7 @@ Most people would never see the step where authority became legally complete.
 
 That invisibility is the point.
 
-The Crown is not irrelevant.
-
-It is hidden.
+The Crown's relevance is mostly hidden.
 
 And hidden dependencies are where legacy systems get interesting.
 

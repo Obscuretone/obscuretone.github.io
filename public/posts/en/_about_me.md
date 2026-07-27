@@ -44,7 +44,7 @@ I also have a collection of todo apps that I treat as architecture probes rather
 
 I like practical architecture more than architecture theater.
 
-I am interested in systems that can be operated, debugged, explained, and improved. That includes software systems, hiring systems, team processes, and occasionally public policy. [Should Canada Elect Senators?](/posts/en/government_control) applies control-loop thinking to Canadian government. [Could AI Govern?](/posts/en/hal_9000) uses a fictional AI sovereign as a harder test of intelligence than conversation alone. [Nova Scotia Should Be An Island](/posts/en/nova_scotia) is, technically, an infrastructure proposal.
+I am interested in systems that can be operated, debugged, explained, and improved. That includes software systems, hiring systems, team processes, and occasionally public policy. [Should Canada Elect Senators?](/posts/en/government_control) applies control-system thinking to Canadian government. [Could AI Govern?](/posts/en/hal_9000) uses a fictional AI sovereign as a harder test of intelligence than conversation alone. [The Last Human Job Is Blame](/posts/en/one_last_breath) asks what meaningful accountability looks like when automated systems do more of the work.
 
 The tone changes from post to post, but the habit is consistent: look at the system, identify the incentives, find the bottleneck, and ask what the current design is actually optimizing.
 

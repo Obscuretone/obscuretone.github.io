@@ -24,9 +24,7 @@ Whether it improves depends on whether the metric is connected to the thing peop
 
 ## The Metric Becomes The Job
 
-The joke in *Office Space* is not really about the number of pieces of flair.
-
-It is about a workplace that has confused visible compliance with actual value. The employee is technically meeting the stated requirement, but the manager still wants more enthusiasm, more performance, more proof that she has internalized the metric.
+The flair joke in *Office Space* works because the workplace has confused visible compliance with actual value. The employee is technically meeting the stated requirement, but the manager still wants more enthusiasm, more performance, more proof that she has internalized the metric.
 
 That is what bad measurement does.
 
@@ -36,13 +34,13 @@ This is the warning behind [Goodhart's Law](https://en.wikipedia.org/wiki/Goodha
 
 > **When a measure becomes a target, it ceases to be a good measure.**
 
-[Campbell's Law](https://www.sesp.northwestern.edu/docs/publications/429551791356808642.pdf) says the same thing in institutional terms: the more a metric is used to make decisions, the more pressure there is to corrupt the process being measured.
+[Campbell's Law](https://jmde.com/index.php/jmde_1/article/view/297/) says the same thing in institutional terms: the more a metric is used to make decisions, the more pressure there is to corrupt the process being measured.
 
 That sounds abstract until you have lived inside one of those systems.
 
 ## Handle Time
 
-During university, I worked in technical support at an Apple call center.
+During university, I worked in consumer technical support.
 
 One of the key metrics was average handle time. On the surface, that made sense. Shorter calls can mean faster service, lower queue times, and better operational efficiency.
 
@@ -50,7 +48,7 @@ I was good at the job. I knew the tools, I knew the products, and I had been the
 
 That became a problem.
 
-I was written up because my handle time was out of spec. Not too long. Too short.
+My handle time was flagged because it was out of spec. Not too long. Too short.
 
 The explanation I was given was:
 
@@ -60,13 +58,9 @@ That sentence has stayed with me because it is such a pure example of measuremen
 
 The customers were getting helped. The queue was moving. The work was being done. But the metric wanted the appearance of standardized effort more than it wanted the outcome the metric supposedly represented.
 
-So I adapted to the system.
+The metric made the perverse response obvious: an agent could improve their score by adding dead time without improving support.
 
-I put customers on hold. I took longer breaks. I let calls breathe for no reason other than making the number look normal.
-
-The next review was positive.
-
-That is the part that matters. The system did not detect better support. It detected better compliance with the metric. Once the metric became the target, wasting time became the rational behavior.
+That is the part that matters. The system could not distinguish better support from better compliance with the metric. Once the metric became the target, wasting time became a rational way to satisfy it.
 
 ## Engineering Dashboards
 
@@ -116,9 +110,7 @@ But OKRs do not automatically fix the problem. They can become pieces of flair t
 
 If the organization treats OKRs as a performance theater, people will learn to write safe objectives, negotiate easy key results, and tell success-shaped stories at the end of the quarter.
 
-The framework is not the hard part.
-
-The hard part is whether the organization can tolerate honest measurement.
+The hard part is whether the organization can tolerate honest measurement, regardless of framework.
 
 Can it look at a missed target and ask what was learned, or does it need someone to blame?
 
@@ -144,15 +136,15 @@ But the outcomes companies usually claim to care about are harder to measure:
 6. team trust
 7. access to talent
 
-When organizations optimize for visible presence, they may improve the office-utilization metric while damaging the work.
+When organizations optimize for visible presence, they may improve the office-utilization metric without improving the work. A six-month randomized trial of 1,612 employees found that a two-day hybrid schedule [reduced attrition without damaging measured performance](https://www.nature.com/articles/s41586-024-07500-2), although one company and one hybrid arrangement cannot settle every workplace question.
 
-That does not mean remote work is always better. It means attendance is a proxy, not the outcome. Treating presence as productivity is the same category of mistake as treating call length as support quality or Jira movement as engineering value.
+The trial leaves the universal remote-work question open. Attendance remains a proxy rather than an outcome, and treating presence as productivity makes the same category of mistake as treating call length as support quality or Jira movement as engineering value.
 
 It rewards the visible signal because the real signal is harder to capture.
 
 ## What Good Measurement Looks Like
 
-Good metrics are not scoreboards. They are instruments.
+Good metrics work as instruments rather than scoreboards.
 
 They should help people ask better questions:
 

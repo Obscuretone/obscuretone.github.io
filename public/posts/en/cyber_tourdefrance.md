@@ -4,7 +4,7 @@ image: rt_ai_code_review_queue.webp
 imagealt: "An engineer reviews a growing queue of AI-generated code printouts moving through QA gates."
 imagecaption: "AI makes the first draft cheaper and pushes the bottleneck into review, testing, and accountability."
 imagesource: "AI-generated illustration created for obscuretone with OpenAI image generation."
-description: A 2026 retrospective on AI-assisted software development, arguing that AI amplified experienced developers first, made routine work cheaper, and moved the real bottleneck into review, QA, and accountability.
+description: A 2026 retrospective on AI-assisted software development, arguing that cheaper first drafts move the real bottleneck into review, QA, and accountability.
 tags: [ai, software, engineering, review, accountability]
 ---
 
@@ -14,7 +14,7 @@ That was the wrong question.
 
 The better question was: who gets more leverage from the tool?
 
-The answer, at least so far, is that AI helps most when the person using it can evaluate the output. It can generate boilerplate, draft tests, summarize unfamiliar code, explain APIs, and propose implementations quickly. The generated text has value, but the real leverage comes from knowing what to accept, what to reject, and what still needs to be reasoned through.
+The answer, at least so far, depends on the task and the system around it. AI is easiest to use safely when the person or team can evaluate the output. It can generate boilerplate, draft tests, summarize unfamiliar code, explain APIs, and propose implementations quickly. The generated text has value, but durable leverage comes from knowing what to accept, what to reject, and what still needs to be reasoned through.
 
 AI can do useful work. The modern problem is that it can create more work than the existing QA, review, and deployment pipelines were designed to absorb.
 
@@ -22,9 +22,9 @@ That is why AI has not removed the need for strong developers. It has changed th
 
 ## The Original Claim
 
-The original version of this argument compared AI to a performance enhancer for developers. That analogy was imperfect, but the core claim was right: AI gives the biggest advantage to people who already understand the work.
+The original version of this argument compared AI to a performance enhancer for developers. That analogy was imperfect, and one part of the claim was too broad. The evidence does not establish that the most experienced developer always receives the largest speedup. It does suggest that understanding the work changes what a user can safely do with cheap generated code.
 
-It does not turn an inexperienced developer into a senior engineer. It gives an experienced developer a faster way to move through routine work, explore options, and generate drafts.
+AI does not turn an inexperienced developer into a senior engineer. It may help a newer developer substantially on a bounded task, and it may give an experienced developer a faster way to explore options or generate drafts. Neither result removes the need to judge the output in context.
 
 The difference is review.
 
@@ -59,7 +59,7 @@ That mismatch matters. If a team doubles the amount of code it can produce but k
 
 The most important thing current research adds is nuance.
 
-Early controlled work on GitHub Copilot showed large gains on bounded tasks. A widely cited controlled experiment found developers completed a JavaScript HTTP-server task much faster with Copilot than without it.
+Early controlled work on GitHub Copilot showed large gains on bounded tasks. In one [controlled experiment](https://arxiv.org/abs/2302.06590), developers asked to implement a JavaScript HTTP server completed the task 55.8% faster with Copilot. The authors also found heterogeneous effects that suggested possible benefits for people entering software development.
 
 But real software work is not always a bounded greenfield task. Mature codebases require context, conventions, tests, review, deployment awareness, and knowledge of what not to change.
 
@@ -182,7 +182,7 @@ AI can help with many of those. It cannot be accountable for them.
 
 ## Closing Thought
 
-The early performance-enhancer analogy held up better than I expected. AI amplified the people and teams capable of using it well.
+The early performance-enhancer analogy held up only after moving it up a level. AI can amplify people and teams capable of using it well, but experience alone does not tell us who will receive the largest measured speedup.
 
 It made routine work cheaper. It made first drafts faster. It made code generation less scarce.
 

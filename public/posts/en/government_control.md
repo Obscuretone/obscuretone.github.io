@@ -1,30 +1,30 @@
 ---
 title: Should Canada Elect Senators?
 image: rt_senate_pid_controller.webp
-imagealt: "Canadian parliamentary components are arranged as an analog control loop with an elected-senate path causing resonance."
-imagecaption: "The House, Senate, and Crown redrawn as a control loop where adding another electoral input risks oscillation."
+imagealt: "Canadian parliamentary components are arranged as an analog control loop with an elected-senate path risking oscillation."
+imagecaption: "The House, Senate, and Crown redrawn as a control loop where adding another electoral input can amplify oscillation."
 imagesource: "AI-generated illustration created for obscuretone with OpenAI image generation."
-description: This article compares the three pillars of Canadian government to a PID controller, suggesting that an elected senate would lead to resonance.
+description: This article compares the three pillars of Canadian government to a PID controller and asks what an elected Senate would do to its accumulated state.
 tags: [government, canada, control-systems, senate, institutions]
 ---
 
-Canadian politics has a useful control-systems analogy: the House of Commons, Senate, and Crown behave a little like parts of a PID loop. While system control theory and political science are distant fields, the analogy holds up surprisingly well when we examine how different branches of government interact and how changes to the system, like electing senators, could affect political stability.
+Canadian politics has a useful control-systems analogy: the House of Commons, Senate, and Crown behave a little like parts of a PID loop. This is an analogy about institutional roles and time horizons, not a claim that Parliament has a literal transfer function. With that limit stated, the comparison is useful when we examine how different branches interact and how changes to the system, like electing senators, could affect political stability.
 
 ## The Problem with Pure Democracy
 
-In a perfect world, democracy would involve voting on every issue, ensuring that the government is always aligned with the will of the people. But the logistical nightmare and dangers of such a system—imagine a society constantly pivoting with every whim of public opinion—make it unfeasible. Some science fiction, like [that unsettling episode of *The Orville*](https://orville.fandom.com/wiki/Majority_Rule), explores the risks of such systems. Instead, we have representative democracies, like Canada’s, where elected officials represent us in Parliament for fixed terms; the House of Commons describes Canada as a [representative democracy](https://www.ourcommons.ca/About/OurProcedure/SelectedDecisions/ch_01-e.html), and Elections Canada describes federal MPs as being chosen through [electoral districts](https://www.elections.ca/content.aspx?section=vot&dir=faq&document=faqvoting&lang=e).
+At one extreme, democracy could put far more policy questions directly to voters. At national scale, continuous voting would create logistical, attention, consistency, and majoritarian problems; [that unsettling episode of *The Orville*](https://orville.fandom.com/wiki/Majority_Rule) turns the failure mode into science fiction. Canada instead uses representative democracy: Parliament's education site describes it as a [representative democracy](https://learn.parl.ca/en/games/game5/index.html), and Elections Canada describes federal MPs as being chosen through [electoral districts](https://www.elections.ca/content.aspx?section=vot&dir=faq&document=faqvoting&lang=e).
 
 But here’s the catch: the average Canadian’s beliefs and priorities are constantly shifting. Whether it’s due to economic changes, global events, or social movements, public opinion is a moving target. The government needs to respond to these changes, but without veering too far off course or bouncing between extremes. This is where I find the analogy to PID loops useful.
 
 ## What is a PID Loop?
 
-In control systems, a [PID controller (Proportional-Integral-Derivative)](https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_controller) is used to manage and stabilize outputs—like keeping your car at a set speed while accounting for inclines and declines. Just as the PID loop adjusts the throttle to smooth out deviations from the target speed, the different elements of the Canadian government work to stabilize policy and governance in the face of changing public opinion.
+In control systems, a [PID controller (Proportional-Integral-Derivative)](https://ctms.engin.umich.edu/CTMS/index.php/Content/MotorSpeed/Simulink/Control/Content/Basics/Content/MotorPosition/Simulink/Simscape/Introduction/Simulink/Control/?example=Introduction&section=ControlPID) combines responses to present error, accumulated error, and the rate of change of error. The exact effect of each term depends on the plant and tuning: integral action can remove persistent offset but can also increase overshoot, while derivative action often adds damping. The political analogy is about what information each institution carries into the loop.
 
 A PID loop has three parts:
 
 1. **Proportional (P):** Adjusts the output based on the current error.  
-2. **Integral (I):** Accounts for accumulated past errors to smooth long-term changes.  
-3. **Derivative (D):** Predicts future errors to prevent overcorrections.
+2. **Integral (I):** Accumulates past error so persistent offset cannot be ignored.
+3. **Derivative (D):** Responds to how quickly error is changing and can limit overcorrection.
 
 Now, let’s map these components to the Canadian political system.
 
@@ -36,13 +36,15 @@ However, relying solely on proportional control can lead to instability. Imagine
 
 ### The Integral Gain: The Senate
 
-In a PID loop, the **Integral (I)** part helps smooth out the output by considering the cumulative past errors. This can be thought of as a shock absorber that prevents wild oscillations. In Canada’s political system, the **Senate** serves this purpose. Senators, appointed until age 75 rather than elected, provide what the Senate itself calls ["sober second thought"](https://sencanada.ca/en/about/what-the-senate-does/), reviewing and revising legislation with a long-term perspective. Free from the pressures of elections, the Senate can take into account the cumulative lessons of past governments and temper the swift swings in policy that the House of Commons might introduce.
+In a PID loop, the **Integral (I)** part carries accumulated error forward. The Senate has a surprisingly literal version of that memory. Each government adds appointments, but it does not replace the chamber. Senate composition is a stock built from decades of appointments, with [retirement at 75](https://laws-lois.justice.gc.ca/eng/const/section-29.html) providing a slow discharge path. Past political judgments remain in the system after the government that made them is gone.
 
-By taking a broader, long-term view, the Senate acts like the integral gain in a PID loop—stabilizing the political system and preventing rapid, reactionary shifts. In this analogy, **long non-electoral tenure** is critical to maintaining this function. Senators are not beholden to the same immediate political pressures as MPs, allowing them to act as a counterweight to the rapid pace of electoral politics.
+That includes bad judgments. Appoint the wrong senator and the next election cannot correct the error; the system carries it until that person retires or leaves. In control terms, this resembles the liability as well as the value of integral action: memory can correct persistent error, but accumulated state can also produce overshoot or windup.
+
+The same persistence is what lets senators provide what the Senate calls ["sober second thought"](https://sencanada.ca/en/about/). Because appointments overlap governments and senators do not face re-election, the chamber can retain lessons, priorities, and mistakes across electoral cycles. **Long non-electoral tenure** supplies the mechanism that makes the Senate an accumulator instead of another reading of the latest poll.
 
 ### The Derivative Gain: The Crown
 
-In PID loops, the **Derivative (D)** component helps predict future errors and corrects for them before they happen. In Canada, this role can be seen in the **Crown** (or more practically, the Governor General as the monarch’s representative). The Constitution Act, 1867 defines Parliament as the [King, the Senate, and the House of Commons](https://laws-lois.justice.gc.ca/eng/const/section-17.html), and the Governor General formally acts as the monarch's representative. Although rarely invoked, the Governor General has the power to intervene in extreme situations—such as the [1975 Australian constitutional crisis](https://www.nma.gov.au/defining-moments/resources/whitlam-dismissal)—when the political system is at risk of serious instability. While this "derivative control" is rarely used, its mere existence can serve as a backstop against overshoot and political chaos.
+The **Derivative (D)** mapping is the loosest part of the analogy. Derivative control responds to the rate of change and can restrain overshoot. The **Crown**—or more practically, the Governor General as the monarch’s representative—does not continuously perform that calculation; its role here is a constitutional backstop that becomes relevant when political movement threatens the system's operating bounds. The Constitution Act, 1867 defines Parliament as the [King, the Senate, and the House of Commons](https://laws-lois.justice.gc.ca/eng/const/section-17.html), and the Governor General formally acts as the monarch's representative. Although rarely invoked, reserve powers can matter in extreme situations, as the [1975 Australian constitutional crisis](https://www.nma.gov.au/defining-moments/resources/whitlam-dismissal) demonstrates.
 
 However, in the post-Elizabeth II era, this role is becoming more ambiguous. As public sentiment shifts regarding the monarchy, it’s unclear how much authority the Crown’s reserve powers will carry in future crises. Nonetheless, for now, the Governor General remains an important but rarely activated element of Canada’s political stabilizer.
 
@@ -50,9 +52,9 @@ However, in the post-Elizabeth II era, this role is becoming more ambiguous. As 
 
 Here’s the crux of the issue: some advocate for an **elected Senate**, arguing that life appointments are undemocratic. However, electing senators with fixed terms could severely disrupt this balance. If senators were elected on the same or similar cycles as MPs, they might start reacting to the same political trends as the House of Commons, especially if they run on party lines. This would turn the Senate into another **proportional gain**—responding to immediate public opinion rather than dampening it.
 
-In a control loop, having two proportional gains without the stabilizing effect of the integral would lead to **resonant frequencies**—wild swings between extremes, as both chambers of government overcorrect to match short-term public sentiment. In such a scenario, the political system would oscillate between policies without ever settling on a stable middle ground.
+In the analogy, two chambers reacting to the same short-term electoral signal can create coupled feedback. If their election cycles, party incentives, and powers align without a good deadlock mechanism, both can overcorrect toward the same momentary pressure or oscillate against each other while claiming equivalent mandates. Duplicating the fast feedback path creates an institutional risk, although it does not mathematically guarantee resonance.
 
-Just as in control theory, the **stabilizing function of the integral**—the Senate in this case—is crucial. Without it, Canada risks sliding into political instability, driven by constant changes in popular opinion.
+The Senate's accumulated state is therefore worth understanding before changing its input. Without an institution operating on a different time horizon, Canada would be more exposed to constant changes in popular opinion. With one, Canada also accepts that bad appointments decay slowly. That trade is the point of the integral term, not an exception to it.
 
 ## A Solution: Electing Senators For Very Long Terms
 

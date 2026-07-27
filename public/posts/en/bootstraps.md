@@ -10,13 +10,13 @@ tags: [startups, capital, incentives, regulation, mythology]
 
 The classic startup story is simple: a small team starts in a garage, works harder than everyone else, and changes the world through determination. It is an appealing story because it makes success feel legible. Work hard, take risks, build relentlessly, and the market will reward you.
 
-The reality is more complicated. Execution matters enormously, but it is rarely the whole story. Timing, family support, access to capital, regulatory context, professional networks, and tolerance for risk all shape which companies get to survive long enough to look inevitable in hindsight. Research on entrepreneurship keeps finding that wealth and access to capital matter, whether in NBER work on [entrepreneurial households and wealth](https://www.nber.org/system/files/working_papers/w7894/w7894.pdf) or newer work showing that [family financial resources can ease credit constraints](https://finance.unibocconi.eu/sites/default/files/files/media/attachments/Hosseini_Fatemeh_JobMarket_Paper20170111152045.pdf).
+The reality is more complicated. Execution matters enormously, but it is rarely the whole story. Timing, family support, access to capital, regulatory context, professional networks, and tolerance for risk all shape which companies get to survive long enough to look inevitable in hindsight. The research does not reduce entrepreneurship to a simple wealth story, but natural experiments do find financing effects: an inheritance study found that windfalls affected entry and capital employed [in ways consistent with liquidity constraints](https://www.nber.org/papers/w4526 "startups, capital, research | NBER"), while a 2024 study using idiosyncratic stock returns found that increased wealth raised firm creation and profitability for some households [by relaxing financial constraints](https://www.nber.org/papers/w32643 "startups, capital, research | NBER").
 
 That does not make successful founders undeserving. It does mean we should be careful about turning survivorship bias into advice.
 
 ## The Garage Is Not Neutral
 
-The garage startup has become one of the strongest symbols in technology. It suggests scarcity, improvisation, and ambition. The HP Garage is literally preserved as ["the birthplace of Silicon Valley"](https://www.hp.com/us-en/hp-information/about-hp/history/hp-garage.html). But in expensive markets, even having a garage can signal a level of stability that many founders do not have.
+The garage startup has become one of the strongest symbols in technology. It suggests scarcity, improvisation, and ambition. HP's own history calls its preserved garage ["the birthplace of Silicon Valley"](https://www.hp.com/hpinfo/abouthp/histnfacts/garage/timeline.html). But in expensive markets, even having a garage can signal a level of stability that many founders do not have.
 
 If someone can afford to spend months or years building before the business is sustainable, there is usually a cushion somewhere: savings, family support, a spouse's income, investor access, or a fallback path that makes risk survivable.
 

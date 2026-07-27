@@ -2,7 +2,6 @@ import { useEffect, useMemo, useRef } from 'react';
 import Head from 'next/head';
 import fs from 'fs';
 import path from 'path';
-import { execFileSync } from 'child_process';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import remarkGfm from 'remark-gfm';
@@ -15,6 +14,11 @@ import PostsList from '../../../components/PostsList';
 import PostsGraph from '../../../components/PostsGraph';
 import { getPostsByLanguage } from '../../../utils/posts';
 import { getCurrentRevision } from '../../../utils/revision';
+import {
+    getGitFirstAdded,
+    getGitLastUpdated,
+    normalizeDate,
+} from '../../../utils/gitDates';
 
 const MATHJAX_SCRIPT_ID = 'mathjax-script';
 const SOURCE_KIND_ALIASES = {
@@ -164,10 +168,14 @@ function getFaviconUrl(href) {
 function getSourceName(hostname) {
     const host = hostname.replace(/^www\./, '');
     const sourceNames = [
+        ['eur-lex.europa.eu', 'EUR-Lex'],
         ['laws-lois.justice.gc.ca', 'Justice Laws'],
         ['canada.ca', 'Canada'],
         ['gc.ca', 'Canada'],
+        ['gg.ca', 'Governor General'],
+        ['electionsanddemocracy.ca', 'Elections Canada'],
         ['ourcommons.ca', 'House of Commons'],
+        ['parl.ca', 'Parliament'],
         ['sencanada.ca', 'Senate'],
         ['elections.ca', 'Elections Canada'],
         ['statcan.gc.ca', 'StatCan'],
@@ -177,12 +185,20 @@ function getSourceName(hostname) {
         ['eeoc.gov', 'EEOC'],
         ['chrc-ccdp.gc.ca', 'CHRC'],
         ['nps.gov', 'NPS'],
+        ['scrumguides.org', 'Scrum Guide'],
+        ['agilemanifesto.org', 'Agile Manifesto'],
+        ['sre.google', 'Google SRE'],
+        ['dora.dev', 'DORA'],
         ['hbs.edu', 'Harvard'],
         ['nber.org', 'NBER'],
         ['stanford.edu', 'Stanford'],
         ['metr.org', 'METR'],
+        ['arxiv.org', 'arXiv'],
+        ['nature.com', 'Nature'],
+        ['jmde.com', 'JMDE'],
         ['journals.sagepub.com', 'SAGE'],
         ['northwestern.edu', 'Northwestern'],
+        ['ctms.engin.umich.edu', 'UMich CTMS'],
         ['gbdev.io', 'GBDev'],
         ['problemkaputt.de', 'Pan Docs'],
         ['man7.org', 'man7'],
@@ -219,36 +235,12 @@ function getSourceTag(href) {
 
         if (
             host.includes('laws-lois.justice.gc.ca')
+            || host.includes('eur-lex.europa.eu')
             || host.includes('artificialintelligenceact.eu')
             || host.includes('eeoc.gov')
             || host.includes('chrc-ccdp.gc.ca')
         ) {
             return { key: 'law', label: 'law' };
-        }
-
-        if (
-            host.endsWith('.gov')
-            || host.endsWith('.gc.ca')
-            || host.includes('canada.ca')
-            || host.includes('ourcommons.ca')
-            || host.includes('sencanada.ca')
-            || host.includes('elections.ca')
-            || host.includes('nps.gov')
-        ) {
-            return { key: 'official', label: 'official' };
-        }
-
-        if (
-            host.includes('hbs.edu')
-            || host.includes('nber.org')
-            || host.includes('stanford.edu')
-            || host.includes('metr.org')
-            || host.includes('journals.')
-            || host.includes('northwestern.edu')
-            || host.includes('unibocconi.eu')
-            || pathName.endsWith('.pdf')
-        ) {
-            return { key: 'research', label: 'research' };
         }
 
         if (
@@ -261,7 +253,45 @@ function getSourceTag(href) {
         }
 
         if (
+            host.endsWith('.gov')
+            || host.endsWith('.gc.ca')
+            || host.includes('canada.ca')
+            || host === 'gg.ca'
+            || host.endsWith('.gg.ca')
+            || host.includes('electionsanddemocracy.ca')
+            || host.includes('ourcommons.ca')
+            || host === 'parl.ca'
+            || host.endsWith('.parl.ca')
+            || host.includes('sencanada.ca')
+            || host.includes('elections.ca')
+            || host.includes('nps.gov')
+        ) {
+            return { key: 'official', label: 'official' };
+        }
+
+        if (
+            host.includes('hbs.edu')
+            || host.includes('nber.org')
+            || host.includes('stanford.edu')
+            || host.includes('metr.org')
+            || host.includes('arxiv.org')
+            || host.includes('nature.com')
+            || host.includes('jmde.com')
+            || host.includes('dora.dev')
+            || host.includes('journals.')
+            || host.includes('northwestern.edu')
+            || host.includes('unibocconi.eu')
+            || pathName.endsWith('.pdf')
+        ) {
+            return { key: 'research', label: 'research' };
+        }
+
+        if (
             host.includes('man7.org')
+            || host.includes('scrumguides.org')
+            || host.includes('agilemanifesto.org')
+            || host.includes('sre.google')
+            || host.includes('ctms.engin.umich.edu')
             || host.includes('gbdev.io')
             || host.includes('problemkaputt.de')
             || host.includes('numpy.org')
@@ -514,21 +544,6 @@ function ensureMathJax() {
     return window.__mathJaxLoadingPromise;
 }
 
-function getGitLastUpdated(filePath) {
-    try {
-        const relativePath = path.relative(process.cwd(), filePath);
-        const updatedAt = execFileSync(
-            'git',
-            ['log', '-1', '--format=%aI', '--', relativePath],
-            { cwd: process.cwd(), encoding: 'utf8' },
-        ).trim();
-
-        return updatedAt || null;
-    } catch {
-        return null;
-    }
-}
-
 export async function getStaticPaths() {
     const paths = [];
 
@@ -563,6 +578,7 @@ export async function getStaticProps({ params }) {
     const { data, content } = matter(fileContent);
 
     const updatedAt = getGitLastUpdated(filePath) || fs.statSync(filePath).mtime.toISOString();
+    const publishedAt = normalizeDate(data.published) || getGitFirstAdded(filePath) || updatedAt;
 
     const processedContent = await remark()
         .use(remarkGfm)
@@ -584,6 +600,7 @@ export async function getStaticProps({ params }) {
                 imageSource: data.imagesource || '',
                 imageSourceUrl: data.imagesourceurl || '',
                 htmlContent,
+                publishedAt,
                 updatedAt,
             },
             postsEn,
@@ -598,6 +615,7 @@ export default function Post({ post, postsEn, currentLang, revision }) {
         title,
         description,
         htmlContent,
+        publishedAt,
         updatedAt,
     } = post;
     const articleContentRef = useRef(null);
@@ -629,13 +647,29 @@ export default function Post({ post, postsEn, currentLang, revision }) {
         };
     }, [htmlContent, currentLang]);
 
-    const formattedDate = updatedAt
-        ? new Date(updatedAt).toLocaleDateString(currentLang, {
+    const formatDate = (value) => {
+        const dateParts = typeof value === 'string'
+            ? value.match(/^(\d{4})-(\d{2})-(\d{2})/)
+            : null;
+
+        if (!dateParts) {
+            return null;
+        }
+
+        const [, year, month, day] = dateParts;
+        return new Date(Date.UTC(Number(year), Number(month) - 1, Number(day)))
+            .toLocaleDateString(currentLang, {
             year: 'numeric',
             month: 'long',
             day: 'numeric',
-        })
-        : null;
+            timeZone: 'UTC',
+        });
+    };
+    const formattedPublishedDate = formatDate(publishedAt);
+    const formattedUpdatedDate = formatDate(updatedAt);
+    const wasUpdated = publishedAt
+        && updatedAt
+        && publishedAt.slice(0, 10) !== updatedAt.slice(0, 10);
     const [openingHtml, remainingHtml] = splitAfterFirstParagraph(htmlContent);
     const evidenceItems = useMemo(() => ({
         sectionLinks: extractSectionLinks(htmlContent),
@@ -658,9 +692,17 @@ export default function Post({ post, postsEn, currentLang, revision }) {
 
             <article>
                 <CutoutTitle title={title} seedText={htmlContent} />
-                {formattedDate && (
+                {formattedPublishedDate && (
                     <p>
-                        <strong>Last updated:</strong> {formattedDate}
+                        <strong>Published:</strong>{' '}
+                        <time dateTime={publishedAt}>{formattedPublishedDate}</time>
+                        {wasUpdated && (
+                            <>
+                                {' / '}
+                                <strong>Updated:</strong>{' '}
+                                <time dateTime={updatedAt}>{formattedUpdatedDate}</time>
+                            </>
+                        )}
                     </p>
                 )}
                 <div ref={articleContentRef}>

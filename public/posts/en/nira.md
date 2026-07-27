@@ -32,7 +32,7 @@ nira close NIRA-12 --reason completed
 
 Those commands are easy to call, easy to inspect, and easy to compose with other development workflows.
 
-A terminal is not special by itself. A CLI tends to force a stable contract.
+A terminal has no special power by itself. The value comes from the stable contract a good CLI tends to require.
 
 ## APIs Can Work Just As Well
 
