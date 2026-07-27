@@ -8,7 +8,7 @@ description: obscuretone is a collection of systems notes, software projects, an
 tags: [systems, software, incentives, architecture, publishing]
 ---
 
-obscuretone is a place for systems notes, software projects, and essays about technology, organizations, and the strange places where incentives turn into architecture.
+obscuretone is a site I occasionally update with systems notes, software projects, and essays about technology, organizations, and the strange places where incentives turn into architecture.
 
 The writing comes from a background in backend, full-stack, and embedded systems work: authentication and core services at very large scale, compliance tooling, incident management, QA process design, fleet management, industrial control interfaces, IoT connectivity, database performance, and the unglamorous work of making systems reliable enough for other people to depend on.
 
