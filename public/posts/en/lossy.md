@@ -28,9 +28,7 @@ A resume is a brutal file format.
 
 It has to reduce years of work into titles, dates, employers, tools, bullets, and metrics. It has to fit on one or two pages. It has to be readable by a human under time pressure and by software that may treat layout, keywords, and section headings as evidence. Harvard Business School's *Hidden Workers* report is a useful institutional version of the same problem: efficient screening systems can [filter out people whose resumes do not match narrow criteria](https://www.hbs.edu/ris/Publication%20Files/hiddenworkers09032021_Fuller_white_paper_33a2047f-41dd-47b1-9a8d-bd08cf3bfa94.pdf "hiring, resumes, evidence | Harvard"), even when they may be able to do the work.
 
-That means the resume is not a record of the work.
-
-It is a compressed representation of the work.
+The resume is a compressed representation rather than a record of the work.
 
 Compression is not automatically bad. A good resume should summarize. Nobody wants a complete event log of every meeting, outage, migration, argument, incident, refactor, design review, and production surprise.
 
@@ -129,9 +127,7 @@ Keywords matter because they are easy to preserve through compression.
 
 If a resume says `Kubernetes` and the job description says `Kubernetes`, the system can see the overlap.
 
-That does not mean the candidate can operate Kubernetes in production. It does not mean the role really requires Kubernetes expertise. It does not mean the word was used at the same level of depth on both sides.
-
-It only means the token survived.
+A surviving token proves only that both artifacts contain the word. It says nothing by itself about whether the candidate can operate Kubernetes in production, whether the role requires that depth, or whether both sides used the term in the same way.
 
 This is why keyword matching feels simultaneously useful and inadequate.
 
@@ -143,9 +139,7 @@ It rewards people who know which words to include.
 
 It punishes people whose work is real but described differently.
 
-The keyword is not the skill.
-
-It is the residue left after the skill has been compressed into text.
+The keyword is residue left after the skill has been compressed into text.
 
 ## Metrics Are Also Lossy
 
@@ -195,9 +189,7 @@ Negotiating a sane migration path may look less impressive than declaring a rewr
 
 Making a system boring is one of the highest forms of engineering taste, and one of the hardest things to advertise.
 
-Resume writing alone cannot solve that.
-
-It is a compression problem.
+Resume writing alone cannot solve a compression problem.
 
 The market wants evidence that fits inside bullets. The work often lives between them.
 

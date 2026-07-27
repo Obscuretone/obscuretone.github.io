@@ -196,6 +196,28 @@ a:focus {
   text-decoration-color: var(--air-force-blue);
 }
 
+.posts-list {
+  padding-left: 1.25em;
+}
+
+.posts-list li {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.45em 0;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.posts-list time {
+  flex: 0 0 auto;
+  margin-left: auto;
+  color: var(--soft-ink);
+  font-family: "IBM Plex Mono", Consolas, monospace;
+  font-size: 0.72em;
+  white-space: nowrap;
+}
+
 .article-source-link {
   --article-source-ink: var(--air-force-blue);
   --article-source-paper: #eef7fd;

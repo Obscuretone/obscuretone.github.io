@@ -8,7 +8,7 @@ description: Fast resume screening compresses professional history into a headli
 tags: [hiring, resumes, attention, careers, incentives]
 ---
 
-Ten seconds is too short. The exact number varies by process, but the claim is not folklore: Ladders' 2018 eye-tracking work put the first resume skim at [about 7.4 seconds](https://www.theladders.com/career-advice/you-only-get-6-seconds-of-fame-make-it-count "hiring, resumes, attention | Ladders"), and the deeper problem is what that speed rewards.
+Ten seconds is too short. The exact number varies by process, and the familiar figure comes from a proprietary study rather than a universal measurement: Ladders' 2018 eye-tracking work put average initial attention at [about 7.4 seconds](https://www.theladders.com/career-advice/you-only-get-6-seconds-of-fame-make-it-count "hiring, resumes, attention | Ladders"). The deeper problem is what a fast skim rewards.
 
 The deeper problem is what ten seconds turns a resume into.
 
@@ -96,7 +96,7 @@ That sounds reassuring, but it actually makes the problem clearer.
 
 It means the glance is the classifier.
 
-The resume only gets a deeper read after it has already survived the first visual and semantic impression. The extra attention is not evenly available to all candidates. It is allocated to resumes that look promising immediately.
+The resume only gets a deeper read after it has already survived the first visual and semantic impression. Resumes that look promising immediately receive a disproportionate share of the extra attention.
 
 That makes the first few seconds even more important, not less.
 

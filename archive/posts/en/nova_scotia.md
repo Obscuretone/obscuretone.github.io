@@ -1,12 +1,6 @@
 ---
 title: Nova Scotia Should Be An Island
-image: rt_nova_scotia_map.webp
-imagealt: "A styled map of Nova Scotia with the Chignecto Isthmus highlighted."
-imagecaption: "A deliberately over-serious Chignecto Isthmus flood proposal, anchored to the actual Nova Scotia map."
-imagesource: "Wikimedia Commons map, Canada Nova Scotia location map 2, adapted with overlay."
-imagesourceurl: "https://commons.wikimedia.org/wiki/File:Canada_Nova_Scotia_location_map_2.svg"
 description: A satirical engineering proposal to flood the Chignecto Isthmus and make Nova Scotia's geography match its culture, written with the full seriousness of a public infrastructure review.
-tags: [nova-scotia, infrastructure, satire, government, systems]
 ---
 
 # Chignecto Isthmus Decommissioning Proposal
@@ -24,13 +18,13 @@ Literally.
 
 The province should be separated from the mainland by flooding the Chignecto Isthmus in a planned, consultative, environmentally reviewed, procurement-compliant manner.
 
-This is an act of architectural consistency.
+This is not an act of hostility. It is an act of architectural consistency.
 
 Nova Scotia already behaves like an island. The infrastructure should stop lying.
 
 ## Background
 
-The [Chignecto Isthmus](https://www2.gnb.ca/content/gnb/en/departments/dti/promos/chignecto.html) is the low-lying land bridge between Nova Scotia and New Brunswick. It contains the only road and rail connection between Nova Scotia and the rest of Canada. It is protected by dykes, exposed to sea-level rise and severe weather, and responsible for carrying large volumes of trade through a corridor that engineers keep describing as critical, vulnerable, and in need of protection. Canada, Nova Scotia, and New Brunswick reached a 2025 funding agreement to [raise the dykeland system against sea-level rise and storm surge](https://www.canada.ca/en/housing-infrastructure-communities/news/2025/03/protecting-the-chignecto-isthmus-against-climate-change.html), which is the responsible adult version of this article's much worse idea.
+The [Chignecto Isthmus](https://www2.gnb.ca/content/gnb/en/departments/dti/promos/chignecto.html) is the low-lying land bridge between Nova Scotia and New Brunswick. It contains the only road and rail connection between Nova Scotia and the rest of Canada. It is protected by dykes, exposed to sea-level rise and severe weather, and responsible for carrying large volumes of trade through a corridor that engineers keep describing as critical, vulnerable, and in need of protection.
 
 The official plan is to preserve the corridor.
 
@@ -38,7 +32,7 @@ Raise the dykes. Improve the aboiteaux. Protect the highway and rail line. Keep 
 
 This is the conventional answer, which is how we know it has not been thought through emotionally.
 
-Nova Scotia can remain attached. The better question is why it should.
+The better question is not whether Nova Scotia can remain attached.
 
 The better question is why we keep insisting.
 
@@ -87,7 +81,7 @@ The Chignecto Isthmus is already a fragile dependency.
 
 It is low-lying. It is dyke-protected. It is exposed to sea-level rise and storm surge. It carries transportation, trade, and symbolic continuity through one narrow corridor.
 
-That is a TODO comment with tides.
+That is not resilience. That is a TODO comment with tides.
 
 If a software team found a critical system relying on one aging shared dependency with no clean failover, the review would not be gentle.
 
@@ -100,7 +94,7 @@ Someone would ask:
 
 The official answer is to harden the dependency.
 
-The proposed answer is to resolve the contradiction.
+The proposed answer is to remove the lie.
 
 Nova Scotia is an island-shaped system with a peninsula-shaped bug.
 
@@ -196,9 +190,7 @@ Tourism Nova Scotia will need updated messaging.
 
 The current slogan, "Canada's Ocean Playground," is too cheerful and was clearly written by someone who visited in August.
 
-Recommended campaign:
-
-> **Nova Scotia: We Made It An Island So You'd Take The Hint.**
+Make it real.
 
 The ferry schedule becomes a moral filter. Anyone truly committed to visiting can still do so, but only after demonstrating disposable income, patience, and a willingness to spend several hours reflecting in a terminal café.
 
@@ -233,7 +225,7 @@ That is why the project must include replacement logistics.
 
 Bridge, tunnel, ferry, relocated corridor, amphibious trucking: the specific technical solution can be determined by people with credentials, budgets, and the thousand-yard stare of public procurement.
 
-The key point is to make Nova Scotia honest with itself in theory.
+The key point is not to isolate Nova Scotia in practice.
 
 The key point is to isolate it accurately.
 

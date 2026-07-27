@@ -4,11 +4,9 @@ description: Bad Agile keeps the rituals and removes the autonomy. Then everyone
 tags: [software, management, agile, incentives, work]
 ---
 
-Agile is like communism in exactly one useful way:
+Agile and communism both have manifestos.
 
-They both have manifestos, which is already too funny to ignore.
-
-Software people looked at a political form famous for producing arguments about theory versus implementation and said: what if we had one of those, but for sprint planning?
+There. That is the entire political comparison, and already more ideology than sprint planning deserves.
 
 Every failed implementation comes with someone standing nearby saying, "that was not real Agile."
 
@@ -16,17 +14,13 @@ This is annoying because it sounds like a dodge.
 
 It is also annoying because sometimes it is true.
 
-Most organizations do not implement Agile. They implement meeting communism for people who still report to a monarchy.
+Most organizations do not implement Agile. They implement its meeting schedule inside the same command structure they had before.
 
 The team gets the ceremonies. Management keeps the control. Everyone is told they are empowered, then handed a roadmap, a deadline, a dependency graph, a quarterly planning ritual, a velocity target, and a Jira workflow with seventeen statuses.
 
 Then the whole thing fails and someone says Agile does not work.
 
-Well.
-
-Sure.
-
-If the commune has a landlord, a police force, and a quarterly OKR review, perhaps the problem is not that the tomato garden lacked revolutionary spirit.
+The defence is too convenient to accept automatically. It is also sometimes correct: if a process keeps the ceremonies and removes the authority to respond to change, it has discarded the operational premise.
 
 ## The Manifesto Was Not Jira
 
@@ -65,25 +59,23 @@ Velocity survives.
 
 Backlog grooming survives, though calling it refinement did not make the activity less spiritually damp.
 
-What disappears is the political content.
+What disappears is the part about authority.
 
 The team is not allowed to change scope in any meaningful way. The roadmap is already sold. The date is already promised. The dependencies are already late. The architecture is already compromised. The staffing plan is already optimistic. The customer feedback is filtered through five layers of people who do not maintain the system.
 
-The team is "Agile" in the same way a prisoner doing yoga is free.
+The team is "Agile" in the same way a treadmill is travel.
 
 There is movement.
 
-There is breathing.
-
-The doors are still locked.
+The scenery does not change.
 
 ## Control Wants The Costume Of Trust
 
-The hard part of Agile is not the process.
-
-The hard part is trust.
+The hard part of Agile is trust, not process.
 
 If a team is supposed to respond to change, then the team must be allowed to change something.
+
+The [official Scrum Guide](https://scrumguides.org/scrum-guide.html) supports this reading: it calls Scrum Teams self-managing, says they decide who does what, when, and how, and allows scope to be clarified and renegotiated as more is learned.
 
 That means changing scope.
 
@@ -217,6 +209,8 @@ That last one is where the dream usually dies.
 
 Adaptability needs slack. A system running at 100% utilization cannot adapt. It can only queue pain.
 
+Google's SRE guidance treats overload as a condition that systems must be designed to handle, including by [degrading gracefully and shedding load](https://sre.google/workbook/overload/). A work system needs the human equivalent: spare capacity to absorb surprises instead of passing every shock directly to a queue.
+
 If every developer is fully allocated, every sprint is packed, every deadline is tight, and every plan assumes nothing surprising will happen, the organization has already chosen fragility.
 
 Calling that Agile does not make it adaptive.
@@ -225,15 +219,11 @@ It makes the failure arrive in two-week increments.
 
 ## The Half-Assed Version Cannot Work
 
-This is the communism joke again.
-
 If you half-ass the implementation, it does not work.
 
 But the funny part is what "half-assed" means here.
 
-It does not mean the team skipped a ceremony.
-
-It means the organization adopted the vocabulary of autonomy while preserving the structure of command.
+A half-implemented version may perform every ceremony. The failure occurs when an organization adopts the vocabulary of autonomy while preserving the structure of command.
 
 It means feedback exists, but cannot alter commitments.
 
@@ -243,9 +233,7 @@ It means teams are accountable for outcomes they cannot meaningfully control.
 
 It means management wants adaptation from people who are not allowed to adapt the plan.
 
-The methodology is not the deepest problem.
-
-Authority is, and it is wearing a methodology lanyard.
+The deeper problem is authority wearing a methodology lanyard.
 
 ## Agile Has Been Tried Locally
 

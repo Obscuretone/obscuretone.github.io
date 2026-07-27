@@ -24,29 +24,21 @@ That is the problem.
 
 Hiring is eventually consistent, but the consistency arrives too late to be useful.
 
-The numbers support that distinction between visible demand and actual hiring.
+The numbers help explain why visible demand is not the same thing as a usable hiring pipeline.
 
-In the United States, the [Bureau of Labor Statistics reported](https://www.bls.gov/jlt/) 7.594 million job openings in May 2026 and 5.170 million hires. That is not a one-to-one conversion rate because openings are a stock and hires are a monthly flow, but the gap still matters: the public sees millions of openings while candidates experience a market where many visible opportunities do not become jobs.
+In the United States, the [Bureau of Labor Statistics reported](https://www.bls.gov/news.release/jolts.nr0.htm) 7.6 million job openings and 5.2 million hires in May 2026. BLS defines the first as positions open on the last business day and the second as additions to payroll over the entire month. They are a stock and a flow, not a numerator and denominator. The figures show a large, active labour market; they do not tell us how many postings were stale or how likely any one applicant was to be hired.
 
 In Canada, [Statistics Canada reported](https://www150.statcan.gc.ca/n1/daily-quotidien/251216/dq251216a-eng.htm) 492,500 job vacancies in the third quarter of 2025, down from a second-quarter 2022 peak of 985,900. For jobs requiring a bachelor's degree or higher, the unemployment-to-vacancy ratio rose to 6.1, up from 5.1 a year earlier.
 
-That is the job market candidates are trying to debug: visible openings, fewer hires than the postings imply, and far more people chasing each credible professional role.
+That is the job market candidates are trying to debug: aggregate demand that says little about any particular posting, alongside far more people chasing each credible professional role in parts of the Canadian market.
 
 ## The Posting Is A Stale Read
 
-A job posting looks like a source of truth.
-
-It is usually not.
-
-It is a cached artifact. It may have been copied from an older role, edited by HR, softened by legal, inflated by a hiring manager, keyword-stuffed by a recruiter, and posted after the team's needs already changed.
+A job posting looks like a source of truth but often behaves like a cached artifact. It may have been copied from an older role, edited by HR, softened by legal, inflated by a hiring manager, keyword-stuffed by a recruiter, and posted after the team's needs already changed.
 
 That is how a backend role accumulates frontend requirements. That is how a mid-level role asks for staff-level judgment. That is how a job requiring deep production experience gets described with a cheerful paragraph about learning opportunities.
 
-The posting is not necessarily false.
-
-It is worse than false.
-
-It is partially true in several incompatible directions.
+The posting may be sincere while remaining partially true in several incompatible directions, a harder failure to detect than a simple falsehood.
 
 Candidates respond to the artifact they can see. They tailor resumes to the visible requirements, write cover letters to the stated mission, and prepare stories for the listed responsibilities.
 
@@ -190,15 +182,13 @@ Candidates are inconsistent too.
 
 They maintain multiple resume versions. They compress experience differently for each role. They omit relevant work because it does not fit the page. They exaggerate the visible parts because the process rewards visibility. They apply to roles that are adjacent, aspirational, or merely tolerable because the market has become too noisy to reward precision.
 
-That does not make candidates dishonest as a class.
-
-It makes them participants in the same distributed system.
+Candidates are adapting as participants in the same distributed system, not becoming dishonest as a class.
 
 The resume is a replica of the person's work history. It is lossy, stale, and optimized for the reader expected to consume it. The job posting is a replica of the employer's need. It is also lossy, stale, and optimized for the market expected to consume it.
 
 Then both sides compare the replicas and act surprised when reality fails to match.
 
-## Eventual Consistency Is Not Enough
+## Eventual Consistency Fails People
 
 Eventual consistency is useful in software when the system can tolerate temporary disagreement.
 
@@ -210,17 +200,13 @@ Employers have constraints too. They need people. They need process. They need l
 
 Hiring will always have uncertainty.
 
-The problem is that the uncertainty is hidden from the people most affected by it.
-
-A distributed system can be eventually consistent and still terrible to use if callers cannot observe state, retry safely, or understand failure.
-
-That is where hiring is now.
+Hiring hides too much of that uncertainty from the people most affected by it. A distributed system can be eventually consistent and still terrible to use when callers cannot observe state, retry safely, or understand failure.
 
 ## Better Consistency
 
 Perfect transparency would be a bad promise.
 
-Companies will never expose every internal discussion, and they should not. Candidates will never submit a complete representation of themselves, because such a document would be unreadable and possibly illegal to ask for.
+Companies will never expose every internal discussion, and they should not. Candidates will never submit a complete representation of themselves, because such a document would be unreadable, invasive, and likely to include information employers should neither request nor use.
 
 But the system could be much more honest about state.
 
@@ -255,9 +241,7 @@ A better hiring platform would reconcile replicas:
 6. the current state of the req
 7. the reasons candidates moved forward or stopped
 
-That does not mean AI should make the hiring decision.
-
-It means software should help identify where the records disagree.
+Software can help identify where the records disagree without being given authority to make the hiring decision.
 
 If the posting says Python and the hiring manager means production Django at scale, that mismatch should be visible. If the recruiter rejects a candidate for missing Kubernetes but the role only needs container literacy, that should be visible. If the candidate's resume implies relevant incident-response experience without using the expected term, that should be visible.
 
@@ -267,9 +251,7 @@ It should make inconsistency inspectable.
 
 ## Closing Thought
 
-The job market is not broken because every participant is careless.
-
-It is broken because too many participants are acting rationally against stale, partial, and incompatible state.
+The job market can fail even when every participant behaves rationally, because each one acts against stale, partial, and incompatible state.
 
 Candidates optimize resumes for systems that barely acknowledge them. Recruiters search indexes that flatten work into terms. Hiring managers clarify requirements after screening has already happened. Companies leave stale postings online and call the resulting mess a talent market.
 
@@ -279,4 +261,4 @@ The role was paused. The range was wrong. The requirement was different. The man
 
 By then, the damage is already done.
 
-Eventually consistent is not good enough when people are the ones waiting for convergence.
+Eventual consistency leaves people waiting too long for convergence.

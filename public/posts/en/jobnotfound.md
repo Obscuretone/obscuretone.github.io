@@ -12,9 +12,9 @@ Applying for jobs can feel like interacting with software that fails silently.
 
 You submit a resume. You answer screening questions. You may complete interviews, assessments, or take-home work. Then the process ends with a generic rejection, or worse, no response at all.
 
-As a candidate, you know the process failed.
+As a candidate, you know the application did not advance.
 
-You rarely know what failed.
+You rarely know why.
 
 In software, a bad error message is more than annoying. It blocks debugging. It tells the user something went wrong while hiding the information needed to correct it.
 
@@ -22,7 +22,7 @@ Modern hiring often works the same way.
 
 ## The Feedback Gap Is Getting Worse
 
-The data suggests the candidate feedback problem is worsening.
+Recruiting-industry surveys cannot estimate every candidate population, but they describe a widespread feedback problem.
 
 [iHire surveyed 1,024 candidates in October 2025](https://www.ihire.com/resourcecenter/employer/pages/53-percent-of-job-seekers-have-been-ghosted-by-a-potential-employer) and found that 53% had been ghosted by an employer during their job search.
 
@@ -30,9 +30,9 @@ The data suggests the candidate feedback problem is worsening.
 
 That second number matters because post-interview ghosting is not silence after a low-effort application. It happens after the candidate has already spent real time in the employer's process.
 
-At the same time, the macro hiring market has become more confusing. The [Bureau of Labor Statistics reported](https://www.bls.gov/news.release/jolts.nr0.htm) 7.6 million U.S. job openings in May 2026, but only 5.2 million hires. In other words, visible openings do not automatically mean fast hiring, responsive process, or real candidate momentum.
+At the same time, the macro hiring market has become more confusing. The [Bureau of Labor Statistics reported](https://www.bls.gov/news.release/jolts.nr0.htm) 7.6 million U.S. job openings and 5.2 million hires in May 2026. Those figures cannot be treated as a conversion funnel: openings count positions open on the last business day, while hires count additions to payroll throughout the month.
 
-That gap between openings and hires is part of why job seekers can feel disconnected from the market's official story. The jobs are listed. The applications are submitted. The process still goes nowhere.
+The distinction is part of why job seekers can feel disconnected from the market's official story. A large aggregate stock of openings says nothing about whether a particular listing is current, funded, responsive, or likely to close. The jobs are listed. The applications are submitted. The process can still go nowhere.
 
 ## The Error Message Problem
 

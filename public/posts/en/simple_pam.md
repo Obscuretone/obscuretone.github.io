@@ -32,9 +32,9 @@ That is a different kind of programming from writing an application endpoint. Th
 
 ## Why Uptime?
 
-Uptime is not identity. It does not prove who a user is.
+Uptime proves neither identity nor physical presence. At most, recent uptime can suggest physical access: if a system requires a reboot before accepting a login path, the user may have had the ability to power-cycle the device or be near someone who did.
 
-What it can sometimes suggest is physical access. If a system requires recent reboot before accepting a login path, the user likely had the ability to power-cycle the device or be near someone who did.
+That inference depends entirely on the threat model. A remote administrator, watchdog, scheduled restart, power interruption, or attacker with another control path may also produce recent uptime. The signal can support a narrow local policy; it cannot establish identity or physical presence by itself.
 
 That can be useful only in specific contexts, such as:
 

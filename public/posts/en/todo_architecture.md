@@ -8,9 +8,7 @@ description: A project note on using deliberately small todo applications to com
 tags: [software, architecture, frameworks, persistence, systems]
 ---
 
-Todo apps are not interesting because the domain is interesting. The domain is intentionally boring.
-
-That is the point.
+The intentionally boring domain is what makes todo apps useful.
 
 A todo app gives you a fixed problem shape: create, read, update, delete, maybe authenticate, maybe group tasks, maybe expose a UI. Because the product problem is simple, the architecture becomes easier to compare.
 

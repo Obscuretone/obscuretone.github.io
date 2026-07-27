@@ -38,9 +38,7 @@ It does not always mean the human is meaningfully improving the output. Sometime
 
 Sometimes the human is there because the system needs a throat to clear, a box to check, a name to put in the audit log, and a person who can be told they should have known better.
 
-The human is not always the intelligence layer.
-
-The human is the blame adapter.
+The human can become the blame adapter even when they add little to the intelligence layer.
 
 ## The Signature Survives The Skill
 
@@ -88,9 +86,7 @@ This is how oversight becomes a sacrament of liability. A person performs the ri
 
 The next few years may produce whole classes of jobs where the work is mostly AI output and the human role is mostly institutional digestion. You are there to look at the machine's answer, determine whether it is visibly insane, and then lend it your employee ID.
 
-The employee is not there to outperform the machine.
-
-The employee is there to make the machine admissible.
+The employee's practical role becomes making the machine admissible, not outperforming it.
 
 ## Blame Is A Coordination Primitive
 
@@ -160,13 +156,13 @@ The human job expands, but not always upward. Sometimes it expands outward, into
 
 ## The Credential Becomes A Handle
 
-This is also why credentials will not disappear.
+This is also why some credentials and designated roles will not disappear.
 
 People like to imagine AI dissolving credentialism because capability becomes easier to access. If the model can perform the task, who cares where you went to school? If AI can draft the legal memo, why protect the guild? If AI can write production code, why care about the resume?
 
-Because credentials also create handles for accountability.
+Academic degrees, certifications, professional licenses, and job titles are not interchangeable. A degree is usually a hiring signal. A regulated license can also define a standard of practice, a disciplinary body, and a person authorized to perform restricted work. A named organizational role can identify who had power to approve a decision.
 
-They are handles for blame.
+Those latter mechanisms create handles for accountability.
 
 A license means there is a board.
 
@@ -174,13 +170,15 @@ A title means there is an org chart.
 
 A manager means there is a policy owner.
 
-A certified professional means there is a standard that can be invoked after the fact.
+A certification may identify a standard that can be invoked after the fact, although its legal force depends on the credential and jurisdiction.
 
 A named reviewer means there is someone to ask why the generated change was accepted.
 
-Credentials make accountability administratively possible. They convert a diffuse system into a legible person.
+Licenses and assigned roles make accountability administratively legible. They can convert one part of a diffuse system into a named person.
 
 This is one reason institutions will automate work while preserving human chokepoints. Quality matters, but liability keeps the chokepoint alive.
+
+The named person is still only one node in the chain. A provider built the system. An employer selected it. Managers set the review time, incentives, and escalation path. A deployer decided where the output would be used. Human accountability should not erase organizational accountability for those choices.
 
 ## The Future Is Human Attached To Machine
 
@@ -190,7 +188,7 @@ That arrangement will be unstable.
 
 If the human has real authority, then AI remains a tool and the human can reject it. That is expensive. It requires time, expertise, confidence, and organizational permission to slow down.
 
-If the human has no real authority, then "human oversight" becomes decorative. The person is responsible for outputs they cannot meaningfully inspect, produced by systems they cannot meaningfully control, under incentives they cannot meaningfully resist. The EU AI Act's high-risk-system rules make the same distinction in legal language by requiring systems to be designed so natural persons can [effectively oversee them while in use](https://artificialintelligenceact.eu/section/3-2/).
+If the human has no real authority, then "human oversight" becomes decorative. The person is responsible for outputs they cannot meaningfully inspect, produced by systems they cannot meaningfully control, under incentives they cannot meaningfully resist. The [EU AI Act](https://eur-lex.europa.eu/eli/reg/2024/1689/oj?locale=en) makes the distinction concrete for high-risk systems: Article 14 requires effective human oversight, while Articles 16 and 26 separately impose obligations on providers and deployers. It does not treat a person in the workflow as a universal solvent for responsibility.
 
 Oversight needs more than placement in a workflow.
 
