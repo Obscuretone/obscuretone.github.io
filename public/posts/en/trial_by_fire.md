@@ -8,13 +8,11 @@ description: Production incidents are a real signal of engineering experience. T
 tags: [production, incidents, hiring, engineering, evidence]
 ---
 
-One of my favorite interview questions is simple:
+One of my favorite interview questions is:
 
 > Tell me about the last time something broke in production.
 
-I do not like this question because I want to punish people for making mistakes.
-
-I like it because production is where software stops being theoretical.
+I ask because production is where software stops being theoretical, not because I want to punish people for making mistakes.
 
 Local development is controlled. Tests are selective. Staging is a model. Production has real users, real data, real concurrency, real integrations, real permissions, real traffic, real money, and real organizational pressure.
 
@@ -78,15 +76,11 @@ There is a bad version of this question:
 
 > Have you suffered enough to be allowed in?
 
-That version is useless.
-
-The good version is:
+That version is useless. A better version is:
 
 > What did production teach you that tests, code review, and local development did not?
 
-That is signal.
-
-A production incident reveals how someone behaves when the abstraction leaks. It shows whether they can stay calm, gather evidence, communicate clearly, reduce blast radius, make reversible changes, and learn without hiding.
+A production incident provides signal about how someone behaves when the abstraction leaks. It shows whether they can stay calm, gather evidence, communicate clearly, reduce blast radius, make reversible changes, and learn without hiding.
 
 Those are real engineering skills. They are also recognizably operational skills: Google's SRE guidance on monitoring describes production systems in terms of [symptoms, causes, alerts, and user-visible behavior](https://sre.google/sre-book/monitoring-distributed-systems/ "production, incidents, engineering | Google SRE"), which is exactly the world an incident story has to navigate.
 
@@ -96,7 +90,7 @@ I have used this question in real interviews.
 
 If someone says they have never broken production, I do not treat the sentence itself as a fail. I ask what they have operated, how releases worked, what incidents they helped investigate, and what near misses changed their practice.
 
-The useful signal comes from proximity to consequences and the ability to learn from them, not guilt.
+The useful signal comes from proximity to consequences and the ability to learn from them rather than guilt.
 
 For a junior engineer, a developer without deployment access, or someone working in a tightly controlled environment, an equivalent story may be a failed test rollout, a support escalation, a defect caught before release, or an incident they helped diagnose rather than caused.
 
@@ -114,13 +108,9 @@ Some filters are worse than weak. They use protected characteristics instead of 
 
 Canadian employment-discrimination law is divided by jurisdiction. The Canadian Human Rights Commission handles only [federal matters](https://www.chrc-ccdp.gc.ca/find-help/file-discrimination-complaint/find-out-if-you-are-right-place), while provincial and territorial bodies cover most employers and may define grounds, exceptions, and procedures differently. In the United States, the EEOC describes sex discrimination in hiring as a [prohibited employment practice](https://www.eeoc.gov/prohibited-employment-policiespractices).
 
-That is another reason to prefer questions connected to the work.
+That is another reason to prefer questions connected to the work. Production incidents are part of software engineering, and how someone talks about them tells me more than a polished resume, a brand-name employer, a school, an email domain, or a rehearsed answer about strengths and weaknesses.
 
-Production incidents are part of software engineering. How someone talks about them tells me more than a polished resume, a brand-name employer, a school, an email domain, or a rehearsed answer about strengths and weaknesses.
-
-Find me a better filter that is actually available in a real interview, under real time constraints, with the information employers really use.
-
-Until then, I will keep asking.
+Until someone finds a better filter that is available in a real interview, under real time constraints and with the information employers really use, I will keep asking.
 
 ## Why Production Is Different
 
@@ -153,11 +143,7 @@ They usually include:
 6. how the root cause was found
 7. what changed afterward
 
-The best answers are not heroic. They are boring in the right way.
-
-The engineer noticed evidence, narrowed the problem, communicated impact, chose a reversible mitigation, preserved information for root-cause analysis, and turned the incident into better tests, monitoring, design, or process.
-
-That is what maturity looks like.
+The best answers are boring in the right way rather than heroic. The engineer noticed evidence, narrowed the problem, communicated impact, chose a reversible mitigation, preserved information for root-cause analysis, and turned the incident into better tests, monitoring, design, or process. That is what maturity looks like.
 
 ## A Useful Incident Story
 
@@ -167,11 +153,9 @@ The system was eventually consistent and correct for the overwhelming majority o
 
 The result was that a minimum usage charge could be calculated incorrectly. Most discrepancies were small, but some were large enough to require manual review.
 
-The technical fix mattered, but the broader lesson mattered more: tests covered the expected paths, but not the lifecycle interaction that caused the issue.
+The technical fix mattered, but the broader lesson mattered more: tests covered the expected paths but missed the lifecycle interaction that caused the issue. The follow-up improved the test cases around revisions, made the calculation easier to reason about, and added checks that surfaced unusual billing outcomes earlier.
 
-The follow-up was to improve the test cases around revisions, make the calculation easier to reason about, and add checks that surfaced unusual billing outcomes earlier.
-
-That is the kind of story I want to hear in interviews. Not perfection. Ownership, analysis, and improvement.
+That is the kind of story I want to hear in interviews: ownership, analysis, and improvement instead of a claim of perfection.
 
 ## What The Question Actually Tests
 
@@ -186,16 +170,10 @@ It tests:
 5. **Learning:** Did the incident lead to better tests, monitoring, process, or design?
 6. **Humility:** Do they understand that real systems fail in ways no one fully predicts?
 
-The red flag is the absence of ownership.
-
-Lack of access says little by itself. The concern is claimed ownership without a failure, a near miss, or anything the system taught you.
+The red flag is the absence of ownership. Lack of access says little by itself; the concern is claimed ownership without a failure, a near miss, or anything the system taught you.
 
 ## Closing Thought
 
-Breaking production confers no badge of honor. Learning from the failure is what matters.
+Breaking production confers no badge of honor; learning from the failure is what matters. The strongest engineers can explain what happened, how they responded, and how the system became better afterward instead of claiming that nothing ever goes wrong.
 
-The strongest engineers are not the ones who claim nothing ever goes wrong. They are the ones who can explain what happened, how they responded, and how the system became better afterward.
-
-Production is not fair, but it is honest.
-
-Eventually, it grades the assumptions.
+Production is unfair but honest, and eventually it grades the assumptions.

@@ -8,13 +8,7 @@ description: As AI absorbs more work, institutions will still need a person-shap
 tags: [ai, accountability, work, liability, institutions]
 ---
 
-The last human job will not be creativity.
-
-It will not be empathy.
-
-It will not be leadership, taste, strategy, wisdom, or whatever else people put in keynote slides when they are trying to make mass automation sound like a leadership retreat.
-
-The last human job is blame.
+The last human job will not be creativity, empathy, leadership, taste, strategy, wisdom, or whatever else people put in keynote slides when they are trying to make mass automation sound like a leadership retreat. The last human job is blame.
 
 AI can write the memo. AI can draft the code. AI can summarize the meeting, triage the ticket, screen the resume, identify the suspicious transaction, recommend the treatment, generate the policy brief, and produce a perfect little paragraph explaining why all of this is fine.
 
@@ -22,9 +16,7 @@ But when it fails, somebody still has to be standing there.
 
 Somebody has to approve the change. Somebody has to sign the form. Somebody has to hold the license. Somebody has to answer the email. Somebody has to attend the hearing. Somebody has to say, with a straight face, that appropriate oversight was applied. The governance language around AI already points this way: NIST's AI Risk Management Framework treats trustworthy AI as including [accountability, transparency, explainability, safety, and risk management](https://www.nist.gov/itl/ai-risk-management-framework), which are organizational burdens before they are model features.
 
-The model can do the work.
-
-The model cannot be fired.
+The model can do the work, but it cannot be fired.
 
 ## One Last Breath
 
@@ -32,9 +24,7 @@ This is where I regret to inform you that Creed may have been doing labor-market
 
 When the system is six feet from the edge and everyone is thinking maybe six feet is not so far down, task performance stops being the scary part. The institution has to survive the fall with no human body between the decision and the consequence.
 
-That is what "human in the loop" often means.
-
-It does not always mean the human is meaningfully improving the output. Sometimes they are. Often they are not.
+That is what "human in the loop" often means. The human may improve the output, but improvement is not guaranteed.
 
 Sometimes the human is there because the system needs a throat to clear, a box to check, a name to put in the audit log, and a person who can be told they should have known better.
 
@@ -44,27 +34,13 @@ The human can become the blame adapter even when they add little to the intellig
 
 Automation eats tasks before it eats accountability.
 
-A doctor may use AI to read scans, summarize patient histories, draft notes, or suggest diagnoses. But the doctor still signs.
-
-A lawyer may use AI to search cases, draft arguments, compare clauses, or summarize discovery. But the lawyer still files.
-
-An engineer may use AI to write code, generate tests, review logs, or propose an incident fix. But the engineer still merges.
-
-A manager may use AI to rank candidates, draft performance reviews, summarize meetings, or plan layoffs. But the manager still delivers the news.
+A doctor may use AI to read scans, summarize histories, draft notes, or suggest diagnoses, but the doctor still signs. A lawyer may use it to search cases, draft arguments, compare clauses, or summarize discovery, but the lawyer still files. An engineer can generate code, tests, log reviews, or incident fixes, but still merges the result, just as a manager remains responsible for delivering decisions produced with automated help.
 
 The visible skill can shrink while the accountability surface remains.
 
 Institutions like signatures. They turn messy chains of causality into a single convenient point.
 
-A signature says:
-
-> This passed through a person.
-
-It does not say:
-
-> This person understood everything.
-
-Those are very different claims.
+A signature says, "This passed through a person." It does not establish that the person understood everything, and those claims should not be confused.
 
 ## Approval Is Not Understanding
 
@@ -72,17 +48,9 @@ AI makes it cheap to generate work that looks complete.
 
 That is useful. It is also dangerous, because approval can become theater.
 
-The human reads the generated report quickly. The human skims the diff. The human clicks accept. The human says the recommendation seems reasonable. The human adds a sentence to the email so it sounds less like a copier achieved sentience.
+The human reads the generated report quickly, skims the diff, clicks accept, says the recommendation seems reasonable, and adds a sentence to the email so it sounds less like a copier achieved sentience. The work now has a responsible party, although it may have gained neither a better decision nor deeper understanding. It has gained a cleaner story.
 
-Now the work has a responsible party.
-
-Not necessarily a better decision.
-
-Not necessarily a deeper understanding.
-
-Just a cleaner story.
-
-This is how oversight becomes a sacrament of liability. A person performs the ritual. The institution receives the protection.
+This is how oversight becomes a sacrament of liability: a person performs the ritual and the institution receives the protection.
 
 The next few years may produce whole classes of jobs where the work is mostly AI output and the human role is mostly institutional digestion. You are there to look at the machine's answer, determine whether it is visibly insane, and then lend it your employee ID.
 
@@ -92,63 +60,30 @@ The employee's practical role becomes making the machine admissible, not outperf
 
 Blame sounds moral, but it is also operational.
 
-When something breaks, blame tells an organization where to route consequence.
+When something breaks, blame tells an organization where to route consequence:
 
-Who gets paged?
-
-Who writes the incident report?
-
-Who talks to the customer?
-
-Who loses authority?
-
-Who changes the process?
-
-Who becomes the reason this will never happen again, at least until the next time it happens again?
+1. who gets paged and writes the incident report
+2. who talks to the customer
+3. who loses authority or changes the process
+4. who becomes the reason this will never happen again, at least until the next time it happens again
 
 Without blame, failure becomes fog. Everyone was involved. The system was complex. The model produced a recommendation. The workflow followed policy. The dashboard was green. The meeting notes were accurate. The decision was collectively understood to be aligned with current priorities.
 
-Great.
-
-Now who owns the damage?
+The record can be immaculate while leaving the only important question unanswered: who owns the damage?
 
 Organizations are bad at living with unassigned consequence. They need a stack trace, and the stack trace eventually needs a human frame.
 
 That is why "the AI did it" will not satisfy anyone for very long.
 
-The customer does not care that the model hallucinated.
+The customer does not care that the model hallucinated, the regulator does not care that the vendor liked its benchmark, the judge does not care that the prompt was ambiguous, and the patient does not care about a low observed error rate. Likewise, the user harmed by generated code gains little comfort from its statistical plausibility.
 
-The regulator does not care that the vendor said the benchmark looked good.
-
-The judge does not care that the prompt was ambiguous.
-
-The patient does not care that the system had a low observed error rate.
-
-The user does not care that the generated code was statistically plausible.
-
-Somebody adopted the output. Somebody benefited from the automation. Somebody put it into the world.
-
-That somebody is where the blame goes.
+Somebody adopted the output, benefited from the automation, and put it into the world. That is where the blame goes.
 
 ## With Arms Wide Open
 
 The funny part is that companies will describe this as empowerment.
 
-AI will let every employee do more. AI will make teams more strategic. AI will remove drudgery. AI will free humans for higher-value work.
-
-Maybe.
-
-But there is another version.
-
-AI lets one person supervise more processes than they can understand.
-
-AI lets one manager approve more decisions than they can review.
-
-AI lets one engineer ship more code than they can reason about.
-
-AI lets one analyst produce more reports than they can defend.
-
-AI lets one customer-support agent become the named human surface area for a policy they did not write, a model they did not train, and a product they cannot change.
+Companies will promise that AI lets every employee do more, makes teams strategic, removes drudgery, and frees humans for higher-value work. Another version is equally plausible: one person supervises more processes than they understand, one manager approves more decisions than they can review, one engineer ships more code than they can reason about, and one analyst produces more reports than they can defend. A customer-support agent can become the named human surface for a policy they did not write, a model they did not train, and a product they cannot change.
 
 That is blast-radius expansion with a lanyard.
 
@@ -162,13 +97,7 @@ People like to imagine AI dissolving credentialism because capability becomes ea
 
 Academic degrees, certifications, professional licenses, and job titles are not interchangeable. A degree is usually a hiring signal. A regulated license can also define a standard of practice, a disciplinary body, and a person authorized to perform restricted work. A named organizational role can identify who had power to approve a decision.
 
-Those latter mechanisms create handles for accountability.
-
-A license means there is a board.
-
-A title means there is an org chart.
-
-A manager means there is a policy owner.
+Those latter mechanisms create handles for accountability: a license points to a board, a title to an org chart, and a manager to a policy owner.
 
 A certification may identify a standard that can be invoked after the fact, although its legal force depends on the credential and jurisdiction.
 
@@ -182,60 +111,34 @@ The named person is still only one node in the chain. A provider built the syste
 
 ## The Future Is Human Attached To Machine
 
-The future is a bureaucracy where machines do more of the work and humans remain attached to the consequences.
-
-That arrangement will be unstable.
+The future may be a bureaucracy where machines do more of the work and humans remain attached to the consequences, an arrangement that will be unstable.
 
 If the human has real authority, then AI remains a tool and the human can reject it. That is expensive. It requires time, expertise, confidence, and organizational permission to slow down.
 
 If the human has no real authority, then "human oversight" becomes decorative. The person is responsible for outputs they cannot meaningfully inspect, produced by systems they cannot meaningfully control, under incentives they cannot meaningfully resist. The [EU AI Act](https://eur-lex.europa.eu/eli/reg/2024/1689/oj?locale=en) makes the distinction concrete for high-risk systems: Article 14 requires effective human oversight, while Articles 16 and 26 separately impose obligations on providers and deployers. It does not treat a person in the workflow as a universal solvent for responsibility.
 
-Oversight needs more than placement in a workflow.
-
-That is liability laundering.
+Treating placement in a workflow as sufficient oversight is liability laundering.
 
 The real question for AI adoption is whether the human has enough power, time, and information for their accountability to be honest.
 
-If not, the loop is theater.
+Without those conditions, the loop is theater.
 
 ## My Sacrifice
 
 There is another Creed joke here, obviously, but the song title is doing more work than I expected.
 
-That is the shape of the deal being offered to a lot of workers:
-
-Let AI make you faster.
-
-Let AI make you broader.
-
-Let AI make you responsible for more decisions, more documents, more code, more customers, more exceptions, more edge cases, more output.
+The deal being offered to many workers is straightforward: let AI make you faster and broader, then become responsible for more decisions, documents, code, customers, exceptions, edge cases, and output.
 
 Then, when something fails, be grateful that your human judgment still matters.
 
-That is the sacrifice.
-
-Not that AI takes all the work.
-
-That AI leaves you the part that hurts.
+The sacrifice is that AI need not take all the work to leave you the part that hurts.
 
 ## The Last Job
 
-There will still be human creativity. There will still be human judgment. There will still be care, taste, trust, courage, and all the other stubborn little things people do that do not fit neatly into a benchmark.
+Human creativity and judgment will remain, along with care, taste, trust, courage, and all the other stubborn little things that do not fit neatly into a benchmark. The labour market does not guarantee a job for those qualities, but it has a durable use for blame.
 
-But those are not guaranteed by the labor market.
+As long as institutions need responsibility to land somewhere, they will need people, whether or not people are better at the task, more creative, or newly respected by a spreadsheet with a soul. Somebody has to carry the consequence.
 
-Blame is.
-
-As long as institutions need responsibility to land somewhere, they will need people. Not necessarily because people are better at the task. Not necessarily because people are more creative. Not necessarily because people have a soul and the spreadsheet finally learned respect.
-
-Because somebody has to carry the consequence.
-
-The model can generate.
-
-The organization can deploy.
-
-The dashboard can glow.
-
-The policy can say a human reviewed it.
+The model can generate, the organization can deploy, the dashboard can glow, and the policy can say a human reviewed it.
 
 And when the whole thing goes wrong, someone still has to take one last breath and open the incident report.
