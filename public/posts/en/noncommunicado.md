@@ -89,3 +89,237 @@ Once I stopped thinking in terms of leaving a belief system, I started thinking 
 That is a very different question.
 
 And, unexpectedly, a much more interesting one.
+
+## The Question I Was Actually Asking
+
+At some point I stopped trying to rewrite the sentence and started trying to understand why it kept failing.
+
+That isn't always an easy distinction to recognize. Engineers are trained to fix things, and the temptation when something doesn't work is to start changing the implementation. Rename the variable. Rearrange the logic. Add another condition. Refactor the function. Most of the time that instinct is useful. Occasionally it's exactly the wrong thing to do because the implementation isn't the problem. The implementation is faithfully expressing a model that happens to be incorrect.
+
+That was what had happened here.
+
+I wasn't arguing with the wording.
+
+I was arguing with the assumptions hidden underneath the wording.
+
+Eventually I gave up on editing altogether, opened a blank page, and wrote a single sentence by itself.
+
+> One cannot leave a system they were never part of.
+
+I remember staring at it for a while because it immediately felt more important than anything I'd written in the declaration itself. It didn't solve the problem, but it explained why the problem existed. Every paragraph I'd been struggling with suddenly looked like an attempt to either defend or refute that sentence.
+
+The obvious objection presented itself immediately.
+
+*"Of course you were part of the system."*
+
+I had been baptized. I attended Catholic schools. I made my First Communion. I was confirmed. I was married in a Catholic church. My childhood was unquestionably shaped by Catholic institutions. If someone had described my upbringing as Catholic, I wouldn't object for a second. It plainly was.
+
+So in what sense could I possibly claim that I had never been part of the system?
+
+The answer, I eventually realized, depended entirely on what kind of system we were talking about.
+
+If we're talking about a social system, then yes, I was part of it. If we're talking about an institution, then certainly. If we're talking about parish records, school systems, family traditions, or cultural expectations, there is nothing controversial about saying that Catholicism formed part of my childhood.
+
+But belief is not a social system.
+
+Belief is an epistemic one.
+
+The defining relationship within a religious belief system is not attendance, participation, or administration. It is assent. The system operates because its members accept certain propositions as true. Without that, participation may continue, but participation and membership cease to mean the same thing.
+
+That was the distinction I had been missing.
+
+A child sitting through Mass tells us where they spent Sunday morning. It tells us remarkably little about what propositions they actually accepted as true.
+
+For years I had allowed biography to stand in for belief simply because the two had always appeared together. Once I separated them, the declaration stopped being an explanation of why I had abandoned Catholicism and became an investigation into whether I had ever occupied the category I was supposedly leaving.
+
+## Finding the Root Cause
+
+Software engineers spend an unreasonable amount of time chasing bugs that aren't really bugs.
+
+A user reports that clicking one button causes another page to display incorrect information. You investigate the page, then the API, then the database query, and eventually discover that none of those components are actually wrong. They're all faithfully implementing an assumption that entered the system months or years earlier. The visible bug is merely where reality finally collided with the model.
+
+Once you've seen that happen enough times, you become suspicious of local fixes.
+
+When the same idea keeps appearing in different places, you stop asking how to fix each occurrence and start asking why the duplication exists at all.
+
+My declaration reached exactly that point.
+
+I had written separate sections about baptism, childhood, participation, consent, institutional authority, historical records, and belief. They all seemed different while I was writing them. During revision they started collapsing into one another. I found myself deleting paragraphs not because they were incorrect, but because they were saying exactly the same thing through different examples.
+
+I hadn't discovered several arguments.
+
+I had discovered one argument several times.
+
+The declaration wasn't suffering from weak reasoning.
+
+It was suffering from duplicated reasoning.
+
+That realization changed the way I edited the document. Instead of asking whether a paragraph was persuasive, I began asking whether it introduced a genuinely new idea. If the answer was no, it disappeared. Once the underlying principle had been identified, the declaration became substantially shorter without, I think, becoming any less complete.
+
+That principle wasn't really about Catholicism.
+
+Catholicism happened to be the system that exposed the problem, but the principle itself is broader.
+
+One cannot leave a system they were never part of.
+
+The more carefully I considered that sentence, the less interested I became in arguing about religion itself. The interesting question was no longer whether Christianity was true. The interesting question was what it actually means to be *part* of any system whose defining characteristic is belief.
+
+The answer, at least as I understand it, is that participation can be assigned.
+
+Belief cannot.
+
+Parents can decide where a child goes to school.
+
+They cannot decide what convinces that child.
+
+An institution can record that a baptism occurred.
+
+It cannot record that a proposition was believed unless it actually was.
+
+Those sound like small distinctions.
+
+I think they're fundamental.
+
+## Truth and Consent
+
+Once the declaration was organized around that principle, another distinction became impossible to ignore.
+
+Earlier drafts had blurred together two different objections because they happened to point toward the same practical conclusion.
+
+The first objection concerns truth.
+
+I do not believe Christianity is an accurate description of reality. That conclusion rests on the same standards I try to apply elsewhere in my life. Claims about miracles, revelation, divine intervention, or supernatural authority require evidence just as claims in any other domain do. After years of reading, thinking, and occasionally arguing with myself, I reached the conclusion that Christianity does not meet that standard.
+
+That is one argument.
+
+The second argument concerns something entirely different.
+
+Suppose I am wrong.
+
+Suppose every miracle occurred exactly as described.
+
+Suppose Catholic theology turned out to be entirely correct.
+
+Would that change the conclusion that brought me to write the declaration?
+
+Surprisingly, I don't think it would.
+
+It would completely change my understanding of the universe.
+
+It would not change my understanding of consent.
+
+A proposition can be true without giving another person permanent authority to define my identity. Those are different categories of claim. One concerns objective reality. The other concerns the relationship between institutions and individuals.
+
+I think confusing those two questions has produced a remarkable amount of unnecessary disagreement. People often argue as though proving a religion true would automatically settle every question about affiliation, identity, or belonging. I don't think it does.
+
+Even if Catholicism were objectively true, the statement "I am Catholic because I was baptized as an infant" would still require an argument beyond the truth of Catholic doctrine itself.
+
+Truth does not eliminate the distinction between participation and assent.
+
+That distinction survives either way.
+
+Which is another reason I became convinced that the declaration was never really about proving Christianity wrong.
+
+It was about describing my own relationship to it accurately.
+
+## Why Accuracy Matters
+
+If this declaration accomplishes anything at all, it will almost certainly be modest.
+
+Perhaps someone in a diocesan office will read it, make a notation in a register, and file it away. Perhaps nothing will happen beyond an acknowledgement that it was received. Either way, my life tomorrow morning will look almost exactly as it did yesterday. I will still go to work, still worry about deadlines, still argue with software that refuses to behave the way its documentation insists it should. The practical consequences of this document are, by any reasonable standard, insignificant.
+
+Which raises an obvious question.
+
+Why write it at all?
+
+The answer has changed considerably since I began.
+
+At first, I thought I was writing to explain why I rejected Catholicism. That certainly remains part of the declaration, but somewhere during the revisions I realized that I cared far less about persuading anyone else than I did about describing my own position honestly. The declaration became less of an argument and more of an exercise in precision.
+
+That distinction matters.
+
+Arguments are written to change another person's mind. Precision is pursued because you become dissatisfied with your own language.
+
+Every revision I made over the past week had the same purpose. Not to strengthen the rhetoric. Not to make the document more confrontational. Quite the opposite. I removed sarcasm because it distracted from the point. I removed repetition because I had finally realized that several paragraphs were expressing the same underlying idea. Most importantly, I removed sentences that I no longer believed accurately described my own experience, even if they sounded perfectly natural.
+
+"I left the Catholic Church" was one of those sentences.
+
+People say it every day, and I understand exactly what they mean when they do. It simply isn't the description that best fits my own life.
+
+That is a surprisingly small distinction.
+
+It is also the entire reason this essay exists.
+
+I have spent enough years building software to develop an almost instinctive discomfort with models that no longer correspond to reality. A program can continue functioning while quietly accumulating incorrect assumptions about the world it represents. Eventually those assumptions stop being harmless shortcuts and start becoming sources of confusion. The obvious solution is not to defend the model because it has always existed. The solution is to improve it until it more faithfully represents the thing it was meant to describe.
+
+I eventually realized that I was trying to do the same thing with language.
+
+The declaration is not an attempt to rewrite history.
+
+I was baptized.
+
+I was raised in Catholic institutions.
+
+Catholicism shaped my childhood in ways that will always remain part of my biography.
+
+None of those facts trouble me because they are, quite simply, true.
+
+The question was never whether those things happened.
+
+The question was whether they were sufficient to describe who I am today.
+
+I no longer believe they are.
+
+That conclusion doesn't require anyone else to abandon their theology. It doesn't require the Church to stop believing in the permanence of baptism, nor does it require anyone reading this essay to agree with my understanding of identity.
+
+It requires only that I stop describing myself in words that I no longer believe correspond to reality.
+
+## Finishing the Letter
+
+The declaration is still sitting on my desk.
+
+Perhaps by the time you read this it will have been mailed. Perhaps it won't. I honestly don't know.
+
+For the past week I have repeatedly convinced myself that it was finished, only to discover another sentence that seemed just slightly wrong. Not dramatically wrong. Not dishonest. Just imprecise enough that I knew I would continue thinking about it if I allowed it to remain.
+
+That isn't hesitation.
+
+It's quality control.
+
+When I first sat down to write the declaration, I thought I understood exactly what I was trying to say. Looking back, I don't think I understood it at all. I had reached the conclusion years earlier, but I hadn't yet identified the assumptions hidden inside the language I was using to express it.
+
+The declaration forced me to do that.
+
+It forced me to ask why one sentence felt wrong when everyone else seemed perfectly comfortable saying it. It forced me to distinguish participation from belief, history from identity, biography from assent. Most unexpectedly, it forced me to confront a question that had very little to do with Catholicism and a great deal to do with how I think about the world.
+
+I care about describing reality as accurately as I know how.
+
+That sounds almost embarrassingly ordinary.
+
+It is also the principle that connects nearly everything I care about, from engineering to science to philosophy. Models matter because they shape the way we think. When a model stops corresponding to reality, we don't preserve it out of sentiment. We replace it with a better one.
+
+Somewhere during the process of writing this declaration, I realized that I had been carrying around an inaccurate model of my own relationship with the Church.
+
+Once I recognized that, the revisions became almost inevitable.
+
+The document became shorter.
+
+The argument became simpler.
+
+The conclusion became clearer.
+
+Eventually only one sentence remained that seemed capable of expressing what I had been trying to articulate all along.
+
+> One cannot leave a system they were never part of.
+
+Whether you agree with that sentence is, in some ways, beside the point.
+
+It is the sentence that finally allowed me to describe my own experience without feeling that I was borrowing someone else's story.
+
+The declaration is not, for me, the story of leaving the Catholic Church.
+
+It is the story of finally finding language that describes, as honestly as I know how, the relationship that existed all along.
+
+That turned out to be a much more interesting problem than the one I thought I was solving.
+
+And, I think, a much more worthwhile one. 
