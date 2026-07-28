@@ -8,17 +8,13 @@ description: A 2026 retrospective on AI-assisted software development, arguing t
 tags: [ai, software, engineering, review, accountability]
 ---
 
-When AI coding tools first became useful, the obvious question was whether they would replace software developers.
-
-That was the wrong question.
-
-The better question was: who gets more leverage from the tool?
+When AI coding tools first became useful, the obvious question was whether they would replace software developers. A more useful question was who would get the most leverage from the tool.
 
 The answer, at least so far, depends on the task and the system around it. AI is easiest to use safely when the person or team can evaluate the output. It can generate boilerplate, draft tests, summarize unfamiliar code, explain APIs, and propose implementations quickly. The generated text has value, but durable leverage comes from knowing what to accept, what to reject, and what still needs to be reasoned through.
 
 AI can do useful work. The modern problem is that it can create more work than the existing QA, review, and deployment pipelines were designed to absorb.
 
-That is why AI has not removed the need for strong developers. It has changed the bar for what strong development looks like.
+AI therefore has not removed the need for strong developers; it has changed the bar for what strong development looks like.
 
 ## The Original Claim
 
@@ -26,9 +22,7 @@ The original version of this argument compared AI to a performance enhancer for 
 
 AI does not turn an inexperienced developer into a senior engineer. It may help a newer developer substantially on a bounded task, and it may give an experienced developer a faster way to explore options or generate drafts. Neither result removes the need to judge the output in context.
 
-The difference is review.
-
-A senior developer can look at AI output and ask:
+Review makes the difference. A senior developer can look at AI output and ask:
 
 1. Does this fit the architecture?
 2. Is the error handling correct?
@@ -65,11 +59,11 @@ But real software work is not always a bounded greenfield task. Mature codebases
 
 That is where the picture gets complicated. In 2025, [METR ran a randomized controlled trial](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/) with experienced open-source developers working on their own repositories. In that setting, AI tools made developers slower by about 19%.
 
-That result was surprising, but not absurd. In mature systems, AI can generate work that looks useful while creating review, correction, and integration costs. The time saved writing code can be lost checking whether the code should exist.
+That result was surprising but plausible. In mature systems, AI can generate work that looks useful while creating review, correction, and integration costs. The time saved writing code can be lost checking whether the code should exist.
 
 METR later noted in a [2026 update](https://metr.org/blog/2026-02-24-uplift-update/) that the 2025 result had become out of date quickly. Developers had become more reluctant to work without AI, task selection changed, and newer agentic tools made the effect harder to measure. Their later data suggested speedups may have emerged, but the measurement itself had become more difficult because AI changed how developers choose and perform tasks.
 
-That is the point: AI productivity is not a single number. It depends on the task, the developer, the codebase, the tool, the review standard, and the organization around it.
+AI productivity cannot be reduced to a single number because it depends on the task, the developer, the codebase, the tool, the review standard, and the organization around it.
 
 ## AI Amplifies The System
 
@@ -99,9 +93,7 @@ AI does not fix a bad engineering system. It makes the system move faster. Wheth
 
 ## The Review Bottleneck
 
-This is the part that feels most current to me.
-
-AI makes it easier to produce code, but code production was not the only constraint in software engineering. Often it was not even the most important one.
+The review bottleneck feels like the most current part of the argument. AI makes it easier to produce code, but code production was never the only constraint in software engineering and was often not even the most important one.
 
 The real constraints were things like:
 
@@ -119,7 +111,7 @@ That is the uncomfortable operational problem: AI can increase implementation th
 
 If those systems do not scale, AI does not create a clean productivity gain. It creates queueing pressure.
 
-The failure mode is not dramatic. It looks ordinary:
+The resulting failure mode looks ordinary:
 
 1. pull requests get larger
 2. reviewers skim more
@@ -160,15 +152,13 @@ The central question is no longer:
 
 > Can AI write code?
 
-Of course it can.
-
-The better question is:
+It plainly can. The better question is:
 
 > Who is accountable for the system?
 
 If an AI-generated change breaks production, leaks data, weakens security, or silently corrupts a workflow, the responsibility still belongs to the people and organization that accepted it.
 
-That makes engineering judgment more important, not less. The durable skills are the ones AI cannot own for you:
+That makes engineering judgment more important. The durable skills are the ones AI cannot own for you:
 
 1. understanding the problem
 2. choosing the right abstraction
@@ -178,14 +168,10 @@ That makes engineering judgment more important, not less. The durable skills are
 6. communicating uncertainty
 7. operating the system after it ships
 
-AI can help with many of those. It cannot be accountable for them.
+AI can help with many of those tasks, but it cannot be accountable for them.
 
 ## Closing Thought
 
 The early performance-enhancer analogy held up only after moving it up a level. AI can amplify people and teams capable of using it well, but experience alone does not tell us who will receive the largest measured speedup.
 
-It made routine work cheaper. It made first drafts faster. It made code generation less scarce.
-
-But it also made review, judgment, architecture, QA, and accountability more important. The bottleneck moved. The scarce skill is no longer typing the code. It is knowing what code should exist, whether the generated version is good enough, whether the delivery system can validate it, and what happens when it reaches production.
-
-That is the new bar.
+AI made routine work cheaper, first drafts faster, and code generation less scarce. It also made review, judgment, architecture, QA, and accountability more important. The bottleneck moved from typing code toward knowing what code should exist, whether the generated version is good enough, whether the delivery system can validate it, and what happens when it reaches production. That is the new bar.

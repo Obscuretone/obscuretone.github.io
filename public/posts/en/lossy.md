@@ -8,19 +8,7 @@ description: Hiring starts by compressing people and work into tiny artifacts, t
 tags: [hiring, resumes, compression, evidence, systems]
 ---
 
-Hiring starts with two compression artifacts.
-
-A resume compresses a person's working life into a few pages.
-
-A job description compresses an organization's need into a public advertisement.
-
-Then everyone pretends those two artifacts can be compared cleanly.
-
-They cannot.
-
-Both are lossy.
-
-The interesting information is often exactly what gets discarded.
+Hiring starts with two compression artifacts: a resume reduces a person's working life to a few pages, while a job description reduces an organization's need to a public advertisement. Everyone then pretends the artifacts can be compared cleanly, even though both are lossy and often discard exactly the information that matters.
 
 ## The Resume Is Not The Person
 
@@ -32,7 +20,7 @@ The resume is a compressed representation rather than a record of the work.
 
 Compression is not automatically bad. A good resume should summarize. Nobody wants a complete event log of every meeting, outage, migration, argument, incident, refactor, design review, and production surprise.
 
-But compression always chooses what to keep.
+Compression always chooses what to keep.
 
 A resume tends to preserve:
 
@@ -61,9 +49,7 @@ That is a problem because the discarded information is often the part that disti
 
 ## The Job Description Is Not The Job
 
-The job description is just as compressed.
-
-It takes a messy organizational reality and turns it into a public-facing role.
+The job description is equally compressed because it turns a messy organizational reality into a public-facing role.
 
 The real job may involve a legacy system nobody wants to mention, a manager trying to backfill someone irreplaceable, a team recovering from a failed migration, a product that has outgrown its architecture, or a political problem disguised as a technical one. Even at the aggregate level, the job ad is only a partial signal: the U.S. Bureau of Labor Statistics treats job openings and hires as distinct measures in [JOLTS](https://www.bls.gov/jlt/ "hiring, evidence, systems | BLS"), which is a polite statistical way of saying a posted opening is not the same thing as a completed job match.
 
@@ -75,9 +61,7 @@ The posting usually says:
 4. work with Python, React, Kubernetes, AWS, PostgreSQL, or whatever terms survived the editing process
 5. thrive in a fast-paced environment
 
-That is a placeholder for a job.
-
-That is a brochure for a job.
+The result is a placeholder and a brochure for a job, not the job itself.
 
 Like a resume, the job description preserves the easiest signals to publish. It keeps tools, responsibilities, seniority, location, salary if legally required, and a general sense of the company's self-image.
 
@@ -93,33 +77,19 @@ It discards the things candidates most need to know:
 8. whether the budget is approved
 9. whether the system is stable, burning, or quietly haunted by past decisions
 
-Candidates apply to the brochure.
-
-Then, if they are lucky, they interview for the job.
+Candidates apply to the brochure and, if they are lucky, eventually interview for the job.
 
 ## Comparing Two Lossy Files
 
-Most hiring systems compare the resume to the job description as if the important information survived compression on both sides.
-
-That is optimistic.
+Most hiring systems optimistically compare the resume to the job description as if the important information survived compression on both sides.
 
 The resume might omit a skill because the candidate assumed it was obvious, used it years ago, learned it under a different name, or did not have room to explain the relevant project.
 
 The job description might include a skill because someone copied it from a previous posting, because the team might use it later, because it sounds senior, or because the hiring manager forgot to distinguish required from nice-to-have.
 
-Then the system compares the two artifacts and declares a match or mismatch.
+The system compares those artifacts and declares a match or mismatch, producing absurd outcomes: candidates are rejected for omitting technologies they used daily, others pass by repeating keywords they barely understand, and teams receive hundreds of applications that match the posting but almost none that match the work.
 
-That is how absurd outcomes happen.
-
-A candidate can be rejected for not mentioning a technology they used daily.
-
-A candidate can pass screening because they repeated a keyword they barely understand.
-
-A team can receive hundreds of applications that match the posting and almost none that match the actual work.
-
-Bad faith is only one part of the problem.
-
-The problem is that both sides are comparing compressed files without enough error correction.
+Bad faith is only one part of the problem; both sides are comparing compressed files without enough error correction.
 
 ## Keywords Are Compression Residue
 
@@ -129,29 +99,17 @@ If a resume says `Kubernetes` and the job description says `Kubernetes`, the sys
 
 A surviving token proves only that both artifacts contain the word. It says nothing by itself about whether the candidate can operate Kubernetes in production, whether the role requires that depth, or whether both sides used the term in the same way.
 
-This is why keyword matching feels simultaneously useful and inadequate.
-
-It catches obvious overlap.
-
-It misses implied experience.
-
-It rewards people who know which words to include.
-
-It punishes people whose work is real but described differently.
+This is why keyword matching feels simultaneously useful and inadequate. It catches obvious overlap while missing implied experience, rewarding people who know which words to include and punishing people whose real work is described differently.
 
 The keyword is residue left after the skill has been compressed into text.
 
 ## Metrics Are Also Lossy
 
-Numbers look like high-quality signal.
-
-Sometimes they are.
+Numbers often look like high-quality signal, and sometimes they are.
 
 Reduced latency by 40%. Cut cloud spend by $200,000. Increased conversion by 8%. Migrated 12 services. Supported 5 million users.
 
-Those are useful claims. They give scale and shape to the work.
-
-They are also compressed.
+Those claims give scale and shape to the work, but they are compressed too.
 
 A number rarely explains:
 
@@ -163,11 +121,7 @@ A number rarely explains:
 6. whether the tradeoff was acceptable
 7. whether the number was chosen because it was true or because it looked good
 
-The hiring market has taught candidates to produce numbers because numbers survive the skim.
-
-That does not make numbers fake.
-
-It makes them dangerous when treated as complete.
+The hiring market has taught candidates to produce numbers because numbers survive the skim. That does not make them fake, but it does make them dangerous when treated as complete.
 
 A resume bullet with a large number can be evidence. It can also be a compression artifact optimized for attention.
 
@@ -175,19 +129,15 @@ The reader still has to decompress it.
 
 ## What Gets Lost Is Often The Work
 
-The hardest engineering work often leaves weak resume artifacts.
+The hardest engineering work often leaves weak resume artifacts:
 
-Preventing an outage is less visible than causing one and fixing it.
+1. preventing an outage is less visible than causing one and fixing it
+2. simplifying a system may sound smaller than building a new one
+3. mentoring someone until they succeed produces credit in someone else's bullet
+4. killing a bad project before it wastes a year may leave no public artifact
+5. negotiating a sane migration path may look less impressive than declaring a rewrite
 
-Simplifying a system may sound smaller than building a new one.
-
-Mentoring someone until they succeed produces credit in someone else's bullet.
-
-Killing a bad project before it wastes a year may leave no public artifact at all.
-
-Negotiating a sane migration path may look less impressive than declaring a rewrite.
-
-Making a system boring is one of the highest forms of engineering taste, and one of the hardest things to advertise.
+Making a system boring is one of the highest forms of engineering taste and one of the hardest things to advertise.
 
 Resume writing alone cannot solve a compression problem.
 
@@ -195,11 +145,7 @@ The market wants evidence that fits inside bullets. The work often lives between
 
 ## The Employer Also Lies By Compression
 
-Candidates are often told not to exaggerate.
-
-Fair enough.
-
-Employers should hear the same advice.
+Candidates are often told not to exaggerate, which is fair enough, but employers should hear the same advice.
 
 A job description exaggerates when it describes maintenance as greenfield development, chaos as autonomy, understaffing as ownership, emergency response as fast pace, or unclear priorities as ambiguity.
 
@@ -215,9 +161,7 @@ The organization compresses its need into a more attractive artifact, then compl
 
 ## Decompression Is The Real Hiring Work
 
-A good hiring process needs more than matching.
-
-It is decompression.
+A good hiring process needs more than matching because its real work is decompression.
 
 The point of screening, interviews, references, work samples, and structured questions should be to recover the information lost in the artifacts.
 
@@ -239,17 +183,11 @@ For the employer, it means asking:
 5. What would success look like after six months?
 6. What are we hiding from candidates because it makes the role harder to sell?
 
-That last question is the uncomfortable one.
-
-It is also one of the most useful.
+That last question is both uncomfortable and unusually useful.
 
 ## Better Artifacts
 
-Longer resumes and exhaustive job descriptions will not fix it.
-
-Nobody wants that.
-
-The answer is to design better artifacts and better decompression paths.
+Longer resumes and exhaustive job descriptions will not fix the problem, nor would anyone want them. The answer is to design better artifacts and better decompression paths.
 
 Resumes should be allowed to preserve evidence instead of only polish. Project context, tradeoffs, failure recovery, operating environment, and collaboration shape matter.
 
@@ -269,9 +207,7 @@ A useful system would ask what information survived compression, what was lost, 
 
 ## Closing Thought
 
-Resumes and job descriptions are not truth.
-
-They are compressed files.
+Resumes and job descriptions are compressed files rather than complete truth.
 
 Sometimes they are useful. Sometimes they are misleading. Sometimes they are technically valid and semantically useless.
 
@@ -279,8 +215,4 @@ The mistake is treating them as if they contain enough information to make confi
 
 That is how hiring becomes keyword matching, title shopping, brand-name filtering, and vibes with paperwork.
 
-People are more complicated than resumes.
-
-Jobs are more complicated than postings.
-
-The work of hiring is figuring out what the compression threw away.
+People are more complicated than resumes, and jobs are more complicated than postings. The work of hiring is figuring out what the compression threw away.

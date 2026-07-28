@@ -8,21 +8,13 @@ description: "Hiring behaves like a badly replicated distributed system: posting
 tags: [hiring, distributed-systems, careers, incentives, software]
 ---
 
-The modern job market behaves like a badly replicated distributed system.
-
-Every participant is reading from a different copy of reality.
+The modern job market behaves like a badly replicated distributed system in which every participant reads from a different copy of reality.
 
 The job posting says one thing. The recruiter says another. The hiring manager wants something narrower. The compensation band has changed. The ATS still contains the old title. The internal candidate already exists. The business need is urgent until finance freezes the req.
 
 Then the candidate is asked to treat the process as rational.
 
-Eventually, the system may converge.
-
-Unfortunately, it often converges after the candidate has already applied, interviewed, waited, followed up, rewritten their resume, questioned their own judgment, and been ghosted by a no-reply address with brand guidelines.
-
-That is the problem.
-
-Hiring is eventually consistent, but the consistency arrives too late to be useful.
+The system may eventually converge, but often only after the candidate has applied, interviewed, waited, followed up, rewritten their resume, questioned their own judgment, and been ghosted by a no-reply address with brand guidelines. Hiring is eventually consistent, but the consistency arrives too late to be useful.
 
 The numbers help explain why visible demand is not the same thing as a usable hiring pipeline.
 
@@ -42,9 +34,7 @@ The posting may be sincere while remaining partially true in several incompatibl
 
 Candidates respond to the artifact they can see. They tailor resumes to the visible requirements, write cover letters to the stated mission, and prepare stories for the listed responsibilities.
 
-Then, in the interview, they discover the actual role.
-
-The system has served them a stale read.
+When they discover the actual role during the interview, the system has served them a stale read.
 
 ## Recruiters Query An Index
 
@@ -56,19 +46,11 @@ That is querying an index, with all the distance from the real job that implies.
 
 An index is useful. It helps find candidates quickly. It supports filtering, ranking, and rough matching. But an index is not the source record. It does not contain the full context of the team, the technical debt, the political constraints, the production risks, or the actual reason the role exists.
 
-This is why candidate conversations can feel surreal.
-
-The recruiter is asking about terms.
-
-The candidate is trying to describe work.
-
-Those are different protocols.
+Candidate conversations can therefore feel surreal: the recruiter asks about terms while the candidate tries to describe work, and those are different protocols.
 
 If the right acronym appears, the conversation moves forward. If the candidate has equivalent experience under different names, the system may fail to join the records.
 
-The candidate did the work.
-
-The index did not know how to find it.
+The candidate may have done the work even when the index does not know how to find it.
 
 ## Candidates Write To A Queue With No Ack
 
@@ -90,51 +72,31 @@ Hiring usually returns:
 
 > Thank you for your interest.
 
-That is a postcard from the void.
+That response is a postcard from the void.
 
 The candidate does not know whether the role is active, whether the resume parsed correctly, whether the application reached a human, whether the posting has an internal candidate, whether the salary range is real, or whether the company is collecting resumes for a role it may never fill.
 
-So candidates retry.
-
-They apply again. They message recruiters. They rewrite bullets. They change titles. They increase volume. They ask friends for referrals. They treat silence as a signal because the system refuses to produce one.
-
-Then employers complain about candidate volume.
-
-The queue is full of retries caused by missing acknowledgements.
+Candidates respond by retrying: they apply again, message recruiters, rewrite bullets, change titles, increase volume, ask friends for referrals, and treat silence as a signal because the system refuses to produce one. Employers then complain about candidate volume even though the queue is full of retries caused by missing acknowledgements.
 
 ## Ghosting Is Packet Loss With Corporate Branding
 
-Ghosting is usually discussed as a manners problem.
-
-It is also a reliability problem.
+Ghosting is usually discussed as a manners problem, but it is also a reliability problem.
 
 Somewhere in the process, a state transition happened. The candidate was rejected, the role paused, the manager disappeared, another candidate accepted, the recruiter left, the req closed, the interview feedback never arrived, or the team simply stopped caring.
 
-The candidate sees none of that.
-
-The message is dropped.
+The candidate sees none of those transitions because the message is dropped.
 
 Because the message is dropped, the candidate has to keep state locally. They maintain spreadsheets, calendar reminders, email threads, recruiter names, job IDs, salary ranges, interview notes, and emotional guesses about whether silence means no, maybe, or "we are just busy."
 
-That is absurd.
-
-The employer owns the process but offloads state management to the applicant.
+The arrangement is absurd: the employer owns the process but offloads state management to the applicant.
 
 Even worse, the dropped message is often wrapped in politeness. Companies describe silence as high volume, careful process, or an inability to provide individual updates. Some of that is true. None of it changes the user experience.
 
-From the candidate's side, the packet was lost.
-
-The company just put a logo on the loss.
+From the candidate's side, the packet was lost and the company merely put a logo on the loss.
 
 ## Fake Jobs Are Cache Poisoning
 
-Not every bad posting is fake.
-
-Some are merely stale, aspirational, duplicated, paused, underfunded, already-filled, or waiting for an internal candidate to clear process.
-
-From the outside, those differences barely matter.
-
-They all poison the cache.
+Many bad postings are merely stale, aspirational, duplicated, paused, underfunded, already filled, or waiting for an internal candidate to clear process. From the outside, those distinctions barely matter because every version poisons the cache.
 
 Candidates cannot reliably tell which postings represent real demand. A listing may be active because the company genuinely needs someone. It may be active because the company wants a pipeline. It may be active because HR forgot to close it. It may be active because the company wants to look like it is growing. It may be active because the role exists in theory but no one has permission to hire.
 
@@ -142,13 +104,9 @@ The visible job market becomes contaminated by records that look valid but do no
 
 Exhausted job seekers have data behind the paranoia. [Greenhouse's 2024 State of Job Hunting report](https://www.greenhouse.com/blog/greenhouse-2024-state-of-job-hunting-report) said 18-22% of jobs posted on its platform in a given quarter were classified as ghost jobs, and that three in five candidates suspected they had encountered one.
 
-That breaks trust.
+That uncertainty breaks trust. Once candidates believe a meaningful percentage of postings are not real, they rationally apply more broadly, spend less time on each application, use automation, and stop treating individual postings as worthy of careful attention.
 
-Once candidates believe a meaningful percentage of postings are not real, they adapt rationally. They apply more broadly. They spend less time on each application. They use automation. They stop treating any individual posting as worthy of careful attention.
-
-Employers then receive lower-quality applications and conclude that candidates are careless.
-
-The system trained them to be careless.
+Employers then receive lower-quality applications and conclude that candidates are careless, overlooking how the system trained that behaviour.
 
 ## Hiring Managers Arrive Late
 
@@ -164,21 +122,15 @@ This creates a familiar failure mode:
 4. the hiring manager finally clarifies the real requirement
 5. everyone discovers they were matching against the wrong shape
 
-The role did not change.
-
-The source of truth arrived late.
+The role did not change; its source of truth arrived late.
 
 This is especially damaging for senior or unusual candidates. Their value often lives in judgment, recovery, architecture, tradeoffs, operations, mentorship, or problem framing. Those signals are hard to screen from a keyword index and easy to lose before the hiring manager sees them.
 
-A process that claims to want senior judgment should not filter primarily on junior-legible keywords.
-
-But many do.
+Many processes claim to want senior judgment while filtering primarily on junior-legible keywords.
 
 ## The Candidate Is Also Inconsistent
 
-Employers do not own the whole mess.
-
-Candidates are inconsistent too.
+Employers do not own the whole mess because candidates are inconsistent too.
 
 They maintain multiple resume versions. They compress experience differently for each role. They omit relevant work because it does not fit the page. They exaggerate the visible parts because the process rewards visibility. They apply to roles that are adjacent, aspirational, or merely tolerable because the market has become too noisy to reward precision.
 
@@ -190,15 +142,11 @@ Then both sides compare the replicas and act surprised when reality fails to mat
 
 ## Eventual Consistency Fails People
 
-Eventual consistency is useful in software when the system can tolerate temporary disagreement.
-
-Hiring often cannot.
+Eventual consistency is useful in software when the system can tolerate temporary disagreement, which hiring often cannot.
 
 A candidate cannot wait forever for the posting, budget, recruiter, hiring manager, ATS, interview loop, and business need to converge. They have rent, timelines, competing interviews, visa constraints, family obligations, and finite emotional bandwidth.
 
-Employers have constraints too. They need people. They need process. They need legal caution. They need to avoid overfitting to the loudest candidate or the most polished resume.
-
-Hiring will always have uncertainty.
+Employers have constraints too: they need people, process, legal caution, and protection against overfitting to the loudest candidate or most polished resume. Hiring will always contain uncertainty.
 
 Hiring hides too much of that uncertainty from the people most affected by it. A distributed system can be eventually consistent and still terrible to use when callers cannot observe state, retry safely, or understand failure.
 
@@ -208,7 +156,7 @@ Perfect transparency would be a bad promise.
 
 Companies will never expose every internal discussion, and they should not. Candidates will never submit a complete representation of themselves, because such a document would be unreadable, invasive, and likely to include information employers should neither request nor use.
 
-But the system could be much more honest about state.
+The system could still be much more honest about state.
 
 Employers could expose basic process facts:
 
@@ -221,9 +169,7 @@ Employers could expose basic process facts:
 7. whether the candidate is rejected, queued, or still under review
 8. whether rejection was caused by fit, timing, compensation, level, or process closure
 
-None of that requires a soul-baring confession from the hiring team.
-
-It requires treating candidates like callers of a real system.
+None of that requires a soul-baring confession from the hiring team; it requires treating candidates like callers of a real system.
 
 ## Where Software Could Help
 
@@ -245,9 +191,7 @@ Software can help identify where the records disagree without being given author
 
 If the posting says Python and the hiring manager means production Django at scale, that mismatch should be visible. If the recruiter rejects a candidate for missing Kubernetes but the role only needs container literacy, that should be visible. If the candidate's resume implies relevant incident-response experience without using the expected term, that should be visible.
 
-Hiring software should do more than rank people.
-
-It should make inconsistency inspectable.
+Hiring software should do more than rank people by making inconsistency inspectable.
 
 ## Closing Thought
 
@@ -255,10 +199,4 @@ The job market can fail even when every participant behaves rationally, because 
 
 Candidates optimize resumes for systems that barely acknowledge them. Recruiters search indexes that flatten work into terms. Hiring managers clarify requirements after screening has already happened. Companies leave stale postings online and call the resulting mess a talent market.
 
-Eventually, the truth may emerge.
-
-The role was paused. The range was wrong. The requirement was different. The manager wanted someone else. The posting was stale. The candidate was qualified for a job that only existed in the cache.
-
-By then, the damage is already done.
-
-Eventual consistency leaves people waiting too long for convergence.
+Eventually, the truth may emerge: the role was paused, the range was wrong, the requirement was different, the manager wanted someone else, the posting was stale, or the candidate was qualified for a job that existed only in the cache. By then, the damage is already done because eventual consistency has left people waiting too long for convergence.

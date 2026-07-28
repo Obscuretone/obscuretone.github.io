@@ -31,7 +31,7 @@ That sequence does not establish a permanent legal maximum. It establishes somet
 3. safeguards and identity controls can determine whether a product ships
 4. access policy can change within weeks
 
-The state found the switch. It also switched it back.
+The state found the switch and then switched it back.
 
 ## A Moving Boundary
 
@@ -77,9 +77,7 @@ When models cluster inside a similar public capability range, competition moves 
 
 Alibaba's [Qwen family](https://www.alibabacloud.com/en/solutions/generative-ai/qwen "ai, software, official | Alibaba Cloud") and [Model Studio pricing](https://www.alibabacloud.com/help/en/model-studio/model-pricing "ai, markets, official | Alibaba Cloud") already present AI this way: model families, token prices, context lengths, throughput, and deployment choices.
 
-That is less cinematic than an unlimited intelligence race.
-
-It is also how infrastructure markets mature.
+That is less cinematic than an unlimited intelligence race, but it is also how infrastructure markets mature.
 
 ## The China Mirror
 
@@ -107,6 +105,4 @@ Mythos supports a narrower and more defensible conclusion: the strongest model a
 
 If competitors catch up faster than institutions expand the public boundary, the mass market will temporarily look less like an intelligence race and more like an infrastructure market. Labs will still push the frontier. Most users will compare the versions that survived safeguards, law, procurement, and risk review.
 
-Inside that glass ceiling, price and usability matter more.
-
-Outside it, the research race continues.
+Inside that glass ceiling, price and usability matter more; outside it, the research race continues.

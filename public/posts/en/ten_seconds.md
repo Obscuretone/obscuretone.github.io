@@ -10,9 +10,7 @@ tags: [hiring, resumes, attention, careers, incentives]
 
 Ten seconds is too short. The exact number varies by process, and the familiar figure comes from a proprietary study rather than a universal measurement: Ladders' 2018 eye-tracking work put average initial attention at [about 7.4 seconds](https://www.theladders.com/career-advice/you-only-get-6-seconds-of-fame-make-it-count "hiring, resumes, attention | Ladders"). The deeper problem is what a fast skim rewards.
 
-The deeper problem is what ten seconds turns a resume into.
-
-It stops being a record of work. It becomes an advertisement.
+The deeper problem is what ten seconds turns a resume into: an advertisement rather than a record of work.
 
 The optimal resume for that process is barely a document at all. It is a headline, a few flashy numbers, recognizable titles, company names, and enough keyword density to survive the first filter. Everything else becomes fine print.
 
@@ -30,41 +28,29 @@ If the reviewer has only a few seconds, the resume has to communicate almost ins
 6. large numbers
 7. obvious relevance to the posting
 
-Those signals are not meaningless. They can be useful. But they are not the same thing as understanding someone's work.
+Those signals can be useful without amounting to an understanding of someone's work.
 
 The ten-second process rewards whatever can be understood at a glance. That means it rewards compression, formatting, brand recognition, and easily digestible claims.
 
-It punishes context.
-
-It punishes non-linear careers.
-
-It punishes people whose best work requires explanation.
-
-It punishes candidates who did important work in unimpressive-looking environments.
-
-It punishes anyone whose value does not fit cleanly into a headline.
+It punishes context, non-linear careers, work that requires explanation, important experience in unimpressive-looking environments, and anyone whose value does not fit cleanly into a headline.
 
 The resume becomes less like evidence and more like packaging.
 
 ## Less Than A Sentence
 
-Taken seriously, the logic of the ten-second screen implies that the resume needs to be reducible to something shorter than a sentence.
-
-Not:
+Taken seriously, the logic of the ten-second screen implies that the resume must be reducible to something shorter than a sentence. The full claim might be:
 
 > This person designed, maintained, debugged, negotiated, learned, shipped, supported, recovered, documented, mentored, and made tradeoffs across complicated systems.
 
-But:
+The compressed version becomes:
 
 > Senior backend engineer. Python. AWS. 40% latency reduction. Fintech.
 
-That may be useful as a summary. Evaluation needs more.
+That may be useful as a summary, but evaluation needs more.
 
 The problem is that the hiring process often behaves as if the summary is the evaluation. The tagline becomes the product.
 
-Once that happens, candidates learn to write resumes like landing pages. Put the conversion-critical content above the fold. Make the numbers big. Repeat the right keywords. Remove nuance. Hide caveats. Keep the reader moving toward the call to action.
-
-That may be rational. It is also unhealthy.
+Once that happens, candidates learn to write resumes like landing pages: put conversion-critical content above the fold, make the numbers big, repeat the right keywords, remove nuance, hide caveats, and keep the reader moving toward the call to action. The response may be rational while remaining unhealthy.
 
 ## The Throughput Math
 
@@ -82,9 +68,7 @@ If the recruiter has 15 open roles, the same quick skim becomes more than eight 
 
 And that is only the first pass. It does not include intake meetings, sourcing, scheduling, interviews, candidate communication, hiring-manager follow-up, offer process, or administrative work.
 
-So yes, hiring teams compress the screen because volume forces compression.
-
-But compression has consequences.
+Hiring teams compress the screen because volume forces compression, but that choice has consequences.
 
 The more the process optimizes for speed, the more resumes are forced to become instantly legible artifacts. The market then teaches candidates to optimize for the skim rather than the truth.
 
@@ -92,25 +76,21 @@ The more the process optimizes for speed, the more resumes are forced to become 
 
 A common rebuttal is that recruiters do not spend only ten seconds on good resumes. Ten seconds is just an average. Strong resumes get more attention.
 
-That sounds reassuring, but it actually makes the problem clearer.
-
-It means the glance is the classifier.
+That sounds reassuring, but it makes the problem clearer by turning the initial glance into the classifier.
 
 The resume only gets a deeper read after it has already survived the first visual and semantic impression. Resumes that look promising immediately receive a disproportionate share of the extra attention.
 
 That makes the first few seconds even more important, not less.
 
-The process is not really asking:
+The process may appear to ask:
 
 > Is this candidate qualified?
 
-It is asking:
+In practice, it first asks:
 
 > Does this resume look like it is worth spending more attention on?
 
-Those are different questions.
-
-The first asks about the person. The second asks about the artifact's ability to compete for human attention under constraint.
+The first question concerns the person; the second concerns the artifact's ability to compete for attention under constraint.
 
 That means precise keywords, familiar titles, known companies, obvious metrics, and conventional formatting become gates to further consideration. The deeper read only happens after the resume has already signaled in the expected way.
 
@@ -124,25 +104,7 @@ That is efficient. It is also a very lossy way to evaluate people.
 
 ## The Arms Race
 
-This creates a bad loop.
-
-Employers receive too many applications, so they screen faster.
-
-Candidates know they are screened quickly, so they simplify, keyword-pack, and exaggerate the most scannable parts of their experience.
-
-AI tools make it easier to generate tailored resumes at scale.
-
-Employers respond with more automation, stricter filters, and even faster triage.
-
-Candidates respond with more volume.
-
-Eventually both sides distrust the artifacts they created.
-
-The employer distrusts the resume because it looks optimized.
-
-The candidate distrusts the process because they know the resume was barely read.
-
-Everyone behaves rationally inside a system that produces worse signal.
+This creates a bad loop. Employers receive too many applications and screen faster; candidates respond by simplifying, packing keywords, and exaggerating the most scannable parts of their experience. AI makes tailored resumes cheaper, employers add automation and stricter filters, and candidates increase volume. Eventually employers distrust optimized resumes, candidates distrust a process that barely reads them, and everyone behaves rationally inside a system that produces worse signal.
 
 ## What Gets Lost
 
@@ -154,7 +116,7 @@ How do you prove that you prevented incidents that never happened?
 
 How do you show that you made a system easier to operate, reduced future maintenance, improved team decision-making, or noticed the requirement that everyone else missed?
 
-You can try. You can write numbers. You can polish bullets. You can name the tools. But the deeper value often lives in context, tradeoffs, and judgment.
+You can write numbers, polish bullets, and name the tools, but the deeper value often lives in context, tradeoffs, and judgment.
 
 Those are exactly the things a ten-second screen is least able to see.
 
@@ -164,9 +126,7 @@ But a process should be honest about what kind of signal it is using. A glance c
 
 ## The Harvard Resume Effect
 
-This is why simple, conventional resume formats work.
-
-They reduce search cost.
+Simple, conventional resume formats work because they reduce search cost.
 
 If the reviewer knows where to find title, employer, dates, tools, and impact, the resume gets a few more words of attention. A second saved on layout may become a few more words read. A familiar structure lowers friction. The Ladders study found that resumes with [simple layouts and clear sectioning](https://www.prnewswire.com/news-releases/ladders-updates-popular-recruiter-eye-tracking-study-with-new-key-insights-on-how-job-seekers-can-improve-their-resumes-300744217.html "hiring, resumes, attention | PR Newswire") performed better in that initial scan.
 
@@ -174,17 +134,11 @@ That is practical advice, but it is also depressing.
 
 It means the resume is being optimized less for expression than for scan efficiency. The format wins because it helps the reviewer consume the candidate faster.
 
-In a better process, clarity would help the reviewer understand more.
-
-In the current process, clarity often helps the reviewer decide faster.
-
-Those are not the same thing.
+In a better process, clarity would help the reviewer understand more; in the current process, it often helps the reviewer decide faster. The distinction matters.
 
 ## Better Screening
 
-Demanding that every recruiter lovingly read every resume will not work.
-
-That would be fantasy.
+Demanding that every recruiter lovingly read every resume would be fantasy.
 
 The better answer is to admit that first-pass screening is a decision system and design it accordingly.
 
@@ -208,8 +162,4 @@ It is unfair because it changes what the resume is trying to be.
 
 It pushes candidates to compress years of work into an ad: headline, numbers, keywords, brand signals, and fine print. It rewards the easiest evidence to consume, not necessarily the strongest evidence of ability.
 
-That is the real failure.
-
-A resume should help someone understand work.
-
-The ten-second process asks it to sell.
+That is the real failure: a resume should help someone understand work, while the ten-second process asks it to sell.

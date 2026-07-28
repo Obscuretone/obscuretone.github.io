@@ -10,15 +10,9 @@ tags: [metrics, incentives, management, systems, work]
 
 I came across a tagline for a marketing research company called *L'Observateur*: "Tout ce que l'on mesure s'améliore."
 
-Everything that is measured improves.
+Translated loosely, everything that is measured improves. The line sounds true because measurement can focus attention, reveal patterns, and show whether a change helped or hurt; without it, teams are guessing.
 
-It sounds true because it is almost true.
-
-Measurement can focus attention. It can reveal patterns. It can show whether a change helped or hurt. Without measurement, teams are guessing.
-
-But the more complete version is less comforting:
-
-Everything that is measured gets optimized.
+The more complete and less comforting version is that everything measured gets optimized.
 
 Whether it improves depends on whether the metric is connected to the thing people actually care about.
 
@@ -26,9 +20,7 @@ Whether it improves depends on whether the metric is connected to the thing peop
 
 The flair joke in *Office Space* works because the workplace has confused visible compliance with actual value. The employee is technically meeting the stated requirement, but the manager still wants more enthusiasm, more performance, more proof that she has internalized the metric.
 
-That is what bad measurement does.
-
-It starts as a proxy for the work. Then it becomes the work. Eventually people are no longer optimizing the outcome. They are optimizing their appearance inside the reporting system.
+Bad measurement starts as a proxy for the work, becomes the work, and eventually persuades people to optimize their appearance inside the reporting system rather than the outcome.
 
 This is the warning behind [Goodhart's Law](https://en.wikipedia.org/wiki/Goodhart%27s_law), especially the formulation popularized by Marilyn Strathern in ["Improving ratings"](https://journals.sagepub.com/doi/10.1177/135638909700300102):
 
@@ -44,11 +36,7 @@ During university, I worked in consumer technical support.
 
 One of the key metrics was average handle time. On the surface, that made sense. Shorter calls can mean faster service, lower queue times, and better operational efficiency.
 
-I was good at the job. I knew the tools, I knew the products, and I had been there long enough to solve common issues quickly.
-
-That became a problem.
-
-My handle time was flagged because it was out of spec. Not too long. Too short.
+I was good at the job, knew the tools and products, and had enough experience to solve common issues quickly. That became a problem when my handle time was flagged for being too short rather than too long.
 
 The explanation I was given was:
 
@@ -68,15 +56,7 @@ Software teams are not immune to this. We just use more expensive dashboards.
 
 Lines of code, ticket counts, Jira comments, pull-request volume, story points, sprint velocity, review counts, deployment frequency, and incident counts can all be useful in narrow contexts. None of them is engineering value.
 
-The danger is that numbers can be real and still misleading.
-
-A developer can write a lot of code in the wrong direction.
-
-A team can close many tickets while accumulating technical debt.
-
-A sprint can look predictable because scope is quietly removed whenever new work appears.
-
-A director can generate a beautiful dashboard that proves the organization is busy while every engineer underneath it knows the work is getting worse.
+Numbers can be real and still misleading. A developer can write a lot of code in the wrong direction, a team can close tickets while accumulating technical debt, and a sprint can look predictable because scope disappears whenever new work appears. A director can produce a beautiful dashboard proving the organization is busy while every engineer underneath knows the work is getting worse.
 
 That is the bleak little magic trick of bad metrics: they convert local dysfunction into executive confidence.
 
@@ -88,15 +68,7 @@ The dashboard was not measuring the work. The work was being reshaped to satisfy
 
 Metrics often create hidden tradeoffs.
 
-If support agents are judged mainly on handle time, deep troubleshooting loses to fast closure.
-
-If engineers are judged mainly on ticket throughput, invisible maintenance loses to visible output.
-
-If managers are judged mainly on sprint predictability, honest uncertainty loses to scope manipulation.
-
-If companies are judged mainly on office occupancy, effective remote work loses to badge swipes.
-
-The measured thing improves. Something else pays for it.
+When support agents are judged mainly on handle time, deep troubleshooting loses to fast closure. Ticket throughput makes invisible maintenance lose to visible output, sprint predictability makes honest uncertainty lose to scope manipulation, and office occupancy makes effective remote work lose to badge swipes. The measured thing improves because something else pays for it.
 
 That is why "everything that is measured improves" is too naive. A metric can improve by pushing damage somewhere the dashboard does not look.
 
@@ -124,7 +96,7 @@ If not, OKRs become a more sophisticated way to count flair.
 
 Return-to-office mandates are a clean modern example of mismatched measurement.
 
-Office attendance is easy to measure. Badge swipes are easy to count. Empty real estate is easy to see. Executives can look at occupancy and feel that something concrete has improved.
+Office attendance, badge swipes, and empty real estate are easy to measure, count, and see. Executives can look at occupancy and feel that something concrete has improved.
 
 But the outcomes companies usually claim to care about are harder to measure:
 
@@ -156,17 +128,11 @@ They should help people ask better questions:
 6. What behavior does this metric encourage?
 7. What damage could this metric hide?
 
-The last two questions are the ones organizations skip.
-
-Every metric is also an incentive. Every dashboard is also a theory of what matters. If that theory is wrong, people will still optimize for it.
-
-They may even get rewarded for doing so.
+The last two questions are the ones organizations skip. Every metric is also an incentive, and every dashboard is a theory of what matters; even when that theory is wrong, people will optimize for it and may be rewarded for doing so.
 
 ## Closing Thought
 
-Measurement is necessary.
-
-But measurement is not judgment.
+Measurement is necessary, but it is not judgment.
 
 Metrics are lossy representations of reality. They can reveal the system, or they can become a costume the system wears to look healthy.
 
@@ -174,6 +140,4 @@ When a workplace starts rewarding the costume, people notice. They learn what is
 
 That is how you end up with more pieces of flair, longer support calls, cleaner dashboards, fuller offices, and worse outcomes.
 
-Everything that is measured is measured.
-
-That does not mean it improved.
+Everything measured is certainly measured, but that does not mean it improved.
