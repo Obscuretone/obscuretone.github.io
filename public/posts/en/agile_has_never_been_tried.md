@@ -1,22 +1,22 @@
 ---
 title: Agile Has Never Been Tried
-description: Bad Agile keeps the rituals and removes the autonomy. Then everyone acts surprised when the ceremonies do not produce adaptability.
+description: "Agile and communism share an implementation failure: people adopt the language, preserve the hierarchy, and blame the idea after refusing to redistribute power."
 tags: [software, management, agile, incentives, work]
 ---
 
-Agile and communism both have manifestos. There: that is the entire political comparison, and already more ideology than sprint planning deserves.
+Agile is like communism: neither has ever been tried, because every implementation reaches the part where people with power have to give some of it up and suddenly discovers a need for seventeen Jira statuses.
 
-Every failed implementation comes with someone standing nearby saying, "that was not real Agile." The line is annoying because it sounds like a dodge and, even more annoyingly, is sometimes true.
+The joke takes both ideas seriously. Communism requires shared ownership and control rather than replacing one ruling class with another. Agile requires teams to share operational authority rather than replacing project-plan terminology with sprint terminology. When the hierarchy remains intact, the implementation has skipped the premise.
 
-Most organizations do not implement Agile. They implement its meeting schedule inside the same command structure they had before.
+Every failed attempt still turns into a long explanation about the people who implemented it wrong. The explanation sounds convenient because it is repeated so often, but giving something the name communism does not mean workers own or control production. Sometimes people really do implement the opposite of an idea while keeping its name. The theory survives, the implementers go to a retrospective, and someone proposes trying the same revolution again with better facilitation.
 
-The team gets the ceremonies while management keeps control. Everyone is told they are empowered, then handed a roadmap, a deadline, a dependency graph, a quarterly planning ritual, a velocity target, and a Jira workflow with seventeen statuses. When the whole thing fails, someone announces that Agile does not work.
+The Agile defence is often correct. Most organizations implement its meeting schedule inside the command structure they already had. The team gets the ceremonies while management keeps control. Everyone is told they are empowered, then handed a roadmap, a deadline, a dependency graph, a quarterly planning ritual, a velocity target, and that Jira workflow with seventeen statuses. When the whole thing fails, someone announces that Agile does not work.
 
-The defence is too convenient to accept automatically. It is also sometimes correct: if a process keeps the ceremonies and removes the authority to respond to change, it has discarded the operational premise.
+Calling every failure an impure implementation would be too convenient if purity meant doctrinal trivia. Here it means the mechanism itself. A process that keeps the ceremonies and removes the authority to respond to change has discarded the operational premise, just as shared ownership without shared control has discarded the political one. The problem is people, but more specifically it is people preserving power while pretending to distribute it.
 
 ## The Manifesto Was Not Jira
 
-The [Agile Manifesto](https://agilemanifesto.org/) is short enough to read during a standup, which is funny because many standups have done more damage to Agile than any waterfall Gantt chart ever managed.
+The [Agile Manifesto](https://agilemanifesto.org/) is short enough to read during a standup, which is funny because many standups have done more damage to Agile than any waterfall Gantt chart ever managed. Both ideologies have manifestos, and both put unusual faith in the people doing the work.
 
 The manifesto values:
 
@@ -120,9 +120,9 @@ If every developer is fully allocated, every sprint is packed, every deadline is
 
 Calling that system Agile only makes its failures arrive in two-week increments.
 
-## The Half-Assed Version Cannot Work
+## The People Problem
 
-If you half-ass the implementation, it does not work, but the funny part is what "half-assed" means here.
+If you half-ass the implementation, Agile does not work, but the funny part is what "half-assed" means here.
 
 A half-implemented version may perform every ceremony. The failure occurs when an organization adopts the vocabulary of autonomy while preserving the structure of command.
 
@@ -130,26 +130,38 @@ The recognizable symptoms are feedback that cannot alter commitments, estimates 
 
 The deeper problem is authority wearing a methodology lanyard.
 
-## Agile Has Been Tried Locally
+That still leaves Agile with the same problem as communism: a managerial class will not surrender power merely because the new system says it should.
 
-Real Agile exists, usually in pockets: a small team with a clear mission, a product owner who can decide, engineers who can talk directly to users, a codebase with enough test coverage to make change survivable, a manager who treats bad news as information instead of disobedience, and a planning process that can absorb reality without making someone lose face. Those teams can move beautifully without much ritual.
+A methodology for organizing human work has to account for ambition, fear, status, self-protection, and the desire for control. Management will seek certainty, teams will protect themselves from punishment, executives will prefer legible dashboards to ambiguous reality, and everyone will optimize whatever determines their next performance review.
+
+None of that makes cooperation impossible. It makes the redistribution of authority the actual implementation work. Ceremonies cannot produce trust while punishment rewards silence, and a manifesto cannot create shared ownership while a protected class retains every meaningful decision. The people with power have to surrender some control, while everyone else has to accept the responsibility that comes with receiving it.
+
+That is why "the people did it wrong" can be both a pathetic excuse and a precise diagnosis. The phrase explains nothing by itself, but an implementation that preserves the hierarchy the idea was meant to replace really has missed the point. Doing it properly means building incentives, protections, and decision structures that make cooperation durable rather than merely asking everyone to believe harder.
+
+## It Works When Power Actually Moves
+
+Real Agile exists in small teams with shared goals, mutual trust, enough resources, and actual authority over their work.
+
+A small team with a clear mission, a product owner who can decide, engineers who can talk directly to users, a codebase with enough test coverage to make change survivable, a manager who treats bad news as information instead of disobedience, and a planning process that can absorb reality without making someone lose face can move beautifully without much ritual.
 
 They need alignment, trust, feedback, technical competence, and permission to change course.
 
-The process is almost boring when it works: work in small pieces, show the thing, learn, adjust, and keep the system healthy enough that further adjustment remains possible. That is the whole trick.
+Agile works there because the transfer of authority is real. The process is almost boring: work in small pieces, show the thing, learn, adjust, and keep the system healthy enough that further adjustment remains possible.
 
 It is simple in the same way eating well and exercising are simple.
 
-The instructions fit on a page; the hard part is becoming the kind of organization that can follow them.
+The instructions fit on a page; the hard part is building an organization capable of following them. That difficulty does not invalidate the goal. It explains why adopting the vocabulary is so much easier than changing the power structure.
 
 ## Closing Thought
 
-Agile did not fail because standups are silly, though many standups are silly.
-
-Agile failed because companies wanted adaptability without redistributing authority to the people closest to the work.
+Agile did not fail because standups are silly, though many standups are silly. It failed because companies wanted adaptability without redistributing authority to the people closest to the work.
 
 They wanted fast feedback without changed plans, empowered teams without team power, and working software accompanied by comprehensive reporting about why it did not match the fantasy roadmap.
 
-When someone says "that was not real Agile," they may be unbearable and correct at the same time.
+When someone says "that was not real Agile," they may be unbearable and correct at the same time. An implementation that never transferred authority removed the mechanism that made the theory work.
 
 Bad Agile keeps the parts management could safely adopt without changing itself.
+
+Agile and communism make the same demand in different domains: the people doing the work should control the work. Both fail when a managerial class keeps the power and distributes only vocabulary.
+
+The problem is always people, specifically the people who refuse to give up control.

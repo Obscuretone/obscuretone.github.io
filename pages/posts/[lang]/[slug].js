@@ -693,7 +693,7 @@ export default function Post({ post, postsEn, currentLang, revision }) {
             <article>
                 <CutoutTitle title={title} seedText={htmlContent} />
                 {formattedPublishedDate && (
-                    <p>
+                    <p className="article-meta">
                         <strong>Published:</strong>{' '}
                         <time dateTime={publishedAt}>{formattedPublishedDate}</time>
                         {wasUpdated && (
