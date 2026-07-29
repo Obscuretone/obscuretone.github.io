@@ -1,14 +1,18 @@
 :root {
-  --ruby-red: #a31621;
-  --snow: #fcf7f8;
-  --pale-slate: #ced3dc;
-  --air-force-blue: #4e8098;
-  --sky-blue: #90c2e7;
-  --deep-ink: #16232b;
-  --soft-ink: #314956;
-  --paper-shadow: rgba(163, 22, 33, 0.34);
-  --blue-shadow: rgba(78, 128, 152, 0.22);
-  --slate-wash: rgba(206, 211, 220, 0.46);
+  --ruby-red: #982b3a;
+  --snow: #f7f3e9;
+  --pale-slate: #c9ced0;
+  --air-force-blue: #476775;
+  --sky-blue: #a5bdc5;
+  --deep-ink: #292923;
+  --soft-ink: #5c5a50;
+  --desk: #424a46;
+  --paper-edge: #b9ad98;
+  --paper-rule: rgba(71, 103, 117, 0.2);
+  --highlighter: #dcc66c;
+  --paper-shadow: rgba(24, 25, 22, 0.32);
+  --blue-shadow: rgba(71, 103, 117, 0.2);
+  --slate-wash: rgba(201, 206, 208, 0.42);
 }
 
 *,
@@ -18,25 +22,39 @@
 }
 
 html {
-  background: var(--deep-ink);
+  min-height: 100%;
+  background:
+    repeating-linear-gradient(17deg, rgba(255, 255, 255, 0.018) 0 1px, transparent 1px 9px),
+    repeating-linear-gradient(103deg, rgba(0, 0, 0, 0.035) 0 1px, transparent 1px 13px),
+    var(--desk);
 }
 
 body {
-  margin: 40px auto;
-  width: calc(100% - 32px);
-  max-width: 800px;
-  padding: 28px;
-  border: 1px solid var(--deep-ink);
+  position: relative;
+  margin: 38px auto 64px;
+  width: calc(100% - 40px);
+  max-width: 860px;
+  padding: 38px 42px 44px;
+  border: 1px solid var(--paper-edge);
   color: var(--deep-ink);
-  background-color: var(--snow);
-  box-shadow: 6px 6px 0 var(--paper-shadow);
-  font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
-  font-size: 18px;
-  line-height: 1.6;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 31px, rgba(71, 103, 117, 0.025) 31px 32px),
+    repeating-linear-gradient(92deg, rgba(41, 41, 35, 0.018) 0 1px, transparent 1px 7px),
+    var(--snow);
+  box-shadow:
+    0 2px 2px rgba(0, 0, 0, 0.18),
+    9px 12px 24px var(--paper-shadow);
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 19px;
+  line-height: 1.68;
 }
 
 article h1 {
   font-size: 2em;
+}
+
+article p {
+  margin: 0 0 1.15em;
 }
 
 .cutout-title {
@@ -144,84 +162,136 @@ h1,
 h2,
 h3,
 h4 {
+  color: var(--deep-ink);
+  font-family: "Special Elite", "Courier Prime", Georgia, serif;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+article h2 {
+  position: relative;
+  margin-top: 2.2em;
+  padding-top: 0.62em;
+  border-top: 1px solid var(--paper-rule);
+  font-size: 1.48em;
+}
+
+article h2::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 3.4em;
+  height: 3px;
+  background: var(--ruby-red);
+  transform: rotate(-0.5deg);
+}
+
+article h3 {
   color: var(--ruby-red);
-  font-family: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
-  font-weight: 700;
-  line-height: 1.2;
 }
 
 header {
   position: relative;
-  padding-bottom: 0.85em;
-  border-bottom: 2px solid var(--air-force-blue);
+  padding: 0.15em 0 1em;
+  border-bottom: 1px solid var(--deep-ink);
 }
 
 header::before {
-  content: "technical notes / local systems / rev. " attr(data-revision);
+  content: "notes / clippings / loose ends / rev. " attr(data-revision);
   display: block;
-  margin-bottom: 0.6em;
+  margin-bottom: 0.75em;
   color: var(--soft-ink);
-  font-family: "IBM Plex Mono", Consolas, monospace;
-  font-size: 0.78em;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-family: "Courier Prime", "Courier New", monospace;
+  font-size: 0.7em;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
 }
 
 header h1 {
-  margin-bottom: 0;
+  display: inline-block;
+  margin: 0;
+  color: var(--deep-ink);
+  font-family: "Special Elite", "Courier Prime", serif;
+  font-size: 2.05em;
+  line-height: 1;
+  text-shadow: 1px 1px 0 rgba(152, 43, 58, 0.2);
 }
 
 header h2 {
-  margin-top: 0.2em;
+  margin: 0.38em 0 0;
   color: var(--soft-ink);
-  font-family: "IBM Plex Mono", Consolas, monospace;
-  font-size: 1em;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1.08em;
+  font-style: italic;
   font-weight: 500;
 }
 
 a {
-  color: var(--ruby-red);
-  text-decoration-color: rgba(163, 22, 33, 0.55);
-  text-underline-offset: 0.18em;
+  color: #345d70;
+  text-decoration-color: rgba(52, 93, 112, 0.58);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
 }
 
 a:visited {
-  color: var(--air-force-blue);
+  color: #735269;
 }
 
 a:hover,
 a:focus {
   color: var(--deep-ink);
-  background: rgba(144, 194, 231, 0.32);
-  text-decoration-color: var(--air-force-blue);
+  background: rgba(220, 198, 108, 0.5);
+  text-decoration-color: var(--ruby-red);
 }
 
 .posts-list {
-  padding-left: 1.25em;
+  padding: 0;
+  list-style: none;
 }
 
 .posts-list li {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
-  margin: 0.45em 0;
+  margin: 0;
+  padding: 0.58em 0 0.52em 1.05em;
   align-items: baseline;
+  border-bottom: 1px dotted rgba(92, 90, 80, 0.36);
   justify-content: space-between;
   gap: 1em;
+}
+
+.posts-list li::before {
+  content: "";
+  position: absolute;
+  top: 1.13em;
+  left: 0;
+  width: 0.55em;
+  height: 2px;
+  background: var(--ruby-red);
+  transform: rotate(-4deg);
+}
+
+.posts-list a {
+  color: var(--deep-ink);
+  font-weight: 600;
+  text-decoration-color: rgba(152, 43, 58, 0.46);
 }
 
 .posts-list time {
   flex: 0 0 auto;
   margin-left: auto;
   color: var(--soft-ink);
-  font-family: "IBM Plex Mono", Consolas, monospace;
-  font-size: 0.72em;
+  font-family: "Courier Prime", "Courier New", monospace;
+  font-size: 0.68em;
   white-space: nowrap;
 }
 
 .article-source-link {
   --article-source-ink: var(--air-force-blue);
   --article-source-paper: #eef7fd;
-  text-decoration-color: rgba(78, 128, 152, 0.58);
+  text-decoration-color: rgba(71, 103, 117, 0.58);
   text-decoration-style: dotted;
   text-decoration-thickness: 0.08em;
 }
@@ -264,15 +334,33 @@ a:focus {
 
 strong {
   color: var(--ruby-red);
+  font-family: "Special Elite", "Courier Prime", serif;
+  font-weight: 400;
+}
+
+.article-meta {
+  margin: 0.2em 0 1.55em;
+  color: var(--soft-ink);
+  font-family: "Courier Prime", "Courier New", monospace;
+  font-size: 0.72em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.article-meta strong {
+  color: var(--deep-ink);
+  font-family: inherit;
   font-weight: 700;
 }
 
 .nearby-arguments {
   margin: 1.5em 0;
   padding: 1em;
-  border: 1px solid var(--air-force-blue);
-  border-left: 6px solid var(--ruby-red);
-  background: rgba(206, 211, 220, 0.24);
+  border: 1px solid var(--paper-edge);
+  border-left: 5px solid var(--ruby-red);
+  background:
+    repeating-linear-gradient(0deg, transparent 0 1.35em, rgba(71, 103, 117, 0.1) 1.35em 1.4em),
+    rgba(255, 255, 255, 0.24);
 }
 
 .nearby-arguments ul {
@@ -301,16 +389,15 @@ strong {
   height: 420px;
   min-width: 0;
   overflow: hidden;
-  border: 1px solid var(--air-force-blue);
+  border: 7px solid #5a5247;
+  outline: 1px solid rgba(41, 41, 35, 0.76);
   background:
-    radial-gradient(circle at 16px 16px, rgba(163, 22, 33, 0.13) 1px, transparent 1.5px),
-    linear-gradient(135deg, rgba(144, 194, 231, 0.4), transparent 38%),
-    linear-gradient(0deg, rgba(22, 35, 43, 0.08), rgba(22, 35, 43, 0.08)),
-    var(--pale-slate);
-  background-size: 32px 32px, auto, auto, auto;
+    repeating-linear-gradient(9deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 8px),
+    repeating-linear-gradient(97deg, rgba(41, 41, 35, 0.045) 0 1px, transparent 1px 11px),
+    #aea186;
   box-shadow:
-    inset 0 0 0 6px rgba(252, 247, 248, 0.45),
-    inset 0 0 38px rgba(22, 35, 43, 0.18);
+    4px 5px 0 rgba(41, 41, 35, 0.18),
+    inset 0 0 32px rgba(41, 41, 35, 0.2);
 }
 
 .posts-graph__canvas {
@@ -329,16 +416,16 @@ strong {
   padding: 0.28em 0.34em;
   transform: translate(-50%, -50%);
   align-items: center;
-  border: 1px solid rgba(22, 35, 43, 0.64);
+  border: 1px solid rgba(41, 41, 35, 0.62);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.32), transparent 42%),
     var(--snow);
   box-shadow:
-    3px 4px 0 rgba(163, 22, 33, 0.18),
+    3px 4px 0 rgba(41, 41, 35, 0.2),
     0 0 0 1px rgba(255, 255, 255, 0.35) inset;
   color: var(--deep-ink);
   cursor: grab;
-  font-family: "IBM Plex Mono", Consolas, monospace;
+  font-family: "Courier Prime", "Courier New", monospace;
   font-size: 0.53em;
   line-height: 1.08;
   text-align: center;
@@ -355,11 +442,11 @@ strong {
   padding: 0.44em 0.48em;
   align-content: center;
   justify-items: start;
-  border-color: rgba(22, 35, 43, 0.5);
+  border-color: rgba(41, 41, 35, 0.5);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.55), transparent 32%),
-    repeating-linear-gradient(0deg, transparent 0 0.66em, rgba(22, 35, 43, 0.08) 0.66em 0.72em),
-    linear-gradient(90deg, rgba(144, 194, 231, 0.28), transparent 18%),
+    repeating-linear-gradient(0deg, transparent 0 0.66em, rgba(71, 103, 117, 0.1) 0.66em 0.72em),
+    linear-gradient(90deg, rgba(220, 198, 108, 0.2), transparent 18%),
     var(--snow);
   color: var(--deep-ink);
   font-family: "Courier Prime", "Courier New", monospace;
@@ -375,13 +462,13 @@ strong {
   width: 126px;
   min-height: 76px;
   padding: 0.4em 0.55em;
-  border-color: rgba(78, 128, 152, 0.58);
+  border-color: rgba(92, 90, 80, 0.5);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.28), transparent 58%),
-    linear-gradient(90deg, transparent 0 88%, rgba(163, 22, 33, 0.12) 88% 90%, transparent 90%),
-    #fff4a8;
+    linear-gradient(90deg, transparent 0 88%, rgba(152, 43, 58, 0.12) 88% 90%, transparent 90%),
+    #f1dfa0;
   box-shadow:
-    4px 5px 0 rgba(163, 22, 33, 0.16),
+    4px 5px 0 rgba(41, 41, 35, 0.18),
     inset 0 0 0 1px rgba(255, 255, 255, 0.36);
   color: var(--ruby-red);
   font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive;
@@ -412,7 +499,7 @@ strong {
     linear-gradient(90deg, var(--source-tag-wash, rgba(78, 128, 152, 0.18)), transparent 24%),
     var(--source-tag-paper, #eef7fd);
   box-shadow:
-    4px 5px 0 var(--source-tag-shadow, rgba(78, 128, 152, 0.16)),
+    4px 5px 0 var(--source-tag-shadow, rgba(41, 41, 35, 0.18)),
     inset 0 0 0 1px rgba(255, 255, 255, 0.55);
   color: var(--source-tag-ink, var(--air-force-blue));
   font-family: "Courier Prime", "Courier New", monospace;
@@ -507,7 +594,7 @@ strong {
   justify-content: space-between;
   gap: 0.45em;
   color: var(--source-tag-ink, var(--air-force-blue));
-  font-family: "IBM Plex Mono", Consolas, monospace;
+  font-family: "Courier Prime", "Courier New", monospace;
   font-size: 0.7em;
   font-style: normal;
   line-height: 1;
@@ -538,7 +625,7 @@ strong {
   display: block;
   margin-top: 0.38em;
   color: var(--soft-ink);
-  font-family: "IBM Plex Mono", Consolas, monospace;
+  font-family: "Courier Prime", "Courier New", monospace;
   font-size: 0.64em;
   font-weight: 700;
   line-height: 1.05;
@@ -550,7 +637,7 @@ strong {
   z-index: 2;
   outline: 2px solid var(--ruby-red);
   outline-offset: 2px;
-  background: var(--snow);
+  background: #fffdf5;
   color: var(--deep-ink);
 }
 
@@ -563,7 +650,7 @@ strong {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 45%),
     var(--ruby-red);
-  box-shadow: 4px 4px 0 rgba(78, 128, 152, 0.34);
+  box-shadow: 4px 4px 0 rgba(41, 41, 35, 0.32);
   color: var(--snow);
   cursor: default;
   font-weight: 700;
@@ -577,27 +664,28 @@ strong {
 
 blockquote {
   display: block;
-  margin-left: 60px;
-  margin-right: 60px;
-  padding-left: 12px;
-  border-left: 2px solid var(--air-force-blue);
+  margin: 1.5em 2.4em;
+  padding: 0.2em 0 0.2em 1em;
+  border-left: 3px solid var(--ruby-red);
   color: var(--deep-ink);
-  font-family: "IBM Plex Mono", Consolas, monospace;
-  font-size: 0.95em;
-  line-height: 1.25;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1.02em;
+  font-style: italic;
+  line-height: 1.45;
 }
 
 blockquote.longform {
   margin-left: -1px;
   padding-left: 9px;
-  border-left: 1px solid var(--air-force-blue);
-  font-family: "IBM Plex Mono", Consolas, monospace;
+  border-left: 1px solid var(--soft-ink);
+  font-family: "Courier Prime", "Courier New", monospace;
   font-size: 0.8em;
+  font-style: normal;
   text-align: left;
 }
 
 blockquote.longform strong {
-  font-family: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Special Elite", "Courier Prime", serif;
 }
 
 blockquote li {
@@ -606,7 +694,7 @@ blockquote li {
 }
 
 article>span {
-  font-family: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Special Elite", "Courier Prime", serif;
 }
 
 img,
@@ -627,28 +715,28 @@ table {
 
 th,
 td {
-  border: 1px solid rgba(78, 128, 152, 0.58);
+  border: 1px solid var(--paper-edge);
   padding: 0.6em 0.75em;
   text-align: left;
   vertical-align: top;
 }
 
 th {
-  background-color: var(--ruby-red);
-  color: var(--snow);
-  font-family: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
-  font-weight: 700;
+  background-color: rgba(220, 198, 108, 0.34);
+  color: var(--deep-ink);
+  font-family: "Special Elite", "Courier Prime", serif;
+  font-weight: 400;
 }
 
 tr:nth-child(even) td {
-  background-color: rgba(206, 211, 220, 0.24);
+  background-color: rgba(201, 206, 208, 0.2);
 }
 
 code {
-  border-radius: 4px;
-  background-color: rgba(206, 211, 220, 0.42);
+  border-radius: 2px;
+  background-color: rgba(201, 206, 208, 0.34);
   color: var(--ruby-red);
-  font-family: "IBM Plex Mono", Consolas, "Cascadia Code", "Fira Code", "JetBrains Mono", monospace;
+  font-family: "Courier Prime", Consolas, "Cascadia Code", "Fira Code", "JetBrains Mono", monospace;
   font-size: 0.92em;
   padding: 0.08em 0.28em;
 }
@@ -656,9 +744,9 @@ code {
 pre {
   overflow-x: auto;
   margin: 1.5em 0;
-  border: 1px solid rgba(78, 128, 152, 0.58);
-  border-radius: 4px;
-  background-color: var(--snow);
+  border: 1px solid var(--paper-edge);
+  border-radius: 2px;
+  background-color: #f0eadc;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.55);
 }
 
@@ -700,10 +788,10 @@ pre code {
 hr {
   display: block;
   width: 100%;
-  height: 24px;
-  margin: 1.6em 0;
+  height: 18px;
+  margin: 1.8em 0 1.65em;
   background:
-    linear-gradient(90deg, transparent 0 7%, var(--ruby-red) 7% 18%, transparent 18% 21%, var(--air-force-blue) 21% 27%, transparent 27% 31%, var(--sky-blue) 31% 34%, transparent 34% 38%, var(--pale-slate) 38% 100%);
+    linear-gradient(90deg, transparent 0 5%, var(--ruby-red) 5% 16%, transparent 16% 20%, var(--deep-ink) 20% 24%, transparent 24% 29%, var(--highlighter) 29% 32%, transparent 32% 37%, var(--paper-edge) 37% 100%);
   clip-path: polygon(0 48%, 7% 48%, 7% 20%, 11% 20%, 11% 48%, 27% 48%, 27% 0, 31% 0, 31% 48%, 100% 48%, 100% 56%, 31% 56%, 31% 100%, 27% 100%, 27% 56%, 11% 56%, 11% 80%, 7% 80%, 7% 56%, 0 56%);
   border: none;
 }
@@ -711,16 +799,16 @@ hr {
 @media (max-width: 700px) {
   body {
     overflow-x: hidden;
-    margin: 16px 9px;
+    margin: 12px 8px 28px;
     width: auto;
     max-width: none;
-    padding: 18px;
-    font-size: 16px;
+    padding: 22px 19px 28px;
+    font-size: 17px;
   }
 
   #__next {
-    width: calc(100vw - 54px);
-    max-width: calc(100vw - 54px);
+    width: 100%;
+    max-width: 100%;
     overflow-x: hidden;
   }
 
@@ -732,7 +820,7 @@ hr {
   .posts-graph,
   hr {
     width: 100%;
-    max-width: calc(100vw - 54px);
+    max-width: 100%;
   }
 
   header::before {
@@ -745,6 +833,7 @@ hr {
 
   .posts-graph__stage {
     height: 380px;
+    border-width: 5px;
   }
 
   blockquote {
