@@ -1,5 +1,6 @@
 ---
-title: Should Canada Elect Senators?
+title: "senate.tune({ damping: true });"
+titleformat: code
 image: rt_senate_pid_controller.webp
 imagealt: "Canadian parliamentary components are arranged as an analog control loop with an elected-senate path risking oscillation."
 imagecaption: "The House, Senate, and Crown redrawn as a control loop where adding another electoral input can amplify oscillation."

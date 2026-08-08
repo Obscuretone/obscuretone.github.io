@@ -1,5 +1,6 @@
 ---
-title: Refactoring Capitalism With Zero Downtime
+title: "economy.migrate({ downtime: 0 });"
+titleformat: code
 image: rt_zero_downtime_capitalism.webp
 imagealt: "A live city services machine keeps housing, food, medicine, payroll, power, schools, buses, and hospitals running during a migration."
 imagecaption: "Economic transition as a live migration where the services people depend on cannot go down."

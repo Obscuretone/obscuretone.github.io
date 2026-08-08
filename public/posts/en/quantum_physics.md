@@ -1,5 +1,6 @@
 ---
-title: Finish Powder Shouldn't Exist
+title: "basic.fail(); premium.sell();"
+titleformat: code
 description: A dishwasher detergent became an unexpected lesson in how companies design artificial product tiers, where the cheapest option exists less to satisfy customers than to persuade them to buy the next model up.
 tags: [consumer-products, product-design, engineering, incentives, markets]
 ---

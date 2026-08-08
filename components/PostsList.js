@@ -1,5 +1,6 @@
 // components/PostsList.js
 import Link from 'next/link';
+import PostTitle from './PostTitle';
 
 function formatPublishedDate(value) {
     const dateParts = typeof value === 'string'
@@ -31,7 +32,7 @@ export default function PostsList({ title, posts }) {
                     return (
                         <li key={post.slug}>
                             <Link href={`/posts/${post.slug}`}>
-                                {post.title}
+                                <PostTitle title={post.title} format={post.titleformat} />
                             </Link>
                             {publishedDate && (
                                 <time dateTime={post.publishedAt}>{publishedDate}</time>

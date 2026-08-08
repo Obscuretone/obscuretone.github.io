@@ -1,5 +1,6 @@
 ---
-title: AI Did Not Replace Developers. It Changed The Bar.
+title: "generation.rate > review.capacity"
+titleformat: code
 image: rt_ai_code_review_queue.webp
 imagealt: "An engineer reviews a growing queue of AI-generated code printouts moving through QA gates."
 imagecaption: "AI makes the first draft cheaper and pushes the bottleneck into review, testing, and accountability."

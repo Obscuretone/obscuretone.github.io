@@ -1,5 +1,6 @@
 ---
-title: Every Sprint Becomes Kanban Eventually
+title: "while (work.arrives()) kanban.pull();"
+titleformat: code
 description: "Every sprint team I have joined eventually admitted that work arrives continuously. The fair contest between Scrum and Kanban is decided by which model survives contact with that reality."
 tags: [software, management, agile, kanban, systems]
 ---
@@ -50,7 +51,7 @@ Interruptions provide another test. A sprint is useful when incoming work can wa
 
 ## Kanban Is More Than Removing The Sprint
 
-Calling an unplanned ticket queue Kanban would repeat the exact mistake described in [Agile Has Never Been Tried](/posts/en/agile_has_never_been_tried). Removing sprint boundaries does not create flow by itself.
+Calling an unplanned ticket queue Kanban would repeat the exact mistake described in [`power.redistribute();`](/posts/en/agile_has_never_been_tried). Removing sprint boundaries does not create flow by itself.
 
 The [Kanban Guide](https://kanbanguides.org/the-kanban-guide/ "software, management, kanban | Kanban Guides") requires teams to define and visualize their workflow, actively manage items, control work in progress, and improve the system. It also requires four flow metrics: WIP, throughput, work-item age, and cycle time. A service-level expectation uses historical cycle-time data to forecast how long work will probably take.
 

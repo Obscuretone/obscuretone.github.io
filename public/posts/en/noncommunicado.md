@@ -1,5 +1,6 @@
 ---
-title: On Consent, and Identity
+title: "if (!consent) identity.unlink();"
+titleformat: code
 description: I thought I was writing a declaration of apostasy. Instead, I discovered I was trying to answer a much older question about identity, consent, and the importance of describing reality as accurately as possible.
 tags: [institutions, religion, identity, consent, evidence]
 ---

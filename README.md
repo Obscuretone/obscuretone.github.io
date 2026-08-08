@@ -28,7 +28,14 @@ Posts live in `public/posts/en` and `public/posts/fr` as Markdown files with fro
 ---
 title: Post title
 description: Short description for metadata
+titleformat: prose # prose, code, policy, or hybrid
 ---
 ```
 
 Images used by posts live in `public/images`.
+
+## Content Philosophy
+
+Posts are snapshots, not permanent positions. They are deliberately ephemeral and may be revised, superseded, archived, or removed as the thinking develops.
+
+Ideas change. Views change. Better arguments hold.

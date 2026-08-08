@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import PostTitle from './PostTitle';
 
 function formatTags(tags) {
     if (tags.length <= 1) {
@@ -24,7 +25,7 @@ export default function NearbyArguments({ posts }) {
                 {posts.map((post) => (
                     <li key={post.slug}>
                         <Link href={`/posts/${post.slug}`}>
-                            {post.title}
+                            <PostTitle title={post.title} format={post.titleformat} />
                         </Link>
                         <span>
                             Also about {formatTags(post.sharedTags)}.

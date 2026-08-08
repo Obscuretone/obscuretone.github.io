@@ -1,5 +1,6 @@
 ---
-title: The Job Market Is Eventually Consistent
+title: "await jobMarket.converge();"
+titleformat: code
 image: rt_eventual_hiring_sync.webp
 imagealt: "Recruiters, candidates, budgets, job postings, and calendars appear as delayed database nodes trying to sync."
 imagecaption: "Hiring as stale replicated state: every node updates eventually, and candidates wait in the lag."

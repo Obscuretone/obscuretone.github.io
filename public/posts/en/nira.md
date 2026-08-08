@@ -1,5 +1,6 @@
 ---
-title: Nira - Designing Tools For Humans And Agents
+title: "nira --interface=human,agent"
+titleformat: code
 image: rt_nira_human_agent_tracker.webp
 imagealt: "A local issue tracker workstation connects a command-line terminal, human review screen, agent queue, and SQLite project cartridge."
 imagecaption: "Nira as a local workspace boundary between human review, CLI automation, agent work, and portable state."

@@ -1,5 +1,6 @@
 ---
-title: Pieces Of Flair
+title: "metric.optimize() !== system.improve()"
+titleformat: code
 image: rt_flair_metric_dashboard.webp
 imagealt: "Workers wear excessive badges while managers watch handle-time clocks, attendance turnstiles, sprint tokens, and velocity gauges."
 imagecaption: "Metrics become the costume, and the costume becomes the work."

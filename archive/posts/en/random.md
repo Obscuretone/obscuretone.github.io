@@ -1,5 +1,6 @@
 ---
-title: No Such Thing As Random
+title: "choice = f(history, state, noise);"
+titleformat: code
 description: Free will is a useful interface, but people are built out of causes. Randomness does not rescue agency. It only adds noise to the machine.
 tags: [free-will, causality, systems, psychology, responsibility]
 ---

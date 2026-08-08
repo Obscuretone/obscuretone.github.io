@@ -1,5 +1,6 @@
 ---
-title: Canada Is A Legacy System
+title: "canada.refactor({ downtime: 0 });"
+titleformat: code
 image: rt_canada_legacy_mainframe.webp
 imagealt: "A patched government mainframe connects monarchy, parliament, provinces, courts, and public services through old ports."
 imagecaption: "Canada as a running legacy mainframe: old interfaces, modern adapters, and terrifying migration risk."
@@ -42,7 +43,7 @@ The magic wands make this visible. The Mace represents parliamentary authority. 
 
 This is where the system becomes absurd enough to be useful.
 
-I wrote the full absurd version of this in [My Cat Could Be The Crown](/posts/en/assent), but the short version is that day-to-day legislative processing makes the Crown look less like an active decision-maker than a required service dependency. The system expects the endpoint to return `assent`.
+I wrote the full absurd version of this in [`return assent;`](/posts/en/assent), but the short version is that day-to-day legislative processing makes the Crown look less like an active decision-maker than a required service dependency. The system expects the endpoint to return `assent`.
 
 The dependency is symbolically enormous and operationally boring, which is classic legacy architecture.
 
@@ -158,7 +159,7 @@ The Senate is another legacy component: unelected, appointed, regionally structu
 
 The Senate is a review queue with questionable ownership and surprising persistence. It slows things down, catches some errors, creates committee work, and occasionally reminds elected governments that passing a bill through the House is not the same thing as shipping a stable release.
 
-I have written about the more charitable version of this in [Should Canada Elect Senators?](/posts/en/government_control), where I treated the House of Commons, Senate, and Crown as parts of a political control system. In that analogy, the Senate is accumulated state: governments add appointments over time, and both sound judgment and appointment error persist beyond an election. Its different time horizon can slow sudden changes, but it can preserve mistakes too.
+I have written about the more charitable version of this in [`senate.tune({ damping: true });`](/posts/en/government_control), where I treated the House of Commons, Senate, and Crown as parts of a political control system. In that analogy, the Senate is accumulated state: governments add appointments over time, and both sound judgment and appointment error persist beyond an election. Its different time horizon can slow sudden changes, but it can preserve mistakes too.
 
 It also has its own Mace, because of course the review queue has its own magic wand.
 

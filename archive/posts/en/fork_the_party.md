@@ -1,5 +1,6 @@
 ---
-title: Fork The Party
+title: "party.fork();"
+titleformat: code
 image: rt_fork_party_branching.webp
 imagealt: "A political party headquarters becomes a branching source-control station with several unpleasant deployment targets."
 imagecaption: "A worldview is easy to fork; the hard part is choosing where the branch has to run."
