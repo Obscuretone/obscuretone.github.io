@@ -1,6 +1,5 @@
 ---
-title: "decompress(resume, jobDescription);"
-titleformat: code
+title: Hiring Is Lossy Compression
 image: rt_lossy_compression.webp
 imagealt: "Retrofuturist plate of resumes and job descriptions passing through a compression codec."
 imagecaption: "Resumes and job descriptions as lossy compression artifacts."

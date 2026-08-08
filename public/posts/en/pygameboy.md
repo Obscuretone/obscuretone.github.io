@@ -1,6 +1,5 @@
 ---
-title: "assert(PyGameBoy.passes(cartridge));"
-titleformat: code
+title: PyGameBoy Passes The Cartridge Test
 description: PyGameBoy began as an experiment in making a Game Boy emulator fast enough in CPython. It became a study in proving that the assembled machine behaves like the hardware.
 tags: [emulation, python, performance, software, architecture, testing]
 ---

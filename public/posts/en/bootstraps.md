@@ -1,6 +1,5 @@
 ---
-title: "startup.boot({ capital, timing, regulation });"
-titleformat: code
+title: The Startup Myth
 image: rt_startup_launchbay.webp
 imagealt: "Retrofuturist plate of a garage launch bay connected to capital tanks and regulatory gates."
 imagecaption: "The garage myth redrawn as infrastructure, timing, capital, and support systems."

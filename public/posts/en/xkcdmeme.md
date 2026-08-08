@@ -1,6 +1,5 @@
 ---
-title: "classify(photo, { park: true, bird: true });"
-titleformat: code
+title: XKCD As A Systems Test
 image: rt_xkcd_tasks_bird_park.webp
 imagealt: "An uploaded photo splits into an EXIF GPS park-boundary check and a bird vision classifier before merging into an API response."
 imagecaption: "The classic bird-in-a-national-park task broken into metadata, geography, vision, and API glue."

@@ -1,6 +1,5 @@
 ---
-title: "for (const stack of stacks) build(todo);"
-titleformat: code
+title: Why Todo Apps Matter
 image: rt_todo_lab.webp
 imagealt: "Several small todo-app machines on a lab bench, each representing a different runtime and persistence stack."
 imagecaption: "The same boring checklist domain repeated across different architecture machines."

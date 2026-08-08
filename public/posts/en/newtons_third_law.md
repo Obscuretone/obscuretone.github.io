@@ -1,6 +1,5 @@
 ---
-title: "for (const rule of resumeAdvice) recruiter.contradict(rule);"
-titleformat: code
+title: Newton's Third Law Of Recruiting
 description: For every resume rule, there exists an equal and opposite recruiter. AI should turn resume and job snapshots into a traceable professional evidence record instead of pretending it can discover the perfect format.
 tags: [hiring, resumes, recruiting, artificial intelligence, software, systems]
 ---
