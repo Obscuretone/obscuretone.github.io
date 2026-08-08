@@ -1,6 +1,5 @@
 ---
-title: "SELECT ability FROM evidence;"
-titleformat: code
+title: Evidence Over Credentials
 image: rt_practical_experience_bench.webp
 imagealt: "A practical engineering workbench stacks shipped systems, incident notes, mentorship, and production evidence above framed credentials."
 imagecaption: "Practical experience as a curriculum made of shipped systems, incidents, judgment, and evidence."

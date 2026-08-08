@@ -1,6 +1,5 @@
 ---
-title: "return assent;"
-titleformat: code
+title: My Cat Could Be The Crown
 image: rt_cat_crown.webp
 imagealt: "A cat beside a Royal Assent desk and ceremonial stamp machinery."
 imagecaption: "The Crown's ordinary assent path, reduced to a ceremonial endpoint with a cat-shaped operator."

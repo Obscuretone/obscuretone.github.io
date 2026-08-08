@@ -1,6 +1,5 @@
 ---
-title: "publicAccess = min(capability, safety, policy);"
-titleformat: code
+title: Glass Ceiling
 image: rt_ai_glass_ceiling_access.webp
 imagealt: "AI terminal cabinets rise toward a glass ceiling while public users wait below an access gate."
 imagecaption: "Capability can exist above the public access layer, where permission becomes part of the product."

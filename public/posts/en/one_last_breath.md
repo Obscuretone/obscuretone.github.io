@@ -1,6 +1,5 @@
 ---
-title: "finally { blame(human); }"
-titleformat: code
+title: The Last Human Job Is Blame
 image: rt_blame_desk.webp
 imagealt: "An automated office machine sends stamped decisions to a lone human liability desk."
 imagecaption: "Automated work flows through the machine until responsibility needs a person-shaped endpoint."

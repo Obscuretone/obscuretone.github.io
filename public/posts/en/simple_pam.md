@@ -1,6 +1,5 @@
 ---
-title: "allow_if(uptime < threshold);"
-titleformat: code
+title: Uptime As Authentication
 image: rt_simple_pam_uptime.webp
 imagealt: "A login doorway controlled by a reboot clock, uptime gauge, and relay-like PAM modules."
 imagecaption: "Physical access, recent reboot, and PAM policy drawn as one local authentication boundary."

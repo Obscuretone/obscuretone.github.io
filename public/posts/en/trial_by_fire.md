@@ -1,6 +1,5 @@
 ---
-title: "describe(lastProductionFailure);"
-titleformat: code
+title: What Broke In Production?
 image: rt_production_incident.webp
 imagealt: "A production control room with an incident lamp, rollback lever, pager, falling graph trace, and review notebook."
 imagecaption: "A production incident as the place where assumptions meet users, alarms, rollback, and review."

@@ -1,6 +1,5 @@
 ---
-title: "generation.rate > review.capacity"
-titleformat: code
+title: AI Changed The Bar
 image: rt_ai_code_review_queue.webp
 imagealt: "An engineer reviews a growing queue of AI-generated code printouts moving through QA gates."
 imagecaption: "AI makes the first draft cheaper and pushes the bottleneck into review, testing, and accountability."

@@ -1,6 +1,5 @@
 ---
-title: "assert(emulator.behavesLikeHardware);"
-titleformat: code
+title: "OTR: The Test ROM That Talks"
 description: Obscuretone Test ROM is a cartridge-shaped integration test for Game Boy emulators, with visible progress, a versioned serial protocol, reproducible artifacts, and a coverage ledger that refuses to forget an opcode.
 tags: [emulation, testing, python, software, hardware, evidence]
 ---

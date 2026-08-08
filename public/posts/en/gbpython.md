@@ -1,6 +1,5 @@
 ---
-title: "while (rom.hasSpace()) python.addFeature();"
-titleformat: code
+title: "GBPython: Python In A Game Boy"
 description: GBPython puts a persistent Python REPL inside a Nintendo Game Boy ROM, using banked cartridge memory for syntax trees and objects, integer arithmetic for floating point, and PyGameBoy as its test machine.
 tags: [gameboy, python, interpreters, emulation, software, architecture]
 ---

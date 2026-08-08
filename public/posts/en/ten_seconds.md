@@ -1,6 +1,5 @@
 ---
-title: "resume.render({ attention: 10_000 });"
-titleformat: code
+title: The Ten-Second Resume
 image: rt_resume_ad_unit.webp
 imagealt: "A resume transformed into a billboard above a fast screening conveyor."
 imagecaption: "A resume becomes an ad unit when the review window collapses to ten seconds."

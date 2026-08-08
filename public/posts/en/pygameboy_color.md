@@ -1,6 +1,5 @@
 ---
-title: "if (cartridge.cgb) memory.bankEverything();"
-titleformat: code
+title: PyGameBoy In Color
 description: Game Boy Color support turned one monochrome framebuffer into a hardware-model problem involving banked memory, tile attributes, palette RAM, DMA, double speed, boot state, and visual conformance.
 tags: [emulation, gameboy, python, color, hardware, testing]
 ---
@@ -15,7 +14,7 @@ Color did not replace the monochrome machine. It multiplied the state hidden beh
 
 ## One Header Bit Is Not A Hardware Model
 
-A Game Boy cartridge header contains a CGB flag at `0x0143`. It tells the console whether the program supports or requires Game Boy Color features. The tempting emulator implementation is the title of this post:
+A Game Boy cartridge header contains a CGB flag at `0x0143`. It tells the console whether the program supports or requires Game Boy Color features. The tempting emulator implementation fits in one line:
 
 ```javascript
 if (cartridge.cgb) memory.bankEverything();
