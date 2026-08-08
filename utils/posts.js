@@ -20,6 +20,7 @@ export function getPostsByLanguage(language) {
 
             return {
                 ...data,
+                published: normalizeDate(data.published),
                 slug: `${language}/${filename.replace('.md', '')}`,
                 publishedAt: normalizeDate(data.published) || getGitFirstAdded(filePath),
             };
