@@ -1,5 +1,6 @@
 ---
-title: EMH - Building A Hiring Platform Around Evidence
+title: "match(candidate, job, { evidence: true });"
+titleformat: code
 image: rt_emh_evidence_matcher.webp
 imagealt: "One resume and one job description feed into an evidence comparison machine with requirement gauges and a draft output tray."
 imagecaption: "EMH as a one-resume, one-job evidence matcher instead of another pile-reduction machine."

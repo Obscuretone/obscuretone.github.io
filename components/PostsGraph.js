@@ -229,34 +229,31 @@ function drawGraph(canvas, graph, width, height) {
 
     graph.links.forEach((link) => {
         const strength = Math.min(1, link.score / 4);
+        const trace = context.createLinearGradient(
+            link.source.x,
+            link.source.y,
+            link.target.x,
+            link.target.y,
+        );
+
+        trace.addColorStop(0, `rgba(77, 231, 255, ${0.38 + strength * 0.48})`);
+        trace.addColorStop(1, `rgba(255, 79, 216, ${0.34 + strength * 0.5})`);
 
         context.beginPath();
         context.moveTo(link.source.x, link.source.y);
         context.lineTo(link.target.x, link.target.y);
-        context.strokeStyle = `rgba(163, 22, 33, ${0.34 + strength * 0.48})`;
+        context.strokeStyle = trace;
         context.lineWidth = 1.2 + strength * 2.4;
+        context.shadowColor = 'rgba(77, 231, 255, 0.48)';
+        context.shadowBlur = 5 + strength * 4;
         context.stroke();
+        context.shadowBlur = 0;
     });
 
-    graph.links.forEach((link) => {
-        const sourceAngle = Math.atan2(link.target.y - link.source.y, link.target.x - link.source.x);
-        const targetAngle = sourceAngle + Math.PI;
-
-        [link.source, link.target].forEach((node, index) => {
-            const angle = index === 0 ? sourceAngle : targetAngle;
-            const dimensions = getNodeDimensions(node);
-            const x = node.x + Math.cos(angle) * ((dimensions.width / 2) - 8);
-            const y = node.y + Math.sin(angle) * ((dimensions.height / 2) - 5);
-
-            context.beginPath();
-            context.arc(x, y, 1.8, 0, Math.PI * 2);
-            context.fillStyle = node.isCurrent ? '#4e8098' : '#a31621';
-            context.fill();
-        });
-    });
 }
 
 export default function PostsGraph({ posts, currentSlug, evidenceItems }) {
+    const scrollerRef = useRef(null);
     const containerRef = useRef(null);
     const canvasRef = useRef(null);
     const simulationRef = useRef(null);
@@ -363,6 +360,16 @@ export default function PostsGraph({ posts, currentSlug, evidenceItems }) {
             }
         };
     }, [graph, size]);
+
+    useEffect(() => {
+        const scroller = scrollerRef.current;
+
+        if (!scroller || scroller.scrollWidth <= scroller.clientWidth) {
+            return;
+        }
+
+        scroller.scrollLeft = (scroller.scrollWidth - scroller.clientWidth) / 2;
+    }, [size.width]);
 
     function getNodeFromEvent(event, nodeId) {
         const node = simulationRef.current?.nodes().find((candidate) => candidate.id === nodeId);
@@ -525,7 +532,11 @@ export default function PostsGraph({ posts, currentSlug, evidenceItems }) {
     }
 
     return (
-        <section className="posts-graph" aria-label="Evidence board">
+        <section ref={scrollerRef} className="posts-graph" aria-label="Evidence board">
+            <span className="posts-graph__label" aria-hidden="true">
+                EVIDENCE MAP // <span className="posts-graph__label-desktop">DRAG NODES</span>
+                <span className="posts-graph__label-mobile">SWIPE TO TRACE</span>
+            </span>
             <div ref={containerRef} className="posts-graph__stage">
                 <canvas
                     ref={canvasRef}

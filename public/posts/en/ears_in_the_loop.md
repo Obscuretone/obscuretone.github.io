@@ -1,5 +1,6 @@
 ---
-title: The AI Didn't Hear The Audio Bug - And Still Fixed It
+title: "debug(audio, { sensor: human });"
+titleformat: code
 description: A static-filled Game Boy emulator became a debugging exercise in human perception, DC bias, audio buffering, analog hardware, and tests for a problem the coding agent could not hear.
 tags: [ai, emulation, python, debugging, audio, testing]
 ---

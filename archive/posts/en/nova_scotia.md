@@ -1,5 +1,6 @@
 ---
-title: Nova Scotia Should Be An Island
+title: "novaScotia.detach(chignecto);"
+titleformat: code
 description: A satirical engineering proposal to flood the Chignecto Isthmus and make Nova Scotia's geography match its culture, written with the full seriousness of a public infrastructure review.
 ---
 

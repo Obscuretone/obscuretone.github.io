@@ -592,6 +592,7 @@ export async function getStaticProps({ params }) {
             post: {
                 slug: `${lang}/${slug}`,
                 title: data.title || 'Untitled',
+                titleFormat: data.titleformat || 'prose',
                 description: data.description || '',
                 tags: data.tags || [],
                 image: data.image || '',
@@ -613,6 +614,7 @@ export async function getStaticProps({ params }) {
 export default function Post({ post, postsEn, currentLang, revision }) {
     const {
         title,
+        titleFormat,
         description,
         htmlContent,
         publishedAt,
@@ -691,7 +693,7 @@ export default function Post({ post, postsEn, currentLang, revision }) {
             <hr />
 
             <article>
-                <CutoutTitle title={title} seedText={htmlContent} />
+                <CutoutTitle title={title} format={titleFormat} seedText={htmlContent} />
                 {formattedPublishedDate && (
                     <p className="article-meta">
                         <strong>Published:</strong>{' '}

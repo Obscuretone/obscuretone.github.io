@@ -1,5 +1,6 @@
 ---
-title: Job Not Found
+title: "throw new JobNotFoundError();"
+titleformat: code
 image: rt_job_not_found_terminal.webp
 imagealt: "A job applicant feeds a resume into a large terminal with an empty output tray and disconnected feedback cable."
 imagecaption: "The application disappears into the machine, and the feedback path never returns."

@@ -1,5 +1,6 @@
 ---
-title: The Emulator Does Not Count
+title: "if (!employment.paid) experience.discard();"
+titleformat: code
 description: A professional Python contract and a Game Boy emulator can both disappear when a hiring system only recognizes experience from the approved kind of employment record.
 tags: [hiring, careers, evidence, software, python, credentials]
 ---

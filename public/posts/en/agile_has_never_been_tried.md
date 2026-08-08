@@ -1,5 +1,6 @@
 ---
-title: Agile Has Never Been Tried
+title: "power.redistribute();"
+titleformat: code
 description: "Agile and communism share an implementation failure: people adopt the language, preserve the hierarchy, and blame the idea after refusing to redistribute power."
 tags: [software, management, agile, incentives, work]
 ---

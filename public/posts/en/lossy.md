@@ -1,5 +1,6 @@
 ---
-title: Resumes And Job Descriptions Are Lossy Compression
+title: "decompress(resume, jobDescription);"
+titleformat: code
 image: rt_lossy_compression.webp
 imagealt: "Retrofuturist plate of resumes and job descriptions passing through a compression codec."
 imagecaption: "Resumes and job descriptions as lossy compression artifacts."
