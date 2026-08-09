@@ -72,10 +72,12 @@ Registered functions are mapped directly into a global hash register `self.nativ
 
 ## 4. Production-Grade Validation: The Casino Stack
 
-To prove the operational viability of RustPHP's extension layer, we integrated the exact subset of required dynamic PHP extensions used by the high-volume production transaction pipelines of the **Casino** project monorepo.
+To prove the operational viability of RustPHP's extension layer, we integrated the exact subset of required dynamic PHP extensions used by the high-volume production transaction pipelines of the **Casino** project monorepo (`../casino`).
 
 Using our `PhpExtension` trait, we delivered safe Rust-native bindings for:
 * **`ext-openssl`:** Exposes `openssl_random_pseudo_bytes()`, utilizing standard cryptographic entropy (`rand::thread_rng()`) to securely generate transaction salts and hashes.
+* **`ext-pcre`:** Exposes `preg_match()`, integrating Rust's DFA-based compiled regular expressions. It maps PHP patterns cleanly and leverages **safe interior mutability** (`Rc<RefCell<Vec>>`) to populate reference out-parameters, allowing the caller to immediately access captures.
+* **`ext-bcmath`:** Exposes `bcadd()`, `bcsub()`, `bcmul()`, `bcdiv()`, and `bccomp()` to perform high-precision, standard-compliant banking arithmetic on player balances.
 * **`ext-mbstring`:** Exposes `mb_strlen()` and `mb_substr()`. Since Rust strings are natively UTF-8, these compile down to $O(1)$ native slice allocations, ensuring high-speed Unicode text manipulation.
 * **`ext-ctype`:** Exposes `ctype_digit()` and `ctype_alpha()` for lightning-fast character set input validations, bypassing regex compilation costs.
 * **`ext-json`:** Exposes `json_encode()` and `json_decode()`. We corrected a core compiler array-indexing layout bug to support dynamic auto-index sequential keys, guaranteeing PHP array-literals serialize cleanly into compliant JSON structures.
