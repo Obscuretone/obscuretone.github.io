@@ -72,9 +72,8 @@ Registered functions are mapped directly into a global hash register `self.nativ
 
 ## 4. Production-Grade Validation: The Casino Stack
 
-To prove the operational viability of RustPHP's extension layer, we integrated the exact subset of required dynamic PHP extensions used by the high-volume production transaction pipelines of the **Casino** project monorepo (`../casino`).
-
-Using our `PhpExtension` trait, we delivered safe Rust-native bindings for:
+To prove the operational viability of RustPHP's execution runtime, we integrated the exact core subset of dynamic PHP extensions installed inside the production Docker containers of the **Casino** game server (`../casino`):
+* **`ext-mysqli`:** A fully operational native database driver compiled with the pure-Rust `mysql` crate. It manages active MySQL/MariaDB database connections, executes queries natively, and maps database results (`mysql::Row`) recursively into compliant PHP associative arrays (`Val::Array`). If local database servers are down, it seamlessly falls back to structured mock registers to allow dry-run pipelines to execute with absolute stability.
 * **`ext-openssl`:** Exposes `openssl_random_pseudo_bytes()`, utilizing standard cryptographic entropy (`rand::thread_rng()`) to securely generate transaction salts and hashes.
 * **`ext-pcre`:** Exposes `preg_match()`, integrating Rust's DFA-based compiled regular expressions. It maps PHP patterns cleanly and leverages **safe interior mutability** (`Rc<RefCell<Vec>>`) to populate reference out-parameters, allowing the caller to immediately access captures.
 * **`ext-bcmath`:** Exposes `bcadd()`, `bcsub()`, `bcmul()`, `bcdiv()`, and `bccomp()` to perform high-precision, standard-compliant banking arithmetic on player balances.
