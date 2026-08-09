@@ -86,7 +86,21 @@ We verified these extensions in concert using a simulated high-throughput bettin
 
 ---
 
-## 5. Web-Scale FastCGI Process Manager (FPM)
+## 5. Migrating Massive Codebases: Runtime File Bootstrapping
+
+While performance micro-benchmarks are important, real-world repositories like the Casino project require complex environments. An Ahead-of-Time compiler typically expects a single, flat buffer of code. However, modern PHP apps use dynamic `require_once` statements and autoloaders.
+
+To break through this barrier, we upgraded the RustPHP Lexer, Parser, Compiler, and Virtual Machine execution loops to support **Native Dynamic File Traversal**:
+* **Dynamic Loading (`require_once` / `include`):** The VM execution loop now supports pausing script execution to dynamically parse, compile, and merge foreign `.php` dependency trees dynamically at runtime.
+* **Magic Directives (`__DIR__`):** The compiler supports runtime resolution of `__DIR__` instructions, allowing relative filepath boots.
+* **Class Constraints:** The AST and `CompiledClass` registry now natively handle `abstract class` declarations, `public/private/protected/static` property modifiers, and `const` assignments.
+* **Exception Unwinding:** The VM `CallFrame` was re-engineered with a localized `try_catch_stack`. When an `Instruction::Throw` occurs, the VM unwinds the parent execution states sequentially until a matching `Catch` or `Finally` instruction pointer (`ip`) is recovered.
+
+These structural blueprints represent the final leap from synthetic script execution to true dynamic project orchestration.
+
+---
+
+## 6. Web-Scale FastCGI Process Manager (FPM)
 
 To serve HTTP requests, RustPHP includes a built-in FastCGI Process Manager (**RustPHP-FPM**), acting as a full drop-in replacement for Zend-FPM.
 
@@ -94,7 +108,7 @@ Running the command `rustphp --fpm --listen 127.0.0.1:9000` spawns a multi-threa
 
 ---
 
-## 6. Why It Is Incompatible with Zend Extensions
+## 7. Why It Is Incompatible with Zend Extensions
 
 A common architectural inquiry is whether RustPHP can run existing Zend C extensions (like `xdebug`, `opcache`, or `pdo_mysql`). 
 
