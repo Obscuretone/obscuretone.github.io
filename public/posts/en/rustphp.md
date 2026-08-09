@@ -39,7 +39,7 @@ This is highly inefficient. To bypass this, we implemented a multi-pass **peepho
 By inlining raw 64-bit integer payloads directly into the instruction bytes, we completely eliminate constant-pool memory lookups and dynamic enum tag checks. This reduced our heavy loop body from **5 generic instructions to just 2**, stripping **30,000,000 instruction dispatches** from our 10M iteration benchmark.
 
 ### B. Register-Cached Stack Dispatches
-Instead of a dynamic vector (`Vec<Val>`) that triggers bounds checking and capacity checks on every single stack modification, RustPHP allocates a flat register stack of `1024` slots. 
+Instead of a dynamic vector (`Vec<Val>`)  that triggers bounds checking and capacity checks on every single stack modification, RustPHP allocates a flat register stack of `1024` slots. 
 
 During execution, the stack pointer index is cached locally into a mutable variable (`mut stack_top`). Since `stack_top` is held as a local register, the CPU can store the stack index directly in a hardware register, bypassing memory round-trips to the `self` structure. Furthermore, math operations read operands directly via immutable references (`&self.stack[stack_top]`), performing calculations and writing results back in-place.
 
@@ -86,49 +86,32 @@ We verified these extensions in concert using a simulated high-throughput bettin
 
 ---
 
-## 5. Migrating Massive Codebases: Runtime File Bootstrapping
+## 5. Bootstrapping the WordPress Monolith: Runtime File Splicing
 
-While performance micro-benchmarks are important, real-world repositories like the Casino project require complex environments. An Ahead-of-Time compiler typically expects a single, flat buffer of code. However, modern PHP apps use dynamic `require_once` statements and autoloaders.
+A key test of compatibility for any proposed candidate of a next-generation PHP standard (PHP 9) is its ability to bootstrap and execute the core **WordPress** monolith.
 
-To break through this barrier, we upgraded the RustPHP Lexer, Parser, Compiler, and Virtual Machine execution loops to support **Native Dynamic File Traversal**:
-* **Dynamic Loading (`require_once` / `include`):** The VM execution loop now supports pausing script execution to dynamically parse, compile, and merge foreign `.php` dependency trees dynamically at runtime.
-* **Magic Directives (`__DIR__`):** The compiler supports runtime resolution of `__DIR__` instructions, allowing relative filepath boots.
-* **Class Constraints:** The AST and `CompiledClass` registry now natively handle `abstract class` declarations, `public/private/protected/static` property modifiers, and `const` assignments.
-* **Exception Unwinding:** The VM `CallFrame` was re-engineered with a localized `try_catch_stack`. When an `Instruction::Throw` occurs, the VM unwinds the parent execution states sequentially until a matching `Catch` or `Finally` instruction pointer (`ip`) is recovered.
+Unlike standard scripts, WordPress traverses several levels of conditional requirements: `index.php` ➔ `wp-blog-header.php` ➔ `wp-load.php` ➔ `wp-config.php` ➔ `wp-settings.php`.
 
-These structural blueprints represent the final leap from synthetic script execution to true dynamic project orchestration.
-
----
-
-## 6. Web-Scale FastCGI Process Manager (FPM)
-
-To serve HTTP requests, RustPHP includes a built-in FastCGI Process Manager (**RustPHP-FPM**), acting as a full drop-in replacement for Zend-FPM.
-
-Running the command `rustphp --fpm --listen 127.0.0.1:9000` spawns a multi-threaded daemon that accepts FastCGI connections from NGINX or Apache. It maps FastCGI environment parameters directly to the `$_SERVER` superglobal array, parses and executes the PHP script, and streams the HTTP response directly back over TCP.
+To meet this compatibility ceiling, we fundamentally overhauled the RustPHP runtime interpreter to support **Dynamic File Splicing**:
+1. **Borrow-Free Dispatch Splicing:** In a standard VM loop, holding active slices `&[Instruction]` borrowed from `self` creates borrow conflicts when we attempt to modify `self` (such as executing requires, native DB bindings, or loading constants). We eliminated this compile-time barrier by **localizing the instruction and constant-pool vectors inside the CallFrame struct**. Borrowing is confined to local registers in the loop stack, allowing the VM to recursively mutate global state safely at any instruction boundary.
+2. **Recursive Frame Pushing:** When the VM encounters `Instruction::Require(path)`, it halts, parses the path through the Lexer/Parser, compiles it to a new `Chunk` dynamically, registers the chunk, pushes a **`FrameTarget::Dynamic` CallFrame** sharing parent scopes, updates its local execution registers, and instantly resumes execution. Upon reaching the end of the required file, the frame is popped and the parent is resumed cleanly.
+3. **Advanced Monolithic Expressions:** We completed full compiler support for nested logical groupings `(...)`, the error suppression operator `@` (`Expression::ErrorSuppress`), boolean operators `&&` (`BinaryOp::And`) and `||` (`BinaryOp::Or`), the bitwise OR `|` (`BinaryOp::BitwiseOr`), `elseif` statements, and native global standard functions (`function_exists()`, `file_exists()`, `define()`, `defined()`).
 
 ---
 
-## 7. Why It Is Incompatible with Zend Extensions
+## 6. Containerized Orchestration (Docker-Compose)
 
-A common architectural inquiry is whether RustPHP can run existing Zend C extensions (like `xdebug`, `opcache`, or `pdo_mysql`). 
+To enable standard compliance testing directly in containerized workflows, we provided a complete, multi-service orchestrator (**`docker-compose.yml`**):
+* **`db`:** Spawns a production-ready MySQL 8.0 server with initialized accounts.
+* **`rustphp`:** Compiles our custom RustPHP-FPM image built on top of statically compiled Alpine libraries, mounting the local WordPress core directory.
+* **`nginx`:** Spawns NGINX Alpine, proxying incoming web requests on port `8080` via FastCGI to our `rustphp` static daemon.
 
-**It cannot. They are fundamentally incompatible.** The constraints are micro-architectural:
-
-### A. The Memory Model Conflict
-The Zend Engine represents PHP values via raw `zval` pointers, manually incrementing/decrementing reference counters, and managing a custom Garbage Collection heap. 
-RustPHP is built on **100% Safe Rust**. We represent dynamic heap-allocated reference types (like Arrays and Objects) using Rust's safe reference-counting pointer `std::rc::Rc` and interior mutability wrapper `std::cell::RefCell`. 
-
-### B. Foreign Function Interface (FFI) Boundaries
-Zend C extensions are compiled as dynamic libraries that expect to interact directly with Zend's internal C structures and global symbol tables. Because RustPHP compiles to a safe, statically-typed Rust binary with a completely different memory layout, it cannot load these C libraries without completely bypassing Rust's compile-time safety guarantees.
+This serves as a drop-in replacement for the traditional LEMP stack, executing standard core configurations entirely inside the safe-Rust VM!
 
 ---
 
-## A Monumental First Step
+## A Monumental Leap for PHP 9
 
-Despite the lack of legacy extension compatibility, RustPHP represents a monumental first step for the PHP language:
+By proving that a standalone PHP interpreter written in 100% Safe Rust can recursively compile and execute complex, real-world bootstrapping routes of the WordPress core, RustPHP establishes itself as a highly viable candidate for a modern, memory-safe, and high-performance successor to the Zend Engine.
 
-1. **Proof of Concept:** It proves that a modern, safe interpreted virtual machine written in Rust can outperform decades of C-based interpreter optimizations.
-2. **Memory Safety by Default:** It completely immunizes the PHP execution layer from buffer overflows, dangling pointers, double-frees, and use-after-free exploits.
-3. **A Modern Foundation:** It lays the groundwork for a fully multi-threaded, parallel, async-native, and memory-safe PHP runtime.
-
-The repository, performance benchmarks, FPM daemon, and full test suite are publicly available under [github.com/Obscuretone/RustPHP](https://github.com/Obscuretone/RustPHP).
+The repository, docker compose setups, and testing suite are publicly available under [github.com/Obscuretone/RustPHP](https://github.com/Obscuretone/RustPHP).
