@@ -9,9 +9,9 @@ I added a rewind button to [PyGameBoy](https://github.com/Obscuretone/pygameboy/
 
 The visible feature is simple. The implementation has to recover the processor, memory, cartridge controller, timers, display hardware and sound hardware together. The screen is rebuilt by executing the restored machine. There is no stored history of rendered frames.
 
-![An original PyGameBoy demo ROM playing, rewinding, and continuing with different input](/images/pygameboy-rewind.gif)
+![Super Mario Land running in PyGameBoy: Mario walks forward, dies, then returns to life as the game rewinds](/images/pygameboy-marioland-rewind.gif)
 
-The animation uses an original demonstration ROM running through the actual CPU and PPU. Its annotations expose the machine values changing underneath the movement. The backward section restores hardware and regenerates each displayed frame; the final section resumes with different input.
+Mario walks forward, collides with an enemy, and dies. Holding rewind brings him back through the death animation to the moment before the collision, restoring his life and rebuilding each frame from the recorded hardware state.
 
 ## CPU Instructions Lose Information
 
