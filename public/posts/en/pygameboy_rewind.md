@@ -5,7 +5,7 @@ published: "2026-11-07"
 tags: [emulation, gameboy, python, architecture, testing, performance]
 ---
 
-I added a rewind button to [PyGameBoy](https://github.com/Obscuretone/pygameboy/tree/2d5bbb170f7f42911165cfb1dfe97c74505800ec "emulation, python, software | PyGameBoy rewind implementation"). Hold R and the game moves backward through roughly ten seconds of history. Release it and play continues from the restored machine, with whatever buttons are held now. A small bar shows how much past remains.
+I added a rewind button to [PyGameBoy](https://github.com/Obscuretone/pygameboy/tree/9a3da91766ce816a614aafb70c3cebee7417a729 "emulation, python, software | PyGameBoy rewind implementation"). Hold R and the game moves backward through roughly ten seconds of history. Release it and play continues from the restored machine, with whatever buttons are held now. A small bar shows how much past remains.
 
 The visible feature is simple. The implementation has to recover the processor, memory, cartridge controller, timers, display hardware and sound hardware together. The screen is rebuilt by executing the restored machine. There is no stored history of rendered frames.
 
@@ -27,7 +27,7 @@ PyGameBoy records hardware transitions at frame boundaries. Rewind undoes those 
 
 Restoring the program counter is insufficient if the next instruction reads a different memory bank or an interrupt arrives in a different phase.
 
-The [captured hardware state](https://github.com/Obscuretone/pygameboy/blob/2d5bbb170f7f42911165cfb1dfe97c74505800ec/rewind.py "emulation, architecture, software | MachineHistory capture and replay") includes CPU registers and execution flags, the visible memory bus, backing cartridge RAM, bank selections, timer and serial phase, interrupt state, joypad state, PPU timing, and the APU's channels and filters. Color mode adds VRAM and WRAM banks, palette memory and DMA state. The cartridge clock has to travel with the rest of the machine too.
+The [captured hardware state](https://github.com/Obscuretone/pygameboy/blob/9a3da91766ce816a614aafb70c3cebee7417a729/rewind.py "emulation, architecture, software | MachineHistory capture and replay") includes CPU registers and execution flags, the visible memory bus, backing cartridge RAM, bank selections, timer and serial phase, interrupt state, joypad state, PPU timing, and the APU's channels and filters. Color mode adds VRAM and WRAM banks, palette memory and DMA state. The cartridge clock has to travel with the rest of the machine too.
 
 That state crosses several Python objects, some of which share storage. The CPU caches a reference to the flat memory array. The renderer holds NumPy views into that array and the physical VRAM banks. Replacing a bytearray during restoration could leave one device looking at the restored memory while another continues reading an abandoned allocation.
 
@@ -52,7 +52,7 @@ Unchanged buffers need no payload in that transition. Changes concentrated in a 
 
 Keeping buffers separate matters. Applying XOR to one large serialized object lets a small change in metadata shift the byte offsets of everything that follows it. An integer crossing an encoding boundary can make otherwise identical RAM appear completely different. Aligning the actual buffers avoids confusing serialization movement with hardware changes.
 
-The [reverse-delta codec](https://github.com/Obscuretone/pygameboy/blob/2d5bbb170f7f42911165cfb1dfe97c74505800ec/rewind_state.py "emulation, architecture, software | ReverseDeltaBuffer and full-state reference") has a simple direction: every retained transition converts a newer checkpoint into its predecessor. Removing the oldest transition shortens the available past without breaking the remaining chain. Popping transitions during rewind discards the future; recording again extends the surviving timeline.
+The [reverse-delta codec](https://github.com/Obscuretone/pygameboy/blob/9a3da91766ce816a614aafb70c3cebee7417a729/rewind_state.py "emulation, architecture, software | ReverseDeltaBuffer and full-state reference") has a simple direction: every retained transition converts a newer checkpoint into its predecessor. Removing the oldest transition shortens the available past without breaking the remaining chain. Popping transitions during rewind discards the future; recording again extends the surviving timeline.
 
 The default limit is about 600 frame intervals and 64 MiB of retained payload. That byte limit includes the detached current state as well as compressed transitions. Python container headers and temporary allocations remain outside that accounting.
 
@@ -106,9 +106,9 @@ These boundaries allow hardware to be restored without pretending that an extern
 
 The useful test goes beyond watching the character move backward.
 
-The [benchmark harness](https://github.com/Obscuretone/pygameboy/blob/2d5bbb170f7f42911165cfb1dfe97c74505800ec/tools/benchmark_rewind.py "emulation, testing, performance | Rewind comparison and replay verification") records digests of the original hardware and pixels, walks backward through retained history, compares every reconstructed result, and resumes forward with the original input sequence. Disk dirty flags are deliberately excluded from hardware comparisons because restoration changes that bookkeeping. Both storage backends use the same capture and reconstruction path.
+The [benchmark harness](https://github.com/Obscuretone/pygameboy/blob/9a3da91766ce816a614aafb70c3cebee7417a729/tools/benchmark_rewind.py "emulation, testing, performance | Rewind comparison and replay verification") records digests of the original hardware and pixels, walks backward through retained history, compares every reconstructed result, and resumes forward with the original input sequence. Disk dirty flags are deliberately excluded from hardware comparisons because restoration changes that bookkeeping. Both storage backends use the same capture and reconstruction path.
 
-In one local 900-frame Crystal workload, each backend retained 600 reverse transitions. All 600 backward frames and the subsequent 600 forward frames matched their originals. Their [retained payloads](https://github.com/Obscuretone/pygameboy/blob/2d5bbb170f7f42911165cfb1dfe97c74505800ec/benchmarks/rewind-crystal-2026-11-07.json "emulation, testing, performance | Recorded Crystal rewind comparison") were:
+In one local 900-frame Crystal workload, each backend retained 600 reverse transitions. All 600 backward frames and the subsequent 600 forward frames matched their originals. Their [retained payloads](https://github.com/Obscuretone/pygameboy/blob/9a3da91766ce816a614aafb70c3cebee7417a729/benchmarks/rewind-crystal-2026-11-07.json "emulation, testing, performance | Recorded Crystal rewind comparison") were:
 
 | Hardware history | Retained payload |
 |---|---:|
@@ -119,6 +119,6 @@ That is approximately 90 percent less retained payload for this workload. It inc
 
 Reconstructing a Crystal frame took about 20 milliseconds locally. The memory saving does not remove that execution cost or establish 60-frame-per-second rewind. The project keeps those measurements separate from CPU microbenchmarks and hardware conformance claims.
 
-Regression tests also exercise changing palettes and scrolling during scanlines, DMG and CGB output, both dispatch paths, banked memory, clock restoration, history eviction, branching, LCD-off frames, and suppressed serial callbacks. The complete local suite passed 1,377 tests with 100 percent statement and branch coverage. Five existing CGB conformance cases remain expected failures. Replaying the same emulator exactly establishes determinism across this feature; independent hardware tests still determine whether the emulator itself is accurate.
+Regression tests also exercise changing palettes and scrolling during scanlines, DMG and CGB output, both dispatch paths, banked memory, clock restoration, history eviction, branching, LCD-off frames, and suppressed serial callbacks. The complete local suite passed 1,379 tests with 100 percent statement and branch coverage. Five existing CGB conformance cases remain expected failures. Replaying the same emulator exactly establishes determinism across this feature; independent hardware tests still determine whether the emulator itself is accurate.
 
 The small bar at the bottom of the game now represents a bounded chain of machine transitions. Releasing R leaves the processor, devices and memory at the selected point, ready to produce a different future. The screen follows because the restored hardware builds it again.
