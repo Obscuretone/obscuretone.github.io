@@ -76,3 +76,25 @@ This has been effective in practice, and the scale is the part that still makes 
 They can ask while the pull request is open.
 
 That is a pretty cool thing to be able to build.
+
+## Can My Wizard Do This?
+
+I have since built an open-source companion to explore the same pattern with a different body of rules: [D&D Rules MCP](https://github.com/Obscuretone/dnd-rules-mcp).
+
+The source is the complete English [System Reference Document 5.2.1](https://www.dndbeyond.com/srd), which Wizards publishes under Creative Commons Attribution 4.0. That gives the public project a versioned, reusable corpus: 364 pages covering character creation, classes, spells, monsters, equipment, magic items, exploration, and the rules glossary. The importer also extracts 339 individual spell entries.
+
+The question becomes familiar very quickly. Can my character do this? Do I have the action available? Can I spend another spell slot on this turn? What happens to the spell I was concentrating on? Which rule supports that answer?
+
+The public service combines SQLite full-text search with real vector search using a local embedding model. Hybrid retrieval is the default. It returns page citations and source text, and the MCP client can fetch complete entries before reasoning about the proposed action. The model and its index stay local after the initial download and build.
+
+There are three tools: search the rules, read a cited entry, and investigate whether a proposed action is possible. The last tool can also evaluate structured facts against deterministic checks for action economy, movement, Opportunity Attacks, spellcasting, Concentration, damage, rolls, and basic character validation.
+
+That division is useful. The client's language model interprets the broader question using the retrieved evidence. The deterministic evaluator handles the constraints it explicitly implements. Its results list what was checked, what facts are missing, and what remains unverified. A result saying no violation was found covers those checks; spell-specific exceptions, target eligibility, and a Dungeon Master's ruling still need their own reasoning.
+
+I also wanted the evidence pipeline to be testable. The suite includes worked examples from the SRD and paired scenarios that change one fact: one more foot of movement, an unavailable Reaction, a missing component, a second spell slot, or a condition that changes what the character can do. The tests exercise the actual MCP connection as well as the evaluator.
+
+Even importing the rules produced an instructive failure. The PDF's internal text order initially attached an unrelated creature stat block to Fireball. Checking the printed page exposed it. The importer now reads the spell columns explicitly, and that failure has a regression test. A citation is only useful if the text behind it survived extraction correctly.
+
+The corporate implementation remains work product. The public project is an independent implementation over published game rules, with its own code, source attribution, and tests. It gives people something concrete to inspect and run while keeping the original article at the level it belongs.
+
+Corporate governance and a wizard's action economy are very different domains. Both become easier to discuss when a proposed action can be brought to the relevant rules while the decision is still being made.
