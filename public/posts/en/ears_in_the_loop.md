@@ -1,101 +1,59 @@
 ---
 title: The AI Couldn't Hear The Bug
-description: A static-filled Game Boy emulator became a debugging exercise in human perception, DC bias, audio buffering, analog hardware, and tests for a problem the coding agent could not hear.
-tags: [ai, emulation, python, debugging, audio, testing]
+description: From a crackling Tetris pause screen to an ultrasonic pulse that folded into audible range. Debugging PyGameBoy through its sound registers, sampled waveforms, and live playback.
+published: "2026-07-29"
+tags: [ai, emulation, gameboy, python, debugging, audio, testing]
 ---
 
-I found a bug an AI coding agent could fix but could not perceive. [PyGameBoy](/posts/en/pygameboy) was producing audio, but Tetris sounded like it was being played through loose wiring: static, distortion, and crackling that continued even on the pause screen.
-
-My bug report was one sentence:
+The first clue was where I heard the static. Tetris was sitting on its pause screen, and [PyGameBoy](/posts/en/pygameboy) still sounded like it was playing through loose wiring. I gave the coding agent the symptom in one sentence.
 
 > The sound is kind of staticy even on the Tetris pause screen.
 
-The agent had no access to my speakers. It did not record the emulator, inspect a waveform from the sound device, or hear the noise. I was the only audio sensor in the debugging loop.
+I had the speakers. The agent had the source and could run the emulator. The pause-screen clue sent us down the signal path, where a perfectly ordinary square wave was riding on a constant voltage.
 
-That small observation was still enough to begin an investigation because "static while paused" contains more information than "the audio is bad." A bad note might implicate an oscillator or frequency calculation. Noise that survives the pause screen points farther down the path, where channels are mixed, samples are buffered, and silence is translated into voltage.
+## The Tetris Pause Screen
 
-## A Voltage Problem Hiding In Python
+The old mixer routed each channel's four-bit output into the stereo mix as a number between 0 and 15. A pulse spending equal time at both extremes had an average of 7.5. Making the waveform smaller also made the offset smaller, but the offset was still there.
 
-The old mixer represented each Game Boy channel as an integer from 0 through 15. It routed those values into the left and right outputs, added them together, and normalized the result.
+The first fix centred the four-bit values before mixing. We later corrected the polarity too. The Game Boy's channel DACs map digital zero to positive full scale and 15 to negative full scale. The console's AC-coupled output pulls sustained offsets back toward zero. In PyGameBoy, each stereo side carries a capacitor value forward as part of the emulated sound unit. [Pan Docs on the mixer and DACs](https://gbdev.io/pandocs/Audio_details.html#dacs "emulation, audio, hardware | Pan Docs DAC details")
 
-The arithmetic looked reasonable until the signal was considered as a waveform. A square wave alternating between 0 and 15 has an average of 7.5. Normalization can make that waveform smaller, but it cannot move the centre to zero. The output remains a changing signal balanced on top of a constant positive value.
+We first put the high-pass filter in the audio callback, where it ran on blocks requested by the operating system. Moving it into the sample producer gave it a clock that belonged to the emulated hardware. We also stopped filling starved buffers by holding the last sample indefinitely. Tetris was a good place to hear the difference. The next complaint, crackling and buzzing during ordinary play, needed finer instruments. [The original mixer change](https://github.com/Obscuretone/pygameboy/commit/c02d5a56dc1ea361e8931708f5a8e6c150bbbab5 "emulation, audio, testing | Original mixer and silence changes")
 
-That constant component is DC bias.
+## A Right Shift Can Silence a Channel
 
-The Game Boy's channel DACs are bipolar. The [hardware model documented by Pan Docs](https://gbdev.io/pandocs/Audio_details.html "emulation, audio, hardware | Pan Docs audio details") maps the four-bit range into an analog range centred around zero:
+The first pulse channel has an 11-bit pitch setting and a sweep unit. Trigger the channel and the sweep copies the setting into an internal shadow register. At the next sweep update, it shifts that value right and adds or subtracts the result. The Game Boy also checks whether the *following* calculation would overflow. That second check can kill the note on the same tick that changes its pitch. [Pan Docs on pulse sweep](https://gbdev.io/pandocs/Audio_details.html#pulse-channel-with-sweep-ch1 "gameboy, audio, hardware | Channel 1 sweep")
 
-```text
-0  -> -1.0
-15 -> +1.0
-```
-
-The corrected mixer performs that conversion before stereo routing and master-volume gain. A 50 percent square wave can now alternate between equal negative and positive values rather than treating zero as the bottom of an entirely positive waveform. The change is visible in the [audio-mixing implementation and tests](https://github.com/Obscuretone/pygameboy/commit/c02d5a56dc1ea361e8931708f5a8e6c150bbbab5 "emulation, audio, testing | Correct DMG audio mixing and silence"), where exact channel values produce exact expected stereo samples.
-
-The agent could not hear the offset, but it could prove that the old representation had one.
-
-## The Buffer Could Manufacture More DC
-
-The mixer was not the only source.
-
-The host audio callback periodically asks the emulator for a block of samples. When the ring buffer did not contain enough, the old callback filled the remaining space by repeating the last sample it had received. If that sample happened to be `+0.18`, the callback held the output at `+0.18` until fresh audio arrived.
-
-The repeated sample prevented a discontinuity inside that callback, but it also manufactured a sustained voltage from one arbitrary point in a waveform. When new samples arrived, the output jumped from the held value to wherever the new waveform happened to begin. Enough repetitions and jumps become clicks, crackling, and a static-like rasp.
-
-A real underrun now produces zero for the missing frames. That does not make underruns desirable, and an abrupt transition to zero can still click, but it does stop a starved host buffer from extending stale DC indefinitely. The callback tests cover full, wrapped, partial, and empty buffers so that the fallback is a contract rather than an intuition.
-
-## The First Fix Lived In The Wrong Layer
-
-The first attempt at removing DC added a block-vectorized high-pass filter to the host callback. It used the Game Boy capacitor's documented charge factor and passed a numerical test showing that a constant input decayed toward zero.
-
-It was also [backed out](https://github.com/Obscuretone/pygameboy/commit/c4db55350daa7c33c50cc790bd5a4c06ce27c5d4 "emulation, audio, performance | Back out the host audio filter").
-
-The callback is an awkward owner for emulated analog state. Its block size belongs to the host audio device, and callback work competes with the emulator for time. A hardware capacitor should advance according to the samples produced by the emulated machine, not according to however the operating system happens to request them.
-
-The final design moved the capacitor into the APU's sample producer. At each 44.1 kHz sample, each stereo side applies the recurrence:
+We turned that into a bus-level test. Set `NR10` to `0x11` for addition, a pace of one and a one-bit shift. Trigger channel 1 with a pitch setting of 1,000, then overwrite the low pitch byte before the sweep tick. The shadow register still holds 1,000. Here is what the sweep does when it wakes up.
 
 ```text
-output = raw - capacitor
-capacitor = raw - output * charge
+1000 + (1000 >> 1) = 1500   store the new pitch
+1500 + (1500 >> 1) = 2250   exceeds 0x7FF, so clear CH1's active bit
 ```
 
-The callback now has one job: drain samples that have already been formed. Changing the host block size cannot change the waveform, and powering off the APU resets its analog state along with its mixer output.
+The test reads `NR52`, the sound status register, and checks that bit zero is clear. It also checks that the internal pitch reached 1,500. Clamping the result to 2,047 or deferring the overflow until the next tick would leave a tone playing that the cartridge expects to have ended. [The sweep regression test](https://github.com/Obscuretone/pygameboy/blob/67d18c58048edc3caad85c8839d116d9906ac7ea/tests/test_apu_hardware.py#L31-L40 "gameboy, testing | Sweep shadow and overflow test")
 
-Using the DMG charge constant at PyGameBoy's sample cadence gives the model a cutoff of approximately 28 Hz. That is low enough to preserve the useful audio band while allowing sustained offset to decay, which is what the original Game Boy's AC-coupled output stage was there to do.
+The CPU was batching audio clocks for speed. That meant an instruction could reach a sound register while the APU still owed cycles from earlier instructions. The fix kept batching, then flushed pending APU time up to the bus access before reading or changing a register. A test runs the same program in one batch and one instruction at a time, then compares oscillator timing and the generated samples. [CPU timing fix and regression tests](https://github.com/Obscuretone/pygameboy/commit/67d18c58048edc3caad85c8839d116d9906ac7ea "gameboy, timing, testing | DMG sound implementation")
 
-## Correct Audio Still Has To Arrive On Time
+## Where the Phantom Tone Came From
 
-A mathematically better sample is not useful if Python cannot produce it before the sound device asks.
+With the second pulse channel set to `0x7FF`, each duty step takes four base-clock cycles. Eight steps make a full period. At 4,194,304 base clocks per second, that produces a 131,072 Hz pulse. Sample it at 44,100 Hz and its fundamental folds into the audible band. Three times the sample rate is 132,300 Hz. The difference is 1,228 Hz, which is also the strongest frequency bin in a Fourier transform of the point-sampled probe.
 
-PyGameBoy uses the audio queue as its host pacing signal. A deep queue pauses the producer, while a shallow queue can suppress a video frame so the emulator spends its budget rebuilding audio. An earlier pacing bug used a Pygame delay that could busy-wait and starve the Python audio callback of the GIL; replacing it with a yielding sleep allowed the callback and emulator to make progress together.
+![Measured output traces for a 131.072 kHz synthetic pulse. Point sampling yields a large 1.228 kHz alias. The integrated and filtered output is nearly flat on the same amplitude scale.](/images/pygameboy-phantom-tone.svg)
 
-The audio changes also made expensive paths easier to notice. A later [performance pass](https://github.com/Obscuretone/pygameboy/commit/37fd9707ec844a0b3b5ef64dd0de3ca17142bdc1 "emulation, python, performance | Restore real-time Tetris audio performance") batched exact noise-channel LFSR transitions and inlined several opcodes common in the game's polling loops. The optimization tests compare state and timing, including the number of LFSR edges and the bus phase of timed memory access, so "faster" does not silently mean "less like the hardware."
+PyGameBoy now integrates the area under each digital waveform over the sample interval, accounting for the time spent at each level. That feeds an 88.2 kHz intermediate stream. A 64-tap low-pass filter with an 18 kHz cutoff runs before decimation to 44.1 kHz. In this probe, the measured output RMS fell **70.4 dB** after matching the mixer gain. [Probe measurements](https://github.com/Obscuretone/pygameboy/blob/67d18c58048edc3caad85c8839d116d9906ac7ea/benchmarks/gb-sound-2026-11-07.json "audio, testing | Ultrasonic alias probe")
 
-The symptom crossed several boundaries before it disappeared: signal representation, buffer policy, callback scheduling, analog filtering, CPU throughput, and noise-channel execution. No individual layer contained the entire bug.
+The clip plays 1.2 seconds of the reconstructed point sampler, a short pause, and 1.2 seconds of output from the current emulator. Both halves use the same nominal gain and the same synthetic pulse. [Play the A/B audio probe](/audio/pygameboy-phantom-tone.wav)
 
-## Testing A Sound Without Hearing It
+## What Changes on Game Boy Color
 
-The corrected system can be checked numerically:
+The monochrome fixes brought all twelve Blargg DMG sound ROMs to a pass. At that point, five of the twelve Color tests still failed. The first failing Color test checked length counters across a power cycle. Others interrogated the 16 bytes of wave RAM, where each byte holds two four-bit samples. [DMG test results](https://github.com/Obscuretone/pygameboy/blob/67d18c58048edc3caad85c8839d116d9906ac7ea/benchmarks/gb-sound-2026-11-07.json "gameboy, testing | DMG sound ROM results") · [Color test results](https://github.com/Obscuretone/pygameboy/blob/7b070235025301f4a685788cbd20ff8f825fd200/benchmarks/gbc-sound-2026-11-07.json "gameboy color, testing | Sound ROM results before and after the Color model")
 
-1. DAC endpoints map into a bipolar range.
-2. Stereo routing and NR50 gain produce expected samples.
-3. Capacitor state changes successive samples according to the recurrence.
-4. Powering off the APU resets the mixer and capacitor.
-5. Partial and empty host buffers are padded with zero.
-6. Exact noise transitions remain exact after batching.
-7. The pinned Blargg sound-register baseline still passes in the [published conformance run](https://obscuretone.com/pygameboy/ "emulation, audio, testing | PyGameBoy conformance report").
+On the original Game Boy, an active wave channel gives the CPU a narrow window to access wave RAM. A read outside it returns `0xFF`. On Color, if the channel is fetching from `0xFF31`, a CPU write to `0xFF3F` can land in `0xFF31`. The channel's playhead picks the byte. On monochrome hardware, a retrigger timed near a fetch can even overwrite the beginning of the waveform. Color also clears the length counters when the APU is powered off and ignores writes to them while off. DMG preserves the counters and accepts those writes. Once the emulator applied the Color rules, all twelve Color sound ROMs passed. [Wave RAM behavior in Pan Docs](https://gbdev.io/pandocs/Audio_Registers.html#ff30ff3f--wave-pattern-ram "gameboy color, hardware | Wave RAM access rules")
 
-That last test is deliberately narrow. A sound-register ROM can verify masks and power behaviour; it cannot certify that music sounds good. Numerical tests can establish that the implementation follows its model, but the original complaint concerned the experience of listening.
+## The Audio Device Still Has a Deadline
 
-I ran Tetris again.
+The sound ROMs run as cartridges and can catch a wrong status bit or a write hitting the wrong byte. The synthetic probe checks the generated signal. We also captured the live audio callback while Super Mario Land walked and jumped through a level and while Pokémon Crystal ran in Color mode. A queue shortfall shows up there even if every sample the APU managed to produce was correct.
 
-My ears remained the final acceptance test.
+We raised the playback reserve to 3,072 samples, about 70 ms, and kept frame skipping available to buy time when the queue ran low. Mario's three runs completed without missing samples. Two of the three final Crystal runs did too. The third was short by 755 samples, about 17 ms. The callback now ramps down and back up across a gap, so a shortfall starts with a fade instead of a voltage step. [Mario scene-load measurements](https://github.com/Obscuretone/pygameboy/blob/7b070235025301f4a685788cbd20ff8f825fd200/benchmarks/audio-scene-load-2026-11-07.json "audio, performance | Live callback measurements") · [Crystal callback measurements](https://github.com/Obscuretone/pygameboy/blob/7b070235025301f4a685788cbd20ff8f825fd200/benchmarks/gbc-sound-2026-11-07.json "audio, gameboy color | Crystal callback measurements")
 
-## Ears In The Loop
-
-The interesting capability was not an AI secretly hearing my computer. It had no ears in this interaction.
-
-I supplied a sensory observation and enough context to distinguish persistent static from a wrong note. The agent translated that report into falsifiable causes, inspected the code, followed the signal across software and hardware models, and built tests around the resulting explanation. Pan Docs supplied the reference circuit. The test ROM supplied an external compatibility check. Listening supplied the verdict that the measurements could not.
-
-None of those inputs was sufficient alone. My report could identify an unpleasant sound without locating the arithmetic. Source inspection could expose a DC bias without proving that it matched what I heard. Tests could lock down the correction without deciding whether the emulator had become pleasant to use.
-
-Together they formed a debugging instrument with human perception at one end and executable evidence at the other. That is a more useful picture of AI-assisted engineering than pretending either participant perceived the whole system.
+The rewind work had already forced a similar split. Oscillator phase, the capacitor and the filter's recent inputs travel back with the emulated hardware. The queue that feeds the speakers belongs to the host and gets cleared on rewind. The same distinction makes a crackle easier to chase. A wrong bit in `NR52` can send you to an 11-bit adder. A 1,228 Hz peak can send you to the sampler. An empty queue sends you to the host's frame loop. Each of those faults can reach the speakers as a buzz or a click, but each leaves a different trace. [How PyGameBoy rewinds hardware](/posts/en/pygameboy_rewind)
