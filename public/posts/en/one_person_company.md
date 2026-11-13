@@ -2,9 +2,10 @@
 title: "The One Person Company Does Not Need Virtual Employees"
 description: "A one-person business depends on completed workflows, bounded authority and available human attention, rather than a virtual management hierarchy."
 titleformat: "prose"
-published: "2026-11-18T09:17:00-05:00"
+published: "2026-11-03T12:00:00-05:00"
 sourcesCheckedAt: "2026-11-13T01:02:33Z"
 tags: ["ai", "business", "architecture", "operations"]
+dateAssignedRetrospectively: true
 ---
 
 The interesting version of a one-person company is not one person supervising a thousand artificial employees. It is one person operating a system that does useful work without requiring an employee-shaped conversation at every step.
@@ -51,7 +52,7 @@ What happens when the owner is asleep, sick or simply unavailable?
 
 Some work can wait. Some can continue under existing authority. Some needs a fallback or qualified help. The distinction comes from the commitment made to the customer and the consequence of delay.
 
-A system that records a coherent waiting state can preserve a case until someone is available. A system that repeatedly retries an uncertain action can compound it. Payment APIs illustrate why: retries require a contract about duplicate effects, not optimism that the first attempt failed. [Stripe's idempotency documentation](https://docs.stripe.com/api/idempotent_requests)
+A system that records a coherent waiting state can preserve a case until someone is available. A system that repeatedly retries an uncertain action can compound it. Payment APIs illustrate why: retries require a contract about duplicate effects, not optimism that the first attempt failed. [Stripe's idempotency documentation](https://docs.stripe.com/api/idempotent_requests), [Stripe’s 2017 design explanation](https://stripe.com/blog/idempotency)
 
 This is also why operating alone is different from depending on nobody. Hosting, payment services, maintainers and specialist support remain dependencies. The meaningful question is whether their responsibilities and failure boundaries are understood. Having access to outside expertise is compatible with a business whose ordinary operation requires one owner rather than a permanent internal department.
 

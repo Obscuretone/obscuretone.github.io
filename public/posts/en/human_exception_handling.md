@@ -2,9 +2,10 @@
 title: "Human Intervention Is an Exception Handler and Approval Is Not Enough"
 description: "Human oversight requires evidence, authority and capacity. An approval button alone cannot establish control over an automated decision."
 titleformat: "prose"
-published: "2026-11-20T09:17:00-05:00"
+published: "2026-11-05T12:00:00-05:00"
 sourcesCheckedAt: "2026-11-13T01:02:33Z"
 tags: ["ai", "oversight", "operations", "human-factors"]
+dateAssignedRetrospectively: true
 ---
 
 A workflow that stops for human approval is not automatically well supervised. The person can receive incomplete evidence, face an impossible queue or lack the authority to change the proposed outcome.
@@ -29,7 +30,7 @@ Suppose software submits a consequential action and loses the response. The prov
 
 A useful exception contains the operation identity, attempted request, available provider evidence and the permitted reconciliation path. It does not arrive as a paragraph announcing that the action probably failed.
 
-[Stripe's idempotency documentation](https://docs.stripe.com/api/idempotent_requests) shows why an external contract matters. A consistent idempotency key gives retries a defined meaning under the provider's rules. Inventing a new request identity because an earlier response is uncertain can discard that protection.
+[Stripe's idempotency documentation](https://docs.stripe.com/api/idempotent_requests), [Stripe’s 2017 design explanation](https://stripe.com/blog/idempotency) shows why an external contract matters. A consistent idempotency key gives retries a defined meaning under the provider's rules. Inventing a new request identity because an earlier response is uncertain can discard that protection.
 
 Likewise, a workflow engine's retry policy governs execution behavior; it does not decide whether an external action is appropriate. [Temporal's documentation](https://docs.temporal.io/encyclopedia/retry-policies) distinguishes retry settings for workflow and activity failures. The business still needs an interpretation of the action's state and authority.
 
@@ -41,7 +42,7 @@ They also need meaningful choices: correct a fact, request information, reject, 
 
 A source link can help, but a wall of links is not enough. The material evidence needs to be identifiable. The relevant purchase, provider response or policy version should be accessible without requiring the reviewer to search several disconnected systems.
 
-[OPA decision logs](https://www.openpolicyagent.org/docs/management-decision-logs) illustrate a useful technical foundation for preserving decision context. They also illustrate a privacy obligation: logging everything indiscriminately can retain sensitive inputs that do not belong in a general review record.
+[OPA decision logs](https://github.com/open-policy-agent/opa/blob/v0.63.0/docs/content/management-decision-logs.md) illustrate a useful technical foundation for preserving decision context. They also illustrate a privacy obligation: logging everything indiscriminately can retain sensitive inputs that do not belong in a general review record.
 
 ## Humans have failure modes too
 

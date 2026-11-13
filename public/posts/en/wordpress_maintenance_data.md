@@ -2,9 +2,10 @@
 title: "Half the WordPress Directory Has Gone Two Years Without an Update"
 description: "A dated public census shows half the observed listings without a recorded update for more than 730 days. Installation-weighted use tells a different story."
 titleformat: "prose"
-published: "2026-11-21T09:17:00-05:00"
+published: "2026-11-07T12:00:00-05:00"
 sourcesCheckedAt: "2026-11-13T01:02:33Z"
 tags: ["wordpress", "data", "maintenance", "plugins"]
+dateAssignedRetrospectively: true
 ---
 
 In a public snapshot of 70,909 WordPress plugins, 35,602 had gone more than 730 days without a recorded update. That is 50.2% of the observed directory.

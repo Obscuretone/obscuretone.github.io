@@ -12,7 +12,6 @@
 
 # testing
 /coverage
-/.schedule-test-*/
 
 # next.js
 /.next/
@@ -52,18 +51,3 @@ node_modules/
 !.env.template
 .nira/*.db
 .nira/*.db-*
-
-# Build-generated scheduled articles; canonical sources live in scheduled-posts/.
-/public/posts/en/training_junior_engineers.md
-/public/posts/en/ai_company_org_chart.md
-/public/posts/en/startup_advice_failures.md
-/public/posts/en/semantic_diff_works.md
-/public/posts/en/monday_vibe_marketplace.md
-/public/posts/en/one_person_company.md
-/public/posts/en/organizations_as_software.md
-/public/posts/en/human_exception_handling.md
-/public/posts/en/wordpress_maintenance_data.md
-/public/posts/en/wordpress_small_audiences.md
-/public/posts/en/wordpress_plugins_need_a_reason.md
-/public/posts/en/wordpress_raspberry_awards.md
-/public/posts/en/jira_app_license_everyone.md

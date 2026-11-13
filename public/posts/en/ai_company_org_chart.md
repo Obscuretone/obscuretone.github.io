@@ -2,9 +2,10 @@
 title: "Your AI Company Doesn't Need an Org Chart"
 description: "AI executives copy the shape of a human organization. Events, state, policies and explicit authority provide a more useful starting point."
 titleformat: "prose"
-published: "2026-11-14T09:17:00-05:00"
+published: "2026-11-02T12:00:00-05:00"
 sourcesCheckedAt: "2026-11-13T01:02:33Z"
 tags: ["ai", "architecture", "organizations", "skeuomorphism"]
+dateAssignedRetrospectively: true
 ---
 
 Replacing every box on an org chart with an agent is organizational skeuomorphism.
@@ -42,9 +43,9 @@ Request arrives
 
 A model might interpret the request or summarize a dispute. The authority to move money should come from enforced permissions and policy. Putting “follow the refund policy” in a prompt does not create that boundary.
 
-This is familiar systems engineering. CloudEvents specifies a source and ID that consumers can use to recognize duplicate events. That does not automatically make a refund idempotent; the action still needs protection against duplicate execution. [CloudEvents specification](https://github.com/cloudevents/spec/blob/main/cloudevents/spec.md)
+This is familiar systems engineering. CloudEvents specifies a source and ID that consumers can use to recognize duplicate events. That does not automatically make a refund idempotent; the action still needs protection against duplicate execution. [CloudEvents specification](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/spec.md)
 
-Likewise, a policy decision needs a record. Open Policy Agent documents decision logs containing query inputs, policy and bundle metadata, with masking for sensitive fields. Those are useful building blocks for explaining what authorized an action without leaking the customer’s information. [OPA decision logs](https://www.openpolicyagent.org/docs/management-decision-logs)
+Likewise, a policy decision needs a record. Open Policy Agent documents decision logs containing query inputs, policy and bundle metadata, with masking for sensitive fields. Those are useful building blocks for explaining what authorized an action without leaking the customer’s information. [OPA decision logs](https://github.com/open-policy-agent/opa/blob/v0.63.0/docs/content/management-decision-logs.md)
 
 Neither tool turns a company into an autonomous system. They illustrate the kind of contract that a job title fails to specify.
 

@@ -2,9 +2,10 @@
 title: "Ten Popular WordPress Plugins That Need a Reason to Be in Your Stack"
 description: "Ten popular WordPress plugins illustrate why a default stack needs actual requirements. Published capabilities support a conditional critique."
 titleformat: "prose"
-published: "2026-11-23T09:17:00-05:00"
+published: "2026-11-06T12:00:00-05:00"
 sourcesCheckedAt: "2026-11-13T01:02:33Z"
 tags: ["wordpress", "plugins", "product-design"]
+dateAssignedRetrospectively: true
 ---
 
 My problem with a lot of essential-plugin lists is the word essential. A popular product gets installed before anyone states the requirement it is supposed to satisfy.

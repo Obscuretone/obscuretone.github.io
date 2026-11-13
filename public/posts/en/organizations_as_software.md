@@ -2,9 +2,10 @@
 title: "Organizations Are Becoming Software and Their Rules Need Versions"
 description: "Executable business rules need versions, evidence, ownership and recovery plans because changing software can change what an organization permits."
 titleformat: "prose"
-published: "2026-11-19T09:17:00-05:00"
+published: "2026-11-04T12:00:00-05:00"
 sourcesCheckedAt: "2026-11-13T01:02:33Z"
 tags: ["organizations", "software", "policy", "architecture"]
+dateAssignedRetrospectively: true
 ---
 
 A refund policy is a business decision. When software applies it, it is also an executable rule governing how the company treats a customer.
@@ -29,7 +30,7 @@ Consider a refund request. The company needs to distinguish a request received, 
 
 If a provider response is lost, the internal record may be uncertain while the external action has already happened. The system needs a way to reconcile those two states. Retrying a request without that distinction can create a duplicate action.
 
-The details are familiar distributed-systems problems. [CloudEvents](https://github.com/cloudevents/spec/blob/main/cloudevents/spec.md) supplies an identity convention that consumers can use to recognize duplicate events. [Stripe](https://docs.stripe.com/api/idempotent_requests) documents a provider-specific idempotency contract. Neither eliminates the need to define what a business action means and how its result becomes authoritative.
+The details are familiar distributed-systems problems. [CloudEvents](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/spec.md) supplies an identity convention that consumers can use to recognize duplicate events. [Stripe](https://docs.stripe.com/api/idempotent_requests), [Stripe’s 2017 design explanation](https://stripe.com/blog/idempotency) documents a provider-specific idempotency contract. Neither eliminates the need to define what a business action means and how its result becomes authoritative.
 
 The organizational consequence is important: somebody must decide which evidence settles a dispute between internal belief and external reality. That responsibility exists whether the person performing the reconciliation is an employee, the founder or software operating within delegated authority.
 
@@ -41,7 +42,7 @@ A current record can say that a refund is complete. It may not explain why it wa
 
 An operational history also has limits. Replaying old inputs under a new policy does not recreate what the company knew at the time unless that information was preserved. A log full of generated explanations is not equivalent to a record of the actual evidence and authority used.
 
-That is why the policy version belongs alongside the decision. [Open Policy Agent's decision logs](https://www.openpolicyagent.org/docs/management-decision-logs) provide a concrete example: inputs and bundle metadata can be recorded, with masking for sensitive fields. The organization still has to decide which information is necessary, who can inspect it and what retention is appropriate.
+That is why the policy version belongs alongside the decision. [Open Policy Agent's decision logs](https://github.com/open-policy-agent/opa/blob/v0.63.0/docs/content/management-decision-logs.md) provide a concrete example: inputs and bundle metadata can be recorded, with masking for sensitive fields. The organization still has to decide which information is necessary, who can inspect it and what retention is appropriate.
 
 ## A policy deployment is a business change
 

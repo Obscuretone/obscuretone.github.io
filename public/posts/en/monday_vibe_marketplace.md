@@ -2,9 +2,10 @@
 title: "monday.com Sells Vibe Coding and Rejects Vibe Coded Marketplace Apps"
 description: "monday sells prompt-built applications while excluding primarily vibe-coded Marketplace submissions. Its own policies leave developers with a double standard."
 titleformat: "prose"
-published: "2026-11-17T09:17:00-05:00"
+published: "2026-11-12T20:33:27-05:00"
 sourcesCheckedAt: "2026-11-13T01:02:33Z"
 tags: ["monday", "marketplaces", "ai", "policy"]
+dateAssignedRetrospectively: false
 ---
 
 As of November 12, 2026, monday.com sells vibe coding to its customers. It also tells outside developers that new Marketplace apps built primarily with no-code platforms or AI-generated vibe code are ineligible.

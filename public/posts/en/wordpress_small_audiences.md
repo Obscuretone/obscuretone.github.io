@@ -2,9 +2,10 @@
 title: "The WordPress Plugins Almost Nobody Uses Are More Interesting Than You Think"
 description: "Beer maps, poetry scoring and chess games reveal why a directory installation bucket tells us less than a product story."
 titleformat: "prose"
-published: "2026-11-22T09:17:00-05:00"
+published: "2026-11-11T12:00:00-05:00"
 sourcesCheckedAt: "2026-11-13T01:02:33Z"
 tags: ["wordpress", "plugins", "data", "software"]
+dateAssignedRetrospectively: true
 ---
 
 There is a WordPress plugin called [Beers I Drank](https://wordpress.org/plugins/beers-i-drank/). Its stated job is to keep track of beers and show a map of the provinces they come from. In the November snapshot I examined, it sat in the fewer-than-ten-installations bucket.

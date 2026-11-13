@@ -2,9 +2,10 @@
 title: "Why Does a Jira App for Ten People Need a License for Everyone"
 description: "Atlassian standard Marketplace billing counts the whole instance. A specialist tool can acquire an organization-wide denominator."
 titleformat: "prose"
-published: "2026-11-25T09:17:00-05:00"
+published: "2026-11-12T20:33:27-05:00"
 sourcesCheckedAt: "2026-11-13T01:02:33Z"
 tags: ["atlassian", "jira", "marketplaces", "pricing"]
+dateAssignedRetrospectively: false
 ---
 
 A team finds a Jira app that solves a small problem. Ten people need it. The organization has hundreds of licensed Jira users. Under Atlassian's standard Marketplace billing model as documented on November 12, 2026, the app's billable population is the whole instance, not the ten people using that feature.

@@ -2,9 +2,10 @@
 title: "Your AI Rewrote the Code and the Behavior Still Needs Checking"
 description: "A working TypeScript-to-Rust proof of concept generates inputs and executes both implementations to confirm supported behavioral differences."
 titleformat: "prose"
-published: "2026-11-16T09:17:00-05:00"
+published: "2026-11-12T20:33:27-05:00"
 sourcesCheckedAt: "2026-11-13T01:02:33Z"
 tags: ["software", "ai", "testing", "semantic-diff"]
+dateAssignedRetrospectively: false
 ---
 
 Yes: the implemented Semantic Diff approach works for its tested scope. It identifies supported TypeScript-to-Rust fallback mismatches, generates candidate inputs and confirms behavioral differences by executing both implementations. The preserved corpus records all 20 known regressions as confirmed differences and all 20 preserving controls as matching on the tested candidates. [Code](https://github.com/Obscuretone/obscuretone-semantic-diff), [execution evidence](https://github.com/Obscuretone/obscuretone-semantic-diff/blob/fd825887c1052d73260b8a420ee073ce7e883d8a/evidence/RESULTS.md)

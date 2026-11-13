@@ -2,9 +2,10 @@
 title: "Is Training Junior Engineers Actually Worth It"
 description: "Training juniors can pay for the employer. A retained-contribution model and a two-company game separate private returns from industry underinvestment."
 titleformat: "prose"
-published: "2026-11-13T09:17:00-05:00"
+published: "2026-11-12T20:33:27-05:00"
 sourcesCheckedAt: "2026-11-13T01:02:33Z"
 tags: ["engineering", "training", "economics", "game-theory"]
+dateAssignedRetrospectively: false
 ---
 
 Yes, training juniors can pay for the employer doing it. Game theory does not overturn that result. It explains why a training programme can be profitable for one company while the industry still produces less training than it benefits from.
