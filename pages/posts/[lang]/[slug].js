@@ -15,6 +15,7 @@ import PostsGraph from '../../../components/PostsGraph';
 import SiteHeader from '../../../components/SiteHeader';
 import { getPostsByLanguage } from '../../../utils/posts';
 import { getCurrentRevision } from '../../../utils/revision';
+import { renderLocalVideos } from '../../../utils/articleMedia';
 import {
     getGitFirstAdded,
     getGitLastUpdated,
@@ -586,7 +587,7 @@ export async function getStaticProps({ params }) {
         .use(html)
         .process(content);
     const postTags = data.tags || [];
-    const htmlContent = annotateExternalLinks(addHeadingIds(processedContent.toString()), postTags);
+    const htmlContent = annotateExternalLinks(addHeadingIds(renderLocalVideos(processedContent.toString())), postTags);
 
     return {
         props: {

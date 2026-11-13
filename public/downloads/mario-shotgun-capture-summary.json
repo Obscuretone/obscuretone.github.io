@@ -1,0 +1,48 @@
+{
+  "frames": 1102,
+  "duration_seconds": 18.389625,
+  "fps": "16000/267",
+  "capture_width": 256,
+  "capture_height": 224,
+  "video_width": 1024,
+  "video_height": 896,
+  "presentation": "gameplay and original HUD only; no added panel or counters",
+  "shots": 6,
+  "enemy_removals": 6,
+  "kill_frames": [
+    61,
+    378,
+    422,
+    632,
+    755,
+    1000
+  ],
+  "dragon_coins_collected": 1,
+  "dragon_coin_pickup_frame": 283,
+  "flying_question_block_hit_frames": [
+    513
+  ],
+  "jump_button_press_frames": [
+    255,
+    506,
+    738
+  ],
+  "music_track": 2,
+  "music_track_matches_level_header": true,
+  "level_spc_music_bank_uploaded": true,
+  "music_source": "native SPC engine output, captured with game sound effects",
+  "continuous": true,
+  "input_source": "automated controller input",
+  "enemies": "native level 0x105; no manually placed enemies",
+  "blast_range_pixels": 96,
+  "minimum_visible_frames_before_trigger": 36,
+  "outfit": "regular Mario palette",
+  "gun_lowered_by_pixels": 6,
+  "mosaic_grouping_disabled_on_every_frame": true,
+  "no_damage_taken": true,
+  "sha256": {
+    "mario-shotgun-gameplay.mp4": "09407c7b3fbe459d8b0664c143657fa22b702b64b26fc2f970ff8466e2175e52",
+    "smw-shotgun-mod-source.zip": "4ff8495dba9e84f5fb59f3f7dc4bd6640f1b648dac7f2416afb1155d70d8722f",
+    "events.jsonl": "83b2a007182769db604510a8387377cac288e22cd702ba7e72fab5c4a3ee2e56"
+  }
+}
