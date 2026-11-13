@@ -10,11 +10,11 @@ I asked Codex to find or decompile Super Mario World, give Mario a shotgun inste
 
 The next requirement was a video with a valid killchain. Six Rexes go down in the original level, followed by three short ki shots and an eight-enemy Super Saiyan finisher in a practice course. The sound comes from the running game, including the new blast and pump effects.
 
-![Mario collecting and firing a shotgun, then using Super Saiyan ki waves](/videos/mario-shotgun-saiyan.mp4 "poster: /images/mario-shotgun-saiyan.webp")
+![Mario collecting and firing a shotgun, then using Super Saiyan ki waves](/videos/mario-shotgun-saiyan-final.mp4 "poster: /images/mario-shotgun-saiyan-final.webp")
 
-The updated clip runs for 51.90 seconds. Mario starts unarmed, collects the first Dragon Coin, bumps the flying question block, and collects the shotgun as it emerges from behind the block. Six shots defeat six of the level's own Rexes. A native level transition then leads to a separate ki practice course: three short shots, a full charge, and eight Chargin' Chucks. Controller input is automated, and the audio comes from the running game. [Download the video](/videos/mario-shotgun-saiyan.mp4) or inspect the [capture summary and input log](/downloads/mario-shotgun-saiyan-evidence.zip).
+The updated clip runs for 51.90 seconds. Mario starts unarmed, collects the first Dragon Coin, bumps the flying question block, and collects the shotgun as it emerges from behind the block. Six shots defeat six of the level's own Rexes. A native level transition then leads to a separate ki practice course: three short shots, a full charge, and eight Chargin' Chucks. Controller input is automated, and the audio comes from the running game. [Download the video](/videos/mario-shotgun-saiyan-final.mp4) or inspect the [capture summary and input log](/downloads/mario-shotgun-saiyan-final-evidence.zip).
 
-The shotgun now follows the glove pixels in Mario's animated body graphics, with a second white glove on the pump. The pickup is clipped behind the actual block edge during emergence. Larger, high-contrast pellets travel before applying damage, and a red-and-brass shell ejects during the pump cycle. Each of the six recorded impacts happens four frames after its trigger.
+The shotgun now follows the glove pixels in Mario's animated body graphics, with his original animated glove pixels kept visible over the stock. The pickup is clipped behind the actual block edge during emergence. Larger, high-contrast pellets travel before applying damage, and a red-and-brass shell ejects during the pump cycle. Each of the six recorded impacts happens four frames after its trigger.
 
 ## The Reverse Engineering Was Already There
 
@@ -42,7 +42,7 @@ The weapon has unlimited ammunition and a 28-frame pump cycle. The blast penetra
 
 Replacing the attack leaves several visible places to update.
 
-Mario needs to hold the weapon. The pickup in the level needs to look like a weapon. The reserve box needs the same replacement. The grip is taken from the white glove pixels in the current native body tile, including its position and mirroring. The stock follows that hand while the second glove cycles the pump. Facing changes, ducking and Yoshi poses use the same anchor. Swimming and climbing take different paths through the player code, so firing needs to reach those states too.
+Mario needs to hold the weapon. The pickup in the level needs to look like a weapon. The reserve box needs the same replacement. The grip is taken from the white glove pixels in the current native body tile, including its position and mirroring. The stock follows that hand, and Mario's native glove pixels stay in front of the weapon. Facing changes, ducking and Yoshi poses use the same anchor. Swimming and climbing take different paths through the player code, so firing needs to reach those states too.
 
 The new visuals are drawn in game-sized pixels after the original scene renders. The blast adds a short muzzle flash, pellet trails, smoke, red blood particles, backward recoil, and a steady camera. The ejected shell alternates its orientation as it falls. Its brass end and red body remain visible at the game's small scale.
 
@@ -54,7 +54,7 @@ The Mac app starts Mario unarmed. The flower variant of the flying question bloc
 
 Star pickups are now pulsing gold ki orbs with four red stars. Collecting one gives Mario spiky gold hair and an orange gi with blue trim, boots and a chest emblem. These are edits to the native head and body tiles. His face, proportions and pose selection remain Mario's.
 
-Hold the shoot button for 12–180 frames, then release a ki wave. The charge ball stays aligned with his hands as it grows forward, leaving his body visible. The released beam keeps the ball's diameter; the full charge is 45 game pixels across. Its collision follows the moving round front. The original star invincibility duration remains.
+Hold the shoot button for 12–180 frames, then release a ki wave. The charge ball stays aligned with his hands as it grows forward, leaving his body visible. The released beam keeps the ball's diameter; the full charge is 45 game pixels across. Its collision follows the moving round front. The original star invincibility duration remains. Star power now plays a looping chiptune arrangement of “Cha-La Head-Cha-La,” with pulse lead, triangle bass, pulse harmony and noise percussion. The native music voices are muted while sound effects keep playing; the level music returns after star power ends. The [MIDI reference](https://bitmidi.com/ricardo-silva-chala-head-chala-mid) carries a 1994 Roland Corporation sequencer credit.
 
 The optional `--ki-showcase` source-build flag opens the separate five-screen practice course. It has three walking Rexes for short shots, another ki pickup, and two racks of Chargin' Chucks for a full charge. A short aiming hop puts the beam between the racks. Select resets the course. The ordinary campaign keeps its original levels.
 
@@ -72,6 +72,6 @@ That is a small, concrete claim. It shows this weapon functioning against those 
 
 One early integration check failed because it inspected the result before the game's NMI had latched the button press for the next tick. Giving the input its actual frame boundary made the distinction visible: the controller request and the resulting shot belong to adjacent steps in the running game.
 
-The tests also check the selected defeat states for all seven Koopaling variants. A complete playthrough and every boss cutscene still need testing. The [updated source overlay](/downloads/smw-shotgun-saiyan-source.zip) includes the implementation, integration tests, and recorder so the result can be inspected and extended.
+The tests also check the selected defeat states for all seven Koopaling variants. A complete playthrough and every boss cutscene still need testing. The [updated source overlay](/downloads/smw-shotgun-saiyan-final-source.zip) includes the implementation, integration tests, and recorder so the result can be inspected and extended.
 
 Dinosaur Land has a pump-action shotgun now.
