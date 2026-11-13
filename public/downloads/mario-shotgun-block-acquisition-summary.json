@@ -1,0 +1,58 @@
+{
+  "frames": 1704,
+  "duration_seconds": 28.4355,
+  "fps": "16000/267",
+  "capture_width": 256,
+  "capture_height": 224,
+  "video_width": 1024,
+  "video_height": 896,
+  "presentation": "gameplay and original HUD only; no added panel or counters",
+  "shots": 6,
+  "enemy_removals": 6,
+  "kill_frames": [
+    661,
+    785,
+    1032,
+    1179,
+    1288,
+    1602
+  ],
+  "starts_unarmed": true,
+  "shotgun_acquisition_frames": [
+    516
+  ],
+  "real_pickup_consumed_on_acquisition": true,
+  "no_shots_before_acquisition": true,
+  "no_world_shotgun_pickup_after_acquisition": true,
+  "dragon_coins_collected": 1,
+  "dragon_coin_pickup_frame": 164,
+  "flying_question_block_hit_frames": [
+    410
+  ],
+  "jump_button_press_frames": [
+    40,
+    131,
+    322,
+    401,
+    476,
+    768
+  ],
+  "music_track": 2,
+  "music_track_matches_level_header": true,
+  "level_spc_music_bank_uploaded": true,
+  "music_source": "native SPC engine output, captured with game sound effects",
+  "continuous": true,
+  "input_source": "automated controller input",
+  "enemies": "native level 0x105; no manually placed enemies",
+  "blast_range_pixels": 96,
+  "minimum_visible_frames_before_trigger": 36,
+  "outfit": "regular Mario palette",
+  "gun_lowered_by_pixels": 6,
+  "mosaic_grouping_disabled_on_every_frame": true,
+  "no_damage_taken": true,
+  "sha256": {
+    "mario-shotgun-block-acquisition.mp4": "e0ed4e89c012a48f5ce4ef42a3b4390c78d91f64aae89e50cdca95d6926c2bba",
+    "smw-shotgun-block-acquisition-source.zip": "a912426fcb3a829bb234acfed62bbb92ba480888bdb1bcaff6d2c3568a73614b",
+    "events.jsonl": "30015b7bc75c3077fc83b13ebd050399b20607510240fe27de1e36d03c76cf2f"
+  }
+}

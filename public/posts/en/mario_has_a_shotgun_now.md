@@ -8,11 +8,11 @@ tags: [games, reverse-engineering, c, ai, testing, software]
 
 I asked Codex to find or decompile Super Mario World, give Mario a shotgun instead of a fire flower, and add a blast, an ejected shell, and blood when it killed something. It found an existing reverse-engineered C implementation, modified the game, built a Mac application, and opened it. Mario was standing in Dinosaur Land holding a shotgun.
 
-The next requirement was a video with a valid killchain. Six enemies go down in the continuous run below: a shell-less Koopa, a Banzai Bill, and four Rexes. The sound comes from the running game, including the new blast and pump effects.
+The next requirement was a video with a valid killchain. Six Rexes go down in the continuous run below. The sound comes from the running game, including the new blast and pump effects.
 
-![Mario firing a shotgun through six enemies in one continuous Super Mario World run](/videos/mario-shotgun-gameplay.mp4 "poster: /images/mario-shotgun-gameplay.webp")
+![Mario firing a shotgun through six enemies in one continuous Super Mario World run](/videos/mario-shotgun-block-acquisition.mp4 "poster: /images/mario-shotgun-block-acquisition.webp")
 
-The clip runs for 18.39 seconds. Mario makes three planned jumps: one collects the first Dragon Coin, one bumps the flying question block and releases its pickup, and one clears the raised terrain. Controller input is automated. The enemies come from the level's own sprite data; the recorder does not place a row of targets for Mario to shoot. The input log records each firing frame where enemy sprite slots become empty. [Download the video](/videos/mario-shotgun-gameplay.mp4) or inspect the [capture summary and input log](/downloads/mario-shotgun-capture-evidence.zip).
+The clip runs for 28.44 seconds. Mario starts unarmed, collects the first Dragon Coin, bumps the flying question block, and jumps onto it to collect the shotgun it releases. Only then can he fire. The world pickup disappears on collection; the weapon is now in his hands. Controller input is automated. The enemies come from the level's own sprite data; the recorder does not place a row of targets for Mario to shoot. [Download the video](/videos/mario-shotgun-block-acquisition.mp4) or inspect the [capture summary and input log](/downloads/mario-shotgun-block-acquisition-evidence.zip).
 
 ## The Reverse Engineering Was Already There
 
@@ -46,15 +46,15 @@ The new visuals are drawn in game-sized pixels after the original scene renders.
 
 The shotgun sound is synthesized in code and mixed into the game's audio buffer. A short noise burst and a decaying low tone make the blast; two later metallic clicks suggest the pump action. The video captures that mixed output directly.
 
-The Mac app starts each level armed, wearing Mario's regular red-and-blue outfit, so the feature is immediately usable. Fire-flower pickups grant the shotgun, and taking damage follows the game's existing power-up rules.
+The Mac app starts Mario unarmed. The flower variant of the flying question block releases a shotgun even when Mario is small. He has to touch the pickup to acquire it. Fire-flower pickups elsewhere grant the same weapon, Mario keeps his regular red-and-blue outfit, and taking damage follows the game's existing power-up rules.
 
 ## The Video Has to Kill Something
 
 The first preview used a reproducible test scene with enemies deliberately positioned in front of Mario. That is useful for checking the attack. For the video, I wanted a sequence through the level with its original enemies.
 
-The recorder loads Yoshi's Island 1 through the native level loader, starts Mario with the shotgun, and supplies movement, jumping, and firing through the game's controller input. It captures every frame and the corresponding audio samples in one run. The video shows only the game and its original HUD.
+The recorder loads Yoshi's Island 1 through the native level loader, starts Mario unarmed, and supplies movement, jumping, and firing through the game's controller input. It captures every frame and the corresponding audio samples in one run. The video shows only the game and its original HUD.
 
-The six recorded removals occur at frames 61, 378, 422, 632, 755, and 1000. The capture contains 1,102 frames, six accepted shots, one collected Dragon Coin, and no damage taken. The Dragon Coin counter increments at frame 283. The flying question block activates at frame 513. Jump presses begin at frames 255, 506, and 738. There are no cuts between the kills. The revised recording lets each enemy remain visible for at least 36 frames before the controller fires, and uses a shorter blast range so they have time to approach.
+The six recorded removals occur at frames 661, 785, 1032, 1179, 1288, and 1602. The capture contains 1,704 frames, six accepted shots, one collected Dragon Coin, and no damage taken. The Dragon Coin counter increments at frame 164. The flying question block activates at frame 410, and Mario consumes its shotgun pickup at frame 516. The recorder checks that the pickup is consumed when Mario becomes armed, that no shot fires before collection, and that no world shotgun pickup remains afterward. There are no cuts between the kills. Each enemy remains visible for at least 36 frames before the controller fires, and the shorter blast range gives them time to approach.
 
 The first capture had a visual bug: the hills shimmered while scrolling. The recorder's direct level load had omitted the fade-out mosaic state, leaving the transition's 2-by-2 pixel grouping active during gameplay. Initializing that transition correctly removes the effect. The recorder now checks every captured frame for leftover mosaic grouping. The same direct-load shortcut also skipped the level music bank and its start command, leaving the previous music playing. The recorder now uploads the level bank, starts the track selected by the level header, and checks that the native SPC player is playing that track.
 
@@ -62,6 +62,6 @@ That is a small, concrete claim. It shows this weapon functioning against those 
 
 One early integration check failed because it inspected the result before the game's NMI had latched the button press for the next tick. Giving the input its actual frame boundary made the distinction visible: the controller request and the resulting shot belong to adjacent steps in the running game.
 
-The tests also check the selected defeat states for all seven Koopaling variants. A complete playthrough and every boss cutscene still need testing. The [mod source and patch](/downloads/smw-shotgun-mod-source.zip) include the implementation, integration tests, and recorder so the result can be inspected and extended.
+The tests also check the selected defeat states for all seven Koopaling variants. A complete playthrough and every boss cutscene still need testing. The [mod source and patch](/downloads/smw-shotgun-block-acquisition-source.zip) include the implementation, integration tests, and recorder so the result can be inspected and extended.
 
 Dinosaur Land has a pump-action shotgun now.
