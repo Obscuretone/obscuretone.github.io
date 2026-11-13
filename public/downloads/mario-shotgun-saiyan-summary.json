@@ -1,0 +1,84 @@
+{
+  "features": [
+    "shotgun",
+    "super_saiyan"
+  ],
+  "approved_public_features_only": true,
+  "upstream": "eae20c65c58930c8b62c76188d259579ad4130f1",
+  "frames": 3110,
+  "duration_seconds": 51.898125,
+  "fps": "16000/267",
+  "capture_size": [
+    256,
+    224
+  ],
+  "video_size": [
+    1024,
+    896
+  ],
+  "video_codec": "H.264 yuv420p + AAC",
+  "shotgun_shots": 6,
+  "shotgun_hits": 6,
+  "trigger_frames": [
+    661,
+    785,
+    1032,
+    1179,
+    1288,
+    1602
+  ],
+  "impact_frames": [
+    665,
+    789,
+    1036,
+    1183,
+    1292,
+    1606
+  ],
+  "impact_delay_frames": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+  ],
+  "source_block_occlusion_test": true,
+  "visible_pellet_and_pump_shell_test": true,
+  "grip": "native animated white-glove anchor, two rendered white gloves",
+  "ki_waves": [
+    {
+      "frame": 1851,
+      "charge_frames": 17,
+      "hits": 1
+    },
+    {
+      "frame": 2087,
+      "charge_frames": 20,
+      "hits": 1
+    },
+    {
+      "frame": 2313,
+      "charge_frames": 23,
+      "hits": 1
+    },
+    {
+      "frame": 2941,
+      "charge_frames": 180,
+      "hits": 8
+    }
+  ],
+  "ki_level_starts_at_frame": 1708,
+  "ki_course_targets": "three walking Rexes and eight Chargin Chucks in two racks",
+  "starts_unarmed": true,
+  "dragon_coins_collected": 1,
+  "shotgun_acquisition_frame": 516,
+  "campaign_uses_native_enemies": true,
+  "practice_course_uses_explicit_targets": true,
+  "native_level_transition": true,
+  "no_damage": true,
+  "sha256": {
+    "mario-shotgun-saiyan.mp4": "edf57a4acf3a3e54c405d415d647aba0cf9ffa3c993219b1a1e5e4dffa5406b0",
+    "smw-shotgun-saiyan-source.zip": "ea270358a37ff8847f356b53507fc52f208547fe8e1527bcd4540689a0e59458"
+  }
+}
