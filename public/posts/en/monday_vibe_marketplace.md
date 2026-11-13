@@ -2,7 +2,7 @@
 title: "monday.com Sells Vibe Coding and Rejects Vibe Coded Marketplace Apps"
 description: "monday sells prompt-built applications while excluding primarily vibe-coded Marketplace submissions. Its own policies leave developers with a double standard."
 titleformat: "prose"
-published: "2026-11-12T20:33:27-05:00"
+published: "2026-11-12"
 sourcesCheckedAt: "2026-11-13T01:02:33Z"
 tags: ["monday", "marketplaces", "ai", "policy"]
 dateAssignedRetrospectively: false

@@ -2,7 +2,7 @@
 title: "The WordPress Raspberry Awards Have Winners"
 description: "Four named winners from pinned directory metadata, including a 2004 update and a thirty-thousand-install shortcode utility."
 titleformat: "prose"
-published: "2026-11-11T12:00:00-05:00"
+published: "2026-11-11"
 sourcesCheckedAt: "2026-11-13T01:02:33Z"
 tags: ["wordpress", "plugins", "satire", "data"]
 dateAssignedRetrospectively: true

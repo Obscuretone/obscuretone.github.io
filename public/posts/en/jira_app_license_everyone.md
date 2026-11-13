@@ -2,7 +2,7 @@
 title: "Why Does a Jira App for Ten People Need a License for Everyone"
 description: "Atlassian standard Marketplace billing counts the whole instance. A specialist tool can acquire an organization-wide denominator."
 titleformat: "prose"
-published: "2026-11-12T20:33:27-05:00"
+published: "2026-11-12"
 sourcesCheckedAt: "2026-11-13T01:02:33Z"
 tags: ["atlassian", "jira", "marketplaces", "pricing"]
 dateAssignedRetrospectively: false

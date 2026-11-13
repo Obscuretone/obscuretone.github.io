@@ -2,7 +2,7 @@
 title: "Organizations Are Becoming Software and Their Rules Need Versions"
 description: "Executable business rules need versions, evidence, ownership and recovery plans because changing software can change what an organization permits."
 titleformat: "prose"
-published: "2026-11-04T12:00:00-05:00"
+published: "2026-11-04"
 sourcesCheckedAt: "2026-11-13T01:02:33Z"
 tags: ["organizations", "software", "policy", "architecture"]
 dateAssignedRetrospectively: true

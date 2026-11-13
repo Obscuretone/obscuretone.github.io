@@ -2,7 +2,7 @@
 title: "The One Person Company Does Not Need Virtual Employees"
 description: "A one-person business depends on completed workflows, bounded authority and available human attention, rather than a virtual management hierarchy."
 titleformat: "prose"
-published: "2026-11-03T12:00:00-05:00"
+published: "2026-11-03"
 sourcesCheckedAt: "2026-11-13T01:02:33Z"
 tags: ["ai", "business", "architecture", "operations"]
 dateAssignedRetrospectively: true

@@ -2,7 +2,7 @@
 title: "Startup Advice Needs Evidence From Failures"
 description: "Founder stories suggest hypotheses. Comparable failures, decision quality and the missing denominator determine how much we can learn."
 titleformat: "prose"
-published: "2026-11-01T12:00:00-05:00"
+published: "2026-11-01"
 sourcesCheckedAt: "2026-11-13T01:02:33Z"
 tags: ["startups", "evidence", "survivorship-bias"]
 dateAssignedRetrospectively: true

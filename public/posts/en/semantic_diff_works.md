@@ -2,7 +2,7 @@
 title: "Your AI Rewrote the Code and the Behavior Still Needs Checking"
 description: "A working TypeScript-to-Rust proof of concept generates inputs and executes both implementations to confirm supported behavioral differences."
 titleformat: "prose"
-published: "2026-11-12T20:33:27-05:00"
+published: "2026-11-12"
 sourcesCheckedAt: "2026-11-13T01:02:33Z"
 tags: ["software", "ai", "testing", "semantic-diff"]
 dateAssignedRetrospectively: false

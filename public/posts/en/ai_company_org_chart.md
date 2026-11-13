@@ -2,7 +2,7 @@
 title: "Your AI Company Doesn't Need an Org Chart"
 description: "AI executives copy the shape of a human organization. Events, state, policies and explicit authority provide a more useful starting point."
 titleformat: "prose"
-published: "2026-11-02T12:00:00-05:00"
+published: "2026-11-02"
 sourcesCheckedAt: "2026-11-13T01:02:33Z"
 tags: ["ai", "architecture", "organizations", "skeuomorphism"]
 dateAssignedRetrospectively: true

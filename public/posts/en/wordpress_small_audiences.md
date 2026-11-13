@@ -2,7 +2,7 @@
 title: "The WordPress Plugins Almost Nobody Uses Are More Interesting Than You Think"
 description: "Beer maps, poetry scoring and chess games reveal why a directory installation bucket tells us less than a product story."
 titleformat: "prose"
-published: "2026-11-11T12:00:00-05:00"
+published: "2026-11-11"
 sourcesCheckedAt: "2026-11-13T01:02:33Z"
 tags: ["wordpress", "plugins", "data", "software"]
 dateAssignedRetrospectively: true

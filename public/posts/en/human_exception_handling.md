@@ -2,7 +2,7 @@
 title: "Human Intervention Is an Exception Handler and Approval Is Not Enough"
 description: "Human oversight requires evidence, authority and capacity. An approval button alone cannot establish control over an automated decision."
 titleformat: "prose"
-published: "2026-11-05T12:00:00-05:00"
+published: "2026-11-05"
 sourcesCheckedAt: "2026-11-13T01:02:33Z"
 tags: ["ai", "oversight", "operations", "human-factors"]
 dateAssignedRetrospectively: true

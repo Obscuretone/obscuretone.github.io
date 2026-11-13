@@ -2,7 +2,7 @@
 title: "Ten Popular WordPress Plugins That Need a Reason to Be in Your Stack"
 description: "Ten popular WordPress plugins illustrate why a default stack needs actual requirements. Published capabilities support a conditional critique."
 titleformat: "prose"
-published: "2026-11-06T12:00:00-05:00"
+published: "2026-11-06"
 sourcesCheckedAt: "2026-11-13T01:02:33Z"
 tags: ["wordpress", "plugins", "product-design"]
 dateAssignedRetrospectively: true
