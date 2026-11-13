@@ -229,23 +229,12 @@ function drawGraph(canvas, graph, width, height) {
 
     graph.links.forEach((link) => {
         const strength = Math.min(1, link.score / 4);
-        const trace = context.createLinearGradient(
-            link.source.x,
-            link.source.y,
-            link.target.x,
-            link.target.y,
-        );
-
-        trace.addColorStop(0, `rgba(77, 231, 255, ${0.38 + strength * 0.48})`);
-        trace.addColorStop(1, `rgba(255, 79, 216, ${0.34 + strength * 0.5})`);
-
         context.beginPath();
         context.moveTo(link.source.x, link.source.y);
         context.lineTo(link.target.x, link.target.y);
-        context.strokeStyle = trace;
-        context.lineWidth = 1.2 + strength * 2.4;
-        context.shadowColor = 'rgba(77, 231, 255, 0.48)';
-        context.shadowBlur = 5 + strength * 4;
+        context.strokeStyle = `rgba(66, 112, 128, ${0.22 + strength * 0.32})`;
+        context.lineWidth = 0.75 + strength * 0.8;
+        context.shadowBlur = 0;
         context.stroke();
         context.shadowBlur = 0;
     });
@@ -532,10 +521,11 @@ export default function PostsGraph({ posts, currentSlug, evidenceItems }) {
     }
 
     return (
-        <section ref={scrollerRef} className="posts-graph" aria-label="Evidence board">
+        <section ref={scrollerRef} className="posts-graph" aria-label="Connections between articles, sections and sources">
             <span className="posts-graph__label" aria-hidden="true">
-                EVIDENCE MAP // <span className="posts-graph__label-desktop">DRAG NODES</span>
-                <span className="posts-graph__label-mobile">SWIPE TO TRACE</span>
+                <span>Connections</span>
+                <span className="posts-graph__label-desktop">Drag to explore · follow a link</span>
+                <span className="posts-graph__label-mobile">Swipe to explore</span>
             </span>
             <div ref={containerRef} className="posts-graph__stage">
                 <canvas

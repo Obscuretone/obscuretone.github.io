@@ -12,6 +12,7 @@ import CutoutTitle from '../../../components/CutoutTitle';
 import GraphErrorBoundary from '../../../components/GraphErrorBoundary';
 import PostsList from '../../../components/PostsList';
 import PostsGraph from '../../../components/PostsGraph';
+import SiteHeader from '../../../components/SiteHeader';
 import { getPostsByLanguage } from '../../../utils/posts';
 import { getCurrentRevision } from '../../../utils/revision';
 import {
@@ -685,41 +686,38 @@ export default function Post({ post, postsEn, currentLang, revision }) {
                 <meta name="description" content={description} />
             </Head>
 
-            <header data-revision={revision}>
-                <h1>obscuretone</h1>
-                <h2>Systems, software, and stray signal</h2>
-            </header>
-
-            <hr />
-
-            <article>
-                <CutoutTitle title={title} format={titleFormat} seedText={htmlContent} />
-                {formattedPublishedDate && (
-                    <p className="article-meta">
-                        <strong>Published:</strong>{' '}
-                        <time dateTime={publishedAt}>{formattedPublishedDate}</time>
-                        {wasUpdated && (
-                            <>
-                                {' / '}
-                                <strong>Updated:</strong>{' '}
-                                <time dateTime={updatedAt}>{formattedUpdatedDate}</time>
-                            </>
-                        )}
-                    </p>
-                )}
-                <div ref={articleContentRef}>
-                    <div dangerouslySetInnerHTML={{ __html: openingHtml }} />
-                    <GraphErrorBoundary>
-                        <PostsGraph posts={postsEn} currentSlug={post.slug} evidenceItems={evidenceItems} />
-                    </GraphErrorBoundary>
-                    <div dangerouslySetInnerHTML={{ __html: remainingHtml }} />
-                </div>
-            </article>
-
-            <hr />
-
-            <footer>
-                <PostsList title="All Articles" posts={postsEn} />
+            <a className="skip-link" href="#article">Skip to article</a>
+            <SiteHeader revision={revision} />
+            <main id="article">
+                <article>
+                    <CutoutTitle title={title} format={titleFormat} seedText={htmlContent} />
+                    {formattedPublishedDate && (
+                        <p className="article-meta">
+                            <strong>Published:</strong>{' '}
+                            <time dateTime={publishedAt}>{formattedPublishedDate}</time>
+                            {wasUpdated && (
+                                <>
+                                    {' / '}
+                                    <strong>Updated:</strong>{' '}
+                                    <time dateTime={updatedAt}>{formattedUpdatedDate}</time>
+                                </>
+                            )}
+                        </p>
+                    )}
+                    <div ref={articleContentRef} className="article-content">
+                        <div dangerouslySetInnerHTML={{ __html: openingHtml }} />
+                        <GraphErrorBoundary>
+                            <PostsGraph posts={postsEn} currentSlug={post.slug} evidenceItems={evidenceItems} />
+                        </GraphErrorBoundary>
+                        <div dangerouslySetInnerHTML={{ __html: remainingHtml }} />
+                    </div>
+                </article>
+            </main>
+            <footer className="site-footer site-footer--article">
+                <details className="article-archive">
+                    <summary>All writing <span>{postsEn.length} articles</span></summary>
+                    <PostsList title="All articles" posts={postsEn} />
+                </details>
             </footer>
         </>
     );
