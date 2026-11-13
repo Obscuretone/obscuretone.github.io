@@ -1,4 +1,5 @@
 ---
+math: true
 title: The Ten-Second Resume
 image: rt_resume_ad_unit.webp
 imagealt: "A resume transformed into a billboard above a fast screening conveyor."

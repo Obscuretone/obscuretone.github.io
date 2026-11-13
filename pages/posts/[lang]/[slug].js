@@ -594,6 +594,7 @@ export async function getStaticProps({ params }) {
                 slug: `${lang}/${slug}`,
                 title: data.title || 'Untitled',
                 titleFormat: data.titleformat || 'prose',
+                usesMath: data.math === true,
                 description: data.description || '',
                 tags: data.tags || [],
                 image: data.image || '',
@@ -620,6 +621,7 @@ export default function Post({ post, postsEn, currentLang, revision }) {
         htmlContent,
         publishedAt,
         updatedAt,
+        usesMath,
     } = post;
     const articleContentRef = useRef(null);
 
@@ -629,6 +631,10 @@ export default function Post({ post, postsEn, currentLang, revision }) {
         document.querySelectorAll('pre code').forEach((block) => {
             hljs.highlightElement(block);
         });
+
+        if (!usesMath) {
+            return undefined;
+        }
 
         let isCancelled = false;
 
@@ -648,7 +654,7 @@ export default function Post({ post, postsEn, currentLang, revision }) {
         return () => {
             isCancelled = true;
         };
-    }, [htmlContent, currentLang]);
+    }, [htmlContent, currentLang, usesMath]);
 
     const formatDate = (value) => {
         const dateParts = typeof value === 'string'

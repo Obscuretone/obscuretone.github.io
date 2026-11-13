@@ -1,4 +1,5 @@
 ---
+math: true
 title: What Broke In Production?
 image: rt_production_incident.webp
 imagealt: "A production control room with an incident lamp, rollback lever, pager, falling graph trace, and review notebook."

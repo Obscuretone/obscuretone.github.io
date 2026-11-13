@@ -736,3 +736,11 @@ th {
     transition: none !important;
   }
 }
+
+/* Keep long equations within the reading column on small screens. */
+.article-content mjx-container[display="true"] {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: .2em 0;
+}

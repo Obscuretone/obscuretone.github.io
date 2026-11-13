@@ -24,3 +24,8 @@ not replace reviewing the diff or running the project's tests.
 
 Do not rewrite already published history during routine development. Coordinate
 an exceptional cleanup with collaborators and retain a recoverable backup first.
+
+Articles that contain TeX equations must set `math: true` in their Markdown
+frontmatter. Math rendering is opt-in so ordinary dollar amounts remain prose.
+Existing single-dollar inline and double-dollar display delimiters are supported
+in articles with that flag.
