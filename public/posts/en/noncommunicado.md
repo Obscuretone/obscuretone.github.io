@@ -178,7 +178,7 @@ None of those facts trouble me because they are, quite simply, true.
 
 The question was never whether those things happened, but whether they were sufficient to describe who I am today. I no longer believe they are.
 
-That conclusion doesn't require anyone else to abandon their theology. It doesn't require the Church to stop believing in the permanence of baptism, nor does it require anyone reading this essay to agree with my understanding of identity.
+That conclusion doesn't require anyone else to abandon their theology. It doesn't require the Church to stop believing in [the permanence of baptism](https://www.vatican.va/content/francesco/en/audiences/2018/documents/papa-francesco_20180509_udienza-generale.html), nor does it require anyone reading this essay to agree with my understanding of identity.
 
 It requires only that I stop describing myself in words that I no longer believe correspond to reality.
 

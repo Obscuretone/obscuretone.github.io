@@ -30,9 +30,9 @@ EMH is the software version of that argument. It started as an attempt to replac
 
 I use side projects to explore systems at a scale where the whole shape still fits in one head.
 
-[PyGameBoy](/posts/en/pygameboy) is a Game Boy emulator in Python, which makes performance tradeoffs very explicit: flat memory, opcode dispatch, NumPy rendering, and audio-clock synchronization all matter when CPython itself is part of the constraint.
+[PyGameBoy](https://github.com/Obscuretone/pygameboy) is a Game Boy emulator in Python, which makes performance tradeoffs very explicit: flat memory, opcode dispatch, NumPy rendering, and audio-clock synchronization all matter when CPython itself is part of the constraint.
 
-[Nira](/posts/en/nira) is a local issue tracker designed for both humans and coding agents. It is interested in interface boundaries: a CLI-first command surface for automation, a web UI for human review, and SQLite state that stays with the workspace.
+[Nira](https://github.com/Obscuretone/nira) is a local issue tracker designed for both humans and coding agents. It is interested in interface boundaries: a CLI-first command surface for automation, a web UI for human review, and SQLite state that stays with the workspace.
 
 [XKCD As A Systems Test](/posts/en/xkcdmeme) is about turning the classic "is there a bird in a national park?" joke into an actual service using EXIF parsing, geospatial boundaries, and computer vision. It is small, but it captures how much leverage modern tooling can give a developer.
 

@@ -14,6 +14,8 @@ QA doesn’t have the capacity to keep up with testing. Getting work reviewed is
 
 Five weeks is a long time for work to sit between being implemented and being delivered. It’s enough time to lose context, move into something else, and then have to reconstruct the reasoning behind a change when someone finally gets to it. Meanwhile, the queue keeps growing.
 
+There is a formal relationship behind the queue intuition. [Little's 1961 result](https://pubsonline.informs.org/doi/10.1287/opre.9.3.383) relates average work in a stable system, throughput and time in that system. It does not estimate this team's capacity from my anecdote. It does explain why a growing pile of started work cannot stand in for faster delivery.
+
 I can see the bottleneck. What I can’t see is a satisfying answer to what I’m supposed to do about it.
 
 Writing more code doesn’t create more testing capacity. Finishing another change doesn’t give someone else more time to review it. If those stages are already full, increasing my output mostly means increasing the amount of work waiting for attention.

@@ -44,6 +44,8 @@ Dishwasher detergent is only one instance of the pattern. Software companies hid
 
 The design question repeatedly shifts from "How good can we make the entry-level product?" to "How much better does the next tier need to feel?" The first philosophy tries to build the best product possible at a given price; the second tries to move customers up a pricing ladder.
 
+Economists have studied a stronger version of this mechanism. Deneckere and McAfee's 1996 paper [Damaged Goods](https://doi.org/10.1111/j.1430-9134.1996.00149.x) models intentionally reducing product quality to separate buyers by willingness to pay. That makes the incentive intelligible. It does not establish that Finish deliberately designed my disappointing experience.
+
 ## That's the Part That Bothers Me
 
 Finish Quantum may deserve every bit of praise it receives, but recommending it is beside the point. The target here is a product strategy that appears across countless industries.

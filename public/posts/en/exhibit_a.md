@@ -8,7 +8,7 @@ I am apparently not qualified to write Python.
 
 Exhibit A is a Game Boy emulator written in Python.
 
-[PyGameBoy](/posts/en/pygameboy) implements a CPU, memory bus, interrupts, timers, graphics, audio, cartridge controllers, saves, and a headless conformance runner. It runs real games and diagnostic ROMs. Its tests cover the ordinary Python implementation as well as the assembled machine, because making every line execute is much easier than proving that the result behaves like a Game Boy.
+[PyGameBoy](https://github.com/Obscuretone/pygameboy) implements a CPU, memory bus, interrupts, timers, graphics, audio, cartridge controllers, saves, and a headless conformance runner. It runs real games and diagnostic ROMs. Its [conformance runner and fixture policy](https://github.com/Obscuretone/pygameboy/blob/main/docs/conformance.md) cover the assembled machine as well as the ordinary Python implementation, because making every line execute is much easier than proving that the result behaves like a Game Boy.
 
 I wrote it for fun, which is where the problem begins.
 

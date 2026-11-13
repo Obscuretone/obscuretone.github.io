@@ -86,6 +86,8 @@ That last part matters. An opportunity to submit a response has limited value if
 
 A review process earns credibility through its capacity to revise its conclusions.
 
+There is a research vocabulary for this distinction. Colquitt's 2001 [organizational justice study](https://web.mit.edu/curhan/www/docs/Articles/15341_Readings/Justice/Colquitt_Dimensionality_of_Organizational_Justice.pdf) distinguishes procedural, informational, interpersonal and distributive justice. Accuracy, consistency and correctability belong to the procedural tradition it draws on. Fair treatment involves more than liking the outcome.
+
 ***
 
 I keep coming back to the difference between accepting responsibility for your words and accepting every interpretation placed around them.

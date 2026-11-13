@@ -30,6 +30,8 @@ Sometimes the human is there because the system needs a throat to clear, a box t
 
 The human can become the blame adapter even when they add little to the intelligence layer.
 
+Madeleine Clare Elish's 2019 paper calls a related failure a [moral crumple zone](https://estsjournal.org/index.php/ests/article/view/260): responsibility lands on a person whose control over the automated system was limited. Her cases concern specific sociotechnical accidents. The analogy here is the broader institutional temptation to route responsibility through the nearest human.
+
 ## The Signature Survives The Skill
 
 Automation eats tasks before it eats accountability.

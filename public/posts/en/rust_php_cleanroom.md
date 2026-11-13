@@ -81,7 +81,7 @@ Zend C extensions are compiled as dynamic libraries that expect to interact dire
 Despite the lack of legacy extension compatibility, RustPHP represents a monumental first step for the PHP language:
 
 1. **Proof of Concept:** It proves that a modern, safe interpreted virtual machine written in Rust can outperform decades of C-based interpreter optimizations.
-2. **Memory Safety by Default:** It completely immunizes the PHP execution layer from buffer overflows, dangling pointers, double-frees, and use-after-free exploits.
+2. **Memory Safety by Default:** Safe Rust restricts operations that can introduce memory unsafety, including raw-pointer dereferences. That reduces a class of implementation risks; it does not make a runtime immune to every vulnerability. [Rust safety boundary](https://doc.rust-lang.org/nomicon/what-unsafe-does.html)
 3. **A Modern Foundation:** It lays the groundwork for a fully multi-threaded, parallel, async-native, and memory-safe PHP runtime.
 
 The repository, performance benchmarks, FPM daemon, and full test suite are publicly available under [github.com/Obscuretone/RustPHP](https://github.com/Obscuretone/RustPHP).
