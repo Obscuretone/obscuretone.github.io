@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Obscuretone">
+  <defs>
+    <mask id="note" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
+      <rect x="2" y="2" width="60" height="60" rx="12" fill="white"/>
+      <path fill="black" d="M32 0h3v14c2 3 4 5 8 7 5 3 8 6 8 12 0 3-1 5-2 7 0-6-2-9-7-11l-7-4v39h-3V46c-3 5-8 8-14 7-5-1-8-4-7-8 1-5 6-9 12-9 3 0 6 1 8 2V16l1-2Z"/>
+    </mask>
+  </defs>
+  <rect x="0" y="0" width="64" height="64" rx="13" fill="white"/>
+  <rect width="64" height="64" fill="black" mask="url(#note)"/>
+</svg>

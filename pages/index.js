@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import { getPostsByLanguage } from '../utils/posts';
 import { getCurrentRevision } from '../utils/revision';
 import PostsList from '../components/PostsList';
@@ -24,8 +25,12 @@ export default function Home({ englishPosts, revision }) {
             <SiteHeader revision={revision} />
             <main id="writing" className="home-main">
                 <div className="home-intro">
-                    <p className="eyebrow">Notes and essays</p>
-                    <h1>Systems, software,<br />and stray signal.</h1>
+                    <div>
+                        <p className="eyebrow">Notes and essays</p>
+                        <h1>Systems, software,<br />and stray signal.</h1>
+                    </div>
+                    <Image className="home-photo" src="/piano-gallery.webp" alt=""
+                        width={1050} height={700} priority unoptimized />
                 </div>
                 <PostsList title="Writing" posts={englishPosts} />
             </main>

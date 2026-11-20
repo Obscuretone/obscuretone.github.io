@@ -1,32 +1,33 @@
 :root {
-  --paper: #faf9f6;
-  --ink: #262c30;
-  --muted: #626b70;
-  --line: #dedfdb;
-  --accent: #2e6578;
-  --accent-soft: #edf3f4;
-  --code-paper: #efefea;
+  --paper: #fff;
+  --ink: #111;
+  --muted: #505050;
+  --line: #d8d8d8;
+  --accent: #171717;
+  --accent-soft: #f1f1f1;
+  --code-paper: #f3f3f3;
   --sans: "IBM Plex Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --display: Baskerville, "Iowan Old Style", Georgia, serif;
   --mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
 
   /* Preserve colors referenced by older article markup. */
   --text: var(--ink);
   --text-strong: var(--ink);
   --neon-cyan: var(--accent);
-  --neon-magenta: #815b64;
-  --neon-green: #3c6a57;
-  --neon-violet: #655a85;
-  --ruby-red: #815b64;
+  --neon-magenta: #4a4a4a;
+  --neon-green: #363636;
+  --neon-violet: #444;
+  --ruby-red: #4a4a4a;
   --snow: var(--paper);
   --pale-slate: var(--line);
   --air-force-blue: var(--accent);
-  --sky-blue: #48768b;
+  --sky-blue: #343434;
   --deep-ink: var(--ink);
   --soft-ink: var(--muted);
   --desk: var(--paper);
   --paper-edge: var(--line);
   --paper-rule: var(--line);
-  --highlighter: #eae0ae;
+  --highlighter: #e5e5e5;
 }
 
 *, *::before, *::after {
@@ -55,8 +56,8 @@ body {
 }
 
 ::selection {
-  color: #152d37;
-  background: #d3e4e8;
+  color: #fff;
+  background: #1b1b1b;
 }
 
 a {
@@ -66,7 +67,7 @@ a {
 }
 
 a:visited {
-  color: #625a72;
+  color: #444;
 }
 
 a:hover {
@@ -113,6 +114,9 @@ strong {
 }
 
 .site-brand, .site-brand:visited {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   color: var(--ink);
   font-size: 26px;
   font-weight: 600;
@@ -120,7 +124,7 @@ strong {
   text-decoration: none;
 }
 
-.site-brand span {
+.site-wordmark > span {
   color: var(--accent);
 }
 
@@ -146,7 +150,19 @@ strong {
 }
 
 .home-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+  align-items: center;
+  gap: clamp(1.5rem, 5vw, 3.75rem);
   padding: 66px 0 54px;
+}
+
+.home-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
 }
 
 .eyebrow {
@@ -160,8 +176,7 @@ strong {
 .home-intro h1 {
   max-width: 22ch;
   margin: 15px 0 0;
-  font-size: clamp(36px, 4.7vw, 54px);
-  line-height: 1.14;
+  font: 400 clamp(42px, 5.2vw, 64px)/.98 var(--display);
   letter-spacing: -.045em;
 }
 
@@ -229,6 +244,7 @@ strong {
 }
 
 .article-title {
+  font-family: var(--display);
   max-width: 760px;
   margin: 60px auto 20px;
   font-size: clamp(32px, 4.3vw, 49px);
@@ -307,12 +323,12 @@ article a {
 }
 
 .article-source-link[data-source-kind="research"] {
-  color: #655a85;
+  color: #444;
   text-decoration-color: #c0b6d0;
 }
 
 .article-source-link[data-source-kind="law"], .article-source-link[data-source-kind="news"] {
-  color: #815b64;
+  color: #4a4a4a;
   text-decoration-color: #cbb5bb;
 }
 
@@ -393,7 +409,7 @@ pre code.hljs {
 }
 
 .hljs-title, .hljs-function {
-  color: #2e6578;
+  color: #171717;
 }
 
 table {
@@ -517,13 +533,13 @@ th {
 }
 
 .posts-graph__node--source-research {
-  color: #655a85;
+  color: #444;
   border-color: #d2cbdc;
   background: #f4f1f7;
 }
 
 .posts-graph__node--source-law, .posts-graph__node--source-news {
-  color: #815b64;
+  color: #4a4a4a;
   border-color: #ddcfd2;
   background: #f7f1f2;
 }
@@ -657,7 +673,12 @@ th {
   }
 
   .home-intro {
+    grid-template-columns: minmax(0, 1fr);
     padding: 42px 0 38px;
+  }
+
+  .home-photo {
+    aspect-ratio: 2 / 1;
   }
 
   .home-intro h1 {
