@@ -1,0 +1,89 @@
+{
+  "features": [
+    "shotgun",
+    "super_saiyan"
+  ],
+  "approved_public_features_only": true,
+  "upstream": "eae20c65c58930c8b62c76188d259579ad4130f1",
+  "frames": 3110,
+  "duration_seconds": 51.898125,
+  "fps": "16000/267",
+  "capture_size": [
+    256,
+    224
+  ],
+  "video_size": [
+    1024,
+    896
+  ],
+  "video_codec": "H.264 yuv420p + AAC",
+  "shotgun_shots": 6,
+  "shotgun_hits": 6,
+  "trigger_frames": [
+    661,
+    785,
+    1032,
+    1179,
+    1288,
+    1602
+  ],
+  "impact_frames": [
+    665,
+    789,
+    1036,
+    1183,
+    1292,
+    1606
+  ],
+  "impact_delay_frames": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+  ],
+  "source_block_occlusion_test": true,
+  "visible_pellet_and_pump_shell_test": true,
+  "grip": "native glove anchor; holding pose preserved through firing and recoil; muzzle flash follows barrel",
+  "star_music": "Original Super Mario World star music",
+  "star_music_loop_ms": null,
+  "shotgun_music_layer": "native-note-synchronized electric guitar",
+  "native_star_pcm_bit_exact": true,
+  "fireball_and_recoil_skid_pose_suppressed": true,
+  "ki_waves": [
+    {
+      "frame": 1851,
+      "charge_frames": 17,
+      "hits": 1
+    },
+    {
+      "frame": 2087,
+      "charge_frames": 20,
+      "hits": 1
+    },
+    {
+      "frame": 2313,
+      "charge_frames": 23,
+      "hits": 1
+    },
+    {
+      "frame": 2941,
+      "charge_frames": 180,
+      "hits": 8
+    }
+  ],
+  "ki_level_starts_at_frame": 1708,
+  "ki_course_targets": "three walking Rexes and eight Chargin Chucks in two racks",
+  "starts_unarmed": true,
+  "dragon_coins_collected": 1,
+  "shotgun_acquisition_frame": 516,
+  "campaign_uses_native_enemies": true,
+  "practice_course_uses_explicit_targets": true,
+  "native_level_transition": true,
+  "no_damage": true,
+  "sha256": {
+    "mario-shotgun-saiyan-adaptive-music.mp4": "56a904fe0a6fb5de525cab4cc27ace82c40e0531bf93a3cff277e81eb3f2d423",
+    "smw-shotgun-saiyan-adaptive-music-source.zip": "1cc6c34ad09609f160f3457adb1105e6e007b17c1a1493c5df1d6e51d1209545"
+  }
+}
