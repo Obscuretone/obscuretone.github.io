@@ -35,14 +35,14 @@ export default function AnalyticsConsent() {
   return (
     <>
       <div className="analytics-footer-links">
-        <a href={lang === "fr" ? "/privacy/#fr" : "/privacy/"}>{c.privacy}</a>
+        <a href={lang === "fr" ? "/privacy#fr" : "/privacy"}>{c.privacy}</a>
         <button type="button" data-analytics-open hidden>{c.settings}</button>
       </div>
       <section className="analytics-banner" lang={lang} hidden data-analytics-id="G-GEVFD7WK71" aria-labelledby="analytics-heading">
         <div className="analytics-inner">
           <div>
             <h2 id="analytics-heading">{c.heading}</h2>
-            <p>{c.summary} <a href={lang === "fr" ? "/privacy/#fr" : "/privacy/"}>{c.privacy}</a></p>
+            <p>{c.summary} <a href={lang === "fr" ? "/privacy#fr" : "/privacy"}>{c.privacy}</a></p>
           </div>
           <div className="analytics-choices">
             <button type="button" data-analytics-choice="granted">{c.allow}</button>
