@@ -1,22 +1,28 @@
 ---
-title: "Nira: The Local Issue Tracker"
+title: "Nira for Humans and Coding Agents"
 image: rt_nira_human_agent_tracker.webp
-imagealt: "A local issue tracker workstation connects a command-line terminal, human review screen, agent queue, and SQLite project cartridge."
-imagecaption: "Nira as a local workspace boundary between human review, CLI automation, agent work, and portable state."
+imagealt: "An illustration of the original local Nira prototype, with a terminal, review screen, agent queue, and SQLite cartridge."
+imagecaption: "The original Nira prototype put human review and command-line automation over the same local project state."
 imagesource: "AI-generated illustration created for obscuretone with OpenAI image generation."
-description: A project note on Nira, a local issue tracker built around a CLI for automation and agents, a web UI for humans, and SQLite state stored with the workspace.
-tags: [software, tools, agents, architecture, local-first]
+description: How Nira grew from a local CLI experiment into a self-hosted tracker with a browser workspace for people and MCP tools for coding agents.
+tags: [software, tools, agents, architecture, mcp]
 ---
 
-[Nira](https://github.com/obscuretone/nira) is a local issue tracker for a single workspace. It has a command-line interface for automation and tool use, a local web UI for humans, and SQLite storage in the project directory.
+[Nira](https://tasks.obscuretone.com/) is the self-hosted issue tracker I use to organize my projects. I browse projects, boards, and tickets in the web app. Coding agents work with the same records through MCP. [The current Nira source is on GitHub in a private repository.](https://github.com/Obscuretone/nira)
 
 The interesting part is the interface design question behind ticket tracking:
 
 > What should a tool look like if both humans and coding agents need to use it comfortably?
 
-Nira's answer is to expose a small, explicit command surface while keeping a browser UI for the parts humans prefer to browse, edit, and review visually.
+## A Shared Tracker
 
-## Why CLI-First Works For Agents
+I can open a ticket link directly and still have the same sidebar I use from the main tracker. That matters when I arrive from a chat or a document and want to see the rest of the project. The sidebar switches between workspaces, and each project has a list and a board. Tickets have stable URLs, Markdown descriptions, related issues, and an activity history.
+
+The MCP tools let agents read a ticket, search the tracker, and, when given write access, record a next action or update an issue. The browser and the tools use the same hosted database, so a decision recorded by an agent is available when I open the ticket myself.
+
+## The Local Experiment
+
+[Nira Legacy](https://github.com/Obscuretone/nira-legacy) is the original standalone experiment. It had a CLI, a local browser UI, and SQLite storage in `.nira/nira.db` inside the project directory. That made it easy to run commands anywhere in the workspace and inspect or back up the database alongside the code.
 
 Command-line tools are a natural fit for coding agents because they are explicit. A command has a name, arguments, output, and an exit status. That gives the agent a bounded operation with relatively little ambiguity.
 
@@ -50,30 +56,9 @@ An HTTP API that provides those things is a strong tool interface. A CLI that do
 
 CLI-first is useful because it makes the contract visible quickly. It is easy to run manually, easy to test, easy to script, and easy for an agent to use through the same interface a developer would use.
 
-## Local State Matters
-
-Nira stores its data in `.nira/nira.db` inside the workspace. That makes the issue tracker local to the project rather than dependent on a hosted service.
-
-That local model fits agent-assisted development well:
-
-1. The tool can work without network access.
-2. Project state lives beside project code.
-3. Commands can be run from anywhere under the workspace.
-4. The database can be inspected, backed up, or removed like any other local project artifact.
-
-This has a different shape from team-scale systems like Jira or GitHub Issues: local, lightweight, and close to the work.
-
 ## Humans Still Need A UI
 
-CLI-first does not mean CLI-only.
-
-Humans often want to browse, scan, edit long text, and review related work visually. Nira includes a local web UI for that reason. The browser interface supports ticket lists, filtering, ticket detail pages, inline editing, related-ticket links, and Markdown editing.
-
-That split is deliberate:
-
-1. **CLI:** fast operations, automation, agent use, scripting.
-2. **Web UI:** browsing, editing, review, and human comfort.
-3. **SQLite:** durable local state behind both interfaces.
+Humans often want to browse, scan, edit long text, and review related work visually. The browser is where I do that work. The tools give an agent a way to read and update the same issues without navigating the browser.
 
 The goal is to give each user the interface that matches the task, without forcing humans to behave like scripts or agents to use a human UI.
 
