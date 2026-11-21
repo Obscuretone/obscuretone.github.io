@@ -4,11 +4,11 @@ image: rt_nira_human_agent_tracker.webp
 imagealt: "An illustration of the original local Nira prototype, with a terminal, review screen, agent queue, and SQLite cartridge."
 imagecaption: "The original Nira prototype put human review and command-line automation over the same local project state."
 imagesource: "AI-generated illustration created for obscuretone with OpenAI image generation."
-description: How Nira grew from a local CLI experiment into a self-hosted tracker with a browser workspace for people and MCP tools for coding agents.
+description: How Nira grew from a local CLI prototype into a self-hosted issue tracker with a browser workspace for people and MCP tools for coding agents.
 tags: [software, tools, agents, architecture, mcp]
 ---
 
-[Nira](https://tasks.obscuretone.com/) is the self-hosted issue tracker I use to organize my projects. I browse projects, boards, and tickets in the web app. Coding agents work with the same records through MCP. [The current Nira source is public on GitHub.](https://github.com/Obscuretone/nira)
+[Nira](https://tasks.obscuretone.com/) is the self-hosted issue tracker I use to organize my projects. I use the web app, and coding agents work with the same tickets through the Model Context Protocol (MCP). I built [Nira Legacy](https://github.com/Obscuretone/nira-legacy), the original local prototype, before MCP became a regular part of my workflow. [The current Nira source is public on GitHub.](https://github.com/Obscuretone/nira)
 
 The interesting part is the interface design question behind ticket tracking:
 
@@ -24,7 +24,7 @@ The MCP tools let agents read a ticket, search the tracker, and, when given writ
 
 ## The Local Experiment
 
-[Nira Legacy](https://github.com/Obscuretone/nira-legacy) is the original standalone experiment. It had a CLI, a local browser UI, and SQLite storage in `.nira/nira.db` inside the project directory. That made it easy to run commands anywhere in the workspace and inspect or back up the database alongside the code.
+In the prototype, coding agents used the command line to work with the same tickets I reviewed in a local browser. The prototype kept its SQLite database at `.nira/nira.db` inside the project directory. I could run commands anywhere in the workspace and inspect or back up the database alongside the code.
 
 Command-line tools are a natural fit for coding agents because they are explicit. A command has a name, arguments, output, and an exit status. That gives the agent a bounded operation with relatively little ambiguity.
 
