@@ -16,6 +16,10 @@ I used Taste Engine, the recipe picker I built for myself, to turn my right swip
 
 I’d already done the work of picking dishes I wanted to eat. The planner used the saves in my Taste Engine account for dinners and brunches. I picked a few straightforward weekday breakfasts directly, including bacon and eggs, Nutella toast with yogurt, and berry oats. Putting both kinds of choices on one calendar made it easy to see what each day would look like.
 
+![Taste Engine’s Discover screen showing the Tandoori Chicken Potato Tray with Pass and Save buttons](/images/taste-engine-swipe.webp)
+
+*Taste Engine’s Discover screen with a sample recipe.*
+
 Sales helped shape the menu. When I found a 3.8 kg pork shoulder for $16, I planned to use it in several of my saved pork dishes and freeze the rest. The recipe cards show where I’m using shoulder in place of the original cut, with weights for each batch.
 
 ## Plan the prep as well as the meals
