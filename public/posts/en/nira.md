@@ -8,7 +8,7 @@ description: How Nira grew from a local CLI experiment into a self-hosted tracke
 tags: [software, tools, agents, architecture, mcp]
 ---
 
-[Nira](https://tasks.obscuretone.com/) is the self-hosted issue tracker I use to organize my projects. I browse projects, boards, and tickets in the web app. Coding agents work with the same records through MCP. [The current Nira source is on GitHub in a private repository.](https://github.com/Obscuretone/nira)
+[Nira](https://tasks.obscuretone.com/) is the self-hosted issue tracker I use to organize my projects. I browse projects, boards, and tickets in the web app. Coding agents work with the same records through MCP. [The current Nira source is public on GitHub.](https://github.com/Obscuretone/nira)
 
 The interesting part is the interface design question behind ticket tracking:
 
@@ -19,6 +19,8 @@ The interesting part is the interface design question behind ticket tracking:
 I can open a ticket link directly and still have the same sidebar I use from the main tracker. That matters when I arrive from a chat or a document and want to see the rest of the project. The sidebar switches between workspaces, and each project has a list and a board. Tickets have stable URLs, Markdown descriptions, related issues, and an activity history.
 
 The MCP tools let agents read a ticket, search the tracker, and, when given write access, record a next action or update an issue. The browser and the tools use the same hosted database, so a decision recorded by an agent is available when I open the ticket myself.
+
+[Four Tools I Self-Host](/posts/en/self_hosted_tools) covers the wiki, mail gateway, and passkey provider that I run alongside Nira.
 
 ## The Local Experiment
 
