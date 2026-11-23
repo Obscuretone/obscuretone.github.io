@@ -9,6 +9,7 @@ import html from 'remark-html';
 import hljs from 'highlight.js';
 import 'highlight.js/styles/github.css';
 import CutoutTitle from '../../../components/CutoutTitle';
+import CodexActivityLog from '../../../components/CodexActivityLog';
 import GraphErrorBoundary from '../../../components/GraphErrorBoundary';
 import PostsList from '../../../components/PostsList';
 import PostsGraph from '../../../components/PostsGraph';
@@ -606,6 +607,9 @@ export async function getStaticProps({ params }) {
                 htmlContent,
                 publishedAt,
                 updatedAt,
+                activitySnapshot: data.activitylog === true
+                    ? JSON.parse(fs.readFileSync(path.join(process.cwd(), 'public/data/codex-gone-wild.json'), 'utf8'))
+                    : null,
             },
             postsEn,
             currentLang: lang,
@@ -623,6 +627,7 @@ export default function Post({ post, postsEn, currentLang, revision }) {
         publishedAt,
         updatedAt,
         usesMath,
+        activitySnapshot,
     } = post;
     const articleContentRef = useRef(null);
 
@@ -717,6 +722,7 @@ export default function Post({ post, postsEn, currentLang, revision }) {
                             <PostsGraph posts={postsEn} currentSlug={post.slug} evidenceItems={evidenceItems} />
                         </GraphErrorBoundary>
                         <div dangerouslySetInnerHTML={{ __html: remainingHtml }} />
+                        {activitySnapshot && <CodexActivityLog snapshot={activitySnapshot} />}
                     </div>
                 </article>
             </main>
