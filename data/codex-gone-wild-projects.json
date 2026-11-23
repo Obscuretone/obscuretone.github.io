@@ -1,0 +1,174 @@
+{
+  "Server health": {
+    "title": "A health check with a memory",
+    "summary": "Take 1 built a probe for disk, memory and web availability, then taught it to keep the last 32 checks. It added certificate expiry and request timings. The latest timing change breaks local requests into the connection, header and body phases so there's more evidence when a request is slow."
+  },
+  "Radio Survey": {
+    "title": "Find the hidden radio transmitter",
+    "summary": "Four receivers give distance ranges to a transmitter hidden on a grid. Take 1 checked 730 daily puzzles and found exactly one solution per puzzle, with all four clues needed. It added overlays so players can see which squares fit a clue."
+  },
+  "Sandpile simulation": {
+    "title": "How many grains before the first spill?",
+    "summary": "Take 1 simulated dropping grains at the center of a grid. On a 31×31 board, the 1,768th grain sent 36 over the edge. It also showed that the final pattern survives changes in processing order and fits into a 35-byte wedge when stored by symmetry."
+  },
+  "Sandpile chime": {
+    "title": "What a sandpile sounds like",
+    "summary": "Take 1 turned the same first-spill simulation into a 4.45-second chime. Busier rounds rise in pitch, and rounds that spill grains over the edge get a separate high tone."
+  },
+  "Sandpile animation": {
+    "title": "Watch the first spill spread",
+    "summary": "An eight-second animation follows the 1,768th grain through 99 rounds of toppling. The first four grains escape in round 36, and 36 escape in total."
+  },
+  "Error correction": {
+    "title": "Repairing a burst of flipped bits",
+    "summary": "Take 1's decoder repaired every single-bit error and flagged every two-bit error in its test. It then interleaved the bits across four bytes, which let the same decoder recover from all 29 placements of a four-bit burst."
+  },
+  "Orbit Lab": {
+    "title": "Two ways to simulate an orbit",
+    "summary": "Take 1 ran two simulations of the same elliptical orbit. Forward Euler spiraled outward and hit 85.5% peak energy error. Velocity Verlet stayed near the ellipse at 0.74%, and doubling the number of steps cut its angular lag from 14.8° to 3.74°.",
+    "image": "/images/codexgonewild-orbit.webp",
+    "imageAlt": "The Euler orbit spirals out while the Verlet orbit stays close to the reference ellipse.",
+    "imageWidth": 1050,
+    "imageHeight": 903
+  },
+  "Random walks": {
+    "title": "Does a random walker ever get home?",
+    "summary": "Take 1 calculated the chance of returning to the starting point at least once within 4,000 steps. It found 98.7% on a line, 71.8% on a square grid, and 33.6% on a cubic grid."
+  },
+  "Bit patterns and position decoding": {
+    "title": "A ruler made of bits",
+    "summary": "Take 1 made a 32-bit loop where five clean bits identify your position. It searched all 2,048 candidate loops and found designs that need only ten bits to tolerate one wrong reading. Its decoder can also handle a wrong bit and an unreadable one together with fourteen bits."
+  },
+  "Chaos and rounding": {
+    "title": "How long does extra precision buy you?",
+    "summary": "In Take 1's logistic-map experiment, starting a million times closer bought a median of just 20 more steps before the trajectories separated. It later showed that changing how a low-precision calculation rounds can send the same system into completely different repeating loops."
+  },
+  "VPS Lab gallery": {
+    "title": "An offline gallery for the experiments",
+    "summary": "Take 1 built a gallery to collect its plots, sounds and runnable experiments. In one refresh it rebuilt a 67-file archive byte for byte and ran all 37 listed commands from a clean extraction."
+  },
+  "Leap-day calendar": {
+    "title": "A calendar you can listen to",
+    "summary": "Assuming a fixed year length of 365.24219 days, Take 1 found that 31 leap days per 128 years was the closest fit among cycles up to 400 years. It turned the schedule into a ten-second rhythm, with a louder click for each leap year."
+  },
+  "Musical tuning": {
+    "title": "Why two nearly identical chords pulse differently",
+    "summary": "Take 1 made clips comparing pure tuning with evenly spaced notes. The major third pulsed 8.73 times per second with the usual 12 divisions of an octave. Using 53 divisions brought the beat down to about 0.89 per second."
+  },
+  "Sharding and load balancing": {
+    "title": "Adding a server without moving everything",
+    "summary": "In a test with 20,000 keys, adding a ninth shard moved 88.67% of keys with ordinary modulo hashing and 10.76% with rendezvous hashing. In a separate test, assigning each key to the less busy of two candidates cut the peak load."
+  },
+  "Spatial indexing": {
+    "title": "Reading a rectangle from a one-dimensional file",
+    "summary": "Take 1 stored the same grid in row, Morton and Hilbert order. In its model, reading about eight extra tiles per query cut the Hilbert layout from 7.69 separate reads to 4.30 on average."
+  },
+  "Cache replacement": {
+    "title": "When a bigger cache misses more often",
+    "summary": "Take 1 found the shortest request sequence in its search where adding a slot hurts a first-in, first-out cache. The 12 requests cause nine misses with three slots and ten with four, and the same counts recur on every repeat."
+  },
+  "Sampling π": {
+    "title": "Estimating π by spreading out the guesses",
+    "summary": "Take 1 estimated π by dropping points inside a square and counting how many landed in a circle. Giving each grid cell one sample cut the trial-to-trial error by over sixfold. It improved the estimate again by reflecting a second point across each cell's center."
+  },
+  "Audio compression": {
+    "title": "Shrinking WAV files without losing samples",
+    "summary": "Instead of storing every audio sample as-is, Take 1 stored how samples change. Its best versions saved 64.5% of the sandpile sample bytes and roughly 77% of the tuning sample bytes, while reconstructing every sample exactly."
+  },
+  "Balance-scale puzzles": {
+    "title": "Four weights, one of them missing",
+    "summary": "Weights of 1, 3, 9 and 27 can balance every integer mass from 1 to 40. Take 1 then asked what coverage survives when any weight goes missing. It found that 1, 2, 4 and 7 guarantee every mass from 1 to 7 and proved that four weights cannot guarantee eight."
+  },
+  "Random identifier collisions": {
+    "title": "How many bits does a random ID need?",
+    "summary": "Take 1 calculated the chance that two randomly chosen identifiers collide. For one million independent, uniformly random IDs and a risk budget of one in a million, 59 bits was the smallest width that met the budget."
+  },
+  "Numerically stable roots": {
+    "title": "Recovering the tiny root a calculator loses",
+    "summary": "Take 1 found an equation where the direct quadratic formula rounds a real root near one billionth to zero. It recovered the small root from the large one and then scaled the calculation to avoid overflow with much larger coefficients."
+  },
+  "Queue scheduling": {
+    "title": "What happens to long jobs in a fast queue?",
+    "summary": "Take 1 simulated a server handling both short and long jobs. Always picking the shortest cut the overall wait but made long jobs wait more. Raising the priority of jobs as they waited reduced that penalty."
+  },
+  "Proportional allocation": {
+    "title": "A fourth seat that costs someone their first",
+    "summary": "Take 1 found that with weights 3, 3 and 1, largest-remainder allocation gives every group one seat out of three. With four seats, the same groups get 2, 2 and 0. It also found a case where a different method gives a group more than its proportional quota."
+  },
+  "Floating-point accuracy": {
+    "title": "What arithmetic forgets near a big number",
+    "summary": "Adding large positive numbers, ones and large negative numbers in the wrong order made the ones disappear. Take 1 compared summation methods that preserve them, then recovered the exact variance of 40,000 values near 10¹⁶ from summaries of 315 batches."
+  },
+  "Black-and-white dithering": {
+    "title": "One bit of gray",
+    "summary": "Take 1 rendered a smooth gray ramp with black and white pixels by varying the density of white dots. Repeating a fixed pattern compressed the image to a few hundred bytes. Randomizing each tile independently produced nearly the same local brightness and a much larger file."
+  },
+  "Grid pathfinding": {
+    "title": "A useful hint for a maze with one opening",
+    "summary": "A distance hint cut a search across an open grid from 2,076 visited cells to 62. On a map with a wall, telling the search where the opening was let it visit just the 184 cells along one shortest route."
+  },
+  "Pascal triangle fractals": {
+    "title": "The patterns hiding in Pascal’s triangle",
+    "summary": "Mark only the odd entries and a Sierpiński triangle appears. Take 1 drew the repeating patterns for remainders modulo 2, 3 and 5 and checked each plotted entry against the exact binomial coefficients.",
+    "image": "/images/codexgonewild-pascal.webp",
+    "imageAlt": "Three triangular fractals from Pascal’s triangle with different colors for each nonzero remainder.",
+    "imageWidth": 1156,
+    "imageHeight": 458
+  },
+  "Thumbnail sampling": {
+    "title": "A checkerboard that disappears in a thumbnail",
+    "summary": "Taking every second pixel made the same checkerboard turn solid black or solid white, depending on where sampling started. Averaging each block kept it gray. A second test showed that rounding after each of two shrinking stages can brighten the result by one level."
+  },
+  "Riffle shuffles": {
+    "title": "How random is a deck after seven shuffles?",
+    "summary": "Take 1 calculated how far ideal riffle shuffles leave a 52-card deck from a perfectly random one. The probability gap fell from 0.614 after six shuffles to 0.334 after seven and below 0.1 after nine."
+  },
+  "Coin-flip patterns": {
+    "title": "The slower pattern that wins the race",
+    "summary": "Take 1 calculated how long different eight-flip patterns take to appear. It then put two on the same stream of coin flips and found one that waits longer on its own yet wins 66.84% of their head-to-head races."
+  },
+  "Audio aliasing": {
+    "title": "A rising tone that seems to fall",
+    "summary": "Take 1 played a three-second sweep from 1 to 7 kHz. In the 8 kHz recording, the pitch rises to 4 kHz and then falls back to 1 kHz because the sampling rate makes higher pitches appear as lower ones."
+  },
+  "Shut the Box": {
+    "title": "A better way to play Shut the Box",
+    "summary": "Take 1 solved the two-dice game across all 512 board states. Optimal play won 7.14% of games. Always clearing as many tiles as possible won 1.10%, even when ties were broken optimally."
+  },
+  "Bloom filters": {
+    "title": "When distinct hash positions make a filter worse",
+    "summary": "Take 1 tested a tiny probabilistic membership filter. Requiring distinct positions reduced false positives with three probes. With eight probes it filled too much of the filter, raising false positives from 19.11% to 30.36%."
+  },
+  "Polynomial interpolation": {
+    "title": "When more sample points make a curve fit worse",
+    "summary": "Going from 5 to 21 evenly spaced points pushed the biggest measured error from 0.44 to 59.82. The same number of points clustered near the ends brought it down from 0.46 to 0.018.",
+    "image": "/images/codexgonewild-interpolation.webp",
+    "imageAlt": "Interpolation error rises with evenly spaced points and falls with points clustered near the ends.",
+    "imageWidth": 1200,
+    "imageHeight": 682
+  },
+  "Daylight saving time": {
+    "title": "The alarm time that goes missing",
+    "summary": "Take 1 checked a daily 1:30 a.m. schedule in London. In 2026, that time occurs zero times on the spring clock-change date and twice in autumn. Counting both autumn occurrences puts those two alarms just an hour apart."
+  },
+  "Pixel perimeter": {
+    "title": "Measuring a circle made of square pixels",
+    "summary": "Counting exposed pixel edges overestimated a circle's circumference by about 27%. Counting diagonal crossings as well brought the error down to 0.015% at a radius of 2,048 pixels, though the same estimator undercounted a square."
+  },
+  "Pairs of distance rulers": {
+    "title": "Two different rulers with the same distances",
+    "summary": "Take 1 found two dissimilar arrangements of six marks whose 15 pairwise distances are exactly the same. It searched all shorter spans and found that 17 is the minimum when every distance must be distinct."
+  },
+  "Langton’s ant": {
+    "title": "The ant that builds a diagonal highway",
+    "summary": "Take 1 put an ant on a blank grid with two rules. It turns based on a tile's color and flips that color as it leaves. After 9,977 steps, it fell into a 104-step pattern that repeats while moving diagonally."
+  },
+  "Shortlist selection": {
+    "title": "How long should you wait before making a shortlist?",
+    "summary": "Take 1 worked through 52 candidates arriving in random order, when you can only rank the people you've already seen. Having two shortlist spots raised the best chance of including the top candidate from 37.40% to 60.10%."
+  },
+  "Maze generation": {
+    "title": "A maze generator with a favorite layout",
+    "summary": "Take 1 shuffled the walls and opened only those that connected separate areas. In a 3×3 maze, some resulting layouts were nearly twice as likely as others. The most common appeared 0.685% of the time, versus 0.351% for the least common."
+  }
+}

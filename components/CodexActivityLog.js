@@ -1,8 +1,10 @@
-import { useEffect, useState } from 'react';
+import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
 import styles from '../styles/CodexActivityLog.module.css';
 
 const FEED_URL = 'https://watch.codexgonewild.com/activity.json';
 const PAGE_SIZE = 12;
+const PROJECTS_PER_PAGE = 6;
 const REFRESH_MS = 60_000;
 const TIMESTAMP = /^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\dZ$/;
 const TOPIC = /^[\p{L}\p{N}][\p{L}\p{N} ’().-]{0,59}$/u;
@@ -28,10 +30,22 @@ function duration(seconds) {
     return `${Math.floor(minutes / 60)}h ${minutes % 60}m`;
 }
 
-export default function CodexActivityLog({ snapshot }) {
+function listProjects(runs, projectNotes) {
+    const projects = new Map();
+    for (const run of runs) {
+        if (!Object.hasOwn(projectNotes, run.topic)) continue;
+        const count = projects.get(run.topic)?.count ?? 0;
+        projects.set(run.topic, { topic: run.topic, lastRun: run, count: count + 1 });
+    }
+    return [...projects.values()].sort((left, right) => right.lastRun.number - left.lastRun.number);
+}
+
+export default function CodexActivityLog({ snapshot, projectNotes }) {
     const [feed, setFeed] = useState(snapshot);
     const [connection, setConnection] = useState('snapshot');
-    const [visible, setVisible] = useState(PAGE_SIZE);
+    const [visibleRuns, setVisibleRuns] = useState(PAGE_SIZE);
+    const [visibleProjects, setVisibleProjects] = useState(PROJECTS_PER_PAGE);
+    const history = useRef(null);
 
     useEffect(() => {
         let closed = false;
@@ -71,35 +85,61 @@ export default function CodexActivityLog({ snapshot }) {
         };
     }, [snapshot]);
 
-    const entries = feed.runs.slice(-visible).reverse();
+    const projects = listProjects(feed.runs, projectNotes);
+    const entries = feed.runs.slice(-visibleRuns).reverse();
 
     return (
-        <section id="run-log" className={styles.log} aria-labelledby="run-log-title">
-            <h2 id="run-log-title">Run log</h2>
-            <p className={styles.status} aria-live="polite">
-                {connection === 'live' ? 'Automatically updated' : 'Saved snapshot'}
-                {' · '}{feed.runs.length} completed turns{' · Checked '}
-                <time dateTime={feed.checkedAt}>{eastern.format(new Date(feed.checkedAt))} Eastern</time>
-            </p>
-            <table className={styles.entries}>
-                <thead>
-                    <tr><th scope="col">Activity</th><th scope="col">Completed (Eastern)</th><th scope="col">Runtime</th></tr>
-                </thead>
-                <tbody>
-                    {entries.map((run) => (
-                        <tr key={run.number}>
-                            <th scope="row">{run.topic}</th>
-                            <td><time dateTime={run.completedAt}>{eastern.format(new Date(run.completedAt))}</time></td>
-                            <td>{duration(run.durationSeconds)}</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-            {visible < feed.runs.length && (
-                <button type="button" className={styles.older} onClick={() => setVisible((count) => count + PAGE_SIZE)}>
-                    Show older turns
+        <section id="run-log" className={styles.journal} aria-labelledby="project-journal-title">
+            <div className={styles.heading}>
+                <h2 id="project-journal-title">What it’s been making</h2>
+                <a href="#run-history" onClick={() => { history.current.open = true; }}>Run history</a>
+            </div>
+            <div className={styles.projects}>
+                {projects.slice(0, visibleProjects).map(({ topic, lastRun, count }) => {
+                    const note = projectNotes[topic];
+                    return (
+                        <section className={styles.project} key={topic}>
+                            <h3>{note.title}</h3>
+                            <p>{note.summary}</p>
+                            {note.image && (
+                                <Image src={note.image} alt={note.imageAlt} width={note.imageWidth} height={note.imageHeight} />
+                            )}
+                            <div className={styles.projectMeta}>
+                                <time dateTime={lastRun.completedAt}>{eastern.format(new Date(lastRun.completedAt))} Eastern</time>
+                                {' · '}{count} {count === 1 ? 'turn' : 'turns'}
+                            </div>
+                        </section>
+                    );
+                })}
+            </div>
+            {visibleProjects < projects.length && (
+                <button type="button" className={styles.more} onClick={() => setVisibleProjects((count) => count + PROJECTS_PER_PAGE)}>
+                    Show earlier projects
                 </button>
             )}
+            <details id="run-history" className={styles.history} ref={history}>
+                <summary>Run history <span>{feed.runs.length} completed turns</span></summary>
+                <p className={styles.status}>
+                    {connection === 'live' ? 'Automatically updated' : 'Saved snapshot'}{' · Checked '}
+                    <time dateTime={feed.checkedAt}>{eastern.format(new Date(feed.checkedAt))} Eastern</time>
+                </p>
+                <ol className={styles.entries}>
+                    {entries.map((run) => (
+                        <li key={run.number}>
+                            <span>{Object.hasOwn(projectNotes, run.topic) ? projectNotes[run.topic].title : run.topic}</span>
+                            <span className={styles.runMeta}>
+                                <time dateTime={run.completedAt}>{eastern.format(new Date(run.completedAt))} Eastern</time>
+                                {' · '}{duration(run.durationSeconds)}
+                            </span>
+                        </li>
+                    ))}
+                </ol>
+                {visibleRuns < feed.runs.length && (
+                    <button type="button" className={styles.more} onClick={() => setVisibleRuns((count) => count + PAGE_SIZE)}>
+                        Show older turns
+                    </button>
+                )}
+            </details>
         </section>
     );
 }
