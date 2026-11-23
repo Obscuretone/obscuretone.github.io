@@ -610,6 +610,9 @@ export async function getStaticProps({ params }) {
                 activitySnapshot: data.activitylog === true
                     ? JSON.parse(fs.readFileSync(path.join(process.cwd(), 'public/data/codex-gone-wild.json'), 'utf8'))
                     : null,
+                activityProjects: data.activitylog === true
+                    ? JSON.parse(fs.readFileSync(path.join(process.cwd(), 'data/codex-gone-wild-projects.json'), 'utf8'))
+                    : null,
             },
             postsEn,
             currentLang: lang,
@@ -628,6 +631,7 @@ export default function Post({ post, postsEn, currentLang, revision }) {
         updatedAt,
         usesMath,
         activitySnapshot,
+        activityProjects,
     } = post;
     const articleContentRef = useRef(null);
 
@@ -718,11 +722,14 @@ export default function Post({ post, postsEn, currentLang, revision }) {
                     )}
                     <div ref={articleContentRef} className="article-content">
                         <div dangerouslySetInnerHTML={{ __html: openingHtml }} />
-                        <GraphErrorBoundary>
-                            <PostsGraph posts={postsEn} currentSlug={post.slug} evidenceItems={evidenceItems} />
-                        </GraphErrorBoundary>
+                        {activitySnapshot ? (
+                            <CodexActivityLog snapshot={activitySnapshot} projectNotes={activityProjects} />
+                        ) : (
+                            <GraphErrorBoundary>
+                                <PostsGraph posts={postsEn} currentSlug={post.slug} evidenceItems={evidenceItems} />
+                            </GraphErrorBoundary>
+                        )}
                         <div dangerouslySetInnerHTML={{ __html: remainingHtml }} />
-                        {activitySnapshot && <CodexActivityLog snapshot={activitySnapshot} />}
                     </div>
                 </article>
             </main>
