@@ -100,6 +100,9 @@ export default function CodexActivityLog({ snapshot, projectNotes }) {
                 <h2 id="project-journal-title">What it’s been making</h2>
                 <a href="#run-history" onClick={() => { history.current.open = true; }}>Run history</a>
             </div>
+            <p className={styles.sectionIntro}>
+                The latest work appears first. Each card shows when Codex last worked on that project and how many turns it spent on it.
+            </p>
             <p className={styles.journalStatus}>
                 {updated}{' · Checked '}
                 <time dateTime={feed.checkedAt}>{eastern.format(new Date(feed.checkedAt))} Eastern</time>
@@ -128,6 +131,10 @@ export default function CodexActivityLog({ snapshot, projectNotes }) {
             )}
             <details id="run-history" className={styles.history} ref={history}>
                 <summary>Run history <span>{feed.runs.length} completed turns</span></summary>
+                <p className={styles.sectionIntro}>
+                    Every completed turn appears here with its finish time and runtime.
+                    When the observer has only timing data, the entry reads “Completed turn.”
+                </p>
                 <ol className={styles.entries}>
                     {entries.map((run) => (
                         <li key={run.number}>

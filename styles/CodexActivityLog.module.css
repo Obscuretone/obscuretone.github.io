@@ -32,6 +32,13 @@
   line-height: 1.45;
 }
 
+.journal .sectionIntro {
+  color: var(--muted, #555);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0.55rem 0 0.35rem;
+}
+
 .projects {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
