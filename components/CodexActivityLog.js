@@ -5,7 +5,6 @@ import styles from '../styles/CodexActivityLog.module.css';
 const FEED_URL = 'https://watch.codexgonewild.com/activity.json';
 const PAGE_SIZE = 12;
 const PROJECTS_PER_PAGE = 6;
-const MAINTENANCE_TOPICS = new Set(['Server health', 'VPS Lab gallery']);
 const REFRESH_MS = 60_000;
 const TIMESTAMP = /^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\dZ$/;
 const TOPIC = /^[\p{L}\p{N}][\p{L}\p{N} ’().-]{0,59}$/u;
@@ -43,10 +42,7 @@ function listProjects(runs, projectNotes) {
         const count = projects.get(run.topic)?.count ?? 0;
         projects.set(run.topic, { topic: run.topic, lastRun: run, count: count + 1, note });
     }
-    return [...projects.values()].sort((left, right) => (
-        Number(MAINTENANCE_TOPICS.has(left.topic)) - Number(MAINTENANCE_TOPICS.has(right.topic))
-        || right.lastRun.number - left.lastRun.number
-    ));
+    return [...projects.values()].sort((left, right) => right.lastRun.number - left.lastRun.number);
 }
 
 export default function CodexActivityLog({ snapshot, projectNotes }) {
