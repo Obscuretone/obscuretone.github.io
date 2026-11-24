@@ -9,6 +9,7 @@ const MAINTENANCE_TOPICS = new Set(['Server health', 'VPS Lab gallery']);
 const REFRESH_MS = 60_000;
 const TIMESTAMP = /^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\dZ$/;
 const TOPIC = /^[\p{L}\p{N}][\p{L}\p{N} ’().-]{0,59}$/u;
+const SUMMARY = /^[A-Za-z][A-Za-z0-9 ,()'’-]{12,154}\.$/u;
 const eastern = new Intl.DateTimeFormat('en-US', {
     month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZone: 'America/Toronto',
 });
@@ -21,7 +22,8 @@ function isFeed(value) {
     return value?.version === 1 && isTimestamp(value.checkedAt) && Array.isArray(value.runs)
         && value.runs.every((run, index) => run?.number === index + 1
             && isTimestamp(run.completedAt) && Number.isInteger(run.durationSeconds)
-            && run.durationSeconds >= 0 && typeof run.topic === 'string' && TOPIC.test(run.topic));
+            && run.durationSeconds >= 0 && typeof run.topic === 'string' && TOPIC.test(run.topic)
+            && (run.summary === undefined || (typeof run.summary === 'string' && SUMMARY.test(run.summary))));
 }
 
 function duration(seconds) {
@@ -34,9 +36,12 @@ function duration(seconds) {
 function listProjects(runs, projectNotes) {
     const projects = new Map();
     for (const run of runs) {
-        if (!Object.hasOwn(projectNotes, run.topic)) continue;
+        const note = Object.hasOwn(projectNotes, run.topic)
+            ? projectNotes[run.topic]
+            : run.summary && { title: run.topic, summary: run.summary };
+        if (!note) continue;
         const count = projects.get(run.topic)?.count ?? 0;
-        projects.set(run.topic, { topic: run.topic, lastRun: run, count: count + 1 });
+        projects.set(run.topic, { topic: run.topic, lastRun: run, count: count + 1, note });
     }
     return [...projects.values()].sort((left, right) => (
         Number(MAINTENANCE_TOPICS.has(left.topic)) - Number(MAINTENANCE_TOPICS.has(right.topic))
@@ -91,6 +96,7 @@ export default function CodexActivityLog({ snapshot, projectNotes }) {
 
     const projects = listProjects(feed.runs, projectNotes);
     const entries = feed.runs.slice(-visibleRuns).reverse();
+    const updated = connection === 'live' ? 'Automatically updated' : 'Saved snapshot';
 
     return (
         <section id="run-log" className={styles.journal} aria-labelledby="project-journal-title">
@@ -98,9 +104,12 @@ export default function CodexActivityLog({ snapshot, projectNotes }) {
                 <h2 id="project-journal-title">What it’s been making</h2>
                 <a href="#run-history" onClick={() => { history.current.open = true; }}>Run history</a>
             </div>
+            <p className={styles.journalStatus}>
+                {updated}{' · Checked '}
+                <time dateTime={feed.checkedAt}>{eastern.format(new Date(feed.checkedAt))} Eastern</time>
+            </p>
             <div className={styles.projects}>
-                {projects.slice(0, visibleProjects).map(({ topic, lastRun, count }) => {
-                    const note = projectNotes[topic];
+                {projects.slice(0, visibleProjects).map(({ topic, lastRun, count, note }) => {
                     return (
                         <section className={styles.project} key={topic}>
                             <h3>{note.title}</h3>
@@ -123,10 +132,6 @@ export default function CodexActivityLog({ snapshot, projectNotes }) {
             )}
             <details id="run-history" className={styles.history} ref={history}>
                 <summary>Run history <span>{feed.runs.length} completed turns</span></summary>
-                <p className={styles.status}>
-                    {connection === 'live' ? 'Automatically updated' : 'Saved snapshot'}{' · Checked '}
-                    <time dateTime={feed.checkedAt}>{eastern.format(new Date(feed.checkedAt))} Eastern</time>
-                </p>
                 <ol className={styles.entries}>
                     {entries.map((run) => (
                         <li key={run.number}>

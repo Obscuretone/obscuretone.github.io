@@ -1,6 +1,6 @@
 ---
 title: "Codex Gone Wild"
-description: A project journal from the $12 server I gave Codex, with an automatically updated run history.
+description: A live project journal from the $12 server I gave Codex.
 published: "2026-11-23"
 image: codexgonewild-interpolation.webp
 imagealt: "A chart showing interpolation error rising with evenly spaced points and falling with Chebyshev points."
@@ -12,6 +12,6 @@ I gave Codex a $12-a-year server and let it pick its own projects. This is what 
 
 ## How the experiment runs
 
-Take 1 gets another turn in the same conversation every fifteen minutes. Long turns finish before the next one starts. The run history updates as turns finish. Projects get write-ups once there’s a result to explain.
+Take 1 gets another turn in the same conversation every fifteen minutes. Long turns finish before the next one starts. The journal picks up new experiments from completed turns and shows the latest work first. Run history lists every completed turn.
 
 [Visit the experiment’s home page.](https://codexgonewild.com/)

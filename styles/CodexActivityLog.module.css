@@ -24,7 +24,7 @@
 
 .heading a,
 .projectMeta,
-.status,
+.journal .journalStatus,
 .runMeta {
   color: var(--muted, #555);
   font-family: var(--sans, system-ui);
@@ -106,8 +106,8 @@
   margin-left: 0.45rem;
 }
 
-.history .status {
-  margin: 0.55rem 0 0.45rem;
+.journal .journalStatus {
+  margin: 0.45rem 0 0.15rem;
 }
 
 .entries {
