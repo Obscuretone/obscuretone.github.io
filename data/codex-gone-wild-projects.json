@@ -44,8 +44,8 @@
     "summary": "In Take 1's logistic-map experiment, starting a million times closer bought a median of just 20 more steps before the trajectories separated. It later showed that changing how a low-precision calculation rounds can send the same system into completely different repeating loops."
   },
   "VPS Lab gallery": {
-    "title": "An offline gallery for the experiments",
-    "summary": "Take 1 built a gallery to collect its plots, sounds and runnable experiments. In one refresh it rebuilt a 67-file archive byte for byte and ran all 37 listed commands from a clean extraction."
+    "title": "A searchable offline gallery for the experiments",
+    "summary": "Take 1 added search by title and filename and brought 17 recent experiments and tools into its offline gallery. It ran all 53 listed commands from a fresh extraction and rebuilt the 85-file ZIP byte for byte."
   },
   "Leap-day calendar": {
     "title": "A calendar you can listen to",
@@ -170,5 +170,89 @@
   "Maze generation": {
     "title": "A maze generator with a favorite layout",
     "summary": "Take 1 shuffled the walls and opened only those that connected separate areas. In a 3×3 maze, some resulting layouts were nearly twice as likely as others. The most common appeared 0.685% of the time, versus 0.351% for the least common."
+  },
+  "Empty seats": {
+    "title": "How many seats get stranded when people sit in pairs?",
+    "summary": "Take 1 assigned pairs of adjacent seats at random until every remaining empty seat was isolated. In a row of 100, about 14 seats were left empty on average. The chance of filling the entire row was about one in 58 million."
+  },
+  "Traffic ring": {
+    "title": "How fast can a traffic jam clear on a loop?",
+    "summary": "Take 1 put six bumper-to-bumper cars on a 12-space loop and let each car advance when the next space was empty. One car could move at first. After five updates all six could move every time. The script checked all 4,096 starting layouts on that loop."
+  },
+  "Dice cycle": {
+    "title": "Three dice that beat one another in a loop",
+    "summary": "Take 1 split the numbers 1 through 15 among three five-sided dice with the same average roll. In the strongest sets, A beats B, B beats C, and C beats A. Each matchup favors its winner 60% of the time, even though all three dice average 8."
+  },
+  "Probe coverage": {
+    "title": "How easily can a short outage slip between checks?",
+    "summary": "Take 1 measured the gaps in 32 saved HTTPS checks. For a uniformly timed outage within the observed window, five minutes of downtime would miss every check about 88% of the time. A 30-minute outage would still go undetected about 42% of the time."
+  },
+  "Phase coverage": {
+    "title": "Catching an outage that repeats at the same time",
+    "summary": "Take 1 modeled an outage that lasts five minutes and starts at the same minute every hour. A check at a fixed minute caught only about one in twelve possible start times. Shifting the check minute back and forth covered them all within 24 probes."
+  },
+  "Random probe gaps": {
+    "title": "The blind spots left by randomly timed checks",
+    "summary": "Take 1 calculated the gaps left by placing 24 checks at independent random minutes and seconds around a repeating hour. The largest gap averaged 9.44 minutes. Only about one schedule in 900 kept every gap to five minutes or less."
+  },
+  "Ordered codes": {
+    "title": "What it costs to keep a compressed alphabet in order",
+    "summary": "Take 1 compared binary codes for three symbols when the middle symbol was 100 times as frequent as either neighbor. Requiring the codewords to follow symbol order raised the average from 1.02 to 1.99 bits per symbol. Moving the frequent symbol first erased the difference."
+  },
+  "Mono fold": {
+    "title": "How mixing to mono can make tones disappear",
+    "summary": "Take 1 recorded three tones and mixed them with a copy delayed by one millisecond. The 500 Hz and 1,500 Hz tones canceled because the delay put them half a cycle out of phase. The 1,000 Hz tone stayed in phase and survived the mix."
+  },
+  "Coin change lab": {
+    "title": "Four coins that make change with fewer pieces",
+    "summary": "Take 1 searched 18,424 four-denomination systems for amounts from 1 to 99. The sets 1, 5, 18, 25 and 1, 5, 18, 29 both averaged 3.93 coins with optimal choices. Requiring the largest usable coin at each step raised the best average to 4.14."
+  },
+  "Hedge latency": {
+    "title": "When a backup request makes the slowest responses faster",
+    "summary": "In Take 1’s model, 5% of requests took 200 ms. Launching a duplicate after 30 ms cut the 99th-percentile time to 50 ms when delays were independent, at the cost of 5% more requests. The benefit disappeared when the two requests were sufficiently likely to slow down together."
+  },
+  "Pascal powers": {
+    "title": "Counting odd numbers in a million rows of Pascal’s triangle",
+    "summary": "Take 1 used digit carries to count divisibility across the first 1,048,576 rows. Only 0.634% of the roughly 550 billion entries were odd, and 8.359% had a nonzero remainder when divided by 16. It checked the shortcut against direct calculations on smaller triangles."
+  },
+  "Fraction rounding": {
+    "title": "How a flexible denominator improves fraction rounding",
+    "summary": "Take 1 rounded numbers between zero and one to fractions. Letting the denominator vary up to 100 reduced the mean error from 0.0025 to 0.000189 compared with using 100 throughout. Both methods still had a worst-case error of 0.005."
+  },
+  "Coin extractor": {
+    "title": "Getting fair random bits from a biased coin",
+    "summary": "For a coin that lands heads 20% of the time, Take 1 recovered 0.160 fair bits per flip by working in pairs and 0.646 by working in blocks of 64. It exhaustively checked small blocks to make sure outputs of the same length were equally likely."
+  },
+  "Queue variability": {
+    "title": "Why a few slow jobs can hold up the whole queue",
+    "summary": "Take 1 compared two single-worker queues at 80% utilization, each with a 10 ms average job. When jobs ranged from 1 to 91 ms, the mean wait rose from 20 ms to about 166 ms. The delay grows because an arrival can get stuck behind one of the unusually long jobs."
+  },
+  "Fourier windows": {
+    "title": "Measuring a tone between two frequency bins",
+    "summary": "Take 1 measured a tone that sat halfway between two frequencies in a Fourier analysis. An untapered sample read 3.92 dB low. A Hann window brought that error down to 1.42 dB by tapering the ends, while spreading the peak across more bins."
+  },
+  "Grid reliability": {
+    "title": "Where one extra link helps a grid the most",
+    "summary": "Take 1 tested eight places to add a diagonal to a 3×3 grid whose links worked independently 90% of the time. Connecting either target corner to the center raised the chance of a working corner-to-corner path from 97.25% to 98.48%."
+  },
+  "Chord lab": {
+    "title": "Why a random chord has three different answers",
+    "summary": "Take 1 asked how often a chord is longer than a side of the equilateral triangle inside the same circle. The probability was one third when choosing random endpoints, one half when choosing a random distance from the center, and one quarter when choosing a random midpoint in the disk."
+  },
+  "Huffman ties": {
+    "title": "Same compression, shorter worst-case code",
+    "summary": "Take 1 changed how a Huffman encoder breaks ties. In one eight-symbol example, favoring shorter subtrees reduced the longest codeword from six bits to four. Both versions still averaged 2.571 bits per symbol."
+  },
+  "Matrix chain": {
+    "title": "When the cheapest matrix multiplication costs more overall",
+    "summary": "Take 1 tried different ways to group four matrices being multiplied together. For its strongest example, choosing the cheapest adjacent pair each time took 952 multiplications of individual numbers. Planning the full order cut that to 338."
+  },
+  "Coprime pairs": {
+    "title": "Counting pairs that share no factor greater than one",
+    "summary": "Take 1 counted ordered pairs drawn from 1 through 100 million by grouping them by greatest common divisor. About 60.793% of the ten quadrillion pairs were coprime, close to the large-range prediction of six divided by pi squared."
+  },
+  "Uniform draw": {
+    "title": "Reusing random bits when a draw gets rejected",
+    "summary": "Take 1 compared two ways to draw uniformly from 129 outcomes using fair coin flips. Starting over after each rejection took 15.88 flips on average. Recycling the leftover possibilities cut that to 8.95 flips and kept each outcome equally likely in the exhaustive checks."
   }
 }
