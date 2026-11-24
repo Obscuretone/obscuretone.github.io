@@ -1,0 +1,91 @@
+{
+  "features": [
+    "shotgun",
+    "super_saiyan"
+  ],
+  "approved_public_features_only": true,
+  "upstream": "eae20c65c58930c8b62c76188d259579ad4130f1",
+  "frames": 3110,
+  "duration_seconds": 51.898125,
+  "fps": "16000/267",
+  "video_size": [
+    1024,
+    896
+  ],
+  "video_codec": "H.264 yuv420p + AAC",
+  "shotgun_shots": 6,
+  "shotgun_hits": 6,
+  "trigger_frames": [
+    661,
+    785,
+    1032,
+    1179,
+    1288,
+    1602
+  ],
+  "impact_frames": [
+    665,
+    789,
+    1036,
+    1183,
+    1292,
+    1606
+  ],
+  "impact_delay_frames": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+  ],
+  "starts_unarmed": true,
+  "dragon_coins_collected": 1,
+  "shotgun_acquisition_frame": 516,
+  "hidden_pellets_and_visible_shell_verified": true,
+  "native_star_music": true,
+  "ki_waves": [
+    {
+      "frame": 1851,
+      "charge_frames": 17,
+      "hits": 1
+    },
+    {
+      "frame": 2087,
+      "charge_frames": 20,
+      "hits": 1
+    },
+    {
+      "frame": 2313,
+      "charge_frames": 23,
+      "hits": 1
+    },
+    {
+      "frame": 2941,
+      "charge_frames": 180,
+      "hits": 8
+    }
+  ],
+  "no_damage": true,
+  "music_arrangement": "Accepted full theme: foreground melody on channel 3, supporting parts on 0 and 1, multi-sample guitars, double kicks and heavier bass",
+  "music_verification": {
+    "accepted_heavier_mix_pcm_sha256": "8d1a7c07dadd8c1c33fdf8c8339828d67af469bc7673dbed858a327853b2da85",
+    "recovered_baseline_matches_accepted_bytes": true,
+    "post_mix_gain": 0.23850637954651058,
+    "normalized_pcm_max_error_to_scaled_accepted": 1,
+    "native_reference_lufs": -30.37,
+    "restored_arrangement_lufs": -30.37,
+    "loudness_difference_lu": 0.0,
+    "native_channel_3_main_melody_attacks": 26,
+    "all_melodic_attacks": 108,
+    "native_star_and_unarmed_pcm_unchanged": true,
+    "instrument_balance_preserved": true,
+    "multisample_guitars_double_kick_heavy_bass_preserved": true,
+    "hidden_pellets_and_visible_shell_verified": true
+  },
+  "full_capture_clipped_samples": 0,
+  "sha256": {
+    "mario-shotgun-saiyan-full-theme.mp4": "66caae02e91d1e73f3f356efcd4bb707f3504272acced3e70fe50f9735ee6c6e",
+    "smw-shotgun-saiyan-full-theme-source.zip": "826293a9d5ff890e75534d8a1dbdc5cc1262020be35fffea7024810e48178566"
+  }
+}
