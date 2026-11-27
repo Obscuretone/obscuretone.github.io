@@ -30,6 +30,8 @@ Each weekday lunch has its own card and the calendar has a lunch-only view. On w
 
 ## Turn the portions into groceries
 
-The assistant combined the measured ingredients across the plan and worked out which packages covered them. I kept a three-day pantry reserve alongside the meals and counted the potatoes I already had at home. That made it possible to compare package sizes and stage a Super C cart for a Sunday delivery.
+Codex combined the measured ingredients across the plan and worked out which packages covered them. I kept a three-day pantry reserve alongside the meals and counted the potatoes I already had at home. Codex compared package sizes and filled a Super C cart for a Sunday delivery.
+
+It also put 6 kg of yogurt in the cart. I fixed that one.
 
 I can now open the calendar and work backwards from whatever I’m cooking. For Thursday lunch, I need to save tofu and broccoli on Wednesday. For the pork dinners, I can portion the shoulder once and freeze the batches I’ll use later. The grocery order and the prep both come from the same set of meals I picked.
