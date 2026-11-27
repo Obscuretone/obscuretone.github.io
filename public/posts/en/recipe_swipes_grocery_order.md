@@ -1,37 +1,33 @@
 ---
-title: From Recipe Swipes to a Grocery Order
-description: "How I turned my Taste Engine saves into two weeks of meals, shared prep for weekday lunches, and a grocery order."
+title: I Built a Recipe Swipe App. Codex Filled the Grocery Cart.
+description: "How Codex used the recipes I saved in Taste Engine to plan two weeks of meals, coordinate lunch prep, and fill a real Super C cart."
 published: "2026-11-21"
 titleformat: prose
 tags: [software, ai, personal tools]
 ---
 
-I used Taste Engine, the recipe picker I built for myself, to turn my right swipes into two weeks of meals and a grocery order. The finished calendar has fourteen dinners I’d saved, four weekend brunches, and weekday lunches I can put together from dinner prep. I can open a meal to see what to cook, how much to make, and what to set aside for tomorrow.
+I built Taste Engine so I could swipe right on recipes I’d actually cook. Then I asked Codex to use those saves to plan two weeks of meals and fill a real grocery cart. It built a photo calendar with fourteen dinners, four weekend brunches, and weekday lunches that reuse dinner prep.
 
 ![One week in Taste Engine’s meal calendar. Weekend brunch and dinner share the day, and weekday lunches are marked as leftovers or shared prep.](/images/taste-engine-meal-calendar.png)
 
 *A week from the actual calendar. Recipe images come from TheMealDB and generated food illustrations.*
 
-## Build the menu from saved recipes
+## Give Codex a list of recipes I’d actually cook
 
-I’d already done the work of picking dishes I wanted to eat. The planner used the saves in my Taste Engine account for dinners and brunches. I picked a few straightforward weekday breakfasts directly, including bacon and eggs, Nutella toast with yogurt, and berry oats. Putting both kinds of choices on one calendar made it easy to see what each day would look like.
+In Taste Engine, a right swipe saves a recipe to my account. Codex used those saves to pick dinners and brunches, then filled in the weekday mornings with breakfasts I chose directly. I can open any day on the calendar and get to the measured recipe for each meal.
 
 ![Taste Engine’s Discover screen showing the Tandoori Chicken Potato Tray with Pass and Save buttons](/images/taste-engine-swipe.webp)
 
 *Taste Engine’s Discover screen with a sample recipe.*
 
-Sales helped shape the menu. When I found a 3.8 kg pork shoulder for $16, I planned to use it in several of my saved pork dishes and freeze the rest. The recipe cards show where I’m using shoulder in place of the original cut, with weights for each batch.
+## Build lunch into dinner prep
 
-## Plan the prep as well as the meals
+Five lunches are leftovers. The other five use ingredients I can prep while making dinner. For example, I roast extra tofu and broccoli with the lemon tofu tray bake. The dinner card tells me how much to set aside, and the lunch card shows how to turn it into tofu toast with broccoli.
 
-Five lunches are leftovers. The other five use components from the previous dinner. I can turn a lemon tofu tray bake into tofu toast with broccoli on the side, or combine chicken, green beans, rice, and shredded cabbage into a salad. The dinner card tells me what to set aside and the lunch card tells me how to put it together.
+Each weekday lunch has its own card and the calendar has a lunch-only view. On brunch days the calendar shows brunch and supper, with the portions calculated for those two meals.
 
-Each weekday lunch has its own card and the calendar has a lunch-only view. On weekends, brunch and supper get equal space. Brunch covers the daytime meal, so the serving counts reflect that.
+## Put the plan in a real cart
 
-## Turn the portions into groceries
-
-Codex combined the measured ingredients across the plan and worked out which packages covered them. I kept a three-day pantry reserve alongside the meals and counted the potatoes I already had at home. Codex compared package sizes and filled a Super C cart for a Sunday delivery.
+Codex added up the ingredient weights across the recipes, took stock of what I already had, and worked out which packages covered the rest. Then it filled a Super C cart for Sunday delivery. I kept control of payment.
 
 It also put 6 kg of yogurt in the cart. I fixed that one.
-
-I can now open the calendar and work backwards from whatever I’m cooking. For Thursday lunch, I need to save tofu and broccoli on Wednesday. For the pork dinners, I can portion the shoulder once and freeze the batches I’ll use later. The grocery order and the prep both come from the same set of meals I picked.
