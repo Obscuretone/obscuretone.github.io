@@ -596,6 +596,7 @@ export async function getStaticProps({ params }) {
                 slug: `${lang}/${slug}`,
                 title: data.title || 'Untitled',
                 titleFormat: data.titleformat || 'prose',
+                showPostGraph: data.postgraph !== false,
                 usesMath: data.math === true,
                 description: data.description || '',
                 tags: data.tags || [],
@@ -630,6 +631,7 @@ export default function Post({ post, postsEn, currentLang, revision }) {
         publishedAt,
         updatedAt,
         usesMath,
+        showPostGraph,
         activitySnapshot,
         activityProjects,
     } = post;
@@ -724,7 +726,7 @@ export default function Post({ post, postsEn, currentLang, revision }) {
                         <div dangerouslySetInnerHTML={{ __html: openingHtml }} />
                         {activitySnapshot ? (
                             <CodexActivityLog snapshot={activitySnapshot} projectNotes={activityProjects} />
-                        ) : (
+                        ) : showPostGraph && (
                             <GraphErrorBoundary>
                                 <PostsGraph posts={postsEn} currentSlug={post.slug} evidenceItems={evidenceItems} />
                             </GraphErrorBoundary>
